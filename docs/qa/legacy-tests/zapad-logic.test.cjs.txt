@@ -1,0 +1,354 @@
+test('web transfers reject missing and cross-currency destination accounts',()=>{
+ const source=fs.readFileSync('artifacts/zapad-webapp/src/app/components/zapad/TransferModal.tsx','utf8');
+ const body=source.match(/const validate = \(\) => \{([\s\S]*?)\n  \};/)[1];
+ for(const destination of [undefined,{currency:'USD'}]){
+ const ctx=vm.createContext({amount:'100',fromAccountObj:{balance:1000,currency:'EUR'},toAccountObj:destination,type:'transfer',fromAccount:'1',toAccount:'2',payee:'',toast:{error(){}}});
+ assert.equal(vm.runInContext(`(()=>{${body}})()`,ctx),false);
+ }
+});
+test('all 22 routes render in both profiles without missing data',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});for(const view of x.run('validViews')){x.run(`navigate('${view}')`);assert.doesNotMatch(x.run('app.innerHTML'),/\bundefined\b|NaN|reviewBills/);}}});
+test('rounded spending percentages add to 100 and drilldown matches total',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});assert.equal(x.run('spendCategories().reduce((s,c)=>s+parseInt(c.share),0)'),100);assert.equal(x.run('Math.round(spendTotal()*100)'),x.run('Math.round(transactions.filter(t=>t.amount<0&&!t.meta.includes("Scheduled")).reduce((s,t)=>s-t.amount,0)*100)'));}});
+test('statements preserve the selected account and profile switch clears context',()=>{const x=setup();x.click('account-detail',{index:'1'});x.click('statements');assert.match(x.run('renderStatements()'),/USD account/);assert.doesNotMatch(x.run('renderStatements()'),/Main account/);x.click('select-profile',{profile:'business'});assert.equal(x.run('state.statementAccountIndex'),null);assert.doesNotMatch(x.run('renderStatements()'),/Main account/);assert.match(x.run('renderStatements()'),/Operating account/)});
+test('home bills and review use profile-specific totals',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});const total=x.run('euro(billTotal())');assert.ok(x.run('renderHome()').includes(total));x.click('review-bills');assert.ok(x.run('renderModal()').includes(total));}assert.match(x.run('renderBills()'),/Office electricity/);assert.doesNotMatch(x.run('renderBills()'),/Vodovod Budva/)});
+test('unsupported promises are replaced with honest previews',()=>{const x=setup();assert.doesNotMatch(x.run('renderSupport()'),/Report fraud|Lock account and cards/);assert.doesNotMatch(x.run('renderAccounts()'),/€2,000 available/);x.click('open-language-switcher');assert.match(x.run('renderModal()'),/available in English/);assert.doesNotMatch(x.run('renderModal()'),/data-language="uk"/)});
+test('Products slider scopes limits to the selected card',()=>{const x=setup();x.run("navigate('accounts')");x.click('product-select-card',{index:'1'});assert.equal(x.run('state.activeCardIndex'),1);x.click('limits');x.input('monthlyLimit','2700');x.click('confirm-limits');assert.equal(x.run('state.monthlyLimit_virtual'),2700);assert.equal(x.run('state.monthlyLimit_physical'),2200)});
+test('Add card offers physical and virtual previews in the active profile',()=>{const x=setup();assert.match(x.run('renderAccounts()'),/data-action="add-card"/);x.click('add-card');assert.match(x.run('renderModal()'),/Physical card/);assert.match(x.run('renderModal()'),/Virtual card/);x.click('preview-card',{type:'virtual'});assert.match(x.run('renderModal()'),/Virtual card/);assert.match(x.run('renderModal()'),/No card will be issued/);x.click('select-profile',{profile:'business'});x.click('add-card');assert.match(x.run('renderModal()'),/Demo Corp/)});
+
+
+test('Send tab exposes every payment mode and transfer cancellation returns to payment selection',()=>{
+ const x=setup();
+ for(const profile of ['personal','business']) {
+  x.click('select-profile',{profile});
+  x.run("state.selectedRecipient=recipients[0].name;state.amount=50;state.amountInput='50'");
+  x.choose('[data-view]',{view:'send'});
+  assert.equal(x.run('state.payMode'),'overview');
+  assert.equal(x.run('state.amountInput'),'');
+  for(const mode of ['transfer','bills','qr','exchange']) assert.ok(x.run('renderSend()').includes(`data-pay-mode="${mode}"`));
+  x.choose('[data-pay-mode]',{payMode:'exchange'});
+  assert.match(x.run('renderSend()'),/class="exchange-panel"/);
+  assert.notEqual(x.run('state.fromCurrency'),x.run('state.toCurrency'));
+  x.choose('[data-pay-mode]',{payMode:'qr'});
+  assert.match(x.run('renderSend()'),/data-action="qr-pay"/);
+  x.choose('[data-pay-mode]',{payMode:'bills'});
+  assert.match(x.run('renderSend()'),/data-action="review-bills"/);
+  x.choose('[data-pay-mode]',{payMode:'transfer'});
+  assert.match(x.run('renderSend()'),/Who are you sending to/);
+  assert.doesNotMatch(x.run('renderSend()'),/class="pay-mode-strip"/);
+  x.click('cancel-transfer');
+  assert.equal(x.run('state.view'),'send');
+  assert.equal(x.run('state.payMode'),'overview');
+ }
+});
+
+test('Online and Limits edit separate settings, with card and profile isolation',()=>{
+ const x=setup();x.run("navigate('accounts')");x.click('online');
+ assert.equal(x.run('state.view'),'online');
+ assert.doesNotMatch(x.run('renderOnline()'),/type="range"/);
+ x.run('limitsDraft().onlinePayments=false');x.click('back');
+ assert.equal(x.run('state.onlinePayments_physical'),true);
+ x.click('online');x.run('limitsDraft().onlinePayments=false');x.click('confirm-online');
+ assert.equal(x.run('state.onlinePayments_physical'),false);
+ assert.equal(x.run('state.onlinePayments_virtual'),true);
+ x.click('close-modal');x.click('limits');
+ assert.doesNotMatch(x.run('renderLimits()'),/data-field="onlinePayments"/);
+ x.input('monthlyLimit','2300');x.click('confirm-limits');
+ assert.equal(x.run('state.onlinePayments_physical'),false);
+ x.click('select-profile',{profile:'business'});x.click('online');
+ assert.equal(x.run('limitsDraft().onlinePayments'),true);
+});
+
+test('Bills and QR shortcuts use the same focused tasks from Home, Products and Menu',()=>{
+ for(const profile of ['personal','business']) for(const origin of ['home','accounts','more']) {
+  for(const [action,extra,mode] of [['pay-bills',{},'bills'],['qr-pay',{},'qr'],['tool',{tool:'Bills'},'bills'],['tool',{tool:'QR pay'},'qr']]) {
+   const x=setup();x.click('select-profile',{profile});x.run(`navigate('${origin}')`);
+   x.click(action,extra);assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),mode);
+   assert.match(x.run('renderSend()'),/class="transfer-footer"/);
+   x.click('cancel-transfer');assert.equal(x.run('state.view'),origin);
+  }
+ }
+});
+
+test('dismissing a completed payment clears the draft; dismissing review preserves it',()=>{
+ for(const modal of ['success','exchangeSuccess','billSuccess']) {
+  const x=setup();x.run(`state.view='home';startTransfer();state.selectedRecipient='Ana';state.amount=42;state.amountInput='42';state.modal='${modal}';dismissModal()`);
+  assert.equal(x.run('state.view'),'home');assert.equal(x.run('state.selectedRecipient'),null);assert.equal(x.run('state.amountInput'),'');assert.equal(x.run('state.modal'),null);
+ }
+ const x=setup();x.run("startTransfer();state.selectedRecipient='Ana';state.amount=42;state.amountInput='42';state.modal='transfer';dismissModal()");
+ assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.amount'),42);
+});
+
+test('card settings exposes independent Online controls for the selected card',()=>{
+ const x=setup();x.run("state.activeCardIndex=1;navigate('cardMore')");
+ assert.match(x.run('renderCardMore()'),/data-action="online"/);x.click('online');
+ assert.equal(x.run('state.view'),'online');assert.equal(x.run('state.activeCardIndex'),1);
+});
+
+test('payment exit restores origin history and account even after changing source',()=>{
+ for(const profile of ['personal','business']) for(const mode of ['transfer','bills','exchange','qr']) {
+  const x=setup();x.click('select-profile',{profile});x.run("navigate('accounts');navigate('accountDetail');state.activeAccountIndex=1");
+  x.run(`startPayment('${mode}');state.activeAccountIndex=0`);x.click('cancel-transfer');
+  assert.equal(x.run('state.view'),'accountDetail');assert.equal(x.run('state.activeAccountIndex'),1);
+  x.click('back');assert.equal(x.run('state.view'),'accounts');
+ }
+});
+
+test('saving a recipient replaces the form in history, while Back discards an abandoned form',()=>{
+ for(const origin of ['home','recipients']) {
+  const x=setup();x.run(`navigate('${origin}')`);x.click('new-recipient');
+  x.input('recipientName','Demo Navigation');x.input('recipientIban','GB82WEST12345698765432');x.input('recipientCurrency','EUR');
+  x.click('save-recipient');assert.equal(x.run('state.view'),'recipients');
+  assert.equal(x.run("state.history.includes('newRecipient')"),false);
+  x.click('back');assert.notEqual(x.run('state.view'),'newRecipient');
+ }
+ const x=setup();x.click('new-recipient');x.input('recipientName','Discard me');x.click('back');x.click('new-recipient');
+ assert.equal(x.run('state.recipientDraft.name'),'');
+});
+
+test('every route can leave through its tabs or Back in both profiles',()=>{
+ const views=setup().run('validViews');
+ for(const profile of ['personal','business']) for(const view of views) {
+  const x=setup();x.click('select-profile',{profile});x.run(`state.view='${view}';state.history=[];render()`);
+  if(!['home','accounts','send','rewards','more'].includes(view)) {
+   x.click('back');assert.ok(['home','accounts','send','rewards','more'].includes(x.run('state.view')),`${profile}/${view} Back`);
+  }
+  for(const tab of ['home','accounts','send','rewards','more']) {
+   x.choose('[data-view]',{view:tab});assert.equal(x.run('state.view'),tab);
+   assert.equal(x.run('state.modal'),null);
+   if(tab==='send') assert.equal(x.run('state.payMode'),'overview');
+  }
+ }
+});
+
+test('all rendered action entry points respond without invalid routes or missing content',()=>{
+ const actions=new Set();
+ for(const profile of ['personal','business']) for(const view of setup().run('validViews')) {
+  const page=setup();page.click('select-profile',{profile});page.run(`navigate('${view}')`);
+  const html=page.run('app.innerHTML');
+  for(const match of html.matchAll(/<button\b([^>]*data-action="[^"]+"[^>]*)>/g)) {
+   const data={};for(const a of match[1].matchAll(/data-([a-z-]+)="([^"]*)"/g)) data[a[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=a[2];
+   const x=setup();x.click('select-profile',{profile});x.run(`navigate('${view}')`);
+   x.click(data.action,data);actions.add(data.action);
+   assert.ok(x.run('validViews.includes(state.view)'),`${view}/${data.action}`);
+   assert.doesNotMatch(x.run('app.innerHTML'),/\bundefined\b|NaN/);
+  }
+ }
+ assert.ok(actions.size>=35,`Covered ${actions.size} action types`);
+});
+
+test('IA places savings in Products, recipients in Payments, and catalog behind Add product',()=>{
+ for(const profile of ['personal','business']) {
+  const x=setup();x.click('select-profile',{profile});x.run('openPayments()');
+  assert.match(x.run('renderSend()'),/data-action="all-recipients"/);
+  assert.match(x.run('bottomNav()'),/>Payments</);
+  assert.doesNotMatch(x.run('renderRewards()'),/class="jar-stack"/);
+  assert.match(x.run('renderAccounts()'),/class="jar-stack"/);
+  assert.doesNotMatch(x.run('renderAccounts()'),/Scheduled payments|Explore products/);
+  assert.doesNotMatch(x.run('renderHome()'),/class="product-rail"|class="cards-carousel"/);
+  x.click('product-catalog');assert.match(x.run('renderModal()'),/Add product/);
+ }
+});
+
+test('statements filter documents, open account-specific samples and recover from an empty period',()=>{
+ const x=setup();x.run("navigate('more')");x.click('tool',{tool:'Statements'});
+ x.input('statementAccount','1');assert.equal(x.run('parentTab()'),'more');
+ assert.match(x.run('renderStatements()'),/statement for USD account/);
+ assert.doesNotMatch(x.run('renderStatements()'),/statement for Main account/);
+ x.click('view-statement',{index:'1'});assert.match(x.run('renderModal()'),/USD account/);assert.doesNotMatch(x.run('renderModal()'),/Retail Demo/);
+ x.click('close-modal');x.input('statementPeriod','2026-04');assert.match(x.run('renderStatements()'),/No statements for April/);
+ x.click('latest-statements');assert.match(x.run('renderStatements()'),/statement for USD account/);
+});
+
+test('recipient shortcut from Payments starts a fresh transfer and returns to Payments',()=>{
+ const x=setup();x.run("state.transferReturnView='accountDetail';openPayments()");
+ x.choose('[data-recipient]',{recipient:'Ana'});assert.equal(x.run('state.payMode'),'transfer');
+ x.click('cancel-transfer');assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),'overview');
+});
+
+test('recipient chosen from the Payments directory returns to that directory on Cancel',()=>{
+ const x=setup();x.run('openPayments()');x.click('all-recipients');
+ x.choose('[data-recipient]',{recipient:'Ana'});x.click('cancel-transfer');
+ assert.equal(x.run('state.view'),'recipients');x.click('back');
+ assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),'overview');
+});
+
+test('mobile goals validate, allocate in cents, persist and isolate profiles',()=>{const storage=new Map(),x=setup(storage);assert.equal(x.run("goalChange('edit',null,'Bike','1000','')"),'');const id=x.run('jars.at(-1).id');assert.equal(x.run(`goalChange('add','${id}','','','100.25')`),'');assert.match(x.run(`goalChange('add','${id}','','','1000')`),/exceeds/);assert.equal(setup(storage).run('jars.at(-1).amount'),100.25);x.click('select-profile',{profile:'business'});assert.equal(x.run("jars.some(g=>g.label==='Bike')"),false);assert.equal(x.run('goalAvailable()'),0);});
+test('mobile controls survive reload, but revealed card details do not persist',()=>{const storage=new Map(),x=setup(storage);x.click('toggle-freeze');x.click('limits');x.input('monthlyLimit','2500');x.click('confirm-limits');const y=setup(storage);assert.equal(y.run('state.cardFrozen_physical'),true);assert.equal(y.run('state.monthlyLimit_physical'),2500);assert.ok(!y.run('state.cardDetailsVisible_physical'));});
+test('mobile corrupted goals fall back, and failed writes do not mutate goals',()=>{const storage=new Map([['zb-mobile-product-v1:goals:personal','[{"id":"x","label":"Bad","amount":100000,"target":200000}]']]);const x=setup(storage);assert.equal(x.run('jars[0].label'),'Holiday goal');x.run("localStorage.setItem=()=>{throw Error('quota')}");assert.match(x.run("goalChange('edit',null,'Bike','100','')"),/could not save/);assert.equal(x.run('jars.length'),2);});
+test('mobile exports escape notes and spreadsheet formulas; filters combine',()=>{const x=setup();x.run("state.activityCategory='Dining';state.activityDirection='out';state.activityQuery='Caffe'");assert.equal(x.run('productFilteredTransactions().length'),1);x.run("mobileWrite('note:personal:0','<script>bad</script>')");assert.doesNotMatch(x.run('productReceipt(transactions[0])'),/<script>/);assert.match(x.run('productReceipt(transactions[0])'),/&lt;script&gt;/);assert.equal(x.run('productCsvCell("=1+1")'),'"\'=1+1"');});
+test('web transfers reject missing and cross-currency destination accounts',()=>{
+ const source=fs.readFileSync('artifacts/zapad-webapp/src/app/components/zapad/TransferModal.tsx','utf8');
+ const body=source.match(/const validate = \(\) => \{([\s\S]*?)\n  \};/)[1];
+ for(const destination of [undefined,{currency:'USD'}]){
+ const ctx=vm.createContext({amount:'100',fromAccountObj:{balance:1000,currency:'EUR'},toAccountObj:destination,type:'transfer',fromAccount:'1',toAccount:'2',payee:'',toast:{error(){}}});
+ assert.equal(vm.runInContext(`(()=>{${body}})()`,ctx),false);
+ }
+});
+test('all 22 routes render in both profiles without missing data',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});for(const view of x.run('validViews')){x.run(`navigate('${view}')`);assert.doesNotMatch(x.run('app.innerHTML'),/\bundefined\b|NaN|reviewBills/);}}});
+test('rounded spending percentages add to 100 and drilldown matches total',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});assert.equal(x.run('spendCategories().reduce((s,c)=>s+parseInt(c.share),0)'),100);assert.equal(x.run('Math.round(spendTotal()*100)'),x.run('Math.round(transactions.filter(t=>t.amount<0&&!t.meta.includes("Scheduled")).reduce((s,t)=>s-t.amount,0)*100)'));}});
+test('statements preserve the selected account and profile switch clears context',()=>{const x=setup();x.click('account-detail',{index:'1'});x.click('statements');assert.match(x.run('renderStatements()'),/USD account/);assert.doesNotMatch(x.run('renderStatements()'),/Main account/);x.click('select-profile',{profile:'business'});assert.equal(x.run('state.statementAccountIndex'),null);assert.doesNotMatch(x.run('renderStatements()'),/Main account/);assert.match(x.run('renderStatements()'),/Operating account/)});
+test('home bills and review use profile-specific totals',()=>{const x=setup();for(const profile of ['personal','business']){x.click('select-profile',{profile});const total=x.run('euro(billTotal())');assert.ok(x.run('renderHome()').includes(total));x.click('review-bills');assert.ok(x.run('renderModal()').includes(total));}assert.match(x.run('renderBills()'),/Office electricity/);assert.doesNotMatch(x.run('renderBills()'),/Vodovod Budva/)});
+test('unsupported promises are replaced with honest previews',()=>{const x=setup();assert.doesNotMatch(x.run('renderSupport()'),/Report fraud|Lock account and cards/);assert.doesNotMatch(x.run('renderAccounts()'),/€2,000 available/);x.click('open-language-switcher');assert.match(x.run('renderModal()'),/available in English/);assert.doesNotMatch(x.run('renderModal()'),/data-language="uk"/)});
+test('Products slider scopes limits to the selected card',()=>{const x=setup();x.run("navigate('accounts')");x.click('product-select-card',{index:'1'});assert.equal(x.run('state.activeCardIndex'),1);x.click('limits');x.input('monthlyLimit','2700');x.click('confirm-limits');assert.equal(x.run('state.monthlyLimit_virtual'),2700);assert.equal(x.run('state.monthlyLimit_physical'),2200)});
+test('Add card offers physical and virtual previews in the active profile',()=>{const x=setup();assert.match(x.run('renderAccounts()'),/data-action="add-card"/);x.click('add-card');assert.match(x.run('renderModal()'),/Physical card/);assert.match(x.run('renderModal()'),/Virtual card/);x.click('preview-card',{type:'virtual'});assert.match(x.run('renderModal()'),/Virtual card/);assert.match(x.run('renderModal()'),/No card will be issued/);x.click('select-profile',{profile:'business'});x.click('add-card');assert.match(x.run('renderModal()'),/Demo Corp/)});
+
+
+test('Send tab exposes every payment mode and transfer cancellation returns to payment selection',()=>{
+ const x=setup();
+ for(const profile of ['personal','business']) {
+  x.click('select-profile',{profile});
+  x.run("state.selectedRecipient=recipients[0].name;state.amount=50;state.amountInput='50'");
+  x.choose('[data-view]',{view:'send'});
+  assert.equal(x.run('state.payMode'),'overview');
+  assert.equal(x.run('state.amountInput'),'');
+  for(const mode of ['transfer','bills','qr','exchange']) assert.ok(x.run('renderSend()').includes(`data-pay-mode="${mode}"`));
+  x.choose('[data-pay-mode]',{payMode:'exchange'});
+  assert.match(x.run('renderSend()'),/class="exchange-panel"/);
+  assert.notEqual(x.run('state.fromCurrency'),x.run('state.toCurrency'));
+  x.choose('[data-pay-mode]',{payMode:'qr'});
+  assert.match(x.run('renderSend()'),/data-action="qr-pay"/);
+  x.choose('[data-pay-mode]',{payMode:'bills'});
+  assert.match(x.run('renderSend()'),/data-action="review-bills"/);
+  x.choose('[data-pay-mode]',{payMode:'transfer'});
+  assert.match(x.run('renderSend()'),/Who are you sending to/);
+  assert.doesNotMatch(x.run('renderSend()'),/class="pay-mode-strip"/);
+  x.click('cancel-transfer');
+  assert.equal(x.run('state.view'),'send');
+  assert.equal(x.run('state.payMode'),'overview');
+ }
+});
+
+test('Online and Limits edit separate settings, with card and profile isolation',()=>{
+ const x=setup();x.run("navigate('accounts')");x.click('online');
+ assert.equal(x.run('state.view'),'online');
+ assert.doesNotMatch(x.run('renderOnline()'),/type="range"/);
+ x.run('limitsDraft().onlinePayments=false');x.click('back');
+ assert.equal(x.run('state.onlinePayments_physical'),true);
+ x.click('online');x.run('limitsDraft().onlinePayments=false');x.click('confirm-online');
+ assert.equal(x.run('state.onlinePayments_physical'),false);
+ assert.equal(x.run('state.onlinePayments_virtual'),true);
+ x.click('close-modal');x.click('limits');
+ assert.doesNotMatch(x.run('renderLimits()'),/data-field="onlinePayments"/);
+ x.input('monthlyLimit','2300');x.click('confirm-limits');
+ assert.equal(x.run('state.onlinePayments_physical'),false);
+ x.click('select-profile',{profile:'business'});x.click('online');
+ assert.equal(x.run('limitsDraft().onlinePayments'),true);
+});
+
+test('Bills and QR shortcuts use the same focused tasks from Home, Products and Menu',()=>{
+ for(const profile of ['personal','business']) for(const origin of ['home','accounts','more']) {
+  for(const [action,extra,mode] of [['pay-bills',{},'bills'],['qr-pay',{},'qr'],['tool',{tool:'Bills'},'bills'],['tool',{tool:'QR pay'},'qr']]) {
+   const x=setup();x.click('select-profile',{profile});x.run(`navigate('${origin}')`);
+   x.click(action,extra);assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),mode);
+   assert.match(x.run('renderSend()'),/class="transfer-footer"/);
+   x.click('cancel-transfer');assert.equal(x.run('state.view'),origin);
+  }
+ }
+});
+
+test('dismissing a completed payment clears the draft; dismissing review preserves it',()=>{
+ for(const modal of ['success','exchangeSuccess','billSuccess']) {
+  const x=setup();x.run(`state.view='home';startTransfer();state.selectedRecipient='Ana';state.amount=42;state.amountInput='42';state.modal='${modal}';dismissModal()`);
+  assert.equal(x.run('state.view'),'home');assert.equal(x.run('state.selectedRecipient'),null);assert.equal(x.run('state.amountInput'),'');assert.equal(x.run('state.modal'),null);
+ }
+ const x=setup();x.run("startTransfer();state.selectedRecipient='Ana';state.amount=42;state.amountInput='42';state.modal='transfer';dismissModal()");
+ assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.amount'),42);
+});
+
+test('card settings exposes independent Online controls for the selected card',()=>{
+ const x=setup();x.run("state.activeCardIndex=1;navigate('cardMore')");
+ assert.match(x.run('renderCardMore()'),/data-action="online"/);x.click('online');
+ assert.equal(x.run('state.view'),'online');assert.equal(x.run('state.activeCardIndex'),1);
+});
+
+test('payment exit restores origin history and account even after changing source',()=>{
+ for(const profile of ['personal','business']) for(const mode of ['transfer','bills','exchange','qr']) {
+  const x=setup();x.click('select-profile',{profile});x.run("navigate('accounts');navigate('accountDetail');state.activeAccountIndex=1");
+  x.run(`startPayment('${mode}');state.activeAccountIndex=0`);x.click('cancel-transfer');
+  assert.equal(x.run('state.view'),'accountDetail');assert.equal(x.run('state.activeAccountIndex'),1);
+  x.click('back');assert.equal(x.run('state.view'),'accounts');
+ }
+});
+
+test('saving a recipient replaces the form in history, while Back discards an abandoned form',()=>{
+ for(const origin of ['home','recipients']) {
+  const x=setup();x.run(`navigate('${origin}')`);x.click('new-recipient');
+  x.input('recipientName','Demo Navigation');x.input('recipientIban','GB82WEST12345698765432');x.input('recipientCurrency','EUR');
+  x.click('save-recipient');assert.equal(x.run('state.view'),'recipients');
+  assert.equal(x.run("state.history.includes('newRecipient')"),false);
+  x.click('back');assert.notEqual(x.run('state.view'),'newRecipient');
+ }
+ const x=setup();x.click('new-recipient');x.input('recipientName','Discard me');x.click('back');x.click('new-recipient');
+ assert.equal(x.run('state.recipientDraft.name'),'');
+});
+
+test('every route can leave through its tabs or Back in both profiles',()=>{
+ const views=setup().run('validViews');
+ for(const profile of ['personal','business']) for(const view of views) {
+  const x=setup();x.click('select-profile',{profile});x.run(`state.view='${view}';state.history=[];render()`);
+  if(!['home','accounts','send','rewards','more'].includes(view)) {
+   x.click('back');assert.ok(['home','accounts','send','rewards','more'].includes(x.run('state.view')),`${profile}/${view} Back`);
+  }
+  for(const tab of ['home','accounts','send','rewards','more']) {
+   x.choose('[data-view]',{view:tab});assert.equal(x.run('state.view'),tab);
+   assert.equal(x.run('state.modal'),null);
+   if(tab==='send') assert.equal(x.run('state.payMode'),'overview');
+  }
+ }
+});
+
+test('all rendered action entry points respond without invalid routes or missing content',()=>{
+ const actions=new Set();
+ for(const profile of ['personal','business']) for(const view of setup().run('validViews')) {
+  const page=setup();page.click('select-profile',{profile});page.run(`navigate('${view}')`);
+  const html=page.run('app.innerHTML');
+  for(const match of html.matchAll(/<button\b([^>]*data-action="[^"]+"[^>]*)>/g)) {
+   const data={};for(const a of match[1].matchAll(/data-([a-z-]+)="([^"]*)"/g)) data[a[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=a[2];
+   const x=setup();x.click('select-profile',{profile});x.run(`navigate('${view}')`);
+   x.click(data.action,data);actions.add(data.action);
+   assert.ok(x.run('validViews.includes(state.view)'),`${view}/${data.action}`);
+   assert.doesNotMatch(x.run('app.innerHTML'),/\bundefined\b|NaN/);
+  }
+ }
+ assert.ok(actions.size>=35,`Covered ${actions.size} action types`);
+});
+
+test('IA places savings in Products, recipients in Payments, and catalog behind Add product',()=>{
+ for(const profile of ['personal','business']) {
+  const x=setup();x.click('select-profile',{profile});x.run('openPayments()');
+  assert.match(x.run('renderSend()'),/data-action="all-recipients"/);
+  assert.match(x.run('bottomNav()'),/>Payments</);
+  assert.doesNotMatch(x.run('renderRewards()'),/class="jar-stack"/);
+  assert.match(x.run('renderAccounts()'),/class="jar-stack"/);
+  assert.doesNotMatch(x.run('renderAccounts()'),/Scheduled payments|Explore products/);
+  assert.doesNotMatch(x.run('renderHome()'),/class="product-rail"|class="cards-carousel"/);
+  x.click('product-catalog');assert.match(x.run('renderModal()'),/Add product/);
+ }
+});
+
+test('statements filter documents, open account-specific samples and recover from an empty period',()=>{
+ const x=setup();x.run("navigate('more')");x.click('tool',{tool:'Statements'});
+ x.input('statementAccount','1');assert.equal(x.run('parentTab()'),'more');
+ assert.match(x.run('renderStatements()'),/statement for USD account/);
+ assert.doesNotMatch(x.run('renderStatements()'),/statement for Main account/);
+ x.click('view-statement',{index:'1'});assert.match(x.run('renderModal()'),/USD account/);assert.doesNotMatch(x.run('renderModal()'),/Retail Demo/);
+ x.click('close-modal');x.input('statementPeriod','2026-04');assert.match(x.run('renderStatements()'),/No statements for April/);
+ x.click('latest-statements');assert.match(x.run('renderStatements()'),/statement for USD account/);
+});
+
+test('recipient shortcut from Payments starts a fresh transfer and returns to Payments',()=>{
+ const x=setup();x.run("state.transferReturnView='accountDetail';openPayments()");
+ x.choose('[data-recipient]',{recipient:'Ana'});assert.equal(x.run('state.payMode'),'transfer');
+ x.click('cancel-transfer');assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),'overview');
+});
+
+test('recipient chosen from the Payments directory returns to that directory on Cancel',()=>{
+ const x=setup();x.run('openPayments()');x.click('all-recipients');
+ x.choose('[data-recipient]',{recipient:'Ana'});x.click('cancel-transfer');
+ assert.equal(x.run('state.view'),'recipients');x.click('back');
+ assert.equal(x.run('state.view'),'send');assert.equal(x.run('state.payMode'),'overview');
+});
+
+test('mobile goals validate, allocate in cents, persist and isolate profiles',()=>{const storage=new Map(),x=setup(storage);assert.equal(x.run("goalChange('edit',null,'Bike','1000','')"),'');const id=x.run('jars.at(-1).id');assert.equal(x.run(`goalChange('add','${id}','','','100.25')`),'');assert.match(x.run(`goalChange('add','${id}','','','1000')`),/exceeds/);assert.equal(setup(storage).run('jars.at(-1).amount'),100.25);x.click('select-profile',{profile:'business'});assert.equal(x.run("jars.some(g=>g.label==='Bike')"),false);assert.equal(x.run('goalAvailable()'),0);});
+test('mobile controls survive reload, but revealed card details do not persist',()=>{const storage=new Map(),x=setup(storage);x.click('toggle-freeze');x.click('limits');x.input('monthlyLimit','2500');x.click('confirm-limits');const y=setup(storage);assert.equal(y.run('state.cardFrozen_physical'),true);assert.equal(y.run('state.monthlyLimit_physical'),2500);assert.ok(!y.run('state.cardDetailsVisible_physical'));});
+test('mobile corrupted goals fall back, and failed writes do not mutate goals',()=>{const storage=new Map([['zb-mobile-product-v1:goals:personal','[{"id":"x","label":"Bad","amount":100000,"target":200000}]']]);const x=setup(storage);assert.equal(x.run('jars[0].label'),'Holiday goal');x.run("localStorage.setItem=()=>{throw Error('quota')}");assert.match(x.run("goalChange('edit',null,'Bike','100','')"),/could not save/);assert.equal(x.run('jars.length'),2);});
+test('mobile exports escape notes and spreadsheet formulas; filters combine',()=>{const x=setup();x.run("state.activityCategory='Dining';state.activityDirection='out';state.activityQuery='Caffe'");assert.equal(x.run('productFilteredTransactions().length'),1);x.run("mobileWrite('note:personal:0','<script>bad</script>')");assert.doesNotMatch(x.run('productReceipt(transactions[0])'),/<script>/);assert.match(x.run('productReceipt(transactions[0])'),/&lt;script&gt;/);assert.equal(x.run('productCsvCell("=1+1")'),'"\'=1+1"');});

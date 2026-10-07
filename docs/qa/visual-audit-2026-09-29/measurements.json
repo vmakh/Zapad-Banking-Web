@@ -1,0 +1,1470 @@
+[
+  {
+    "profile": "personal",
+    "route": "payments",
+    "size": "desktop",
+    "file": "desktop-personal-payments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Payments"
+      },
+      {
+        "size": "18px",
+        "text": "Recipients"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "accounts",
+    "size": "desktop",
+    "file": "desktop-personal-accounts.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Main account"
+      },
+      {
+        "size": "18px",
+        "text": "USD account"
+      },
+      {
+        "size": "18px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "GBP account"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "cards",
+    "size": "desktop",
+    "file": "desktop-personal-cards.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Cards"
+      },
+      {
+        "size": "18px",
+        "text": "Apple Pay & Google Pay"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "exchange",
+    "size": "desktop",
+    "file": "desktop-personal-exchange.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Currency exchange"
+      },
+      {
+        "size": "18px",
+        "text": "Exchange"
+      },
+      {
+        "size": "18px",
+        "text": " Illustrative exchanges"
+      },
+      {
+        "size": "18px",
+        "text": "Reference rates"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "loans",
+    "size": "desktop",
+    "file": "desktop-personal-loans.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Loans"
+      },
+      {
+        "size": "18px",
+        "text": "Personal loan"
+      },
+      {
+        "size": "18px",
+        "text": "Personal loan up to €25,000"
+      },
+      {
+        "size": "18px",
+        "text": " Loan calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "savings",
+    "size": "desktop",
+    "file": "desktop-personal-savings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "Savings goals"
+      },
+      {
+        "size": "18px",
+        "text": "Your savings accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Earn 3.2% APY on EUR deposits"
+      },
+      {
+        "size": "18px",
+        "text": " Returns calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 992,
+    "width": 992
+  },
+  {
+    "profile": "personal",
+    "route": "investments",
+    "size": "desktop",
+    "file": "desktop-personal-investments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Investments"
+      },
+      {
+        "size": "18px",
+        "text": "Total portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio breakdown"
+      },
+      {
+        "size": "18px",
+        "text": "Allocation"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "statements",
+    "size": "desktop",
+    "file": "desktop-personal-statements.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Statements"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "transactions",
+    "size": "desktop",
+    "file": "desktop-personal-transactions.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Activity"
+      },
+      {
+        "size": "18px",
+        "text": "Local previews"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "inbox",
+    "size": "desktop",
+    "file": "desktop-personal-inbox.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Inbox"
+      },
+      {
+        "size": "18px",
+        "text": "Confirm new device login"
+      },
+      {
+        "size": "18px",
+        "text": "Your May sample statement is ready"
+      },
+      {
+        "size": "18px",
+        "text": "Transfer completed"
+      },
+      {
+        "size": "18px",
+        "text": "Savings rate increased"
+      },
+      {
+        "size": "18px",
+        "text": "New feature: Instant payments"
+      },
+      {
+        "size": "18px",
+        "text": "Scheduled maintenance"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "settings",
+    "size": "desktop",
+    "file": "desktop-personal-settings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Settings"
+      },
+      {
+        "size": "18px",
+        "text": "Notifications"
+      },
+      {
+        "size": "18px",
+        "text": "Privacy & security"
+      },
+      {
+        "size": "18px",
+        "text": "Demo workspace"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "help",
+    "size": "desktop",
+    "file": "desktop-personal-help.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Help & support"
+      },
+      {
+        "size": "18px",
+        "text": "Frequently asked questions"
+      },
+      {
+        "size": "18px",
+        "text": "How do I preview a transfer?"
+      },
+      {
+        "size": "18px",
+        "text": "Where can I view sample statements?"
+      },
+      {
+        "size": "18px",
+        "text": "How do I freeze my card?"
+      },
+      {
+        "size": "18px",
+        "text": "What are the transfer limits?"
+      },
+      {
+        "size": "18px",
+        "text": "Phone"
+      },
+      {
+        "size": "18px",
+        "text": "Live chat"
+      },
+      {
+        "size": "18px",
+        "text": "Email"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "home",
+    "size": "desktop",
+    "file": "desktop-personal-home.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Good afternoon, Alex"
+      },
+      {
+        "size": "18px",
+        "text": "Recent activity"
+      },
+      {
+        "size": "18px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Savings Goals"
+      },
+      {
+        "size": "18px",
+        "text": "Analytics"
+      },
+      {
+        "size": "18px",
+        "text": "Needs attention"
+      },
+      {
+        "size": "18px",
+        "text": "Card"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "home",
+    "size": "desktop",
+    "file": "desktop-business-home.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Good afternoon, Demo Corp"
+      },
+      {
+        "size": "18px",
+        "text": "Recent activity"
+      },
+      {
+        "size": "18px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Savings Goals"
+      },
+      {
+        "size": "18px",
+        "text": "Analytics"
+      },
+      {
+        "size": "18px",
+        "text": "Needs attention"
+      },
+      {
+        "size": "18px",
+        "text": "Card"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "payments",
+    "size": "desktop",
+    "file": "desktop-business-payments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Payments"
+      },
+      {
+        "size": "18px",
+        "text": "Recipients"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "accounts",
+    "size": "desktop",
+    "file": "desktop-business-accounts.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Operating account"
+      },
+      {
+        "size": "18px",
+        "text": "USD payouts"
+      },
+      {
+        "size": "18px",
+        "text": "Tax reserve"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "cards",
+    "size": "desktop",
+    "file": "desktop-business-cards.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Cards"
+      },
+      {
+        "size": "18px",
+        "text": "Apple Pay & Google Pay"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "exchange",
+    "size": "desktop",
+    "file": "desktop-business-exchange.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Currency exchange"
+      },
+      {
+        "size": "18px",
+        "text": "Exchange"
+      },
+      {
+        "size": "18px",
+        "text": " Illustrative exchanges"
+      },
+      {
+        "size": "18px",
+        "text": "Reference rates"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "loans",
+    "size": "desktop",
+    "file": "desktop-business-loans.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Loans"
+      },
+      {
+        "size": "18px",
+        "text": "Business loan"
+      },
+      {
+        "size": "18px",
+        "text": "Working capital up to €150,000"
+      },
+      {
+        "size": "18px",
+        "text": " Loan calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "savings",
+    "size": "desktop",
+    "file": "desktop-business-savings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "Savings goals"
+      },
+      {
+        "size": "18px",
+        "text": "Your savings accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Earn 3.2% APY on EUR deposits"
+      },
+      {
+        "size": "18px",
+        "text": " Returns calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "investments",
+    "size": "desktop",
+    "file": "desktop-business-investments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Investments"
+      },
+      {
+        "size": "18px",
+        "text": "Total portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio breakdown"
+      },
+      {
+        "size": "18px",
+        "text": "Allocation"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "statements",
+    "size": "desktop",
+    "file": "desktop-business-statements.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Statements"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "transactions",
+    "size": "desktop",
+    "file": "desktop-business-transactions.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Activity"
+      },
+      {
+        "size": "18px",
+        "text": "Local previews"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "inbox",
+    "size": "desktop",
+    "file": "desktop-business-inbox.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Inbox"
+      },
+      {
+        "size": "18px",
+        "text": "Payment awaiting approval"
+      },
+      {
+        "size": "18px",
+        "text": "Sample statement ready"
+      },
+      {
+        "size": "18px",
+        "text": "Client payment received"
+      },
+      {
+        "size": "18px",
+        "text": "Pre-approved credit line"
+      },
+      {
+        "size": "18px",
+        "text": "Payroll processing complete"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "settings",
+    "size": "desktop",
+    "file": "desktop-business-settings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Settings"
+      },
+      {
+        "size": "18px",
+        "text": "Notifications"
+      },
+      {
+        "size": "18px",
+        "text": "Privacy & security"
+      },
+      {
+        "size": "18px",
+        "text": "Demo workspace"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "business",
+    "route": "help",
+    "size": "desktop",
+    "file": "desktop-business-help.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Help & support"
+      },
+      {
+        "size": "18px",
+        "text": "Frequently asked questions"
+      },
+      {
+        "size": "18px",
+        "text": "How do I preview a transfer?"
+      },
+      {
+        "size": "18px",
+        "text": "Where can I view sample statements?"
+      },
+      {
+        "size": "18px",
+        "text": "How do I freeze my card?"
+      },
+      {
+        "size": "18px",
+        "text": "What are the transfer limits?"
+      },
+      {
+        "size": "18px",
+        "text": "Phone"
+      },
+      {
+        "size": "18px",
+        "text": "Live chat"
+      },
+      {
+        "size": "18px",
+        "text": "Email"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 866,
+    "width": 866
+  },
+  {
+    "profile": "personal",
+    "route": "home",
+    "size": "narrow",
+    "file": "narrow-personal-home.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Good afternoon, Alex"
+      },
+      {
+        "size": "18px",
+        "text": "Recent activity"
+      },
+      {
+        "size": "18px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Savings Goals"
+      },
+      {
+        "size": "18px",
+        "text": "Analytics"
+      },
+      {
+        "size": "18px",
+        "text": "Needs attention"
+      },
+      {
+        "size": "18px",
+        "text": "Card"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "payments",
+    "size": "narrow",
+    "file": "narrow-personal-payments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Payments"
+      },
+      {
+        "size": "18px",
+        "text": "Recipients"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "accounts",
+    "size": "narrow",
+    "file": "narrow-personal-accounts.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Main account"
+      },
+      {
+        "size": "18px",
+        "text": "USD account"
+      },
+      {
+        "size": "18px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "GBP account"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "cards",
+    "size": "narrow",
+    "file": "narrow-personal-cards.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Cards"
+      },
+      {
+        "size": "18px",
+        "text": "Apple Pay & Google Pay"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "exchange",
+    "size": "narrow",
+    "file": "narrow-personal-exchange.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Currency exchange"
+      },
+      {
+        "size": "18px",
+        "text": "Exchange"
+      },
+      {
+        "size": "18px",
+        "text": " Illustrative exchanges"
+      },
+      {
+        "size": "18px",
+        "text": "Reference rates"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "loans",
+    "size": "narrow",
+    "file": "narrow-personal-loans.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Loans"
+      },
+      {
+        "size": "18px",
+        "text": "Personal loan"
+      },
+      {
+        "size": "18px",
+        "text": "Personal loan up to €25,000"
+      },
+      {
+        "size": "18px",
+        "text": " Loan calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "savings",
+    "size": "narrow",
+    "file": "narrow-personal-savings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "Savings goals"
+      },
+      {
+        "size": "18px",
+        "text": "Your savings accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Earn 3.2% APY on EUR deposits"
+      },
+      {
+        "size": "18px",
+        "text": " Returns calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "investments",
+    "size": "narrow",
+    "file": "narrow-personal-investments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Investments"
+      },
+      {
+        "size": "18px",
+        "text": "Total portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio breakdown"
+      },
+      {
+        "size": "18px",
+        "text": "Allocation"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "statements",
+    "size": "narrow",
+    "file": "narrow-personal-statements.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Statements"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "transactions",
+    "size": "narrow",
+    "file": "narrow-personal-transactions.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Activity"
+      },
+      {
+        "size": "18px",
+        "text": "Local previews"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "inbox",
+    "size": "narrow",
+    "file": "narrow-personal-inbox.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Inbox"
+      },
+      {
+        "size": "18px",
+        "text": "Confirm new device login"
+      },
+      {
+        "size": "18px",
+        "text": "Your May sample statement is ready"
+      },
+      {
+        "size": "18px",
+        "text": "Transfer completed"
+      },
+      {
+        "size": "18px",
+        "text": "Savings rate increased"
+      },
+      {
+        "size": "18px",
+        "text": "New feature: Instant payments"
+      },
+      {
+        "size": "18px",
+        "text": "Scheduled maintenance"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "settings",
+    "size": "narrow",
+    "file": "narrow-personal-settings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Settings"
+      },
+      {
+        "size": "18px",
+        "text": "Notifications"
+      },
+      {
+        "size": "18px",
+        "text": "Privacy & security"
+      },
+      {
+        "size": "18px",
+        "text": "Demo workspace"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "personal",
+    "route": "help",
+    "size": "narrow",
+    "file": "narrow-personal-help.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Help & support"
+      },
+      {
+        "size": "18px",
+        "text": "Frequently asked questions"
+      },
+      {
+        "size": "18px",
+        "text": "How do I preview a transfer?"
+      },
+      {
+        "size": "18px",
+        "text": "Where can I view sample statements?"
+      },
+      {
+        "size": "18px",
+        "text": "How do I freeze my card?"
+      },
+      {
+        "size": "18px",
+        "text": "What are the transfer limits?"
+      },
+      {
+        "size": "18px",
+        "text": "Phone"
+      },
+      {
+        "size": "18px",
+        "text": "Live chat"
+      },
+      {
+        "size": "18px",
+        "text": "Email"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "home",
+    "size": "narrow",
+    "file": "narrow-business-home.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Good afternoon, Demo Corp"
+      },
+      {
+        "size": "18px",
+        "text": "Recent activity"
+      },
+      {
+        "size": "18px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Savings Goals"
+      },
+      {
+        "size": "18px",
+        "text": "Analytics"
+      },
+      {
+        "size": "18px",
+        "text": "Needs attention"
+      },
+      {
+        "size": "18px",
+        "text": "Card"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "payments",
+    "size": "narrow",
+    "file": "narrow-business-payments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Payments"
+      },
+      {
+        "size": "18px",
+        "text": "Recipients"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "accounts",
+    "size": "narrow",
+    "file": "narrow-business-accounts.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Operating account"
+      },
+      {
+        "size": "18px",
+        "text": "USD payouts"
+      },
+      {
+        "size": "18px",
+        "text": "Tax reserve"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "cards",
+    "size": "narrow",
+    "file": "narrow-business-cards.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Cards"
+      },
+      {
+        "size": "18px",
+        "text": "Apple Pay & Google Pay"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "exchange",
+    "size": "narrow",
+    "file": "narrow-business-exchange.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Currency exchange"
+      },
+      {
+        "size": "18px",
+        "text": "Exchange"
+      },
+      {
+        "size": "18px",
+        "text": " Illustrative exchanges"
+      },
+      {
+        "size": "18px",
+        "text": "Reference rates"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "loans",
+    "size": "narrow",
+    "file": "narrow-business-loans.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Loans"
+      },
+      {
+        "size": "18px",
+        "text": "Business loan"
+      },
+      {
+        "size": "18px",
+        "text": "Working capital up to €150,000"
+      },
+      {
+        "size": "18px",
+        "text": " Loan calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "savings",
+    "size": "narrow",
+    "file": "narrow-business-savings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Savings"
+      },
+      {
+        "size": "18px",
+        "text": "Savings goals"
+      },
+      {
+        "size": "18px",
+        "text": "Your savings accounts"
+      },
+      {
+        "size": "18px",
+        "text": "Earn 3.2% APY on EUR deposits"
+      },
+      {
+        "size": "18px",
+        "text": " Returns calculator"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "investments",
+    "size": "narrow",
+    "file": "narrow-business-investments.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Investments"
+      },
+      {
+        "size": "18px",
+        "text": "Total portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio value"
+      },
+      {
+        "size": "18px",
+        "text": "Portfolio breakdown"
+      },
+      {
+        "size": "18px",
+        "text": "Allocation"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "statements",
+    "size": "narrow",
+    "file": "narrow-business-statements.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Statements"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "transactions",
+    "size": "narrow",
+    "file": "narrow-business-transactions.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Activity"
+      },
+      {
+        "size": "18px",
+        "text": "Local previews"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "inbox",
+    "size": "narrow",
+    "file": "narrow-business-inbox.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Inbox"
+      },
+      {
+        "size": "18px",
+        "text": "Payment awaiting approval"
+      },
+      {
+        "size": "18px",
+        "text": "Sample statement ready"
+      },
+      {
+        "size": "18px",
+        "text": "Client payment received"
+      },
+      {
+        "size": "18px",
+        "text": "Pre-approved credit line"
+      },
+      {
+        "size": "18px",
+        "text": "Payroll processing complete"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "settings",
+    "size": "narrow",
+    "file": "narrow-business-settings.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Settings"
+      },
+      {
+        "size": "18px",
+        "text": "Notifications"
+      },
+      {
+        "size": "18px",
+        "text": "Privacy & security"
+      },
+      {
+        "size": "18px",
+        "text": "Demo workspace"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "profile": "business",
+    "route": "help",
+    "size": "narrow",
+    "file": "narrow-business-help.png",
+    "headings": [
+      {
+        "size": "24px",
+        "text": "Help & support"
+      },
+      {
+        "size": "18px",
+        "text": "Frequently asked questions"
+      },
+      {
+        "size": "18px",
+        "text": "How do I preview a transfer?"
+      },
+      {
+        "size": "18px",
+        "text": "Where can I view sample statements?"
+      },
+      {
+        "size": "18px",
+        "text": "How do I freeze my card?"
+      },
+      {
+        "size": "18px",
+        "text": "What are the transfer limits?"
+      },
+      {
+        "size": "18px",
+        "text": "Phone"
+      },
+      {
+        "size": "18px",
+        "text": "Live chat"
+      },
+      {
+        "size": "18px",
+        "text": "Email"
+      }
+    ],
+    "overflow": [],
+    "scrollWidth": 390,
+    "width": 390
+  }
+]

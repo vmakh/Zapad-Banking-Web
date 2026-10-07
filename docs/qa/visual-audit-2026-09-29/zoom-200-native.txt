@@ -1,0 +1,12 @@
+The following is a diff from the previous accessibility tree for Window: "ZapadBanka" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 129-147, 154-155
++					263 button Zoom: 200%
++								264 button Open navigation menu
++								265 button Search
++		266 container
++			267 container
++				268 container Zoom: 200%
++				269 button Make Text Smaller
++				270 button Make Text Larger
++				271 button Reset
+The focused UI element is 126 HTML content ZapadBanka, URL: 127.0.0.1:5193/#/personal

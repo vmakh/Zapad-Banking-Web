@@ -1,0 +1,275 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --brand-personal: #0a3d91;
+  --brand-personal-mid: #0e4dab;
+  --brand-personal-light: #1862c7;
+  --brand-personal-dark: #083175;
+  --brand-business: #ff6a13;
+  --brand-business-mid: #ff8534;
+  --brand-business-light: #ffa155;
+  --brand-business-dark: #e55c0c;
+  --background: #f4f4f4;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f4;
+  --secondary-foreground: #000000;
+  --muted: #f4f4f4;
+  --muted-foreground: #6f6f6f;
+  --accent: #f4f4f4;
+  --accent-foreground: #000000;
+  --destructive: #da1e28;
+  --destructive-foreground: #ffffff;
+  --border: #e0e0e0;
+  --input: transparent;
+  --input-background: #f4f4f4;
+  --switch-background: #e0e0e0;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 400;
+  --ring: #000000;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 1.25rem;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1a1a1a;
+  --sidebar-ring: #ffffff;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+  --color-brand-personal: var(--brand-personal);
+  --color-brand-personal-mid: var(--brand-personal-mid);
+  --color-brand-personal-light: var(--brand-personal-light);
+  --color-brand-personal-dark: var(--brand-personal-dark);
+  --color-brand-business: var(--brand-business);
+  --color-brand-business-mid: var(--brand-business-mid);
+  --color-brand-business-light: var(--brand-business-light);
+  --color-brand-business-dark: var(--brand-business-dark);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile prototype → web. Shared palette, material and typography contracts.
+   Source: zapad-mobile-successor/src/prototype.css (current app-owned theme).
+   Root scope also supplies Radix portals with the active workspace theme. */
+:root {
+  --bank-ink: #112039;
+  --bank-muted: #58677b;
+  --bank-line: #e9edf2;
+  --bank-paper: #f6f8fb;
+  --bank-soft: #f0f5fd;
+  --bank-accent: #1647a4;
+  --bank-action: linear-gradient(125deg, #245fc5, #123e99);
+  --bank-action-ink: #ffffff;
+  --bank-wash: linear-gradient(115deg, #ffffff, #f0f5fd);
+  --bank-card-base: #153d79;
+  --bank-card-glow: #3266a3;
+  --bank-card-end: #122944;
+  --bank-copper-base: #263240;
+  --bank-copper-glow: #996c50;
+  --bank-business-virtual-base: #303e48;
+  --bank-business-virtual-glow: #73868c;
+  --bank-network-red: #ed4c44;
+  --bank-network-gold: #f6b84a;
+  --bank-virtual-base: #284d72;
+  --bank-virtual-glow: #4d869a;
+  --bank-card-ink: #e4edf8;
+  --bank-card-state: #ffffff10;
+  --bank-display: 'Unbounded', Inter, sans-serif;
+  --bank-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bank-control-radius: 0.75rem;
+  --bank-panel-radius: 1rem;
+  --background: #ffffff;
+  --foreground: var(--bank-ink);
+  --card-foreground: var(--bank-ink);
+  --popover-foreground: var(--bank-ink);
+  --primary: var(--bank-accent);
+  --primary-foreground: var(--bank-action-ink);
+  --secondary: var(--bank-paper);
+  --secondary-foreground: var(--bank-ink);
+  --muted: var(--bank-paper);
+  --muted-foreground: var(--bank-muted);
+  --accent: var(--bank-soft);
+  --accent-foreground: var(--bank-accent);
+  --border: var(--bank-line);
+  --input-background: var(--bank-paper);
+  --ring: var(--bank-accent);
+  --brand-personal: #1647a4;
+  --brand-personal-dark: #123e99;
+  --brand-business: #91400e;
+  --brand-business-dark: #84451c;
+}
+:root:has(.bank-workspace[data-bank-profile="business"]) {
+  --bank-ink: #202832;
+  --bank-muted: #64707d;
+  --bank-line: #e4e7ea;
+  --bank-paper: #f3f4f5;
+  --bank-soft: #fff3e9;
+  --bank-accent: #91400e;
+  --bank-action: var(--bank-accent);
+  --bank-action-ink: var(--card);
+  --bank-wash: linear-gradient(115deg, #ffffff, #fbefe4);
+  --bank-card-base: var(--bank-copper-base);
+  --bank-card-glow: var(--bank-copper-glow);
+}

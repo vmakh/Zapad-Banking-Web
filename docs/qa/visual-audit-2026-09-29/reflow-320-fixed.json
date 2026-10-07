@@ -1,0 +1,142 @@
+{
+  "initialClipping": [
+    {
+      "kind": "personal",
+      "section": "",
+      "clipped": [
+        {
+          "content": 258,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Card ··4821 · Groceries • Today, 14:22",
+          "width": 130
+        },
+        {
+          "content": 225,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Card ··4821 · Cafe • Today, 09:14",
+          "width": 141
+        },
+        {
+          "content": 183,
+          "overflow": "hidden",
+          "tag": "SPAN",
+          "text": "Salary · Demo Corp DOO",
+          "width": 100
+        },
+        {
+          "content": 237,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Incoming SEPA transfer • Yesterday",
+          "width": 100
+        },
+        {
+          "content": 186,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Utility · scheduled • May 14",
+          "width": 130
+        },
+        {
+          "content": 203,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Exchange · rate 1.087 • May 9",
+          "width": 119
+        }
+      ]
+    },
+    {
+      "kind": "business",
+      "section": "",
+      "clipped": [
+        {
+          "content": 242,
+          "overflow": "hidden",
+          "tag": "SPAN",
+          "text": "Invoice INV-2034 · Techno d.o.o.",
+          "width": 104
+        },
+        {
+          "content": 246,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "International payment • Today, 11:02",
+          "width": 104
+        },
+        {
+          "content": 107,
+          "overflow": "hidden",
+          "tag": "SPAN",
+          "text": "Stripe Payouts",
+          "width": 89
+        },
+        {
+          "content": 247,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Incoming · Settlement • Today, 08:30",
+          "width": 89
+        },
+        {
+          "content": 157,
+          "overflow": "hidden",
+          "tag": "SPAN",
+          "text": "Payroll · 4 employees",
+          "width": 104
+        },
+        {
+          "content": 238,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Bulk payment · Scheduled • May 15",
+          "width": 104
+        },
+        {
+          "content": 197,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Card ··1102 · Cloud • May 10",
+          "width": 119
+        },
+        {
+          "content": 117,
+          "overflow": "hidden",
+          "tag": "SPAN",
+          "text": "Client · Alfa doo",
+          "width": 100
+        },
+        {
+          "content": 159,
+          "overflow": "hidden",
+          "tag": "DIV",
+          "text": "Incoming SEPA • May 5",
+          "width": 100
+        },
+        {
+          "content": 46,
+          "overflow": "visible",
+          "tag": "SPAN",
+          "text": "100.0%",
+          "width": 36
+        }
+      ]
+    }
+  ],
+  "homeReflow": [
+    {
+      "kind": "personal",
+      "clipped": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "kind": "business",
+      "clipped": [],
+      "scrollWidth": 320,
+      "width": 320
+    }
+  ]
+}

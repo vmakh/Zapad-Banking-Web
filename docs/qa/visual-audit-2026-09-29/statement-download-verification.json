@@ -1,0 +1,22 @@
+{
+  "file": "/Users/victormakhankov/Downloads/zapadbanka-sample-statement-p-main-2026-05 (1).csv",
+  "bytes": 887,
+  "transactionCount": 6,
+  "allAmountsHidden": true,
+  "onlyCompleted": true,
+  "account": "Main account",
+  "period": "May 2026",
+  "ids": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "7",
+    "8"
+  ],
+  "visibleExport": {
+    "file": "/Users/victormakhankov/Downloads/zapadbanka-sample-statement-p-main-2026-05 (2).csv",
+    "amountsMatchDisplayedRows": true,
+    "transactionCount": 6
+  }
+}

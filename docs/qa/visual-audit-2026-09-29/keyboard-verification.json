@@ -1,0 +1,60 @@
+[
+  {
+    "account": "USD accountUSD · 3002 02",
+    "case": "receive-account-keyboard-selection",
+    "focus": null
+  },
+  {
+    "case": "receive-tab-wrap",
+    "focus": "receive-account-label receive-account-value",
+    "inDialog": true,
+    "outline": "oklab(0.426226 -0.0231419 -0.157639 / 0.5) none 3px",
+    "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  },
+  {
+    "case": "receive-escape-return",
+    "focus": "Receive money",
+    "openDialogs": 0
+  },
+  {
+    "case": "statement-arrow-selection",
+    "focusVisible": true,
+    "outline": "rgb(22, 71, 164) none 1px",
+    "shadow": "none",
+    "value": "USD account · USD"
+  },
+  {
+    "case": "statement-scroll-region-next",
+    "focused": " Download CSV",
+    "rect": {
+      "bottom": 501.1484375,
+      "height": 44,
+      "left": 722.4609375,
+      "right": 876,
+      "top": 457.1484375,
+      "width": 153.5390625,
+      "x": 722.4609375,
+      "y": 457.1484375
+    },
+    "viewport": 720
+  },
+  {
+    "case": "statement-tab-wrap",
+    "focus": "Statement transactions",
+    "inDialog": true
+  },
+  {
+    "case": "fixed-statement-focus",
+    "focusVisible": true,
+    "name": null,
+    "offset": "2px",
+    "outline": "rgb(22, 71, 164) solid 2px"
+  },
+  {
+    "case": "fixed-receive-focus",
+    "focusVisible": true,
+    "name": "receive-account-label receive-account-value",
+    "offset": "2px",
+    "outline": "rgb(22, 71, 164) solid 2px"
+  }
+]

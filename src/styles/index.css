@@ -1,0 +1,321 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import './design-system.css';
+@import './safari-fixes.css';
+
+/* Dashboard hierarchy: balance → accounts → activity. */
+.dashboard-page { font-variant-numeric: tabular-nums; }
+.dashboard-page [data-slot="card"] { border-radius:16px; box-shadow:none; }
+
+.dashboard-balance {padding:28px;background:#001d6c;color:white;border-radius:16px;}
+.dashboard-balance.is-business {background:#31135e;}
+.balance-heading {display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:#edf5ff;}
+.balance-profile {border:1px solid #ffffff40;border-radius:6px;padding:4px 9px;color:white;font-size:12px;}
+.balance-amount {font-size:clamp(32px,3.4vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.2;margin:12px 0 8px;}
+.balance-account {font-size:13px;color:#edf5ff;margin:0;}
+.balance-actions {display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;}
+.balance-actions a {display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid #ffffff55;border-radius:8px;font-size:14px;font-weight:500;}
+.balance-actions a:first-child {background:white;color:#001d6c;border-color:white;}
+.balance-actions a:hover {background:#ffffff20;}
+.balance-actions a:first-child:hover {background:#d0e2ff;}
+.dashboard-accounts {padding:20px 24px;background:white;border:1px solid #dde1e6;border-radius:16px;}
+.accounts-heading {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;}
+.accounts-heading a {display:flex;align-items:center;gap:6px;font-size:13px;min-height:40px;}
+.account-row {display:flex;align-items:center;gap:14px;min-height:70px;border-top:1px solid #edf0f4;padding:12px 0;}
+.account-row:hover {background:#f8fafc;}
+.account-currency {font-size:12px;font-weight:600;color:#525252;background:#f2f4f8;padding:8px;border-radius:8px;}
+.account-name {font-size:14px;flex:1;min-width:0;}
+.account-name small {display:block;font-size:12px;color:#6f6f6f;margin-top:3px;}
+.account-row strong {font-size:16px;font-weight:600;white-space:nowrap;}
+.dashboard-page a:focus-visible {outline:2px solid #0f62fe;outline-offset:4px;}
+@media(max-width:600px){.dashboard-balance{padding:20px}.dashboard-accounts{padding:16px}.account-row{gap:10px}.balance-account span{display:block;margin-top:4px}.balance-actions{gap:8px}.balance-actions a{padding:0 10px;font-size:13px}.account-row strong{font-size:14px}}
+
+/* Shared modal system. Radix portals sit outside #root. */
+[data-slot="dialog-overlay"], [data-slot="alert-dialog-overlay"] {background:rgba(15,23,42,.42);}
+[data-slot="dialog-content"], [data-slot="alert-dialog-content"] {
+  width:calc(100vw - 32px);max-width:520px;max-height:calc(100dvh - 48px);
+  overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;
+  border:0;border-radius:16px;box-shadow:0 24px 80px rgba(15,23,42,.22);
+  gap:20px;color:#161616;font-variant-numeric:tabular-nums;
+}
+[data-slot="dialog-content"].p-0 > div:not([data-slot]) {padding:28px;}
+[data-slot="dialog-header"] {text-align:left;padding-right:48px;gap:8px;margin-bottom:24px;}
+[data-slot="dialog-title"], [data-slot="alert-dialog-title"] {font-size:24px;font-weight:600;line-height:1.25;letter-spacing:-.025em;}
+[data-slot="dialog-description"], [data-slot="alert-dialog-description"] {font-size:14px;line-height:1.5;font-weight:400;color:#5c6778;}
+[data-slot="dialog-content"] .font-extrabold,
+[data-slot="dialog-content"] [data-slot="label"] {font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;line-height:1.4;color:#525252;}
+[data-slot="dialog-content"] [data-slot="input"],
+[data-slot="dialog-content"] [data-slot="select-trigger"] {
+  min-height:46px;border-radius:8px;border-color:#d7dde5;box-shadow:none;font-size:15px;background:#fff;
+}
+[data-slot="dialog-content"] .transfer-amount {font-size:32px;font-weight:600;height:64px;}
+[data-slot="dialog-content"] input[type="number"] {appearance:textfield;}
+[data-slot="dialog-content"] input::-webkit-inner-spin-button {appearance:none;margin:0;}
+[data-slot="dialog-content"] [data-slot="input"]:focus-visible,
+[data-slot="dialog-content"] [data-slot="select-trigger"]:focus-visible {outline:2px solid #6f6f6f;outline-offset:2px;box-shadow:none;}
+[data-slot="dialog-content"] [data-slot="button"] {min-height:44px;border-radius:8px;box-shadow:none;font-weight:500;}
+[data-slot="dialog-footer"] {padding-top:20px;margin-top:4px;border-top:1px solid #dde1e6;gap:12px;}
+[data-slot="dialog-dismiss"] {position:absolute;top:14px;right:14px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:#f2f4f8;color:#525252;opacity:1;}
+[data-slot="dialog-dismiss"]:hover {background:#e3e8ef;color:#161616;}
+[data-slot="dialog-content"] [data-slot="dialog-header"] .shadow-sm {box-shadow:none;border-radius:10px;}
+[data-slot="dialog-content"] .font-mono {font-family:inherit;}
+[data-slot="dialog-content"] .text-slate-400 {color:#6f6f6f;}
+@media(max-width:600px){
+ [data-slot="dialog-content"], [data-slot="alert-dialog-content"] {max-height:calc(100dvh - 24px);width:calc(100vw - 24px);padding:20px;}
+ [data-slot="dialog-content"].p-0 {padding:0;}
+ [data-slot="dialog-content"].p-0 > div:not([data-slot]) {padding:24px 20px;}
+ [data-slot="dialog-header"] {padding-right:44px;margin-bottom:20px;}
+ [data-slot="dialog-title"] {font-size:22px;}
+ [data-slot="dialog-content"] [data-slot="select-trigger"] {max-width:100%;font-size:14px;}
+ [data-slot="dialog-content"] [data-slot="select-trigger"] .gap-6 {gap:10px;}
+}
+@media(prefers-reduced-motion:reduce){[data-slot="dialog-content"],[data-slot="dialog-overlay"]{animation:none;transition:none;}}
+/* Grid items must shrink with the dialog, including long account selectors. */
+[data-slot="dialog-content"] {overflow-x:hidden;}
+[data-slot="dialog-content"] > div {min-width:0;max-width:100%;}
+[data-slot="dialog-content"] [data-slot="select-trigger"] > span {min-width:0;overflow:hidden;text-overflow:ellipsis;}
+[data-slot="dialog-content"] [data-slot="dialog-header"] > div > div {min-width:0;}
+@media(max-width:600px){
+ [data-slot="dialog-content"] [data-slot="dialog-header"] > div {gap:12px;}
+ [data-slot="dialog-content"] [data-slot="dialog-header"] .shrink-0 {flex-shrink:0;}
+}
+
+/* Accessible text colors across pages and portalled dialogs. */
+.text-slate-300,.text-slate-400,.text-neutral-400,.text-gray-400 {color:#525252;}
+.text-emerald-500,.text-emerald-600,.text-green-500,.text-green-600 {color:#198038;}
+.text-amber-500,.text-amber-600,.text-orange-500,.text-orange-600 {color:#92400e;}
+.text-rose-500,.text-rose-600,.text-red-500,.text-red-600 {color:#da1e28;}
+.bg-rose-500,.bg-red-500 {background-color:#da1e28;}
+[class~="text-white/35"],[class~="text-white/40"],[class~="text-white/50"] {color:rgba(255,255,255,.75);}
+[class~="text-white/60"],[class~="text-white/70"] {color:rgba(255,255,255,.85);}
+input::placeholder,textarea::placeholder {color:#6f6f6f;opacity:1;}
+
+/* Impeccable polish: one surface and control scale across workspaces. */
+#root main [data-slot="card"]{border-radius:16px;box-shadow:none}
+#root main [data-slot="button"]{border-radius:10px;min-height:44px;box-shadow:none}
+#root main [data-slot="input"],#root main [data-slot="select-trigger"]{border-radius:8px;min-height:44px;box-shadow:none}
+[data-slot="sheet-content"]{border-radius:16px 0 0 16px}
+[data-slot="sheet-header"]{padding-right:44px}
+[data-slot="sheet-content"] .font-extrabold{font-weight:600}
+.transaction-tools{display:flex;align-items:end;gap:16px;flex-wrap:wrap;padding:24px;border-bottom:1px solid #dde1e6}
+.transaction-tools label{display:flex;flex-direction:column;gap:8px;font-size:13px;color:#525252}
+.transaction-search{flex:1;min-width:200px}
+.transaction-search>div{display:flex;align-items:center;gap:10px;border:1px solid #c1c7cd;border-radius:8px;padding:0 12px;background:white}
+.transaction-search input{min-width:0;width:100%;height:44px;background:transparent;border:0;outline-offset:2px;font-size:15px;color:#161616}
+.transaction-status select{height:46px;border:1px solid #c1c7cd;border-radius:8px;padding:0 12px;background:white;font-size:14px;color:#161616}
+.transaction-tools p{font-size:13px;color:#525252;margin:0;min-height:44px;display:flex;align-items:center}
+.transaction-empty{padding:48px 24px;text-align:center}.transaction-empty h2{font-size:22px}.transaction-empty p{margin:12px 0 20px;color:#525252}
+@media(max-width:600px){.transaction-tools{padding:20px;gap:12px}.transaction-search{flex-basis:100%}.transaction-status{flex:1}[data-slot="sheet-content"]{border-radius:0}}
+@media(prefers-reduced-motion:reduce){#root *,[data-slot="sheet-content"]{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:600px){
+ .transaction-history-row{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px 12px;padding:20px}
+ .transaction-history-row>div:first-child{width:40px;height:40px;align-self:start}
+ .transaction-history-row>div:last-child{grid-column:2;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px}
+ .transaction-history-row>div:nth-child(2) .truncate{white-space:normal;overflow:visible;text-overflow:clip}
+ .transaction-history-row>div:last-child>div{font-size:16px}
+}
+
+/* Brand display face; financial data retains the body stack. */
+@font-face{font-family:Unbounded;src:url('../assets/Unbounded-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+#root h1,#root h2,#root h3,[data-slot="dialog-title"],[data-slot="sheet-title"]{font-family:var(--bank-body);font-weight:var(--font-weight-semibold);letter-spacing:-.025em}
+#root main h1{line-height:1.2}
+.dashboard-balance{background-color:#001d6c;background-image:url('../assets/card-lines.svg');background-position:right center;background-size:auto 100%;background-repeat:no-repeat;border:1px solid #4589ff;border-radius:20px;padding:28px}
+.dashboard-balance.is-business{background-color:#31135e;background-image:url('../assets/card-lines.svg');background-position:right center;background-size:auto 100%;background-repeat:no-repeat;border-color:#8a3ffc}
+.dashboard-balance .balance-profile{background:#ffffff0d;border-color:#ffffff55;border-radius:8px;padding:5px 10px}
+.dashboard-balance .balance-actions{padding-top:20px;border-top:1px solid #ffffff29;margin-top:22px}
+.dashboard-balance .balance-amount{font-size:40px;letter-spacing:-.035em;margin-top:12px}
+.dashboard-accounts{border-color:#dde1e6;background:#fbfcfe;border-radius:18px}
+.dashboard-accounts .account-currency{background:#edf5ff;color:#29497e;border-radius:10px}
+@media(max-width:600px){.dashboard-balance{padding:22px}.dashboard-balance .balance-amount{font-size:32px}}
+
+/* Shared payment-card face: mobile and web use the same identity palette. */
+.payment-card{container-type:inline-size;position:relative;width:100%;aspect-ratio:1.586;border-radius:16px;padding:20px;color:#fff;background:#001141 url('../assets/card-lines.svg') right center/cover no-repeat;border:1px solid #4589ff;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.payment-card--copper{background-color:#491d8b;border-color:#8a3ffc}.payment-card--blue{background-color:#003a6d}.payment-card.is-frozen{background:#343a3f;border-color:#4d5358}
+.payment-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.payment-card-top strong{font:600 clamp(14px,5.4cqi,18px)/1.25 Inter,sans-serif}.payment-card-top>span{font:600 11px/1.4 Inter,sans-serif;background:#f2f4f8;color:#161616;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.payment-card-middle{display:flex;justify-content:space-between;align-items:center}.payment-card-middle svg{width:24px;height:24px}.payment-card-chip{width:38px;height:28px;background:#dec451;border:1px solid #9a8028;border-radius:6px;position:relative}.payment-card-chip:after{content:"";position:absolute;inset:6px 0;border-block:1px solid #9a8028}.payment-card-chip:before{content:"";position:absolute;inset:0 11px;border-inline:1px solid #9a8028}
+.payment-card-number{margin:0;font:400 clamp(16px,7cqi,24px)/1.3 Inter,sans-serif;letter-spacing:.05em;font-variant-numeric:tabular-nums;white-space:nowrap}.payment-card-bottom{display:flex;justify-content:space-between;align-items:end}.payment-card-bottom>span:first-child{font:600 9px/1.3 Inter,sans-serif}.payment-card-bottom strong{display:block;font-size:14px;margin-top:3px}.payment-card-visa{font:bold italic 25px/1 Arial,sans-serif;letter-spacing:-1px}.payment-card-mastercard{display:flex;isolation:isolate}.payment-card-mastercard i{display:block;width:27px;height:27px;border-radius:50%;background:#ed342e}.payment-card-mastercard i+i{background:#f7a726;margin-left:-10px}
+
+/* Web QA: dark-surface copy must not inherit light-surface muted colours. */
+#root .bank-wallet-banner{background:var(--bank-side,#001141);box-shadow:none;border-radius:16px}
+#root .bank-wallet-banner .text-slate-300,#root .bank-wallet-banner .text-slate-400{color:#dde1e6}
+#root .bank-wallet-banner>.pointer-events-none{display:none}
+.bank-sidebar button{transition:none}
+[data-slot="dialog-dismiss"]{width:44px;height:44px;top:10px;right:10px}
+
+/* Shared mobile/web task hierarchy; desktop keeps its persistent sidebar. */
+.bank-transfer-dialog{display:flex!important;flex-direction:column;max-height:calc(100dvh - 48px);border-radius:24px}
+.bank-transfer-body{overflow-y:auto;min-height:0}
+.bank-transfer-footer{flex-shrink:0;background:white}
+.payment-choice{transition:background .15s}
+.payment-choice--send svg{color:var(--bank-accent)}
+.payment-choice--send:hover{background:var(--bank-soft)}
+.payment-choice svg{color:var(--bank-accent)}
+.payment-choice:hover{background:var(--bank-soft)}
+
+/* Currency artwork and account badge dimensions shared with the mobile prototype. */
+.bank-currency-flag{display:inline-block;vertical-align:middle;width:28px;height:28px;min-width:28px;flex-shrink:0;object-fit:contain;border-radius:50%}
+.bank-currency-mark{display:inline-grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:var(--bank-accent,#0f62fe);color:#fff;font-size:24px;font-weight:600;line-height:1}
+
+/* Goal allocations share the same progression on Home and Savings. */
+.goal-balance{display:grid;gap:6px;color:#525252;font-size:14px}
+.goal-balance strong{font-size:clamp(26px,6vw,36px);font-weight:600;letter-spacing:-.025em;color:#161616;overflow-wrap:anywhere}
+.goal-progress{height:8px;background:#edf0f4;border-radius:8px;overflow:hidden}
+.goal-progress>span{display:block;height:100%;background:#007d79;border-radius:inherit}
+.activity-filter-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid #edf0f4;color:#525252;font-size:14px}
+.transaction-tools .transaction-status{min-width:140px;flex:1}
+.transaction-tools .transaction-search{min-width:180px;flex:2}
+@media(max-width:600px){.transaction-tools .transaction-status,.transaction-tools .transaction-search{min-width:0;flex-basis:100%}.activity-filter-summary{padding:16px 20px}}
+
+/* Mobile visual foundation, adapted to desktop density and persistent navigation.
+   Shared tokens live in theme.css; existing routes and interactions remain intact. */
+body { font-family:var(--bank-body);font-weight:var(--font-weight-normal);color:var(--bank-ink); }
+:is(.bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"]) strong { font-weight:var(--font-weight-semibold); }
+::selection { background:var(--bank-soft); color:var(--bank-accent); }
+#root .bank-workspace { background:var(--background); color:var(--bank-ink); }
+#root .bank-workspace main { background:var(--bank-paper); }
+#root .bank-workspace :is(h1),
+[data-slot="dialog-content"] [data-slot="dialog-title"],
+[data-slot="sheet-content"] [data-slot="sheet-title"] {
+  font-family:var(--bank-display);font-weight:500;letter-spacing:-.025em;line-height:1.35;text-wrap:balance;
+}
+#root .bank-workspace h1 { font-size:var(--text-2xl); }
+#root .bank-workspace :is(h2,h3) { font-family:var(--bank-body);font-size:var(--text-lg);line-height:var(--text-lg--line-height);font-weight:var(--font-weight-semibold);letter-spacing:-.025em; }
+#root .bank-workspace :is(.font-bold,.font-extrabold,.font-black) { font-weight:600; }
+#root .bank-workspace :is(.text-slate-900,.text-slate-800,.text-neutral-900) { color:var(--bank-ink); }
+#root .bank-workspace :is(.text-slate-500,.text-slate-400,.text-slate-600) { color:var(--bank-muted); }
+#root .bank-workspace :is(.bg-slate-50,.bg-slate-100) { background-color:var(--bank-paper); }
+#root .bank-workspace main [data-slot="card"] { border-color:var(--bank-line);border-radius:var(--bank-panel-radius);box-shadow:none; }
+#root .bank-workspace main [data-slot="button"],
+[data-slot="dialog-content"] [data-slot="button"] { border-radius:var(--bank-control-radius);font-weight:500;box-shadow:none; }
+#root .bank-workspace [data-slot="button"][data-variant="default"],
+[data-slot="dialog-content"] [data-slot="button"][data-variant="default"] {
+  background:var(--bank-action);color:var(--bank-action-ink);border-color:transparent;
+}
+#root .bank-workspace [data-slot="button"][data-variant="default"]:hover,
+[data-slot="dialog-content"] [data-slot="button"][data-variant="default"]:hover { filter:brightness(.96); }
+#root .bank-workspace :is([data-slot="input"],[data-slot="select-trigger"],[data-slot="native-select"]),
+[data-slot="dialog-content"] :is([data-slot="input"],[data-slot="select-trigger"],[data-slot="native-select"]) {
+  border-radius:var(--bank-control-radius);background:var(--bank-paper);border-color:var(--bank-line);color:var(--bank-ink);box-shadow:none;
+}
+#root .bank-workspace :is(input,button,a):focus-visible { outline-color:var(--bank-accent); }
+#root .bank-workspace [data-slot="bank-topbar"] { background:var(--background);border-color:var(--bank-line);box-shadow:none; }
+#root .bank-workspace [data-slot="bank-topbar"] input { box-shadow:none; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar { background:var(--background);color:var(--bank-ink);border-right:1px solid var(--bank-line); }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar > div { border-color:var(--bank-line); }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar a { color:var(--bank-ink); }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar a img { filter:none; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar nav p { color:var(--bank-muted);font-weight:500;letter-spacing:normal;text-transform:none; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar button { color:var(--bank-muted);background:transparent;border-radius:var(--bank-control-radius);font-weight:500;box-shadow:none; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar button:hover { background:var(--bank-paper);color:var(--bank-ink); }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar button[aria-current="page"] { background:var(--bank-soft);color:var(--bank-accent);font-weight:600; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar .text-white { color:var(--bank-ink); }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar [data-slot="navigation-badge"] { background:var(--bank-accent);color:var(--card); }
+#root .bank-workspace .dashboard-balance { background:var(--bank-wash);color:var(--bank-ink);border:0;border-radius:var(--bank-panel-radius); }
+#root .bank-workspace .balance-heading,
+#root .bank-workspace .balance-account { color:var(--bank-muted); }
+#root .bank-workspace .balance-profile { background:var(--bank-soft);border-color:var(--bank-line);color:var(--bank-accent); }
+#root .bank-workspace .dashboard-balance .balance-actions { border:0;padding-top:0;margin-top:calc(var(--spacing) * 6); }
+#root .bank-workspace .balance-actions a { background:var(--card);color:var(--bank-ink);border-color:var(--bank-accent);border-radius:var(--bank-control-radius); }
+#root .bank-workspace .balance-actions a:hover { background:var(--bank-soft); }
+#root .bank-workspace .balance-actions a:first-child { background:var(--bank-accent);color:var(--card); }
+#root .bank-workspace .balance-actions a:first-child:hover { background:var(--bank-ink);border-color:var(--bank-ink); }
+#root .bank-workspace .dashboard-accounts { background:var(--card);border-color:var(--bank-line);border-radius:var(--bank-panel-radius); }
+#root .bank-workspace .account-row { border-color:var(--bank-line); }
+#root .bank-workspace .account-row:hover { background:var(--bank-paper); }
+#root .bank-workspace .account-currency { background:var(--bank-soft);color:var(--bank-accent); }
+#root .bank-workspace .bank-currency-mark { background:var(--bank-soft);color:var(--bank-accent); }
+#root .bank-workspace :is(.bank-wallet-banner,.bank-product-banner,.bank-investment-summary,.bank-savings-banner) {
+  background:var(--bank-card-base);color:var(--bank-card-ink);box-shadow:none;border-radius:var(--bank-panel-radius);
+}
+.payment-card { background:radial-gradient(ellipse at 100% 0,var(--bank-card-glow),transparent 75%),linear-gradient(130deg,var(--bank-card-base),var(--bank-card-end));border:0;isolation:isolate; }
+.payment-card--copper { --bank-card-base:var(--bank-copper-base);--bank-card-glow:var(--bank-copper-glow); }
+.payment-card--blue { --bank-card-base:var(--bank-virtual-base);--bank-card-glow:var(--bank-virtual-glow); }
+.payment-card.is-frozen { filter:saturate(.18); }
+.payment-card > :not(.payment-card-motif) { position:relative;z-index:1; }
+.payment-card .payment-card-motif { position:absolute;width:62%;height:115%;right:-12%;top:3%;object-fit:contain;filter:brightness(0) invert(1);opacity:.055;transform:rotate(-18deg);pointer-events:none; }
+.payment-card-top > span { background:var(--bank-card-state);color:var(--bank-card-ink);border-radius:var(--radius-sm); }
+.payment-card-number { font-size:var(--text-lg);letter-spacing:.1em; }
+[data-slot="dialog-content"] { color:var(--bank-ink); }
+[data-slot="dialog-content"] [data-slot="dialog-title"] { font-size:var(--text-lg); }
+[data-slot="dialog-content"] [data-slot="dialog-description"] { color:var(--bank-muted); }
+@media (prefers-reduced-motion:reduce) { .payment-card { transition:none; } }
+
+/* Keep the compact switch track while providing a full touch target. */
+[data-slot="switch"] { position:relative; }
+[data-slot="switch"]::before { content:"";position:absolute;min-width:calc(var(--spacing) * 11);min-height:calc(var(--spacing) * 11);inset:50% auto auto 50%;transform:translate(-50%,-50%); }
+
+/* Action hierarchy: saturated surfaces belong to the primary task action.
+   Secondary controls and data retain readable ink without competing fills. */
+:is(#root .bank-workspace, [data-slot="dialog-content"], [data-slot="sheet-content"]) [data-slot="button"][data-variant="outline"] {
+  background:var(--card);color:var(--bank-ink);border-color:var(--bank-line);box-shadow:none;
+}
+:is(#root .bank-workspace, [data-slot="dialog-content"], [data-slot="sheet-content"]) [data-slot="button"][data-variant="outline"]:hover {
+  background:var(--bank-paper);color:var(--bank-ink);
+}
+:is(#root .bank-workspace, [data-slot="dialog-content"], [data-slot="sheet-content"]) [data-slot="supporting-surface"],
+:is(#root .bank-workspace, [data-slot="dropdown-menu-content"]) [data-slot="avatar-fallback"] {
+  background:var(--bank-paper);color:var(--bank-ink);box-shadow:none;
+}
+[data-slot="supporting-surface"] .text-white { color:inherit; }
+:is(#root .bank-workspace,[data-slot="sheet-content"]) .bank-sidebar [data-slot="navigation-badge"] {
+  background:var(--bank-paper);color:var(--bank-ink);
+}
+#root .bank-workspace .payment-choice svg { color:var(--bank-muted); }
+#root .bank-workspace .balance-actions a { border-color:var(--bank-line); }
+#root .bank-workspace .balance-actions a:first-child { background:var(--bank-action);color:var(--bank-action-ink); }
+#root .bank-workspace .goal-progress > span { background:var(--bank-muted); }
+
+/* Preserve the mobile card artwork identity; decorative surfaces elsewhere stay quiet. */
+.payment-card { color:var(--primary-foreground);gap:calc(var(--spacing) * 3); }
+.payment-card-middle { color:var(--bank-card-ink); }
+.payment-card--copper.payment-card--blue { --bank-card-base:var(--bank-business-virtual-base);--bank-card-glow:var(--bank-business-virtual-glow); }
+.payment-card-bottom { align-items:center; }
+.payment-card-top > span { font-weight:var(--font-weight-normal); }
+.payment-card-mastercard i { width:calc(var(--spacing) * 5);height:calc(var(--spacing) * 5);background:var(--bank-network-red); }
+.payment-card-mastercard i+i { background:var(--bank-network-gold);margin-left:calc(var(--spacing) * -2); }
+
+/* Profile identity mirrors the mobile switcher; selection is also marked by a check. */
+:is(#root .bank-workspace, [data-slot="dropdown-menu-content"]) [data-slot="avatar-fallback"][data-profile-kind="personal"] {
+  background:var(--brand-personal);color:var(--primary-foreground);
+}
+:is(#root .bank-workspace, [data-slot="dropdown-menu-content"]) [data-slot="avatar-fallback"][data-profile-kind="business"] {
+  background:var(--brand-business);color:var(--primary-foreground);
+}
+[data-slot="dropdown-menu-content"] [data-profile-option][aria-current="true"] {
+  background:var(--bank-soft);color:var(--bank-ink);
+}
+
+/* Stable type roles across dashboard, product pages and task surfaces. */
+#root .bank-workspace main h1 + p,
+#root .bank-workspace main header > p {
+  font-size:var(--text-sm);line-height:var(--text-sm--line-height);font-weight:var(--font-weight-normal);
+}
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"]) [data-slot="button"] {
+  font-size:var(--text-sm);line-height:var(--text-sm--line-height);
+}
+[data-slot="sheet-content"] [data-slot="sheet-title"] {
+  font-size:var(--text-lg);
+}
+
+/* Transfer headers already provide their own padding and divider. */
+[data-slot="dialog-content"].bank-transfer-dialog { gap:0; }
+.bank-transfer-dialog [data-slot="dialog-header"] { margin-bottom:0; }
+
+/* Keep statement actions visible while long transaction lists scroll independently. */
+[data-slot="dialog-content"].statement-dialog { overflow:hidden; }
+.statement-dialog [data-slot="dialog-header"] { margin-bottom:0; }
+
+/* Proximity: direct dialog headers use the container gap, not a second margin. */
+[data-slot="dialog-content"] > [data-slot="dialog-header"] { margin-bottom:0; }
+
+/* Keep the balance label and value a single visual and semantic group. */
+#root .bank-workspace .balance-summary { display:grid;gap:8px;margin:0; }
+#root .bank-workspace .balance-summary .balance-amount { margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere; }
+
+/* Keyboard focus must survive quiet surface styles that remove box shadows. */
+:is(#root .bank-workspace, [data-slot="dialog-content"], [data-slot="sheet-content"])
+:is(button, a, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline:calc(var(--spacing) * .5) solid var(--ring);
+  outline-offset:calc(var(--spacing) * .5);
+}

@@ -1,0 +1,57 @@
+/* Shared component contracts. Values preserve the recovered UI geometry.
+   Standard scale dimensions stay in Tailwind; these names express component roles.
+   Radix dimensions are supplied at runtime by the corresponding primitive. */
+@theme {
+  --radius-chart-marker: 4px;
+  --radius-action: 0.85rem;
+  --radius-action-inner: 0.75rem;
+  --text-micro: 0.625rem;
+  --text-caption: 0.6875rem;
+  --text-balance: 2.5rem;
+  --text-balance-compact: 2.35rem;
+  --tracking-label: 0.2em;
+  --shadow-panel: 0 20px 60px -15px rgb(0 0 0 / 0.12);
+  --shadow-floating-action: 0 12px 32px -8px rgb(0 0 0 / 0.18);
+  --shadow-inset-hairline: inset 0 0 0 1px rgb(0 0 0 / 0.05);
+  --shadow-wallet: 0 20px 50px -24px rgb(0 0 0 / 0.5);
+  --background-image-wallet-highlight: radial-gradient(circle at 70% 30%, rgb(255 255 255 / 0.08), transparent 45%);
+}
+@utility max-w-dialog-viewport { max-width: 85vw; }
+@utility max-w-dialog-inset { max-width: calc(100% - 2rem); }
+@utility max-h-dialog { max-height: 85dvh; }
+@utility max-h-sheet { max-height: 70vh; }
+@utility max-h-drawer { max-height: 80vh; }
+@utility grid-cols-alert-icon { grid-template-columns: calc(var(--spacing) * 4) 1fr; }
+@utility grid-cols-alert { grid-template-columns: 0 1fr; }
+@utility grid-cols-card-header { grid-template-columns: 1fr auto; }
+@utility grid-rows-card-header { grid-template-rows: auto auto; }
+@utility grid-cols-dashboard { grid-template-columns: minmax(0, 1fr) minmax(280px, 340px); }
+@utility grid-cols-product-detail { grid-template-columns: 1fr 380px; }
+@utility grid-cols-transaction-detail { grid-template-columns: 1fr 320px; }
+@utility grid-cols-payment { grid-template-columns: 1.15fr 1fr; }
+@utility transition-control { transition-property: color, box-shadow; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-field { transition-property: border-color, box-shadow; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-surface { transition-property: background-color, border-color; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-surface-shadow { transition-property: background-color, border-color, box-shadow; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-width { transition-property: width; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-sidebar { transition-property: left, right, width; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-sidebar-inset { transition-property: margin, opacity; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility transition-sidebar-control { transition-property: width, height, padding; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function)); transition-duration: var(--tw-duration, var(--default-transition-duration)); }
+@utility h-navigation-viewport { height: var(--radix-navigation-menu-viewport-height); }
+@utility w-navigation-viewport { width: var(--radix-navigation-menu-viewport-width); }
+@utility h-select-trigger { height: var(--radix-select-trigger-height); }
+@utility min-w-select-trigger { min-width: var(--radix-select-trigger-width); }
+@utility rounded-inherit { border-radius: inherit; }
+@utility w-sidebar-icon-padded { width: calc(var(--sidebar-width-icon) + var(--spacing) * 4); }
+@utility w-sidebar-icon-bordered { width: calc(var(--sidebar-width-icon) + var(--spacing) * 4 + 2px); }
+@utility -left-sidebar { left: calc(var(--sidebar-width) * -1); }
+@utility -right-sidebar { right: calc(var(--sidebar-width) * -1); }
+@utility shadow-sidebar-border { box-shadow: 0 0 0 1px var(--sidebar-border); }
+@utility shadow-sidebar-accent { box-shadow: 0 0 0 1px var(--sidebar-accent); }
+@utility h-switch { height: 1.15rem; }
+@utility translate-x-switch-checked { --tw-translate-x: calc(100% - 2px); translate: var(--tw-translate-x, 0) var(--tw-translate-y, 0); }
+@utility h-tab { height: calc(100% - 1px); }
+@utility translate-y-tooltip-arrow { --tw-translate-y: calc(-50% - 2px); translate: var(--tw-translate-x, 0) var(--tw-translate-y, 0); }
+@utility w-action-panel { width: min(100%, 300px); }
+@utility max-w-account-label { max-width: min(100%, 220px); }
+@utility p-icon-artwork { padding: 22%; }

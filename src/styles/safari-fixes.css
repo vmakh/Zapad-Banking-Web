@@ -1,0 +1,142 @@
+/**
+ * Safari-specific layout fixes (flex overflow, aspect-ratio, inputs).
+ */
+
+[data-slot="card"] {
+  min-width: 0;
+}
+
+/* Safari gives inputs a large default min-width, breaking flex rows */
+input[type="number"],
+input[type="text"],
+input[type="search"] {
+  min-width: 0;
+}
+
+/* aspect-ratio + flex column: h-full is unreliable in WebKit */
+.card-aspect-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100%;
+}
+
+/**
+ * Hover scale/lift — only when the device has a real pointing device.
+ * Avoids transforms stuck after tap or fast hover-out (Safari / iOS sticky :hover).
+ */
+
+/* Fixed slot: scale inside without shifting flex/grid layout */
+.zb-scale-slot {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.zb-scale-slot__target {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.zb-hover-scale-105,
+.zb-hover-scale-110,
+.zb-hover-scale-102,
+.zb-hover-scale-blob,
+.zb-active-scale-95 {
+  transform: scale(1);
+}
+
+.zb-hover-lift,
+.zb-group-hover-lift,
+.zb-group-hover-lift-up {
+  transform: translateY(0);
+}
+
+.zb-group-hover-shift-left {
+  transform: translateX(0);
+}
+
+.zb-hover-scale-105,
+.zb-hover-scale-110,
+.zb-hover-scale-102,
+.zb-active-scale-95 {
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.zb-hover-scale-blob {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.zb-hover-lift,
+.zb-group-hover-lift,
+.zb-group-hover-lift-up,
+.zb-group-hover-shift-left {
+  transition: transform 0.2s ease;
+}
+
+.zb-hover-lift {
+  transition-property: transform, box-shadow;
+  transition-duration: 0.25s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .zb-group-hover-lift {
+    transform: translateY(-0.125rem);
+  }
+
+  .group:hover .zb-group-hover-lift-up {
+    transform: translateY(-0.25rem);
+  }
+
+  .group:hover .zb-group-hover-shift-left {
+    transform: translateX(-0.25rem);
+  }
+
+  .group:hover .zb-hover-scale-105,
+  .group:hover .zb-scale-slot__target.zb-hover-scale-105,
+  .zb-hover-scale-105:hover,
+  .zb-scale-slot__target.zb-hover-scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .group:hover .zb-hover-scale-110,
+  .group:hover .zb-scale-slot__target.zb-hover-scale-110,
+  .zb-hover-scale-110:hover,
+  .zb-scale-slot__target.zb-hover-scale-110:hover {
+    transform: scale(1.08);
+  }
+
+  .group:hover .zb-hover-scale-blob {
+    transform: scale(1.2);
+    opacity: 0.35;
+  }
+
+  .zb-hover-scale-102:hover {
+    transform: scale(1.02);
+  }
+
+  .zb-active-scale-95:active {
+    transform: scale(0.95);
+  }
+
+  .zb-hover-lift:hover {
+    transform: translateY(-0.125rem);
+  }
+
+  /* Explicit reset when pointer leaves — fixes stuck scale on cards */
+  .group:not(:hover) .zb-hover-scale-105,
+  .group:not(:hover) .zb-scale-slot__target.zb-hover-scale-105,
+  .group:not(:hover) .zb-hover-scale-110,
+  .group:not(:hover) .zb-scale-slot__target.zb-hover-scale-110 {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "receive": {
+    "dialog": {
+      "clientHeight": 434,
+      "clientWidth": 511,
+      "height": 433.5,
+      "scrollHeight": 740,
+      "scrollWidth": 511,
+      "width": 512,
+      "x": 187,
+      "y": 0
+    },
+    "focus": "Close",
+    "viewport": [
+      699,
+      433
+    ]
+  },
+  "statement": {
+    "dialog": {
+      "clientWidth": 520,
+      "height": 385.5,
+      "scrollWidth": 520,
+      "width": 520,
+      "x": 89.5,
+      "y": 24
+    },
+    "download": {
+      "height": 44,
+      "width": 156.078125,
+      "x": 429.421875,
+      "y": 341.5
+    },
+    "focus": " Download CSV",
+    "viewport": [
+      699,
+      433
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+Relevant native accessibility excerpt after resetting Chrome zoom (unrelated browser profile and extension information omitted):
+
+					11 button Zoom: 100%
+		93 container Zoom: 100%
+					96 container Zoom: 100%
+					99 button (disabled) Reset

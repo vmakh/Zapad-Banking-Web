@@ -1,0 +1,236 @@
+[
+  {
+    "profile": "personal",
+    "route": "home",
+    "heading": "Good afternoon, Alex",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "payments",
+    "heading": "Payments",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "accounts",
+    "heading": "Accounts",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "cards",
+    "heading": "Cards",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "exchange",
+    "heading": "Currency exchange",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "loans",
+    "heading": "Loans",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "savings",
+    "heading": "Savings",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "investments",
+    "heading": "Investments",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "statements",
+    "heading": "Statements",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "transactions",
+    "heading": "Activity",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "inbox",
+    "heading": "Inbox",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "settings",
+    "heading": "Settings",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "personal",
+    "route": "help",
+    "heading": "Help & support",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "home",
+    "heading": "Good afternoon, Demo Corp",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "payments",
+    "heading": "Payments",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "accounts",
+    "heading": "Accounts",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "cards",
+    "heading": "Cards",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "exchange",
+    "heading": "Currency exchange",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "loans",
+    "heading": "Loans",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "savings",
+    "heading": "Savings",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "investments",
+    "heading": "Investments",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "statements",
+    "heading": "Statements",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "transactions",
+    "heading": "Activity",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "inbox",
+    "heading": "Inbox",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "settings",
+    "heading": "Settings",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "profile": "business",
+    "route": "help",
+    "heading": "Help & support",
+    "mainWidth": 320,
+    "overflow": [],
+    "scrollWidth": 320,
+    "width": 320
+  }
+]
