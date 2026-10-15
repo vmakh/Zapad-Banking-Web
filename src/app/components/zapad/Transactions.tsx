@@ -132,15 +132,15 @@ export function Transactions({
 
 function StatusBadge({ status }: { status: Transaction["status"] }) {
   const { t } = useI18n();
-  const map: Record<Transaction["status"], string> = {
-    Completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    Pending: "bg-amber-50 text-amber-700 border-amber-200",
-    Scheduled: "bg-sky-50 text-sky-700 border-sky-200",
-    "Waiting for approval": "bg-orange-50 text-orange-700 border-orange-200",
+  const map: Record<Transaction["status"], "success" | "warning" | "info" | "attention"> = {
+    Completed: "success",
+    Pending: "warning",
+    Scheduled: "info",
+    "Waiting for approval": "attention",
   };
   if (status === "Completed") return null;
   return (
-    <Badge variant="outline" className={cn("text-xs font-medium px-2.5 py-0.5 rounded-full", map[status])}>
+    <Badge tone={map[status]}>
       {t(status)}
     </Badge>
   );

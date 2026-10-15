@@ -58,6 +58,16 @@ export function RootLayout() {
   const profile = getProfileBySlug(profileSlug);
   const isBusiness = profile.kind === "business";
   const pathToNavId = navIdFromPathname(location.pathname);
+  const sectionTitles: Record<string, string> = {
+    dashboard: "Home", payments: "Payments", accounts: "Accounts", cards: "Cards",
+    savings: "Savings", investments: "Investments", loans: "Loans", exchange: "Currency exchange",
+    statements: "Statements", transactions: "Activity", inbox: "Inbox", settings: "Settings", help: "Help & support",
+  };
+  const sectionTitle = t(sectionTitles[pathToNavId] ?? "Home");
+  useEffect(() => {
+    document.title = `${sectionTitle} · ${profile.name} — Zapad Banka · ${t("Banking demo")}`;
+  }, [sectionTitle, profile.name, t]);
+
 
   const setProfileSlug = (slug: ProfileSlug) => {
     const rest = location.pathname.replace(/^\/(personal|business)/, "") || "";

@@ -12,7 +12,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = "ltr";
-    document.title = `Zapad Banka — ${t("Banking demo")}`;
+    if (!document.querySelector(".bank-workspace")) document.title = `Zapad Banka — ${t("Banking demo")}`;
   }, [locale, t]);
   return children;
 }

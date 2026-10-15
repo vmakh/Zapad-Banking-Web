@@ -42,14 +42,14 @@ export function StatementsPage() {
   <header><h1 className="text-3xl font-medium">{t("Statements")}</h1><p className="text-slate-500 mt-2">{t("View sample statements by account and period.")}</p></header>
   {!accountValid && <p role="status" className="text-sm text-slate-600">{t("Account not found in this profile. Showing all accounts.")}</p>}
   <div data-bank-surface className="flex flex-wrap gap-5 bg-white rounded-2xl p-5 border border-slate-200">
-   <div className="flex-1 min-w-48 space-y-2">
+   <div className="flex-1 min-w-0 basis-48 space-y-2">
     <label htmlFor="statement-account" className="block text-sm text-muted-foreground">{t("Account")}</label>
     <Select value={accountId} onValueChange={setAccountId}>
      <SelectTrigger id="statement-account" className="min-h-12 rounded-xl"><SelectValue /></SelectTrigger>
      <SelectContent><SelectItem value="all">{t("All accounts")}</SelectItem>{accounts.map(a=><SelectItem key={a.id} value={a.id}><CurrencyFlag currency={a.currency} />{t(a.name)} · {a.currency}</SelectItem>)}</SelectContent>
     </Select>
    </div>
-   <div className="flex-1 min-w-48 space-y-2">
+   <div className="flex-1 min-w-0 basis-48 space-y-2">
     <label htmlFor="statement-period" className="block text-sm text-muted-foreground">{t("Period")}</label>
     <Select value={period} onValueChange={setPeriod}>
      <SelectTrigger id="statement-period" className="min-h-12 rounded-xl"><SelectValue placeholder={t("Choose a period")} /></SelectTrigger>

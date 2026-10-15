@@ -116,7 +116,7 @@ export function AlertsCard({
                 <IconScaleSlot className="size-full rounded-full" innerClassName="bg-muted text-foreground">
                   <Icon className="size-6" />
                 </IconScaleSlot>
-                {StatusIcon && <span className="absolute -bottom-0.5 -right-0.5 flex size-4.5 items-center justify-center rounded-full bg-amber-100 text-amber-800 ring-2 ring-card">
+                {StatusIcon && <span data-slot="status-indicator" data-tone="warning" className="absolute -bottom-0.5 -right-0.5 flex size-4.5 items-center justify-center rounded-full bg-amber-100 text-amber-800 ring-2 ring-card">
                   <StatusIcon className="size-3" />
                 </span>}
               </div>

@@ -1,10 +1,11 @@
 import { formatDate } from "../utils/date";
+import { Badge } from "../components/ui/badge";
 import { localizedMerchant } from "../i18n/display";
 import { useI18n } from "../i18n/I18nProvider";
 import { copyText } from "../utils/clipboard";
 import { cn } from "../components/ui/utils";
 import { CurrencyMark } from "../components/zapad/CurrencyIcon";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";
@@ -222,7 +223,7 @@ function OpenAccountDialog({
                       : "border-slate-200 bg-white hover:border-slate-300")}
                   style={selected === type.id ? { borderColor: isBusiness ? "var(--brand-business)" : "var(--brand-personal)" } : {}}
                 >
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
                       <div className="font-semibold text-slate-900 text-sm">{t(type.label)}</div>
                       <div className="text-xs font-normal text-slate-500 mt-1 leading-snug">{t(type.desc)}</div>
@@ -326,11 +327,11 @@ export function AccountsPage() {
       </div>
 
       {/* Total balance */}
-      <div className="border-b border-border pb-6">
+      <div className="bank-amount-container border-b border-border pb-6">
         <div className="text-sm text-muted-foreground mb-2">
           {t("Total EUR balance")}
         </div>
-        <div className="text-4xl font-semibold tracking-tight text-foreground">
+        <div data-bank-account-amount style={{ "--balance-chars": formatMoney(totalBalance).length } as CSSProperties} className="text-4xl font-semibold tracking-tight text-foreground">
           {isPrivate ? "••••••" : formatMoney(totalBalance)}
         </div>
         <div className="text-sm text-muted-foreground mt-2">
@@ -344,26 +345,22 @@ export function AccountsPage() {
             key={account.id}
             className="w-full text-left group"
           >
-            <Card className="p-7 border-slate-200/60 bg-white rounded-4xl hover:shadow-lg hover:border-slate-300 transition-all duration-300 shadow-sm">
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-4">
-                  <CurrencyMark currency={account.currency} />
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight"><button type="button" aria-haspopup="dialog" onClick={() => setDetailAccount(account)} className="min-h-11 text-left hover:underline underline-offset-4">{t(account.name)}</button></h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs font-medium text-slate-400 px-2.5 py-1 rounded-full bg-slate-100">
-                        {t(account.type)}
-                      </span>
-                    </div>
+            <Card data-bank-account-card className="flex flex-col gap-6 p-5 sm:p-6 border-slate-200/60 bg-white rounded-4xl hover:shadow-lg hover:border-slate-300 transition-all duration-300 shadow-sm">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div className="flex min-w-0 flex-1 items-start gap-3">
+                  <div className="flex h-6 shrink-0 items-center"><CurrencyMark currency={account.currency} /></div>
+                  <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
+                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight"><button type="button" aria-haspopup="dialog" onClick={() => setDetailAccount(account)} className="bank-account-title text-left hover:underline underline-offset-4">{t(account.name)}</button></h3>
+                    <Badge tone="neutral">{t(account.type)}</Badge>
                   </div>
                 </div>
                 <Button variant="ghost" size="icon" aria-label={t(account.name)} aria-haspopup="dialog" onClick={() => setDetailAccount(account)} className="shrink-0 text-muted-foreground"><ChevronRight className="size-5" /></Button>
               </div>
 
-              <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{t("Balance")}</div>
-                  <div className="text-2xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div className="bank-amount-container flex w-full min-w-0 flex-1 flex-col gap-2">
+                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wide">{t("Balance")}</div>
+                  <div data-bank-account-amount style={{ "--balance-chars": formatMoney(account.balance, account.currency).length } as CSSProperties} className="text-2xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
                     {isPrivate ? "••••••" : formatMoney(account.balance, account.currency)}
                   </div>
                 </div>
@@ -372,7 +369,7 @@ export function AccountsPage() {
                 </code>
               </div>
 
-              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <Button
                   variant="outline"
                   onClick={(e) => {

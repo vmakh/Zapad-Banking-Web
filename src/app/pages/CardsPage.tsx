@@ -1,3 +1,4 @@
+import { Alert, AlertDescription } from "../components/ui/alert";
 import { FieldFeedback } from "../components/ui/field-feedback";
 import { useI18n } from "../i18n/I18nProvider";
 import { cardLimitError } from "../utils/cardLimit";
@@ -110,12 +111,12 @@ function FreezeDialog({
         </DialogHeader>
 
         {!card.frozen && (
-          <div className="rounded-lg bg-amber-50 border border-amber-100 p-4 mb-6 flex items-start gap-3">
-            <AlertTriangle className="size-5 text-amber-600 shrink-0 mt-0.5" />
-            <p className="text-sm font-normal text-amber-700">
+          <Alert tone="warning" role="status">
+            <AlertTriangle aria-hidden="true" />
+            <AlertDescription>
               {t("This setting is saved on this device. No real card or payment is affected.")}
-            </p>
-          </div>
+            </AlertDescription>
+          </Alert>
         )}
 
         <div data-form-actions className="grid grid-cols-2 gap-3">
@@ -177,7 +178,7 @@ function LimitsDialog({
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
       <DialogContent className="sm:max-w-md rounded-4xl p-8 border border-slate-200/60 shadow-2xl">
         <DialogHeader className="mb-7">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <div data-slot="functional-icon" className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
               <Lock className="size-5" />
             </div>
@@ -232,8 +233,8 @@ function LimitsDialog({
             );
           })}
 
-          <div className="flex items-center justify-between p-4 rounded-lg bg-slate-50 border border-slate-100">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-lg bg-slate-50 border border-slate-100">
+            <div className="flex min-w-0 flex-wrap items-center gap-3">
               <Globe className="size-5 text-slate-500" />
               <div>
                 <div className="font-medium text-slate-900 text-sm">{t("International payments")}</div>
@@ -300,7 +301,7 @@ function DetailsDialog({
     <Dialog open={open} onOpenChange={(v) => { if (!v) { setRevealed(false); onClose(); } }}>
       <DialogContent className="sm:max-w-sm rounded-4xl p-8 border border-slate-200/60 shadow-2xl">
         <DialogHeader className="mb-7">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <div data-slot="functional-icon" className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
               <ShieldCheck className="size-5" />
             </div>
@@ -463,11 +464,11 @@ export function CardsPage() {
           const spendPct = Math.min((card.monthlySpend / card.monthlyLimit) * 100, 100);
 
           return (
-            <Card key={card.id} className="@container min-w-0 p-4 sm:p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm">
+            <Card data-bank-product-card key={card.id} className="@container min-w-0 p-4 sm:p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm">
               <CardDisplay card={card} isPrivate={isPrivate} frozen={card.frozen} />
 
               {/* Spend bar */}
-              <div className="mt-6 space-y-2">
+              <div data-card-pair className="mt-6 space-y-2">
                 <div className="flex flex-wrap justify-between gap-2 text-xs font-medium text-slate-400 uppercase tracking-wide min-w-0">
                   <span className="shrink-0">{t("Monthly spend")}</span>
                   <span className="text-slate-700 text-right whitespace-nowrap min-w-0">
@@ -487,7 +488,7 @@ export function CardsPage() {
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-2 @sm:grid-cols-4 gap-1 border-t border-border pt-3">
+              <div className="grid grid-cols-2 @sm:grid-cols-4 gap-3">
                 {[
                   { label: card.frozen ? "Unfreeze" : "Freeze", icon: Snowflake, run: () => setFreezeDialog(card.id), active: card.frozen },
                   { label: "Details", icon: Eye, run: () => setDetailsDialog(card.id) },
@@ -496,7 +497,7 @@ export function CardsPage() {
                 ].map(action => <Button key={action.label} variant="ghost" onClick={action.run} aria-label={action.online ? (isPrivate ? t("Online payments {status} for {card}", { status: card.onlineEnabled === false ? t("off") : t("on"), card: t(card.type) }) : t("Online payments {status} for {card} ending {last4}", { status: card.onlineEnabled === false ? t("off") : t("on"), card: t(card.type), last4: card.last4 })) : undefined} className="min-w-0 h-auto flex-col gap-2 px-1 py-2 whitespace-normal">
                   <span data-icon-role="action" data-slot={action.active ? "status-icon" : "functional-icon"} className={cn("relative flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary text-foreground", action.active && "bg-sky-50 text-sky-700")}>
                     <action.icon className="size-5" aria-hidden="true" />
-                    {action.online && <span className={cn("absolute right-0 top-0 size-2 rounded-full border-2 border-white", card.onlineEnabled === false ? "bg-slate-400" : "bg-emerald-500")} />}
+                    {action.online && <span data-slot="status-dot" data-tone={card.onlineEnabled === false ? "neutral" : "success"} className={cn("absolute right-0 top-0 size-2 rounded-full border-2 border-white", card.onlineEnabled === false ? "bg-slate-400" : "bg-emerald-500")} />}
                   </span>
                   <span className="min-w-0 w-full break-words text-center text-sm leading-5">{t(action.label)}</span>
                 </Button>)}

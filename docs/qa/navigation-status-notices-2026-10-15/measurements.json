@@ -1,0 +1,2739 @@
+{
+  "screens": [
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "home",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Головна · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "payments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Платежі · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Рахунки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "cards",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Картки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Обмін валют · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "loans",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Кредити · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "savings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Заощадження · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "investments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Інвестиції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "statements",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Виписки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Операції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Вхідні · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "settings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Налаштування · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "route": "help",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Допомога й підтримка · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "home",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Головна · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "payments",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Платежі · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Рахунки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "cards",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Картки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Обмін валют · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "loans",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Кредити · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "savings",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Заощадження · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "investments",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Інвестиції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "statements",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Виписки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Операції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Вхідні · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "settings",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Налаштування · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "route": "help",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Допомога й підтримка · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "home",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Головна · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "payments",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Платежі · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Рахунки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "cards",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Картки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Обмін валют · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "loans",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Кредити · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "savings",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Заощадження · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "investments",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Інвестиції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "statements",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Виписки · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Операції · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Вхідні · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "settings",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Налаштування · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "route": "help",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Допомога й підтримка · Alex Demo — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "home",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Головна · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "payments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Платежі · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Рахунки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "cards",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Картки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Обмін валют · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "loans",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Кредити · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "savings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Заощадження · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "investments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Інвестиції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "statements",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Виписки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Операції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Вхідні · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "settings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Налаштування · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "route": "help",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Допомога й підтримка · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "home",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Головна · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "payments",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Платежі · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Рахунки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "cards",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Картки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Обмін валют · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "loans",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Кредити · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "savings",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Заощадження · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "investments",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Інвестиції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "statements",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Виписки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Операції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Вхідні · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "settings",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Налаштування · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "route": "help",
+      "result": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Допомога й підтримка · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "home",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Головна · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "payments",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Платежі · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "accounts",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Рахунки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "cards",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Картки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "exchange",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Обмін валют · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "loans",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Кредити · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "savings",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Заощадження · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "investments",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Інвестиції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "statements",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Виписки · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "transactions",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Операції · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "inbox",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Вхідні · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "settings",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Налаштування · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "route": "help",
+      "result": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Допомога й підтримка · Demo Corp DOO — Zapad Banka · Банківська демоверсія",
+        "width": 1440
+      }
+    }
+  ],
+  "german": [
+    {
+      "profile": "personal",
+      "route": "home",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Startseite · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zahlungen · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Konten · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Karten · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Währungsumtausch · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Kredite · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Sparen · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Anlagen · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Kontoauszüge · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Aktivitäten · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Posteingang · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Einstellungen · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Hilfe und Support · Alex Demo — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Startseite · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zahlungen · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Konten · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Karten · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Währungsumtausch · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Kredite · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Sparen · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Anlagen · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Kontoauszüge · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Aktivitäten · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Posteingang · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Einstellungen · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "result": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Hilfe und Support · Demo Corp DOO — Zapad Banka · Banking-Demo",
+        "width": 320
+      }
+    }
+  ],
+  "statusSpecimens": [
+    {
+      "profile": "personal",
+      "width": 320,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 122.1953125,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 288
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 104.796875,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 288
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 720
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 768,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 720
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(233, 239, 245)",
+          "color": "rgb(88, 103, 123)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 1392
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 1392
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 122.1953125,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 288
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 104.796875,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 288
+        }
+      ],
+      "layout": {
+        "documentWidth": 320,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 320
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 720
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 768,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 720
+        }
+      ],
+      "layout": {
+        "documentWidth": 768,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 768
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "sample": "badge/default",
+      "tones": [
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "default",
+          "tone": "neutral",
+          "width": 57.3984375
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "secondary",
+          "tone": "neutral",
+          "width": 77.9453125
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "outline",
+          "tone": "neutral",
+          "width": 56.0703125
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "destructive",
+          "tone": "danger",
+          "width": 81.40625
+        },
+        {
+          "background": "rgb(238, 234, 227)",
+          "color": "rgb(92, 104, 117)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "neutral",
+          "tone": "neutral",
+          "width": 57.4296875
+        },
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "success",
+          "tone": "success",
+          "width": 63.6640625
+        },
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "warning",
+          "tone": "warning",
+          "width": 63.859375
+        },
+        {
+          "background": "rgb(255, 240, 230)",
+          "color": "rgb(147, 67, 14)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "attention",
+          "tone": "attention",
+          "width": 69.9375
+        },
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "info",
+          "tone": "info",
+          "width": 39.40625
+        },
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 24,
+          "line": "18px",
+          "role": null,
+          "slot": "badge",
+          "text": "danger",
+          "tone": "danger",
+          "width": 57.9609375
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "sample": "alert/default",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Local demo previewThis component explains a state in text. It does not confirm real settlement.",
+          "tone": "info",
+          "width": 1392
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "sample": "alert/destructive",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 87.3984375,
+          "line": "17.4px",
+          "role": "alert",
+          "slot": "alert",
+          "text": "Could not save this previewReview your input and try again. No payment was submitted.",
+          "tone": "danger",
+          "width": 1392
+        }
+      ],
+      "layout": {
+        "documentWidth": 1440,
+        "issues": [],
+        "title": "Zapad Banka — Component preview",
+        "width": 1440
+      }
+    }
+  ],
+  "toasts": [
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "default",
+      "tones": [
+        {
+          "background": "rgb(253, 254, 254)",
+          "color": "rgb(23, 35, 55)",
+          "font": "12px",
+          "height": 78,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notificationUndo",
+          "tone": null,
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "success",
+      "tones": [
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "success",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "error",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "error",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "info",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "info",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "warning",
+      "tones": [
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "warning",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 320,
+      "state": "loading",
+      "tones": [
+        {
+          "background": "rgb(253, 254, 254)",
+          "color": "rgb(23, 35, 55)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "loading",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "default",
+      "tones": [
+        {
+          "background": "rgb(253, 254, 254)",
+          "color": "rgb(23, 35, 55)",
+          "font": "12px",
+          "height": 78,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notificationUndo",
+          "tone": null,
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "success",
+      "tones": [
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "success",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "error",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "error",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "info",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "info",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "warning",
+      "tones": [
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "warning",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "width": 1440,
+      "state": "loading",
+      "tones": [
+        {
+          "background": "rgb(253, 254, 254)",
+          "color": "rgb(23, 35, 55)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "loading",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "default",
+      "tones": [
+        {
+          "background": "rgb(255, 254, 253)",
+          "color": "rgb(32, 40, 50)",
+          "font": "12px",
+          "height": 78,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notificationUndo",
+          "tone": null,
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "success",
+      "tones": [
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "success",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "error",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "error",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "info",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "info",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "warning",
+      "tones": [
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "warning",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 320,
+      "state": "loading",
+      "tones": [
+        {
+          "background": "rgb(255, 254, 253)",
+          "color": "rgb(32, 40, 50)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "loading",
+          "width": 288
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "default",
+      "tones": [
+        {
+          "background": "rgb(255, 254, 253)",
+          "color": "rgb(32, 40, 50)",
+          "font": "12px",
+          "height": 78,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notificationUndo",
+          "tone": null,
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "success",
+      "tones": [
+        {
+          "background": "rgb(237, 247, 241)",
+          "color": "rgb(23, 99, 72)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "success",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "error",
+      "tones": [
+        {
+          "background": "rgb(255, 242, 240)",
+          "color": "rgb(180, 35, 24)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "error",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "info",
+      "tones": [
+        {
+          "background": "rgb(237, 244, 252)",
+          "color": "rgb(40, 91, 145)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "info",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "warning",
+      "tones": [
+        {
+          "background": "rgb(255, 246, 229)",
+          "color": "rgb(133, 80, 11)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "warning",
+          "width": 356
+        }
+      ]
+    },
+    {
+      "profile": "business",
+      "width": 1440,
+      "state": "loading",
+      "tones": [
+        {
+          "background": "rgb(255, 254, 253)",
+          "color": "rgb(32, 40, 50)",
+          "font": "12px",
+          "height": 58,
+          "line": "17.4px",
+          "role": null,
+          "slot": "toast",
+          "text": "Demo notification",
+          "tone": "loading",
+          "width": 356
+        }
+      ]
+    }
+  ],
+  "keyboard": [
+    {
+      "case": "desktop-personal-route",
+      "result": {
+        "focus": "main-content",
+        "tag": "MAIN",
+        "title": "Платежі · Alex Demo — Zapad Banka · Банківська демоверсія"
+      }
+    },
+    {
+      "case": "mobile-business-menu-route",
+      "result": {
+        "dialogs": 1,
+        "focus": null,
+        "tag": "A",
+        "title": "Вхідні · Demo Corp DOO — Zapad Banka · Банківська демоверсія"
+      }
+    },
+    {
+      "case": "mobile-business-menu-route-settled",
+      "result": {
+        "dialogs": 0,
+        "focus": "main-content",
+        "tag": "MAIN",
+        "title": "Вхідні · Demo Corp DOO — Zapad Banka · Банківська демоверсія"
+      }
+    },
+    {
+      "case": "language-title-update",
+      "result": {
+        "lang": "de",
+        "title": "Posteingang · Demo Corp DOO — Zapad Banka · Banking-Demo"
+      }
+    },
+    {
+      "case": "profile-title-update",
+      "result": {
+        "lang": "de",
+        "title": "Posteingang · Alex Demo — Zapad Banka · Banking-Demo"
+      }
+    }
+  ],
+  "toastAction": {
+    "background": "rgb(32, 40, 50)",
+    "color": "rgb(255, 254, 253)",
+    "height": 44,
+    "role": null,
+    "width": 54.3984375
+  },
+  "shortStatement": {
+    "clientHeight": 456,
+    "height": 456,
+    "overflow": "auto",
+    "scrollHeight": 771,
+    "text": "26 · EUR · ME25 ··· 2001Зразок виписки · 3 проведених транзакційStripe PayoutsСьогодні, 08:3012 450,32 EURAWS Europe10 трав.-320,40 EURКлієнт · Alfa doo5 трав.4 800,00 EURЛише зразки даних. Це не офіційна банківська виписка. Завантажити CSV",
+    "width": 296
+  }
+}

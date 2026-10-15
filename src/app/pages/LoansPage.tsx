@@ -1,3 +1,4 @@
+import { Badge } from "../components/ui/badge";
 import { dateFormatter } from "../utils/localeFormats";
 import { FieldFeedback } from "../components/ui/field-feedback";
 import { normalizeDecimalInput } from "../utils/decimalInput";
@@ -134,7 +135,7 @@ function LoanCalculator({ isBusiness }: { isBusiness: boolean }) {
   const estimate = Object.values(errors).some(Boolean) ? null : loanEstimate(Number(principal), Number(rate), n);
 
   return (
-    <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+    <Card data-bank-product-card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
       <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
         <Calculator className="size-5 text-slate-400" /> {t("Loan calculator")}
       </h3>
@@ -167,7 +168,7 @@ function LoanCalculator({ isBusiness }: { isBusiness: boolean }) {
           { label: "Total repaid", value: estimate ? formatMoney(estimate.total, "EUR", { decimals: 0 }) : "—" },
           { label: "Total interest", value: estimate ? formatMoney(estimate.interest, "EUR", { decimals: 0 }) : "—", dim: true },
         ].map((r) => (
-          <div key={r.label} className="py-4 border-t border-border">
+          <div data-card-pair key={r.label} className="min-w-0">
             <div className="text-xs font-medium uppercase tracking-wide mb-1 text-muted-foreground">{t(r.label)}</div>
             <div className="text-xl font-semibold text-foreground">{r.value}</div>
           </div>
@@ -217,25 +218,23 @@ export function LoansPage() {
       </div>
 
       {/* Active loan */}
-      <Card className="p-8 border-slate-200/60 bg-white rounded-4xl shadow-sm">
+      <Card data-bank-product-card className="p-8 border-slate-200/60 bg-white rounded-4xl shadow-sm">
         <div className="flex items-start justify-between mb-7">
-          <div>
+          <div data-card-pair>
             <h3 className="text-2xl font-semibold text-slate-900 tracking-tight">{isBusiness ? t("Business loan") : t("Personal loan")}</h3>
             <p className="text-sm font-normal text-slate-400 mt-1">{t("Loan ID: {id}", { id: "LN-2024-0482" })}</p>
           </div>
-          <span className="text-xs font-medium text-muted-foreground px-3 py-1 rounded-md bg-muted">
-            {t("Active")}
-          </span>
+          <Badge tone="success">{t("Active")}</Badge>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { label: "Outstanding", value: formatMoney(LOAN_OUTSTANDING, "EUR", { decimals: 0 }) },
             { label: "Original", value: formatMoney(LOAN_ORIGINAL, "EUR", { decimals: 0 }) },
             { label: "Interest rate", value: t("{rate}% APR", { rate: formatNumber(5.2) }), highlight: true },
             { label: "Monthly", value: formatMoney(LOAN_MONTHLY, "EUR", { decimals: 0 }) },
           ].map((stat) => (
-            <div key={stat.label} className="min-w-0 py-3">
+            <div data-card-pair key={stat.label} className="min-w-0">
               <div className="text-xs font-medium uppercase text-slate-400 tracking-wider mb-1.5">
                 {t(stat.label)}
               </div>
@@ -246,13 +245,13 @@ export function LoansPage() {
           ))}
         </div>
 
-        <div className="space-y-2.5 mb-7">
+        <div data-card-pair className="space-y-2.5 mb-7">
           <div className="flex justify-between text-xs font-medium uppercase text-slate-400 tracking-wide">
             <span>{t("Repayment progress")}</span>
             <span className="text-slate-700">{Math.round((1 - LOAN_OUTSTANDING / LOAN_ORIGINAL) * 100)}%</span>
           </div>
           <Progress value={Math.round((1 - LOAN_OUTSTANDING / LOAN_ORIGINAL) * 100)} aria-label={t("Loan repayment")} />
-          <div className="flex items-center justify-between text-sm font-normal text-slate-500">
+          <div className="flex flex-wrap items-center justify-between gap-2 text-sm font-normal text-slate-500">
             <span>{t("{amount} remaining", { amount: isPrivate ? "•••" : formatMoney(LOAN_OUTSTANDING, "EUR", { decimals: 0 }) })}</span>
             <span className="flex items-center gap-1.5">
               <Clock className="size-3.5" /> {t("Next: {date}", { date: dateFormatter({ day: "numeric", month: "long", year: "numeric" }).format(new Date(2026, 4, 25)) })}

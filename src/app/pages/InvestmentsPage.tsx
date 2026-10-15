@@ -238,7 +238,7 @@ export function InvestmentsPage() {
         </details>
       </Card>
 
-      <div className="grid xl:grid-cols-transaction-detail gap-6">
+      <div className="grid min-w-0 xl:grid-cols-transaction-detail gap-6">
         {/* Portfolio breakdown */}
         <Card className="p-8 border-slate-200/60 bg-white rounded-4xl shadow-sm">
           <h2 className="text-xl font-semibold text-slate-900 tracking-tight">{t("Asset classes")}</h2>
@@ -276,13 +276,13 @@ export function InvestmentsPage() {
         </Card>
 
         {/* Portfolio allocation */}
-        <div className="space-y-5">
+        <div className="min-w-0 space-y-5">
           <Card className="p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm flex flex-col items-center">
             <h3 className="text-base font-semibold text-slate-900 mb-4 self-start">{t("Allocation")}</h3>
-            <div className="size-40">
+            <div className="w-40 max-w-full aspect-square" aria-hidden="true">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
-                  <Pie data={portfolio} dataKey="allocation" cx="50%" cy="50%" innerRadius={45} outerRadius={75} strokeWidth={3} isAnimationActive={false}>
+                  <Pie tabIndex={-1} data={portfolio} dataKey="allocation" cx="50%" cy="50%" innerRadius="56%" outerRadius="94%" strokeWidth={3} isAnimationActive={false}>
                     {portfolio.map(item => <Cell key={item.name} fill={item.color} />)}
                   </Pie>
                 </PieChart>
@@ -292,7 +292,7 @@ export function InvestmentsPage() {
               {portfolio.map((item) => (
                 <div key={item.name} className="flex items-center gap-2.5">
                   <div className="size-2.5 rounded-full shrink-0" style={{ background: item.color }} />
-                  <span className="text-xs font-semibold text-slate-600 flex-1 truncate">{t(item.name)}</span>
+                  <span className="text-xs font-semibold text-slate-600 flex-1 min-w-0 wrap-anywhere">{t(item.name)}</span>
                   <span className="text-xs font-medium text-slate-900">{formatNumber(item.allocation, { maximumFractionDigits: 1 })}%</span>
                 </div>
               ))}

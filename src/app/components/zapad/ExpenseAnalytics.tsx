@@ -111,7 +111,7 @@ export function ExpenseAnalytics({
               </div>
             </div>
 
-            <div className="relative z-2 h-full w-full min-h-50 [&_.recharts-tooltip-wrapper]:!z-30 [&_.recharts-tooltip-wrapper]:pointer-events-none">
+            <div aria-hidden="true" className="relative z-2 h-full w-full min-h-50 [&_.recharts-tooltip-wrapper]:!z-30 [&_.recharts-tooltip-wrapper]:pointer-events-none">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart margin={{ top: 4, right: 4, bottom: 4, left: 4 }}>
                   <defs>
@@ -121,6 +121,7 @@ export function ExpenseAnalytics({
                     </linearGradient>)}
                   </defs>
                   <Pie
+                    tabIndex={-1}
                     data={data}
                     cx="50%"
                     cy="50%"

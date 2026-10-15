@@ -1,3 +1,4 @@
+import { Alert, AlertDescription } from "../components/ui/alert";
 import { FieldFeedback } from "../components/ui/field-feedback";
 import { useI18n } from "../i18n/I18nProvider";
 import { exchangeReturnPath } from "../utils/paymentOrigin";
@@ -236,12 +237,12 @@ export function ExchangePage() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-start gap-2.5 px-3 py-2.5 rounded-xl bg-muted border border-border">
-                <Info className="size-4 text-muted-foreground shrink-0 mt-0.5" />
-                <p className="text-xs font-normal text-muted-foreground">
+              <Alert tone="info" role="status" className="mt-4">
+                <Info aria-hidden="true" />
+                <AlertDescription>
                   {t("Illustrative demo rate. No commission in this simulation; no real exchange is submitted.")}
-                </p>
-              </div>
+                </AlertDescription>
+              </Alert>
 
               <Button
                 size="lg"

@@ -22,11 +22,13 @@ const alertVariants = cva(
 function Alert({
   className,
   variant,
+  tone,
   ...props
-}: React.ComponentProps<"div"> & VariantProps<typeof alertVariants>) {
+}: React.ComponentProps<"div"> & VariantProps<typeof alertVariants> & { tone?: "neutral" | "success" | "info" | "warning" | "danger" }) {
   return (
     <div
       data-slot="alert"
+      data-tone={tone ?? (variant === "destructive" ? "danger" : "info")}
       role="alert"
       className={cn(alertVariants({ variant }), className)}
       {...props}

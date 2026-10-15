@@ -140,7 +140,7 @@ export function InboxPage() {
           filtered.map((message) => {
             const Icon = message.icon;
             return (
-              <article
+              <article data-slot="notification-message"
                 key={message.id}
                 className={cn(
                   "p-4 sm:p-6 transition-colors",
@@ -148,7 +148,7 @@ export function InboxPage() {
                 )}
               >
                 <div className="flex gap-3 sm:gap-5">
-                  <div data-slot="functional-icon" className={cn("hidden sm:flex size-10 rounded-lg items-center justify-center shrink-0", message.iconColor)}>
+                  <div data-slot="functional-icon" data-notice-type={message.type} className={cn("flex size-10 rounded-lg items-center justify-center shrink-0", message.iconColor)}>
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -158,9 +158,9 @@ export function InboxPage() {
                           {t(message.title)}
                         </h3>
                         {message.unread && <span className="size-2 rounded-full bg-primary shrink-0"><span className="sr-only">{t("Unread")}</span></span>}
-                        <span className="text-xs font-medium text-muted-foreground">
+                        <Badge tone={message.type === "alert" || message.type === "warning" ? "warning" : message.type === "success" ? "success" : "info"}>
                           {t(message.category)}
-                        </span>
+                        </Badge>
                       </div>
                         <Button
                           type="button"

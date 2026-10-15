@@ -1,3 +1,4 @@
+import { Badge } from "../components/ui/badge";
 import { FieldFeedback } from "../components/ui/field-feedback";
 import { normalizeDecimalInput } from "../utils/decimalInput";
 import { localizedGoalName } from "../i18n/display";
@@ -63,7 +64,7 @@ function ApyCalculator({ isBusiness }: { isBusiness: boolean }) {
     : !estimate ? "These values are too large to calculate reliably. Reduce the deposit, rate or duration." : "";
 
   return (
-    <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+    <Card data-bank-product-card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
       <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
         <Calculator className="size-5 text-slate-400" /> {t("Returns calculator")}
       </h3>
@@ -93,7 +94,7 @@ function ApyCalculator({ isBusiness }: { isBusiness: boolean }) {
           { label: "Interest earned", value: estimate ? formatMoney(estimate.interest) : "—" },
           { label: "Growth", value: estimate ? `+${formatNumber(estimate.growth, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%` : "—", positive: true },
         ].map((r) => (
-          <div key={r.label} className="rounded-lg p-4 bg-muted border border-border">
+          <div data-card-pair key={r.label} className="rounded-lg p-4 bg-muted border border-border">
             <div className="text-xs font-medium uppercase tracking-wide mb-1 text-muted-foreground">{t(r.label)}</div>
             <div className="text-xl font-semibold text-foreground">{r.value}</div>
           </div>
@@ -161,7 +162,7 @@ export function SavingsPage() {
             const Icon = goal.icon;
             const pct = Math.round((goal.current / goal.target) * 100);
             return (
-              <button data-bank-surface type="button" onClick={() => navigate(profilePath(profileSlug, `savings/goals/${goal.id}`))} key={localizedGoalName(goal)} className="text-left p-5 rounded-xl bg-white border border-slate-200/60">
+              <button data-bank-surface data-bank-product-card type="button" onClick={() => navigate(profilePath(profileSlug, `savings/goals/${goal.id}`))} key={localizedGoalName(goal)} className="text-left p-5 rounded-xl bg-white border border-slate-200/60">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3 min-w-0">
                     <div data-slot="functional-icon" className="shrink-0 size-9 rounded-action-inner bg-slate-100 text-slate-500 flex items-center justify-center">
@@ -171,11 +172,11 @@ export function SavingsPage() {
                   </div>
                   <span className="text-sm font-medium text-slate-400 shrink-0 ml-2">{pct}%</span>
                 </div>
-                <Progress value={pct} aria-label={t("{goal} saved", { goal: localizedGoalName(goal) })} className="mb-2" />
-                <div className="flex justify-between text-xs font-normal text-slate-400">
+                <div data-card-pair><Progress value={pct} aria-label={t("{goal} saved", { goal: localizedGoalName(goal) })} className="mb-2" />
+                <div className="flex flex-wrap justify-between gap-2 text-xs font-normal text-slate-400">
                   <span>{isPrivate ? "•••" : formatMoney(goal.current, "EUR")}</span>
                   <span>{isPrivate ? "•••" : formatMoney(goal.target, "EUR")}</span>
-                </div>
+                </div></div>
               </button>
             );
           })}
@@ -190,34 +191,34 @@ export function SavingsPage() {
             const Icon = acc.icon;
             const isLocked = acc.status.startsWith("Locked");
             return (
-              <Card key={acc.name} className="p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm">
-                <div className="flex items-start justify-between mb-5">
+              <Card data-bank-product-card key={acc.name} className="p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm">
+                <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
                   <div className="flex items-center gap-3">
                     <div data-slot="functional-icon" className="size-11 rounded-lg bg-muted text-muted-foreground flex items-center justify-center">
                       <Icon className="size-5" />
                     </div>
-                    <div>
+                    <div data-card-pair>
                       <div className="font-semibold text-slate-900">{t(acc.name)}</div>
                       <div className="text-xs font-normal text-slate-400 mt-0.5">{acc.iban}</div>
                     </div>
                   </div>
-                  <span className={cn("text-xs font-medium px-3 py-1.5 rounded-full", isLocked ? "bg-indigo-50 text-indigo-700 border border-indigo-100" : "bg-emerald-50 text-emerald-700 border border-emerald-100")}>
-                    {isLocked ? <span className="flex items-center gap-1"><Lock className="size-3" /> {t(acc.status)}</span> : t(acc.status)}
-                  </span>
+                  <Badge tone={isLocked ? "info" : "success"}>
+                    {isLocked && <Lock aria-hidden="true" />} {t(acc.status)}
+                  </Badge>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 border-y border-border">
-                  <div className="py-3 min-w-0">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div data-card-pair className="min-w-0">
                     <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{t("Balance")}</div>
                     <div className="text-xl font-semibold text-slate-900">
                       {isPrivate ? "•••" : formatMoney(acc.balance, "EUR", { decimals: 0 })}
                     </div>
                   </div>
-                  <div className="py-3 min-w-0">
+                  <div data-card-pair className="min-w-0">
                     <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">{t("APY")}</div>
                     <div className="text-xl font-semibold text-foreground">{formatNumber(Number(acc.rate))}%</div>
                   </div>
-                  <div className="py-3 min-w-0">
+                  <div data-card-pair className="min-w-0">
                     <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{t("Est. annual interest")}</div>
                     <div className="text-xl font-semibold text-slate-900">
                       {isPrivate ? "•••" : formatMoney(acc.balance * parseFloat(acc.rate) / 100, "EUR", { decimals: 0 })}
