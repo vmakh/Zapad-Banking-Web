@@ -1,0 +1,476 @@
+{
+  "date": "2026-10-15",
+  "geometry": [
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "100",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "108,50",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "",
+          "width": 220
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 320,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "100",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "108,50",
+          "width": 220
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 270,
+          "value": "",
+          "width": 220
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 320,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "100",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "108,50",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "",
+          "width": 290
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 390,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "100",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "108,50",
+          "width": 290
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 50,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 340,
+          "value": "",
+          "width": 290
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 390,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 66,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 546,
+          "value": "100",
+          "width": 480
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 558,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 702,
+          "value": "",
+          "width": 144
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 66,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 546,
+          "value": "108,50",
+          "width": 480
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 558,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 702,
+          "value": "",
+          "width": 144
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 66,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 546,
+          "value": "100",
+          "width": 480
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 558,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 702,
+          "value": "",
+          "width": 144
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 66,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 546,
+          "value": "108,50",
+          "width": 480
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 558,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 702,
+          "value": "",
+          "width": 144
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 362,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 806,
+          "value": "100",
+          "width": 444
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 818,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 962,
+          "value": "",
+          "width": 144
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 362,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 806,
+          "value": "108,50",
+          "width": 444
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 818,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 962,
+          "value": "",
+          "width": 144
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fields": [
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 362,
+          "name": "Сума обміну",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 806,
+          "value": "100",
+          "width": 444
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 818,
+          "name": "Рахунок списання",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 962,
+          "value": "",
+          "width": 144
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 362,
+          "name": "Одержувач отримає",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 806,
+          "value": "108,50",
+          "width": 444
+        },
+        {
+          "font": "17px",
+          "height": 48,
+          "left": 818,
+          "name": "Рахунок призначення",
+          "padding": "8px 12px",
+          "radius": "12px",
+          "right": 962,
+          "value": "",
+          "width": 144
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    }
+  ],
+  "functionalChecks": [
+    "100 EUR -> 108.50 USD",
+    "Swap -> 108.50 USD -> 100.00 EUR",
+    "Review then edit preserves 108.50",
+    "Calculated amount is read-only",
+    "Business source-account list fits at 320px"
+  ]
+}

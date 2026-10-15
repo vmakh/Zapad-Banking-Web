@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { createElement, useEffect, useState } from 'react';
 import { Button } from '../components/ui/button';
 import { PaymentCard } from '../components/zapad/PaymentCard';
 import { CurrencyFlag, CurrencyMark } from '../components/zapad/CurrencyIcon';
@@ -30,19 +30,24 @@ export function Foundations({sample,state}:SpecimenProps) {
     <div className="border-t pt-5 space-y-4"><h2>Card material</h2><PaymentCard name={isBusiness?'Mastercard Business':'Visa Platinum'} last4="4821" expiry="12/28" holder="A. DEMO"/></div>
   </div>;
   if(sample==='typography')return <div className="space-y-6">
-    <p className="text-sm text-muted-foreground">Unbounded Medium · Onest variable</p>
+    <p className="text-base">Unbounded 500 · Onest 400 · Paragraph md 16 px</p>
+    <p className="text-sm text-muted-foreground">Sizes, line heights and paragraph spacing follow a 4 px grid. Tracking is optical, in em. Paragraph spacing is the gap after a prose block; layout gaps are not added twice.</p>
     {[
-      ['Available balance','48 / 600 / 1.1',<p key="balance" className="text-5xl font-semibold tabular-nums break-words">€28,430.18</p>],
-      ['Page title','24 / 500 / 1.35',<h1 key="title">Your banking</h1>],
-      ['Popup title','20 / 500 / 1.35',<p key="popup" style={{fontFamily:'var(--bank-display)',fontSize:'var(--text-xl)',fontWeight:500,lineHeight:1.35}}>Account details</p>],
-      ['Section title','20 / 600 / 1.3',<h2 key="section">Recent activity</h2>],
-      ['Body','17 / 400 / 1.4',<p key="body" className="text-base">Your accounts, clearly in view.</p>],
-      ['Action','17 / 650 / 1.4',<Button key="action" variant="outline">View account</Button>],
-      ['Secondary','15 / 400 / 1.45',<p key="secondary" className="text-sm text-muted-foreground">Available balance · EUR</p>],
-      ['Footnote','13 / 400 / 1.4',<p key="footnote" className="text-xs text-muted-foreground">Saved on this device</p>],
-      ['Caption','11 / 500 / 1.4',<p key="caption" className="text-caption font-medium text-muted-foreground">DEMO SIMULATION</p>],
-    ].map(([label,spec,example])=><div key={String(label)} className="border-b pb-5 space-y-3"><div className="flex flex-wrap justify-between gap-2 text-xs text-muted-foreground"><span>{label}</span><code>{spec}</code></div>{example}</div>)}
-    <p className="text-sm text-muted-foreground">Onest is bundled locally (400 / 500 / 600 / 650). Amounts use Onest and tabular figures; page and popup titles use Unbounded Medium.</p>
+      {role:'h1',label:'H1',size:40,line:48,spacing:24,tracking:'-.025em'},
+      {role:'h2',label:'H2',size:32,line:40,spacing:20,tracking:'-.020em'},
+      {role:'h3',label:'H3',size:28,line:36,spacing:16,tracking:'-.015em'},
+      {role:'h4',label:'H4',size:24,line:32,spacing:16,tracking:'-.010em'},
+      {role:'h5',label:'H5',size:20,line:28,spacing:12,tracking:'-.005em'},
+      {role:'h6',label:'H6',size:16,line:24,spacing:8,tracking:'0em'},
+      {role:'paragraph-sm',label:'Paragraph Sm',size:12,line:20,spacing:8,tracking:'0em'},
+      {role:'paragraph-md',label:'Paragraph Md',size:16,line:24,spacing:12,tracking:'0em'},
+      {role:'paragraph-lg',label:'Paragraph Lg',size:20,line:28,spacing:16,tracking:'-.005em'},
+    ].map(item=><section key={item.role} className="border-b pb-5 space-y-3">
+      <div className="flex flex-wrap justify-between gap-2 text-sm text-muted-foreground"><span>{item.label}</span><code>{item.size}px / {item.line}px · after {item.spacing}px · tracking {item.tracking} · weight {item.role.startsWith('h')?500:400}</code></div>
+      {createElement(item.role.startsWith('h')?item.role:'p', {'data-type-style':item.role}, item.role.startsWith('h')?'Ваші фінанси під контролем':'Ваші рахунки, платежі й заощадження — в одному місці. Your accounts, clearly in view.')}
+      {createElement('p', {'data-type-style':item.role.startsWith('h')?'paragraph-md':item.role}, 'Наступний абзац демонструє відступ після тексту.')}
+    </section>)}
+    <p className="text-base">All H1–H6 use the locally bundled Unbounded Medium at 500. Paragraphs use Onest 400. Labels stay 500, financial amounts 600, action labels 650; all controls use the 16 px body size. Full localized amounts retain tabular figures and their container-based sizing.</p>
   </div>;
   if(sample==='geometry')return <div className="space-y-8">
     <section className="space-y-4"><h2>Spacing</h2>{[1,2,3,4,5,6,8,12].map(n=><div key={n} className="flex items-center gap-4"><code className="w-20 text-xs text-muted-foreground">{n*4} px</code><span className="block h-4 bg-accent border border-border rounded-sm" style={{width:`calc(var(--spacing) * ${n})`}}/></div>)}</section>

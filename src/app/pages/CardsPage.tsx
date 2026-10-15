@@ -1,3 +1,4 @@
+import { FieldFeedback } from "../components/ui/field-feedback";
 import { useI18n } from "../i18n/I18nProvider";
 import { cardLimitError } from "../utils/cardLimit";
 import { getCards, updateCard } from "../data/cards";
@@ -117,7 +118,7 @@ function FreezeDialog({
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-3">
+        <div data-form-actions className="grid grid-cols-2 gap-3">
           <Button
             variant="outline"
             onClick={onClose}
@@ -177,7 +178,7 @@ function LimitsDialog({
       <DialogContent className="sm:max-w-md rounded-4xl p-8 border border-slate-200/60 shadow-2xl">
         <DialogHeader className="mb-7">
           <div className="flex items-center gap-4">
-            <div className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
+            <div data-slot="functional-icon" className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
               <Lock className="size-5" />
             </div>
             <div>
@@ -191,7 +192,7 @@ function LimitsDialog({
           </div>
         </DialogHeader>
 
-        <div className="space-y-5">
+        <div data-form-fields className="space-y-6">
           {[
             { label: "Online payments", icon: Globe, value: online, onChange: setOnline },
             { label: "Contactless / POS", icon: ShoppingCart, value: contactless, onChange: setContactless },
@@ -222,10 +223,11 @@ function LimitsDialog({
                     type="number"
                     value={item.value}
                     onChange={(e) => item.onChange(e.target.value)}
+                    data-leading-adornment
                     className="pl-8 h-12 rounded-lg border-slate-200/80 bg-slate-50 focus-visible:bg-white focus-visible:ring-slate-300 font-medium text-slate-900 shadow-sm"
                   />
                 </div>
-                {error && <p id={`${id}-error`} className="text-sm text-destructive">{t(error)}</p>}
+                {error && <FieldFeedback tone="error" id={`${id}-error`} className="text-sm text-destructive">{t(error)}</FieldFeedback>}
               </div>
             );
           })}
@@ -246,7 +248,7 @@ function LimitsDialog({
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 mt-7">
+        <div data-form-actions className="grid grid-cols-2 gap-3 mt-7">
           <Button
             variant="outline"
             onClick={onClose}
@@ -299,7 +301,7 @@ function DetailsDialog({
       <DialogContent className="sm:max-w-sm rounded-4xl p-8 border border-slate-200/60 shadow-2xl">
         <DialogHeader className="mb-7">
           <div className="flex items-center gap-4">
-            <div className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
+            <div data-slot="functional-icon" className="size-11 rounded-sm bg-slate-100 text-slate-700 flex items-center justify-center">
               <ShieldCheck className="size-5" />
             </div>
             <div>
@@ -492,7 +494,7 @@ export function CardsPage() {
                   { label: "Limits", icon: SlidersHorizontal, run: () => setLimitsDialog(card.id) },
                   { label: "Online", icon: Globe, run: () => setOnlineDialog(card.id), online: true },
                 ].map(action => <Button key={action.label} variant="ghost" onClick={action.run} aria-label={action.online ? (isPrivate ? t("Online payments {status} for {card}", { status: card.onlineEnabled === false ? t("off") : t("on"), card: t(card.type) }) : t("Online payments {status} for {card} ending {last4}", { status: card.onlineEnabled === false ? t("off") : t("on"), card: t(card.type), last4: card.last4 })) : undefined} className="min-w-0 h-auto flex-col gap-2 px-1 py-2 whitespace-normal">
-                  <span className={cn("relative flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary text-foreground", action.active && "bg-sky-50 text-sky-700")}>
+                  <span data-icon-role="action" data-slot={action.active ? "status-icon" : "functional-icon"} className={cn("relative flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary text-foreground", action.active && "bg-sky-50 text-sky-700")}>
                     <action.icon className="size-5" aria-hidden="true" />
                     {action.online && <span className={cn("absolute right-0 top-0 size-2 rounded-full border-2 border-white", card.onlineEnabled === false ? "bg-slate-400" : "bg-emerald-500")} />}
                   </span>
@@ -543,5 +545,5 @@ export function CardsPage() {
 function OnlineDialog({card, enabled, onClose, onSave}: {card: CardData; enabled: boolean; onClose: () => void; onSave: (enabled: boolean) => void}) {
   const { t } = useI18n();
  const [draft, setDraft] = useState(enabled);
- return <Dialog open onOpenChange={open => !open && onClose()}><DialogContent><DialogHeader><DialogTitle>{t("Online payments")}</DialogTitle><DialogDescription>{t(card.type)} · •••• {card.last4}</DialogDescription></DialogHeader><p className="text-sm text-slate-600">{t("Preview the online-payment preference for this demo card. This setting is saved on this device and cannot control real purchases.")}</p><label className="flex items-center justify-between py-4"><span>{t("Allow online payments")}</span><Switch aria-label={t("Allow online payments")} checked={draft} onCheckedChange={setDraft}/></label>{card.frozen && <p className="text-sm text-slate-500">{t("This demo card is marked as frozen. Changing this preference does not unfreeze it.")}</p>}<div className="flex gap-3"><Button variant="outline" onClick={onClose}>{t("Cancel")}</Button><Button onClick={()=>onSave(draft)}>{t("Save changes")}</Button></div></DialogContent></Dialog>;
+ return <Dialog open onOpenChange={open => !open && onClose()}><DialogContent><DialogHeader><DialogTitle>{t("Online payments")}</DialogTitle><DialogDescription>{t(card.type)} · •••• {card.last4}</DialogDescription></DialogHeader><p className="text-sm text-slate-600">{t("Preview the online-payment preference for this demo card. This setting is saved on this device and cannot control real purchases.")}</p><label className="flex items-center justify-between py-4"><span>{t("Allow online payments")}</span><Switch aria-label={t("Allow online payments")} checked={draft} onCheckedChange={setDraft}/></label>{card.frozen && <p className="text-sm text-slate-500">{t("This demo card is marked as frozen. Changing this preference does not unfreeze it.")}</p>}<div data-form-actions className="flex gap-3"><Button variant="outline" onClick={onClose}>{t("Cancel")}</Button><Button onClick={()=>onSave(draft)}>{t("Save changes")}</Button></div></DialogContent></Dialog>;
 }

@@ -10,7 +10,7 @@ function FontPairings() {
   const [fontStatus, setFontStatus] = useState<Record<string, string>>({});
   useEffect(() => {
     for (const font of fontOptions) {
-      void Promise.all([400, 500, 600, 650].map(weight => document.fonts.load(`${weight} 17px "${font.family}"`, 'ҐґЄєІіЇї₴€0123456789')))
+      void Promise.all([400, 500, 600, 650].map(weight => document.fonts.load(`${weight} 16px "${font.family}"`, 'ҐґЄєІіЇї₴€0123456789')))
         .then(faces => setFontStatus(previous => ({ ...previous, [font.id]: faces.every(list => list.length > 0) ? 'Локальний шрифт завантажено' : 'Шрифт не завантажився' })))
         .catch(() => setFontStatus(previous => ({ ...previous, [font.id]: 'Шрифт не завантажився' })));
     }
@@ -47,7 +47,7 @@ function FontPairings() {
             <p role="status" className="text-xs text-muted-foreground">{fontStatus[font.id] ?? 'Завантаження шрифту…'}</p>
           </div>
           <div data-font-specimen style={style} className="space-y-3 rounded-xl border bg-card p-4">
-            <p className="text-sm text-muted-foreground">{font.name} · 17 px · 400 / 500 / 600 / 650</p>
+            <p className="text-sm text-muted-foreground">{font.name} · 16 px · 400 / 500 / 600 / 650</p>
             <p className="text-base">Переказуйте кошти зручно й безпечно</p>
             <p className="text-base font-medium">Ґґ Єє Іі Її · 0О 1Іl · Україна</p>
             <p className="text-xl font-semibold tabular-nums">12 345,67 ₴ · 8 920,00 €</p>
@@ -61,7 +61,7 @@ function FontPairings() {
       })}
     </div>
     <footer className="space-y-2 border-t pt-6 text-sm text-muted-foreground">
-      <p>Рекомендована система: Unbounded 500 — заголовки; Onest 400 — текст; 500 — підписи; 600 — суми; 650 — кнопки. Поточні розміри та кольори збережено.</p>
+      <p>Рекомендована система: Unbounded 500 — заголовки; Onest 400 — текст; 500 — підписи; 600 — суми; 650 — кнопки. Типографіка: H1–H6 40/32/28/24/20/16 px; основний текст 16/24 px. Кольори профілів збережено.</p>
       <p>Попапи можна відкривати всередині кожного прикладу. Onest уже застосовано в Personal та Business. Ілюстративний прототип без реальних банківських операцій.</p>
     </footer>
   </main>;

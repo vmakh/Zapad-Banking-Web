@@ -1,3 +1,4 @@
+import { FieldFeedback } from "../components/ui/field-feedback";
 import { normalizeDecimalInput } from "../utils/decimalInput";
 import { useI18n } from "../i18n/I18nProvider";
 import { ProductPreviewDialog } from "../components/zapad/ProductPreviewDialog";
@@ -136,7 +137,7 @@ function LoanCalculator({ isBusiness }: { isBusiness: boolean }) {
       <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
         <Calculator className="size-5 text-slate-400" /> {t("Loan calculator")}
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 items-end gap-3 mb-5">
+      <div data-form-fields="calculator" className="grid grid-cols-1 sm:grid-cols-3 items-end gap-3 mb-5">
         {[
           { error: errors.principal, label: "Amount (€)", value: principal, onChange: setPrincipal, placeholder: "10000" },
           { error: errors.rate, label: "Rate (% p.a.)", value: rate, onChange: setRate, placeholder: "5.2" },
@@ -154,11 +155,11 @@ function LoanCalculator({ isBusiness }: { isBusiness: boolean }) {
               placeholder={f.placeholder}
               className="h-11 rounded-lg border-slate-200 bg-slate-50 focus-visible:bg-white focus-visible:ring-slate-300 font-medium text-slate-900 shadow-sm"
             />
-            {f.error && <p id={`${fieldId}-${index}-error`} className="text-sm text-destructive">{t(f.error)}</p>}
+            {f.error && <FieldFeedback tone="error" id={`${fieldId}-${index}-error`} className="text-sm text-destructive">{t(f.error)}</FieldFeedback>}
           </div>
         ))}
       </div>
-      {!estimate && !Object.values(errors).some(Boolean) && <p role="status" className="text-sm text-destructive mb-4">{t("These values are too large to calculate. Reduce the amount, rate or term.")}</p>}
+      {!estimate && !Object.values(errors).some(Boolean) && <FieldFeedback tone="error" role="status" className="text-sm text-destructive mb-4">{t("These values are too large to calculate. Reduce the amount, rate or term.")}</FieldFeedback>}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
           { label: "Monthly", value: estimate ? formatMoney(estimate.monthly) : "—", highlight: true },
@@ -318,7 +319,7 @@ export function LoansPage() {
                   {t("Demo preview only. No credit decision or application will be sent.")}
                 </DialogDescription>
               </DialogHeader>
-              <div className="space-y-4 mb-7">
+              <div data-form-fields className="space-y-6 mb-6">
                 <div className="space-y-2">
                   <Label className="text-xs font-medium text-slate-500 uppercase tracking-widest">{t("Loan amount (€)")}</Label>
                   <Input aria-label={t("Loan amount (€)")} aria-invalid={!applicationAmountValid} aria-describedby={!applicationAmountValid ? applicationErrorId : undefined} inputMode="decimal" value={applicationAmount} onChange={e => setApplicationAmount(normalizeDecimalInput(e.target.value))} className="h-12 rounded-lg border-slate-200 bg-slate-50 focus-visible:bg-white focus-visible:ring-slate-300 font-medium text-slate-900 shadow-sm" />
@@ -328,7 +329,7 @@ export function LoansPage() {
                   <Input aria-label={t("Term (months)")} aria-invalid={!applicationTermValid} aria-describedby={!applicationTermValid ? applicationErrorId : undefined} inputMode="decimal" value={applicationTerm} onChange={e => setApplicationTerm(e.target.value)} className="h-12 rounded-lg border-slate-200 bg-slate-50 focus-visible:bg-white focus-visible:ring-slate-300 font-medium text-slate-900 shadow-sm" />
                 </div>
               </div>
-              {!applicationValid && <p id={applicationErrorId} role="alert" className="text-sm text-slate-600">{t("Enter an amount within the advertised offer and a whole term of 12–60 months.")}</p>}
+              {!applicationValid && <FieldFeedback tone="error" id={applicationErrorId} role="alert" className="text-sm text-slate-600">{t("Enter an amount within the advertised offer and a whole term of 12–60 months.")}</FieldFeedback>}
               <Button disabled={!applicationValid} onClick={() => applicationValid && setApplyStep("success")} className={cn("w-full h-12 px-6 rounded-lg font-medium shadow-sm", brandBg, brandHover, brandText)}>
                 {t("Preview application")}
               </Button>

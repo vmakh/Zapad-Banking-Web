@@ -99,7 +99,7 @@ export function QuickActions() {
               onClick={() => handleActionClick(a.id)}
               className="group flex flex-col items-center gap-2 md:gap-3 p-3 md:p-4 rounded-3xl bg-white hover:shadow-md transition-field duration-300 border border-slate-200/60 hover:border-slate-300"
             >
-              <div
+              <div data-slot="functional-icon" data-icon-role="action"
                 className={cn("size-14 rounded-lg", a.color, a.text, "flex items-center justify-center zb-group-hover-lift-up shadow-sm")}
               >
                 <Icon className="size-6" />

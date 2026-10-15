@@ -117,7 +117,7 @@ export function SavingsGoals({
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-xl md:text-2xl font-semibold text-slate-900 tracking-tight flex items-center gap-2.5">
-              <div
+              <div data-slot="functional-icon" data-icon-role="heading"
                 className="size-8 shrink-0 rounded-action-inner bg-muted text-muted-foreground flex items-center justify-center"
               >
                 <Target className="size-4" />

@@ -42,6 +42,7 @@ export function HelpPage() {
   const { t } = useI18n();
   const [params] = useSearchParams();
   const { profile, isBusiness } = useAppProfile();
+  const transaction = getTransactions(profile.kind).find(tx => tx.id === params.get("transaction"));
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
   const brandText = "text-primary-foreground";
 
@@ -58,7 +59,7 @@ export function HelpPage() {
 
       {params.has("transaction") && <section data-bank-surface className="rounded-xl border border-border bg-card p-6 space-y-3">
         <h2 className="text-xl font-semibold">{t("Unrecognized payment")}</h2>
-        <p className="text-sm">{t(getTransactions(profile.kind).find(tx=>tx.id===params.get("transaction"))?.merchant ?? "Transaction unavailable")} · {t("Reference {reference}", { reference: `ZB-${profile.kind === "business" ? "B" : "P"}-${params.get("transaction")}` })}</p>
+        <p className="text-sm">{transaction ? localizedMerchant(transaction.merchant) : t("Transaction unavailable")} · {t("Reference {reference}", { reference: `ZB-${profile.kind === "business" ? "B" : "P"}-${params.get("transaction")}` })}</p>
         <p className="text-sm text-muted-foreground">{t("Check the merchant name and any pending authorization first. If you suspect misuse, freeze the relevant card and contact your bank through a verified channel. This prototype cannot file a dispute, contact support or protect a real card.")}</p>
         <Button variant="outline" asChild><Link to={profilePath(profile.kind,"cards")}>{t("Manage cards")}</Link></Button>
         <Button variant="ghost" asChild><Link to={profilePath(profile.kind,`transactions?transaction=${encodeURIComponent(params.get("transaction") ?? "")}`)}>{t("Back to transaction")}</Link></Button>
@@ -119,7 +120,7 @@ export function HelpPage() {
 
         <Card className="p-6 border-slate-200/60 rounded-4xl md:col-span-2">
           <div className="flex items-center gap-4 mb-3">
-            <div className="size-12 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
+            <div data-slot="functional-icon" className="size-12 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
               <Mail className="size-5" />
             </div>
             <div>

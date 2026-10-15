@@ -1,3 +1,4 @@
+import { FieldFeedback } from "../ui/field-feedback";
 import { normalizeDecimalInput } from "../../utils/decimalInput";
 import { localizedGoalName } from "../../i18n/display";
 import { useI18n } from "../../i18n/I18nProvider";
@@ -58,22 +59,22 @@ export function GoalDialog({kind,goalId,onClose}:{kind:ProfileKind;goalId?:strin
    <Progress aria-label={t("Goal progress")} value={Math.min(100,Math.round(goal.current/goal.target*100))} />
    <div className="flex flex-wrap justify-between gap-2 text-sm text-slate-600"><span>{t("{progress}% complete", { progress: Math.round(goal.current/goal.target*100) })}</span><span>{t("{amount} to go", { amount: money(Math.max(0,goal.target-goal.current)) })}</span></div>
    <p className="text-sm text-slate-600">{t("Unallocated savings: {amount}. Your total savings balance stays the same.", { amount: money(available) })}</p>
-   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button variant="outline" disabled={goal.current===0} onClick={()=>changeMode("release")}>{t("Release money")}</Button><Button className={cn(brand, "text-primary-foreground")} disabled={available<=0||goal.current>=goal.target} onClick={()=>changeMode("add")}>{t("Add money")}</Button></div>
+   <div data-form-actions className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button variant="outline" disabled={goal.current===0} onClick={()=>changeMode("release")}>{t("Release money")}</Button><Button className={cn(brand, "text-primary-foreground")} disabled={available<=0||goal.current>=goal.target} onClick={()=>changeMode("add")}>{t("Add money")}</Button></div>
    {available<=0&&<p className="text-sm text-slate-600">{t("All savings are allocated. Release money from a goal before adding more.")}</p>}
    {goal.current>=goal.target&&<p role="status" className="text-sm text-emerald-700">{t("Goal reached. You can increase your target or release the savings.")}</p>}
    <Button variant="ghost" onClick={()=>changeMode("edit")}>{t("Edit goal")}</Button>
-  </> : <form onSubmit={e=>{e.preventDefault();submit();}} className="space-y-5">
+  </> : <form data-form-fields onSubmit={e=>{e.preventDefault();submit();}} className="space-y-6">
    {mode==="edit"?<>
     <div className="space-y-2"><Label htmlFor="goal-name">{t("Goal name")}</Label><Input id="goal-name" maxLength={60} value={name} aria-invalid={invalidField==="name"&&!!error} aria-describedby={invalidField==="name"&&error?"goal-error":undefined} onChange={e=>{setName(e.target.value);setError("");setInvalidField(null);}} placeholder={t("e.g. Summer holiday")} /></div>
     <div className="space-y-2"><Label htmlFor="goal-target">{t("Target amount (EUR)")}</Label><Input id="goal-target" inputMode="decimal" value={target} aria-invalid={invalidField==="target"&&!!error} aria-describedby={invalidField==="target"&&error?"goal-error":undefined} onChange={e=>{setTarget(e.target.value);setError("");setInvalidField(null);}} placeholder="3000.00" /></div>
-    {!goal&&<p className="text-sm text-slate-600">{t("Start with €0. You can allocate savings after creating your goal.")}</p>}
+    {!goal&&<FieldFeedback className="text-sm text-slate-600">{t("Start with €0. You can allocate savings after creating your goal.")}</FieldFeedback>}
    </>:<>
     <p className="text-sm text-slate-600">{goal ? localizedGoalName(goal) : ""} · {mode==="add"?t("{amount} available to allocate", { amount: money(available) }):t("{amount} available to release", { amount: money(goal?.current??0) })}</p>
     <div className="space-y-2"><Label htmlFor="goal-amount">{t("Amount (EUR)")}</Label><Input id="goal-amount" inputMode="decimal" value={amount} onChange={e=>{setAmount(e.target.value);setError("");setInvalidField(null);}} aria-invalid={invalidField==="amount"&&!!error} aria-describedby={invalidField==="amount"&&error?"goal-error":undefined} placeholder="0.00" /></div>
-    <p className="text-sm text-slate-600">{t("This changes your goal allocation, not your bank balance.")}</p>
+    <FieldFeedback className="text-sm text-slate-600">{t("This changes your goal allocation, not your bank balance.")}</FieldFeedback>
    </>}
-   {error&&<p id="goal-error" role="alert" className="text-sm text-red-700">{t(error)}</p>}
-   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button type="button" variant="outline" onClick={()=>goal?changeMode("details"):onClose()}>{t("Cancel")}</Button><Button type="submit" className={cn(brand, "text-primary-foreground")}>{t(mode==="edit"?(goal?"Save goal":"Create goal"):mode==="add"?"Confirm allocation":"Confirm release")}</Button></div>
+   {error&&<FieldFeedback tone="error" id="goal-error" role="alert" className="text-sm text-red-700">{t(error)}</FieldFeedback>}
+   <div data-form-actions className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button type="button" variant="outline" onClick={()=>goal?changeMode("details"):onClose()}>{t("Cancel")}</Button><Button type="submit" className={cn(brand, "text-primary-foreground")}>{t(mode==="edit"?(goal?"Save goal":"Create goal"):mode==="add"?"Confirm allocation":"Confirm release")}</Button></div>
   </form>}
  </DialogContent></Dialog>;
 }

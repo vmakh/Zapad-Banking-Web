@@ -69,7 +69,7 @@ export function ReceiveSheet({
         <div className="p-8">
           <SheetHeader className="mb-8 text-left">
             <div className="flex items-center gap-4 mb-2">
-              <div className="size-11 shrink-0 rounded-xl bg-muted text-muted-foreground flex items-center justify-center">
+              <div data-slot="functional-icon" className="size-11 shrink-0 rounded-xl bg-muted text-muted-foreground flex items-center justify-center">
                 <ArrowDownLeft className="size-5" />
               </div>
               <div>
@@ -83,7 +83,7 @@ export function ReceiveSheet({
             <Label id="receive-account-label" className="text-sm text-muted-foreground">{t("Receive to")}</Label>
             <Popover open={accountPickerOpen} onOpenChange={setAccountPickerOpen}>
               <PopoverTrigger asChild>
-                <Button variant="outline" role="combobox" aria-expanded={accountPickerOpen} aria-labelledby="receive-account-label receive-account-value" className="w-full h-auto min-h-14 justify-between gap-3 text-left whitespace-normal">
+                <Button variant="outline" role="combobox" aria-expanded={accountPickerOpen} aria-labelledby="receive-account-label receive-account-value" className="w-full h-auto min-h-12 justify-between gap-3 text-left whitespace-normal">
                   <CurrencyFlag currency={acc.currency} />
                   <span id="receive-account-value" className="min-w-0 flex-1">
                     <span className="block break-words">{t(acc.name)}</span>

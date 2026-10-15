@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { FieldFeedback } from "./field-feedback";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 import {
@@ -127,7 +128,7 @@ function FormDescription({ className, ...props }: React.ComponentProps<"p">) {
   const { formDescriptionId } = useFormField();
 
   return (
-    <p
+    <FieldFeedback
       data-slot="form-description"
       id={formDescriptionId}
       className={cn("text-muted-foreground text-sm", className)}
@@ -145,14 +146,14 @@ function FormMessage({ className, ...props }: React.ComponentProps<"p">) {
   }
 
   return (
-    <p
+    <FieldFeedback tone="error"
       data-slot="form-message"
       id={formMessageId}
       className={cn("text-destructive text-sm", className)}
       {...props}
     >
       {body}
-    </p>
+    </FieldFeedback>
   );
 }
 

@@ -1,3 +1,4 @@
+import { FieldFeedback } from "../components/ui/field-feedback";
 import { useI18n } from "../i18n/I18nProvider";
 import { exchangeReturnPath } from "../utils/paymentOrigin";
 import { normalizeDecimalInput } from "../utils/decimalInput";
@@ -125,7 +126,7 @@ export function ExchangePage() {
   };
 
   return (
-    <div className={cn(PAGE_MAX_WIDTH, "@container mx-auto p-6 md:p-8 space-y-8")}>
+    <div className={cn(PAGE_MAX_WIDTH, "@container mx-auto p-4 sm:p-6 lg:p-8 space-y-6")}>
       <div>
         <button className="inline-flex min-h-11 items-center text-sm text-primary-text mb-4" onClick={() => navigate(returnPath ?? profilePath(profileSlug,"payments"), { replace: true })}>← {returnLabel}</button>
         <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">
@@ -140,16 +141,16 @@ export function ExchangePage() {
         {/* Left — exchange widget */}
         <div className="min-w-0 space-y-5">
           {step === "form" && (
-            <Card className="@container p-4 sm:p-8 border-slate-200/60 rounded-4xl bg-white shadow-sm">
-              <div className="flex items-center justify-between mb-7">
+            <Card className="@container p-4 sm:p-6 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h2 ref={stepHeading} tabIndex={-1} className="text-lg font-semibold text-slate-900">{t("Exchange")}</h2>
                 <Badge variant="secondary">{t("Demo rates")}</Badge>
               </div>
 
-              {invalidLink && <p role="status" className="mb-4 text-sm text-destructive">{t("This link refers to an unavailable account. Select your source and destination accounts to continue.")}</p>}
+              {invalidLink && <FieldFeedback tone="error" role="status" className="mb-4 text-sm text-destructive">{t("This link refers to an unavailable account. Select your source and destination accounts to continue.")}</FieldFeedback>}
               <div className="space-y-3">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-5 focus-within:bg-white focus-within:border-slate-300 focus-within:shadow-sm transition-all">
-                  <div className="text-xs font-medium uppercase text-slate-400 tracking-wider mb-3">
+                <div className="rounded-xl border border-border bg-muted p-4">
+                  <div className="text-sm font-medium text-muted-foreground mb-2">
                     {t("From balance")}{sourceAccount ? ` · ${t(sourceAccount.name)}` : ""}
                   </div>
                   <div className="flex flex-col items-stretch @sm:flex-row @sm:items-center gap-3 min-w-0">
@@ -161,11 +162,11 @@ export function ExchangePage() {
                       inputMode="decimal"
                       value={fromAmount}
                       onChange={(e) => setFromAmount(normalizeDecimalInput(e.target.value))}
-                      className="border-0 bg-transparent px-0 h-11 text-3xl md:text-3xl font-semibold shadow-none focus-visible:ring-0 text-slate-900 w-full @sm:w-0 flex-1 min-w-0"
+                      className="h-12 w-full @sm:w-0 @sm:flex-1 min-w-0 px-3 py-2 tabular-nums"
                       placeholder="0"
                     />
                     <Select value={sourceAccount?.id ?? ""} onValueChange={id => selectAccounts(id, destinationAccount?.id ?? "")}>
-                      <SelectTrigger aria-label={t("Source account")} className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
+                      <SelectTrigger aria-label={t("Source account")} className="h-12 w-full @sm:w-36 font-medium gap-2 shrink-0">
                         <SelectValue placeholder={t("Choose account")}>{sourceAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={fromCurrency} /><span>{fromCurrency}</span></span>}</SelectValue>
                       </SelectTrigger>
                       <SelectContent>
@@ -181,11 +182,11 @@ export function ExchangePage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  <p id="exchange-amount-format" className="mt-2 text-xs text-muted-foreground">{t("Use a dot or comma for decimals, without thousands separators.")}</p>
-                  {amountError && <p id="exchange-amount-error" role="status" className="mt-2 text-sm text-destructive">{amountError}</p>}
-                  <div className="text-xs font-normal text-slate-400 mt-2">
+                  <FieldFeedback id="exchange-amount-format" className="mt-2 text-xs text-muted-foreground">{t("Use a dot or comma for decimals, without thousands separators.")}</FieldFeedback>
+                  {amountError && <FieldFeedback tone="error" id="exchange-amount-error" role="status" className="mt-2 text-sm text-destructive">{amountError}</FieldFeedback>}
+                  <FieldFeedback className="mt-2">
                     {!sourceAccount ? t("Choose an account to see its available balance.") : t("Available: {amount}", { amount: isPrivate ? "•••" : formatMoney(sourceAvailable, fromCurrency) })}
-                  </div>
+                  </FieldFeedback>
                 </div>
 
                 <div className="flex justify-center py-1 relative z-10">
@@ -197,19 +198,23 @@ export function ExchangePage() {
                   </button>
                 </div>
 
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-5 transition-all">
-                  <div className="text-xs font-medium uppercase text-slate-400 tracking-wider mb-3">
+                <div className="rounded-xl border border-border bg-muted p-4">
+                  <div className="text-sm font-medium text-muted-foreground mb-2">
                     {t("To balance")}{destinationAccount ? ` · ${t(destinationAccount.name)}` : ""}
                   </div>
                   <div className="flex flex-col items-stretch @sm:flex-row @sm:items-center gap-3 min-w-0">
-                    <div className="text-3xl md:text-3xl font-semibold text-slate-900 w-full @sm:w-0 flex-1 min-w-0 tabular-nums break-words">
-                      {rate > 0 ? formatNumber(parseFloat(toAmount) || 0, {
+                    <Input
+                      readOnly
+                      aria-label={t("Recipient gets")}
+                      aria-describedby="exchange-rate"
+                      value={rate > 0 ? formatNumber(parseFloat(toAmount) || 0, {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                       }) : "—"}
-                    </div>
+                      className="h-12 w-full @sm:w-0 @sm:flex-1 min-w-0 px-3 py-2 tabular-nums"
+                    />
                     <Select value={destinationAccount?.id ?? ""} onValueChange={id => selectAccounts(sourceAccount?.id ?? "", id)}>
-                      <SelectTrigger aria-label={t("Destination account")} className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
+                      <SelectTrigger aria-label={t("Destination account")} className="h-12 w-full @sm:w-36 font-medium gap-2 shrink-0">
                         <SelectValue placeholder={t("Choose account")}>{destinationAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={toCurrency} /><span>{toCurrency}</span></span>}</SelectValue>
                       </SelectTrigger>
                       <SelectContent>
@@ -225,9 +230,9 @@ export function ExchangePage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  <div className="text-xs font-medium text-muted-foreground mt-2">
+                  <FieldFeedback id="exchange-rate" className="mt-2">
                     {sourceAccount && destinationAccount ? fromCurrency === toCurrency ? t("Choose accounts in different currencies.") : `1 ${fromCurrency} = ${formatNumber(rate, { minimumFractionDigits: 4, maximumFractionDigits: 4 })} ${toCurrency}` : t("Choose both accounts to see the rate.")}
-                  </div>
+                  </FieldFeedback>
                 </div>
               </div>
 
@@ -239,6 +244,8 @@ export function ExchangePage() {
               </div>
 
               <Button
+                size="lg"
+                data-exchange-action
                 disabled={!validQuote}
                 onClick={() => {
                   if (!fromAmount || !Number.isFinite(Number(fromAmount)) || Number(fromAmount) <= 0) {
@@ -253,7 +260,7 @@ export function ExchangePage() {
                   if (!validQuote) return;
                   setReviewedAt(Date.now()); setClock(Date.now()); setStep("confirm");
                 }}
-                className={cn("w-full mt-6 h-14 px-8 rounded-lg font-medium text-lg shadow-md transition-all hover:shadow-lg zb-hover-lift", brandBg, brandHover, brandText)}
+                className={cn("w-full mt-6 rounded-lg", brandBg, brandHover, brandText)}
               >
                 {t("Review exchange")}
               </Button>
@@ -261,7 +268,7 @@ export function ExchangePage() {
           )}
 
           {step === "confirm" && (
-            <Card className="@container p-4 sm:p-8 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+            <Card className="@container p-4 sm:p-6 border-slate-200/60 rounded-4xl bg-white shadow-sm">
               <h2 ref={stepHeading} tabIndex={-1} className="text-xl font-semibold text-slate-900 mb-4">{t("Review exchange")}</h2>
               <p className="text-sm text-muted-foreground mb-4">{t("From {account}", { account: sourceAccount ? t(sourceAccount.name) : "" })} · {sourceAccount?.ibanShort}<br/>{t("To {account}", { account: destinationAccount ? t(destinationAccount.name) : "" })} · {destinationAccount?.ibanShort}</p>
               <p role="status" className="text-sm text-muted-foreground mb-4">{expired ? t("Quote expired. Refresh before confirming.") : t("Illustrative quote · valid for 60 seconds after review. No bank request will be sent.")}</p>
@@ -284,7 +291,7 @@ export function ExchangePage() {
                   <span className="font-medium text-emerald-600">{t("{amount} · demo only", { amount: formatMoney(0, "EUR") })}</span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 @sm:grid-cols-2 gap-3">
+              <div data-form-actions className="grid grid-cols-1 @sm:grid-cols-2 gap-3">
                 <Button variant="outline" onClick={() => setStep("form")} className="h-12 px-6 rounded-lg font-medium border-slate-200 text-slate-700">{t("Edit")}</Button>
                 <Button disabled={expired || !validQuote} onClick={handleConfirm} className={cn("h-12 px-6 rounded-lg font-medium shadow-sm", brandBg, brandHover, brandText)}>{t("Confirm in demo")}</Button>
               </div>
@@ -315,7 +322,7 @@ export function ExchangePage() {
           )}
 
           {/* Recent exchanges */}
-          <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+          <Card className="p-4 sm:p-6 border-slate-200/60 rounded-4xl bg-white shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
               <History className="size-5 text-slate-400" /> {t("Illustrative exchanges")}
             </h2>
@@ -349,7 +356,7 @@ export function ExchangePage() {
 
         {/* Right — reference rates */}
         <div className="min-w-0 space-y-5">
-          <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
+          <Card className="p-4 sm:p-6 border-slate-200/60 rounded-4xl bg-white shadow-sm">
             <div className="flex items-center justify-between mb-5">
               <h2 className="text-lg font-semibold text-slate-900">{t("Reference rates")}</h2>
               <Badge variant="secondary">{t("Demo rates")}</Badge>
@@ -388,9 +395,9 @@ export function ExchangePage() {
             </div>
           </Card>
 
-          <Card className="p-7 border-slate-200/60 rounded-4xl bg-slate-50 shadow-sm">
+          <Card className="p-4 sm:p-6 border-slate-200/60 rounded-4xl bg-slate-50 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="size-11 rounded-sm bg-amber-100 text-amber-600 flex items-center justify-center">
+              <div data-slot="functional-icon" className="size-11 rounded-sm bg-amber-100 text-amber-600 flex items-center justify-center">
                 <Star className="size-5" />
               </div>
               <div>

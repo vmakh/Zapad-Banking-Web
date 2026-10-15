@@ -53,7 +53,7 @@ export function TransactionDetailsSheet({
       <SheetContent side="right" className="w-full sm:max-w-md p-0 overflow-hidden border-l-0 rounded-l-5xl bg-neutral-50 flex flex-col">
         {/* Header section */}
         <div className="bank-amount-container w-full min-w-0 bg-white px-8 pt-12 pb-8 rounded-b-5xl shadow-sm relative z-10 flex flex-col items-center text-center shrink-0">
-          <div data-slot="functional-icon" className={cn("size-24 rounded-xl flex items-center justify-center mb-6", transaction.iconBg)}>
+          <div data-slot="functional-icon" data-icon-role="detail" className={cn("size-24 rounded-xl flex items-center justify-center mb-6", transaction.iconBg)}>
             <Icon className="size-10" />
           </div>
           

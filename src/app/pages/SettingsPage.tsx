@@ -66,7 +66,7 @@ export function SettingsPage() {
           <h2 className="font-semibold text-slate-900">{t("Privacy & security")}</h2>
           <div className="flex items-center justify-between gap-4 p-4 rounded-xl border border-border">
             <div className="flex min-w-0 items-center gap-3">
-              <div className="size-10 shrink-0 rounded-lg bg-muted text-muted-foreground flex items-center justify-center" aria-hidden="true">
+              <div data-slot="functional-icon" className="size-10 shrink-0 rounded-lg bg-muted text-muted-foreground flex items-center justify-center" aria-hidden="true">
                 {isPrivate ? <EyeOff className="size-5" /> : <Eye className="size-5" />}
               </div>
               <div>
@@ -86,7 +86,7 @@ export function SettingsPage() {
             className="flex items-center justify-between gap-4 p-4 rounded-xl border border-border hover:bg-muted transition-colors group"
           >
             <div className="flex min-w-0 items-center gap-3">
-              <div className="size-10 shrink-0 rounded-lg bg-muted text-muted-foreground flex items-center justify-center" aria-hidden="true">
+              <div data-slot="functional-icon" className="size-10 shrink-0 rounded-lg bg-muted text-muted-foreground flex items-center justify-center" aria-hidden="true">
                 <Shield className="size-5" />
               </div>
               <div>
@@ -99,7 +99,7 @@ export function SettingsPage() {
         </div>
       </Card>
       <Card className="p-6 md:p-8 space-y-4"><h2 className="text-lg font-semibold">{t("Demo workspace")}</h2><p className="text-sm text-slate-600">{t("Goals, card controls, notes, notification preferences, saved recipients, transfer drafts and local previews for this profile are saved in this browser. Reset them to explore the original sample again.")}</p><Button variant="outline" onClick={()=>setResetOpen(true)}>{t("Reset saved changes")}</Button></Card>
-      <Dialog open={resetOpen} onOpenChange={setResetOpen}><DialogContent><DialogHeader><DialogTitle>{t("Reset {name}’s demo?", { name: profile.name })}</DialogTitle><DialogDescription>{t("This removes saved goals, card controls, notes, notification preferences, recipients, transfer drafts and local previews for this profile. Your other profile is unchanged.")}</DialogDescription></DialogHeader><div className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button variant="outline" onClick={()=>setResetOpen(false)}>{t("Keep changes")}</Button><Button onClick={()=>{if(resetDemoProfile(profile.kind)) window.location.reload();else toast.error(t("Your browser could not reset the demo"));}}>{t("Reset demo")}</Button></div></DialogContent></Dialog>
+      <Dialog open={resetOpen} onOpenChange={setResetOpen}><DialogContent><DialogHeader><DialogTitle>{t("Reset {name}’s demo?", { name: profile.name })}</DialogTitle><DialogDescription>{t("This removes saved goals, card controls, notes, notification preferences, recipients, transfer drafts and local previews for this profile. Your other profile is unchanged.")}</DialogDescription></DialogHeader><div data-form-actions className="grid grid-cols-1 sm:grid-cols-2 gap-3"><Button variant="outline" onClick={()=>setResetOpen(false)}>{t("Keep changes")}</Button><Button onClick={()=>{if(resetDemoProfile(profile.kind)) window.location.reload();else toast.error(t("Your browser could not reset the demo"));}}>{t("Reset demo")}</Button></div></DialogContent></Dialog>
     </div>
   );
 }

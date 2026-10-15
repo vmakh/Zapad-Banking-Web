@@ -1,3 +1,4 @@
+import { FieldFeedback } from "../components/ui/field-feedback";
 import { normalizeDecimalInput } from "../utils/decimalInput";
 import { localizedGoalName } from "../i18n/display";
 import { useI18n } from "../i18n/I18nProvider";
@@ -66,7 +67,7 @@ function ApyCalculator({ isBusiness }: { isBusiness: boolean }) {
       <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
         <Calculator className="size-5 text-slate-400" /> {t("Returns calculator")}
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 items-end gap-3 mb-5">
+      <div data-form-fields="calculator" className="grid grid-cols-1 sm:grid-cols-3 items-end gap-3 mb-5">
         {[
           { label: "Initial deposit (€)", value: principal, onChange: setPrincipal },
           { label: "APY (%)", value: rate, onChange: setRate },
@@ -85,7 +86,7 @@ function ApyCalculator({ isBusiness }: { isBusiness: boolean }) {
           </div>
         ))}
       </div>
-      {error && <p id={`${fieldId}-error`} role="status" className="text-sm text-slate-600 mb-4">{t(error)}</p>}
+      {error && <FieldFeedback tone="error" id={`${fieldId}-error`} role="status" className="text-sm text-slate-600 mb-4">{t(error)}</FieldFeedback>}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
           { label: "Final balance", value: estimate ? formatMoney(estimate.finalAmount) : "—", highlight: true },
@@ -163,7 +164,7 @@ export function SavingsPage() {
               <button data-bank-surface type="button" onClick={() => navigate(profilePath(profileSlug, `savings/goals/${goal.id}`))} key={localizedGoalName(goal)} className="text-left p-5 rounded-xl bg-white border border-slate-200/60">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="shrink-0 size-9 rounded-action-inner bg-slate-100 text-slate-500 flex items-center justify-center">
+                    <div data-slot="functional-icon" className="shrink-0 size-9 rounded-action-inner bg-slate-100 text-slate-500 flex items-center justify-center">
                       <Icon className="size-4" />
                     </div>
                     <span className="font-semibold text-slate-900 wrap-anywhere min-w-0">{localizedGoalName(goal)}</span>

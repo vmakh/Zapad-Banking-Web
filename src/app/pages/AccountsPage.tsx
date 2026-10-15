@@ -133,7 +133,7 @@ function AccountDetailSheet({
                   }}
                   className="flex flex-col items-center gap-2.5 py-4 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-100 transition-all group"
                 >
-                  <div className="size-10 rounded-action-inner bg-white border border-slate-200 flex items-center justify-center zb-group-hover-lift shadow-sm">
+                  <div data-slot="functional-icon" data-icon-role="action" className="size-10 rounded-action-inner bg-white border border-slate-200 flex items-center justify-center zb-group-hover-lift shadow-sm">
                     <Icon className="size-4 text-slate-700" />
                   </div>
                   <span className="text-xs font-medium text-slate-700">{t(a.label)}</span>
@@ -154,7 +154,7 @@ function AccountDetailSheet({
               {txs.length === 0 && <p className="text-sm text-slate-500 py-4">{t("No activity in this demo account.")}</p>}
               {txs.map((tx) => (
                 <div key={tx.id} className="grid grid-cols-1 sm:flex sm:items-center gap-2 sm:gap-4 sm:px-4 py-3.5 rounded-lg hover:bg-slate-50 transition-colors">
-                  <div className={cn("size-10 rounded-full hidden sm:flex items-center justify-center shrink-0", tx.positive ? "bg-emerald-100" : "bg-slate-100")}>
+                  <div data-slot="functional-icon" className={cn("size-10 rounded-full hidden sm:flex items-center justify-center shrink-0", tx.positive ? "bg-emerald-100" : "bg-slate-100")}>
                     {tx.positive ? (
                       <ArrowDownLeft className="size-4 text-emerald-600" />
                     ) : (

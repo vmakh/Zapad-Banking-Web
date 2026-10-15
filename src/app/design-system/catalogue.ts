@@ -7,7 +7,7 @@ export const gallerySections: GallerySection[] = [
   section('geometry','Відступи та радіуси','Основи',[],['default'],'Спільна шкала відступів, геометрія контролів і панелей.'),
   section('icons','Іконки та валюти','Основи',['zapad/CurrencyIcon','zapad/IconScaleSlot'],['default','selected','flags'],'Phosphor regular / fill, нейтральні службові glyphs та локальні валютні SVG.'),
   section('button','Кнопки','Контроли',['ui/button'],['default','hover','focus','disabled','loading','destructive','sizes'],'Усі варіанти Button. Hover/focus мають позначені зафіксовані зразки; клавіатура й миша також працюють.'),
-  section('input','Поля та labels','Контроли',['ui/input','ui/label','ui/textarea'],['empty','filled','invalid','disabled','focus'],'Input, Textarea та Label з доступними підписами й поясненням помилки.'),
+  section('input','Поля та labels','Контроли',['ui/input','ui/label','ui/textarea','ui/field-feedback'],['empty','filled','invalid','disabled','focus'],'Input, Textarea та Label з доступними підписами й поясненням помилки.'),
   section('select','Вибір зі списку','Контроли',['ui/select'],['default','open','selected','disabled','invalid'],'Повний Select з опціями, групами, роздільником і переносом довгого вибраного значення.'),
   section('checkbox','Checkbox','Контроли',['ui/checkbox'],['default','checked','indeterminate','disabled','invalid'],'Незалежний вибір і змішаний стан.'),
   section('radio-group','Radio group','Контроли',['ui/radio-group'],['default','selected','disabled'],'Один варіант із групи; перевірте керування стрілками.'),

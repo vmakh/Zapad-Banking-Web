@@ -223,12 +223,17 @@
 :root {
   --bank-ink: #172337;
   --bank-muted: #58677b;
+  --bank-feedback-ink: var(--bank-muted);
   --bank-line: #e6ebf2;
   --bank-control-line: #dce3ed;
   --bank-field: #f9fbfd;
+  --bank-menu-hover: #f0f5fa;
+  --bank-menu-selected: #e7eff9;
   --bank-error: #b42318;
+  --bank-error-surface: #fff8f9;
   --bank-disabled: #e7ecf2;
   --bank-disabled-ink: #536174;
+  --bank-disabled-line: #d3dbe5;
   --bank-paper: #f4f7fb;
   --bank-soft: #f0f5fd;
   --bank-accent: var(--brand-personal);
@@ -252,7 +257,21 @@
   --bank-display: 'Unbounded', Onest, -apple-system, BlinkMacSystemFont, sans-serif;
   --bank-body: Onest, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --bank-control-radius: 0.75rem;
+  --bank-control-height: calc(var(--spacing) * 12);
+  --bank-control-height-compact: calc(var(--spacing) * 11);
+  --bank-control-height-large: calc(var(--spacing) * 13);
+  --bank-control-height-extra-large: calc(var(--spacing) * 14);
+  --bank-control-padding-inline: calc(var(--spacing) * 3);
+  --bank-control-padding-block: calc(var(--spacing) * 2);
+  --bank-form-field-gap: calc(var(--spacing) * 2);
+  --bank-form-group-gap: calc(var(--spacing) * 6);
+  --bank-form-action-gap: calc(var(--spacing) * 3);
   --bank-panel-radius: 1rem;
+  --bank-icon-leading: calc(var(--spacing) * 6);
+  --bank-icon-action: calc(var(--spacing) * 5);
+  --bank-icon-detail: calc(var(--spacing) * 8);
+  --bank-icon-slot: calc(var(--spacing) * 8);
+  --bank-icon-gap: calc(var(--spacing) * 3);
   --background: #ffffff;
   --foreground: var(--bank-ink);
   --card-foreground: var(--bank-ink);
@@ -272,9 +291,16 @@
 :root:has(.bank-workspace[data-bank-profile="business"]) {
   --bank-ink: #202832;
   --bank-muted: #64707d;
+  --bank-feedback-ink: #5c6875;
   --bank-line: #e4e7ea;
   --bank-control-line: #cbd1d8;
   --bank-field: #fcfaf7;
+  --bank-error-surface: #fff8f5;
+  --bank-disabled: #f0ede8;
+  --bank-disabled-ink: #59636e;
+  --bank-disabled-line: #d8d3cd;
+  --bank-menu-hover: #f8f3ec;
+  --bank-menu-selected: #f6eadc;
   --bank-paper: #f3f4f5;
   --bank-soft: #fff3e9;
   --bank-accent: var(--brand-business);

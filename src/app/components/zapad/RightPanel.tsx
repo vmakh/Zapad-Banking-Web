@@ -112,7 +112,7 @@ export function AlertsCard({
               to={it.href}
               className={cn("group flex items-start rounded-xl hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors", compact ? "gap-3 p-3" : "gap-4 p-4")}
             >
-              <div className="relative size-10 shrink-0" aria-hidden="true">
+              <div className="relative size-8 shrink-0" aria-hidden="true">
                 <IconScaleSlot className="size-full rounded-full" innerClassName="bg-muted text-foreground">
                   <Icon className="size-6" />
                 </IconScaleSlot>
