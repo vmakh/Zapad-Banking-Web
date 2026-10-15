@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../i18n/display";
 import { formatDate } from "../utils/date";
 import { useI18n } from "../i18n/I18nProvider";
 import { CurrencyFlag } from "../components/zapad/CurrencyIcon";
@@ -76,7 +76,7 @@ export function StatementsPage() {
     </section>
     <DialogFooter className="shrink-0 border-t border-border pt-4 sm:items-center">
      <p className="text-xs text-muted-foreground flex-1">{isPrivate ? t("Amounts will remain hidden in the download.") : t("Sample data only. Not an official bank statement.")}</p>
-     <Button onClick={() => preview && downloadFile(`zapadbanka-sample-statement-${preview.id}-2026-05.csv`, statementCsv(preview, transactions, isPrivate, { t, date: formatDate, merchant: localizedMerchant }), "text/csv;charset=utf-8")}>
+     <Button onClick={() => preview && downloadFile(`zapadbanka-sample-statement-${preview.id}-2026-05.csv`, statementCsv(preview, transactions, isPrivate, { t, date: formatDate, merchant: localizedMerchant, meta: localizedTransactionMeta }), "text/csv;charset=utf-8")}>
       <Download className="size-4" /> {t("Download CSV")}
      </Button>
     </DialogFooter>

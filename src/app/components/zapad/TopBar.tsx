@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../../i18n/display";
 import { useI18n } from "../../i18n/I18nProvider";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { formatDate } from "../../utils/date";
@@ -73,7 +73,7 @@ export function TopBar({
     const transactions = getTransactions(profile.kind).filter(
       (transaction) =>
         localizedMerchant(transaction.merchant).toLocaleLowerCase(intlLocale).includes(q) ||
-        t(transaction.meta).toLowerCase().includes(q) ||
+        localizedTransactionMeta(transaction.meta).toLowerCase().includes(q) ||
         t(transaction.category).toLowerCase().includes(q),
     );
     const recipients = getRecipients(profile.kind).filter(

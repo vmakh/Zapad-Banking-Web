@@ -1,3 +1,4 @@
+import { dateFormatter } from "../../utils/localeFormats";
 import { localizedMerchant } from "../../i18n/display";
 import { useI18n } from "../../i18n/I18nProvider";
 import { useState, useRef } from "react";
@@ -70,7 +71,7 @@ export function PreviewHistory({kind, accountId=""}:{kind:ProfileKind;accountId?
       ["Amount", formatMoney(selected.amount, selected.currency)], ["Demo fee", formatMoney(selected.fee, selected.currency)],
       ["Total debit preview", formatMoney(selected.total, selected.currency)], ["Recipient gets", formatMoney(selected.received, selected.targetCurrency)],
       ["Note", previewNote(selected) || t("None")], ["Initiator", selected.initiator === "Demo accounts payable" ? t(selected.initiator) : selected.initiator]];
-    const text = [t("ZapadBanka LOCAL PREVIEW — NOT PROOF OF PAYMENT"), new Date(selected.createdAt).toLocaleString(intlLocale),
+    const text = [t("ZapadBanka LOCAL PREVIEW — NOT PROOF OF PAYMENT"), dateFormatter({ year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit", second: "2-digit" }).format(new Date(selected.createdAt)),
       ...rows.map(([label, value]) => `${t(label)}: ${value}`), "", t("Preview event log"), ...selected.events.map(previewEvent)].join("\n");
     downloadFile(`${selected.id}-preview.txt`, text, "text/plain;charset=utf-8");
   };
@@ -84,7 +85,7 @@ export function PreviewHistory({kind, accountId=""}:{kind:ProfileKind;accountId?
     <CollapsibleContent className="space-y-3 pt-3">
     <p className="text-sm text-muted-foreground">{t("Saved on this device. These are not bank transactions and do not change balances or spending analytics.")}</p>
     <Input aria-label={t("Search local previews")} placeholder={t("Search recipient, amount or reference")} value={search} onChange={e=>setSearch(e.target.value)}/>
-    {visibleRecords.map(r=><Button key={r.id} variant="ghost" className={cn("w-full h-auto min-h-14 flex-wrap justify-between text-left whitespace-normal gap-3", selected?.id===r.id && "bg-accent text-accent-foreground")} aria-haspopup="dialog" aria-expanded={selected?.id===r.id} onClick={event=>{lastTrigger.current=event.currentTarget;setReason("");setParams(previous=>{const next=new URLSearchParams(previous);next.set("preview",r.id);return next;},{replace:true});}}><span className="min-w-0 break-words">{t(r.title)} · {previewRecipient(r)}<small className="block text-muted-foreground">{t(r.status)} · {new Date(r.createdAt).toLocaleString(intlLocale)}</small></span><span>{amount(r.total,r.currency)}</span></Button>)}
+    {visibleRecords.map(r=><Button key={r.id} variant="ghost" className={cn("w-full h-auto min-h-14 flex-wrap justify-between text-left whitespace-normal gap-3", selected?.id===r.id && "bg-accent text-accent-foreground")} aria-haspopup="dialog" aria-expanded={selected?.id===r.id} onClick={event=>{lastTrigger.current=event.currentTarget;setReason("");setParams(previous=>{const next=new URLSearchParams(previous);next.set("preview",r.id);return next;},{replace:true});}}><span className="min-w-0 break-words">{t(r.title)} · {previewRecipient(r)}<small className="block text-muted-foreground">{t(r.status)} · {dateFormatter({ year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit", second: "2-digit" }).format(new Date(r.createdAt))}</small></span><span>{amount(r.total,r.currency)}</span></Button>)}
     {records.length > 0 && !visibleRecords.length && <p role="status" className="text-sm text-muted-foreground">{t("No previews match this account or search.")}</p>}
     {!records.length && <p className="text-sm text-muted-foreground">{t("No previews yet. Confirm a demo transfer to keep its reference here.")}</p>}
     {params.has("preview") && !selected && <p role="status">{t("This preview is unavailable on this device or belongs to another profile.")}</p>}

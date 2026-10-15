@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../../i18n/display";
 import { formatDate } from "../../utils/date";
 import { useI18n } from "../../i18n/I18nProvider";
 import { TransactionExtras } from "./TransactionExtras";
@@ -80,12 +80,12 @@ export function TransactionDetailsSheet({
           <div className="bg-white p-5 rounded-3xl space-y-4 shadow-sm">
             <div className="flex justify-between items-center">
               <span className="text-sm font-normal text-neutral-500">{t("Payment method")}</span>
-              <span className="text-sm font-medium">{t(transaction.meta).split(' · ')[0].trim()}</span>
+              <span className="text-sm font-medium">{localizedTransactionMeta(transaction.meta).split(' · ')[0].trim()}</span>
             </div>
             <div className="h-px bg-neutral-100" />
             <div className="flex justify-between items-center">
               <span className="text-sm font-normal text-neutral-500">{t("Operation details")}</span>
-              <span className="text-sm font-medium">{t(transaction.meta).split(' · ').slice(1).join(' · ') || t(transaction.category)}</span>
+              <span className="text-sm font-medium">{localizedTransactionMeta(transaction.meta).split(' · ').slice(1).join(' · ') || t(transaction.category)}</span>
             </div>
             <div className="h-px bg-neutral-100" />
             <div className="flex justify-between items-center">

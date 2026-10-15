@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../../i18n/display";
 import { formatDate } from "../../utils/date";
 import { useI18n } from "../../i18n/I18nProvider";
 import { useState } from "react";
@@ -95,7 +95,7 @@ export function Transactions({
                   <StatusBadge status={tx.status} />
                 </div>
                 <div className="text-sm font-normal text-slate-500 break-words mt-1">
-                  {t(tx.meta)} <span className="mx-1 text-slate-300">•</span> {formatDate(tx.date)}
+                  {localizedTransactionMeta(tx.meta)} <span className="mx-1 text-slate-300">•</span> {formatDate(tx.date)}
                 </div>
               </div>
               <div className="flex flex-wrap items-baseline justify-between gap-x-3 text-left @sm:block @sm:text-right">

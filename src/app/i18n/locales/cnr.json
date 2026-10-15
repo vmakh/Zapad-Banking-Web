@@ -258,7 +258,7 @@
   "Exchange": "Zamjena valuta",
   "Exchange amount": "Iznos razmjene",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Razmjena je lokalno pregledana. Konverzija nije izvršena; oba stanja su nepromijenjena.",
-  "Exchange · rate 1.087": "Zamjena valuta · kurs 1.087",
+  "Exchange · rate {rate}": "Zamjena valuta · kurs {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Ne uključuje prilive, plaćanja na čekanju i zakazana plaćanja, razmjene valuta i lokalne preglede.",
   "Execution": "Izvršenje",
   "Expiry": "Važi do",

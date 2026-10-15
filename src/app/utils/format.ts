@@ -1,21 +1,21 @@
-import { getIntlLocale } from "../i18n/runtime";
+import { numberFormatter } from "./localeFormats";
 
 export function formatNumber(
   value: number,
   options?: Intl.NumberFormatOptions,
 ): string {
-  return value.toLocaleString(getIntlLocale(), {
+  return numberFormatter({
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
     ...options,
-  });
+  }).format(value);
 }
 
 export function formatInteger(value: number): string {
-  return value.toLocaleString(getIntlLocale(), { maximumFractionDigits: 0 });
+  return numberFormatter({ maximumFractionDigits: 0 }).format(value);
 }
 
-const moneyFormatter = () => new Intl.NumberFormat(getIntlLocale(), {
+const moneyFormatter = () => numberFormatter({
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
@@ -34,7 +34,7 @@ export function formatMoneyParts(value: number): {
 } {
   const amount = coerceMoneyAmount(value);
   if (amount === null) {
-    return { sign: "", whole: "—", cents: "00", decimal: new Intl.NumberFormat(getIntlLocale()).formatToParts(1.1).find(part => part.type === "decimal")?.value ?? "." };
+    return { sign: "", whole: "—", cents: "00", decimal: numberFormatter().formatToParts(1.1).find(part => part.type === "decimal")?.value ?? "." };
   }
 
   const sign = amount < 0 ? "-" : "";
@@ -92,7 +92,7 @@ export function formatMoney(
   }
 
   const decimals = options?.decimals ?? 2;
-  return new Intl.NumberFormat(getIntlLocale(), {
+  return numberFormatter({
     ...(options?.hideSymbol ? {} : { style: "currency", currency }),
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
@@ -108,7 +108,7 @@ export function formatMoneyCompact(value: number, currency: string = "EUR"): str
     return `${sym}—`;
   }
 
-  return new Intl.NumberFormat(getIntlLocale(), {
+  return numberFormatter({
     style: "currency", currency, notation: "compact", maximumFractionDigits: 1,
   }).format(coerced);
 }

@@ -2,6 +2,13 @@ import type { InboxMessage, SavingsGoal } from "../data/types";
 import { t } from "./runtime";
 import { formatMoney, formatNumber } from "../utils/format";
 
+/** Fixture rates are values, rather than punctuation embedded in translated copy. */
+export function localizedTransactionMeta(meta: string): string {
+  return meta === "Exchange · rate 1.087"
+    ? t("Exchange · rate {rate}", { rate: formatNumber(1.087, { maximumFractionDigits: 4 }) })
+    : t(meta);
+}
+
 export function localizedMessageBody(message: Pick<InboxMessage, "body" | "bodyAmount" | "bodyRate">): string {
   return t(message.body, {
     amount: message.bodyAmount === undefined ? undefined : formatMoney(message.bodyAmount, "EUR"),

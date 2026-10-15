@@ -258,7 +258,7 @@
   "Exchange": "Обмін",
   "Exchange amount": "Сума обміну",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Обмін перевірено локально. Конвертацію не виконано; залишки обох рахунків не змінилися.",
-  "Exchange · rate 1.087": "Обмін · курс 1.087",
+  "Exchange · rate {rate}": "Обмін · курс {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Не враховує надходження, платежі в очікуванні й заплановані платежі, обміни валют та локальні перегляди.",
   "Execution": "Виконання",
   "Expiry": "Термін дії",

@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../../i18n/display";
 import { formatDate } from "../../utils/date";
 import { useI18n } from "../../i18n/I18nProvider";
 import { copyText } from "../../utils/clipboard";
@@ -32,7 +32,7 @@ export function TransactionExtras({transaction:tx,business,isPrivate}:{transacti
  const reference=`ZB-${business?"B":"P"}-${tx.id.toUpperCase()}`;
  const explanation={Completed:"This transaction is complete in the sample history.",Pending:"Awaiting completion. The final status is not yet available in this sample.",Scheduled:"This payment is scheduled in the sample history and has not completed.","Waiting for approval":"This sample payment is awaiting approval. Use the isolated approval preview to record a demo decision. No payment can be released."}[tx.status];
  const receipt=()=>{
-  const rows=[["Recipient / merchant",localizedMerchant(tx.merchant)],["Amount",formatMoney(tx.amount,tx.currency)],["Status",t(tx.status)],["Date in sample history",formatDate(tx.date)],["Category",t(tx.category)],["Payment details",t(tx.meta)],["Reference",reference]];
+  const rows=[["Recipient / merchant",localizedMerchant(tx.merchant)],["Amount",formatMoney(tx.amount,tx.currency)],["Status",t(tx.status)],["Date in sample history",formatDate(tx.date)],["Category",t(tx.category)],["Payment details",localizedTransactionMeta(tx.meta)],["Reference",reference]];
   const html=`<!doctype html><html lang="${locale}"><meta charset="utf-8"><title>${escapeHtml(t("Demo transaction {reference}", { reference }))}</title><style>body{font:16px system-ui;color:#172132;max-width:720px;margin:48px auto;padding:24px}h1{font-size:28px}p{line-height:1.6;color:#525252}dl{margin:32px 0}dl div{display:flex;justify-content:space-between;gap:24px;border-bottom:1px solid #ddd;padding:16px 0}dt{color:#525252}dd{margin:0;text-align:right;overflow-wrap:anywhere}@media print{body{margin:0}}</style><h1>${escapeHtml(t("ZapadBanka · Demo transaction"))}</h1><p>${escapeHtml(t("Simulated data. This is not a bank receipt or proof of payment."))}</p><dl>${rows.map(([label,value])=>`<div><dt>${escapeHtml(t(label))}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>${saved?`<h2>${escapeHtml(t("Personal note"))}</h2><p>${escapeHtml(saved)}</p>`:""}<p>${escapeHtml(t("Downloaded from the portfolio prototype. Use your browser’s Print command to save a PDF."))}</p></html>`;
   downloadFile(`${reference}-demo-receipt.html`,html,"text/html;charset=utf-8");
  };

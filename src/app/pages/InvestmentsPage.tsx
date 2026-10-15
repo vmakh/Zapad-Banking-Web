@@ -1,3 +1,4 @@
+import { dateFormatter } from "../utils/localeFormats";
 import { useI18n } from "../i18n/I18nProvider";
 import { ProductPreviewDialog } from "../components/zapad/ProductPreviewDialog";
 import { validMoney } from "../utils/goalRules";
@@ -171,7 +172,7 @@ export function InvestmentsPage() {
   const totalChange = total - startingValue;
 
   const history = portfolioHistory.map((point, index) => ({
-    d: new Date(2026, index < 7 ? 3 : 4, [12, 15, 18, 21, 24, 27, 30, 3, 5, 7, 9, 11][index]).toLocaleDateString(intlLocale, { month: "short", day: "numeric" }),
+    d: dateFormatter({ month: "short", day: "numeric" }).format(new Date(2026, index < 7 ? 3 : 4, [12, 15, 18, 21, 24, 27, 30, 3, 5, 7, 9, 11][index])),
     v: Math.round((total - totalChange + ((point.v - portfolioHistory[0].v) / (portfolioHistory[portfolioHistory.length - 1].v - portfolioHistory[0].v)) * totalChange) * 100) / 100,
   }));
 
@@ -214,9 +215,9 @@ export function InvestmentsPage() {
                 {periodChange >= 0 ? <TrendingUp className="size-4" /> : <TrendingDown className="size-4" />}
                 {isPrivate ? "•••" : `${formatMoney(periodChange, "EUR", { showPlus: periodChange >= 0 })} (${formatNumber((periodChange / periodStart) * 100, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}%)`}
               </span>
-              <span className="text-sm text-muted-foreground">{t("change since {date}", { date: new Date(2026, period === "7D" ? 4 : 3, period === "7D" ? 5 : 12).toLocaleDateString(intlLocale, { day: "numeric", month: "long" }) })}</span>
+              <span className="text-sm text-muted-foreground">{t("change since {date}", { date: dateFormatter({ day: "numeric", month: "long" }).format(new Date(2026, period === "7D" ? 4 : 3, period === "7D" ? 5 : 12)) })}</span>
             </div>
-            <div className="space-y-1 text-sm text-muted-foreground"><p>{t("Demo valuation · {date} · EUR", { date: new Date(2026, 4, 11).toLocaleDateString(intlLocale, { day: "numeric", month: "long", year: "numeric" }) })}</p><p>{t("Portfolio value is not an available cash balance.")}</p></div>
+            <div className="space-y-1 text-sm text-muted-foreground"><p>{t("Demo valuation · {date} · EUR", { date: dateFormatter({ day: "numeric", month: "long", year: "numeric" }).format(new Date(2026, 4, 11)) })}</p><p>{t("Portfolio value is not an available cash balance.")}</p></div>
           </div>
           <div className="min-w-0 p-6 sm:p-8 border-t @3xl:border-t-0 @3xl:border-l border-border">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-2">

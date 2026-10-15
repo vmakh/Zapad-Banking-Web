@@ -1,3 +1,4 @@
+import { dateFormatter } from "../../utils/localeFormats";
 import { useEffect, useId, useState } from "react";
 import { Bar, BarChart, CartesianGrid, ReferenceLine, XAxis, YAxis } from "recharts";
 import { Badge } from "../ui/badge";
@@ -30,12 +31,12 @@ export function CashFlowAnalytics({ profileKind }: { profileKind: ProfileKind })
   const data = getCashFlow(profileKind, period, selectedMonth).map(row => ({
     ...row,
     comparison: getCashFlowPointComparison(profileKind, period, row.month, row.day),
-    label: new Intl.DateTimeFormat(intlLocale, period === "month" ? { day: "numeric" } : { month: "short" }).format(new Date(2026, row.month, row.day)),
-    fullLabel: new Intl.DateTimeFormat(intlLocale, period === "month" ? { day: "numeric", month: "long", year: "numeric" } : { month: "long", year: "numeric" }).format(new Date(2026, row.month, row.day)),
+    label: dateFormatter(period === "month" ? { day: "numeric" } : { month: "short" }).format(new Date(2026, row.month, row.day)),
+    fullLabel: dateFormatter(period === "month" ? { day: "numeric", month: "long", year: "numeric" } : { month: "long", year: "numeric" }).format(new Date(2026, row.month, row.day)),
   }));
   const periodLabel = period === "year" ? "2026" : period === "month"
-    ? new Intl.DateTimeFormat(intlLocale, { month: "long", year: "numeric" }).format(new Date(2026, selectedMonth, 1))
-    : new Intl.DateTimeFormat(intlLocale, { month: "short", year: "numeric" }).formatRange(new Date(2026, firstMonth, 1), new Date(2026, firstMonth + 3, 0));
+    ? dateFormatter({ month: "long", year: "numeric" }).format(new Date(2026, selectedMonth, 1))
+    : dateFormatter({ month: "short", year: "numeric" }).formatRange(new Date(2026, firstMonth, 1), new Date(2026, firstMonth + 3, 0));
   const maxValue = Math.max(...data.flatMap(row => [row.income, -row.spending]));
   const axisStep = 10 ** Math.floor(Math.log10(maxValue)) / 2;
   const axisMax = Math.ceil(maxValue / axisStep) * axisStep;
@@ -44,7 +45,7 @@ export function CashFlowAnalytics({ profileKind }: { profileKind: ProfileKind })
     spending: { label: t("Spending"), color: "var(--bank-cashflow-spending)" },
   };
   const comparison = getCashFlowComparison(profileKind, period, selectedMonth);
-  const previousPeriodLabel = comparison && period === "year" ? String(comparison.previousYear) : comparison ? new Intl.DateTimeFormat(intlLocale, { month: "short", year: "numeric" }).formatRange(new Date(comparison.previousYear, comparison.previousStartMonth, 1), new Date(comparison.previousYear, comparison.previousEndMonth + 1, 0)) : "";
+  const previousPeriodLabel = comparison && period === "year" ? String(comparison.previousYear) : comparison ? dateFormatter({ month: "short", year: "numeric" }).formatRange(new Date(comparison.previousYear, comparison.previousStartMonth, 1), new Date(comparison.previousYear, comparison.previousEndMonth + 1, 0)) : "";
   const changeText = (change: NonNullable<typeof comparison>["income"]) => ({
     amount: `${change.difference > 0 ? "+" : ""}${formatMoney(change.difference, "EUR")}`,
     percent: change.percent === null ? t("Percentage unavailable") : formatNumber(change.percent / 100, { style: "percent", signDisplay: "exceptZero", minimumFractionDigits: 1, maximumFractionDigits: 1 }),
@@ -74,7 +75,7 @@ export function CashFlowAnalytics({ profileKind }: { profileKind: ProfileKind })
       <Select value={period === "year" ? "2026" : String(period === "month" ? selectedMonth : quarter)} onValueChange={value => setSelection(previous => ({ ...previous, selectedMonth: previous.period === "quarter" ? Number(value) * 3 + previous.selectedMonth % 3 : Number(value) }))} disabled={period === "year"}>
         <SelectTrigger aria-label={t("Choose chart period")} className="min-h-11 flex-1 min-w-0 sm:min-w-48"><SelectValue /></SelectTrigger>
         <SelectContent>
-          {period === "year" ? <SelectItem value="2026">2026</SelectItem> : period === "month" ? Array.from({ length: 12 }, (_, month) => <SelectItem key={month} value={String(month)}>{new Intl.DateTimeFormat(intlLocale, { month: "long", year: "numeric" }).format(new Date(2026, month, 1))}</SelectItem>) : Array.from({ length: 4 }, (_, index) => <SelectItem key={index} value={String(index)}>{t("Quarter {number}", { number: index + 1 })} · 2026</SelectItem>)}
+          {period === "year" ? <SelectItem value="2026">2026</SelectItem> : period === "month" ? Array.from({ length: 12 }, (_, month) => <SelectItem key={month} value={String(month)}>{dateFormatter({ month: "long", year: "numeric" }).format(new Date(2026, month, 1))}</SelectItem>) : Array.from({ length: 4 }, (_, index) => <SelectItem key={index} value={String(index)}>{t("Quarter {number}", { number: index + 1 })} · 2026</SelectItem>)}
         </SelectContent>
       </Select>
       <Button variant="ghost" size="icon" className="size-11 shrink-0" aria-label={t("Next period")} disabled={nextDisabled} onClick={() => setSelection(previous => ({ ...previous, selectedMonth: Math.min(11, previous.selectedMonth + (previous.period === "quarter" ? 3 : 1)) }))}><CaretRightIcon className="size-5" aria-hidden="true" /></Button>
@@ -114,7 +115,7 @@ export function CashFlowAnalytics({ profileKind }: { profileKind: ProfileKind })
               const row = entries?.[0]?.payload as typeof data[number] | undefined;
               if (!row) return null;
               const previous = row.comparison;
-              const previousLabel = previous ? new Intl.DateTimeFormat(intlLocale, period === "month" ? { day: "numeric", month: "short", year: "numeric" } : { month: "long", year: "numeric" }).format(new Date(previous.previousYear, previous.previousMonth, previous.previousDay)) : "";
+              const previousLabel = previous ? dateFormatter(period === "month" ? { day: "numeric", month: "short", year: "numeric" } : { month: "long", year: "numeric" }).format(new Date(previous.previousYear, previous.previousMonth, previous.previousDay)) : "";
               return <div className="space-y-1"><p>{row.fullLabel}</p><p className="text-xs font-normal text-muted-foreground">{previous ? t("Compared with {period}", { period: previousLabel }) : t("No matching day in the previous month.")}</p></div>;
             }} formatter={(value, name, entry) => {
               const metric = name === "income" ? "income" : "spending";

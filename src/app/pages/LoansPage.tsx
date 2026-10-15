@@ -1,3 +1,4 @@
+import { dateFormatter } from "../utils/localeFormats";
 import { FieldFeedback } from "../components/ui/field-feedback";
 import { normalizeDecimalInput } from "../utils/decimalInput";
 import { useI18n } from "../i18n/I18nProvider";
@@ -52,7 +53,7 @@ const PAYMENT_INTEREST = SCHEDULE[0].interest;
 
 function PaymentDialog({open,onClose}:{open:boolean;onClose:()=>void;isBusiness:boolean}) {
   const { t, intlLocale } = useI18n();
-  const dueDate = new Date(2026, 4, 25).toLocaleDateString(intlLocale, { day: "numeric", month: "long", year: "numeric" });
+  const dueDate = dateFormatter({ day: "numeric", month: "long", year: "numeric" }).format(new Date(2026, 4, 25));
   return <ProductPreviewDialog open={open} onClose={onClose} title="Loan payment" options={[{name:"Loan LN-2024-0482"}]} initialAmount="320.00" details={amount=>[[t("Interest"),formatMoney(Math.min(amount,PAYMENT_INTEREST))],[t("Principal"),formatMoney(Math.max(0,amount-PAYMENT_INTEREST))],[t("Due date"),dueDate]]} maximum={LOAN_OUTSTANDING+PAYMENT_INTEREST} explanation="Illustrative payment allocation: interest first, then principal. This is not an early-settlement quote; product fees and effective rate require verified terms."/>;
 }
 
@@ -82,7 +83,7 @@ function ScheduleSheet({ open, onClose, isPrivate }: { open: boolean; onClose: (
                 className={cn("grid grid-cols-2 sm:grid-cols-4 gap-3 px-4 py-3.5", row.status === "current" ? "bg-accent" : "")}
               >
                 <div className="col-span-2 sm:col-span-1">
-                  <div className="text-sm font-medium text-slate-900">{row.month.toLocaleDateString(intlLocale, { month: "short", year: "numeric" })}</div>
+                  <div className="text-sm font-medium text-slate-900">{dateFormatter({ month: "short", year: "numeric" }).format(row.month)}</div>
                   {row.status === "current" && (
                     <span className="text-micro font-medium text-accent-foreground uppercase tracking-wide">{t("Current")}</span>
                   )}
@@ -254,7 +255,7 @@ export function LoansPage() {
           <div className="flex items-center justify-between text-sm font-normal text-slate-500">
             <span>{t("{amount} remaining", { amount: isPrivate ? "•••" : formatMoney(LOAN_OUTSTANDING, "EUR", { decimals: 0 }) })}</span>
             <span className="flex items-center gap-1.5">
-              <Clock className="size-3.5" /> {t("Next: {date}", { date: new Date(2026, 4, 25).toLocaleDateString(intlLocale, { day: "numeric", month: "long", year: "numeric" }) })}
+              <Clock className="size-3.5" /> {t("Next: {date}", { date: dateFormatter({ day: "numeric", month: "long", year: "numeric" }).format(new Date(2026, 4, 25)) })}
             </span>
           </div>
         </div>

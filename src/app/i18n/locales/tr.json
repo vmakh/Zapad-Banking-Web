@@ -258,7 +258,7 @@
   "Exchange": "Döviz",
   "Exchange amount": "Döviz tutarı",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Döviz işlemi yerel olarak incelendi. Dönüşüm yapılmadı; her iki bakiye de değişmedi.",
-  "Exchange · rate 1.087": "Döviz · kur 1.087",
+  "Exchange · rate {rate}": "Döviz · kur {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Gelirleri, bekleyen ve planlanan ödemeleri, döviz işlemlerini ve yerel önizlemeleri içermez.",
   "Execution": "Gerçekleştirme",
   "Expiry": "Son kullanma tarihi",

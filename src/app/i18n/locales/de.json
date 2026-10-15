@@ -258,7 +258,7 @@
   "Exchange": "Umtausch",
   "Exchange amount": "Umtauschbetrag",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Währungsumtausch lokal geprüft. Keine Umrechnung ausgeführt; beide Guthaben bleiben unverändert.",
-  "Exchange · rate 1.087": "Umtausch · Kurs 1.087",
+  "Exchange · rate {rate}": "Umtausch · Kurs {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Ohne Einnahmen, ausstehende und geplante Zahlungen, Währungsumtausch und lokale Vorschauen.",
   "Execution": "Ausführung",
   "Expiry": "Gültig bis",

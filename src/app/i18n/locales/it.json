@@ -258,7 +258,7 @@
   "Exchange": "Cambio",
   "Exchange amount": "Importo del cambio",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Cambio verificato localmente. Nessuna conversione eseguita; entrambi i saldi restano invariati.",
-  "Exchange · rate 1.087": "Cambio · tasso 1.087",
+  "Exchange · rate {rate}": "Cambio · tasso {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Esclude entrate, pagamenti in sospeso e programmati, cambi di valuta e anteprime locali.",
   "Execution": "Esecuzione",
   "Expiry": "Scadenza",

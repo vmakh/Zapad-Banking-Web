@@ -258,7 +258,7 @@
   "Exchange",
   "Exchange amount",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.",
-  "Exchange · rate 1.087",
+  "Exchange · rate {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.",
   "Execution",
   "Expiry",

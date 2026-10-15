@@ -258,7 +258,7 @@
   "Exchange": "Обмен",
   "Exchange amount": "Сумма обмена",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Обмен проверен локально. Конвертация не выполнена; остатки обоих счетов не изменились.",
-  "Exchange · rate 1.087": "Обмен · курс 1.087",
+  "Exchange · rate {rate}": "Обмен · курс {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Не учитывает поступления, ожидающие и запланированные платежи, обмены валют и локальные просмотры.",
   "Execution": "Исполнение",
   "Expiry": "Срок действия",

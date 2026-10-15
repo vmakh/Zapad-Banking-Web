@@ -1,4 +1,4 @@
-import { localizedMerchant } from "../i18n/display";
+import { localizedMerchant, localizedTransactionMeta } from "../i18n/display";
 import { formatDate } from "../utils/date";
 import { useI18n } from "../i18n/I18nProvider";
 import { activityFilters } from "../utils/activityFilters";
@@ -56,7 +56,7 @@ export function TransactionsPage() {
   const data = (accountId ? getAccountTransactions(profile.kind, accountId) : allTransactions).filter(tx =>
     (!spending || (isSpendingTransaction(tx) && (!category || tx.category === category))) &&
     (!status || tx.status === status) &&
-    `${tx.merchant} ${tx.meta} ${tx.category} ${localizedMerchant(tx.merchant)} ${t(tx.meta)} ${t(tx.category)} ${tx.amount} ${formatMoney(tx.amount, tx.currency)} ZB-${isBusiness ? "B" : "P"}-${tx.id.toUpperCase()}`.toLocaleLowerCase(intlLocale).includes(query.trim().toLocaleLowerCase(intlLocale))
+    `${tx.merchant} ${tx.meta} ${tx.category} ${localizedMerchant(tx.merchant)} ${localizedTransactionMeta(tx.meta)} ${t(tx.category)} ${tx.amount} ${formatMoney(tx.amount, tx.currency)} ZB-${isBusiness ? "B" : "P"}-${tx.id.toUpperCase()}`.toLocaleLowerCase(intlLocale).includes(query.trim().toLocaleLowerCase(intlLocale))
   );
 
   return (
@@ -120,7 +120,7 @@ export function TransactionsPage() {
                     <StatusBadge status={tx.status} />
                   </div>
                   <div className="text-sm font-normal text-slate-500 truncate mt-1">
-                    {t(tx.meta)} · {formatDate(tx.date)}
+                    {localizedTransactionMeta(tx.meta)} · {formatDate(tx.date)}
                   </div>
                 </div>
                 <div className="text-right shrink-0">

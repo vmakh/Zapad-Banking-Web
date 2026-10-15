@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const ts = require('typescript');
 
-function environment(saved, languages = ['en-GB'], blocked = false) {
+function environment(saved, languages = ['en-GB'], blocked = false, intl = Intl) {
   const cache = new Map();
   const data = new Map(saved ? [['zapadbanka-locale', saved]] : []);
   const localStorage = {
@@ -21,7 +21,7 @@ function environment(saved, languages = ['en-GB'], blocked = false) {
     else {
       const code = ts.transpileModule(fs.readFileSync(filename, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true, target: ts.ScriptTarget.ES2022 } }).outputText;
       vm.runInNewContext(code, {
-        module, exports: module.exports, localStorage, navigator: { languages }, Intl, Date,
+        module, exports: module.exports, localStorage, navigator: { languages }, Intl: intl, Date,
         require: name => load(path.resolve(path.dirname(filename), name + (path.extname(name) ? '' : '.ts'))),
       });
     }
@@ -158,4 +158,65 @@ test('inbox monetary values and rates follow the selected locale and remain mask
   runtime.setLocale('de');
   assert.ok(localizedMessageBody(invoice).includes('4.820,00 €'));
   assert.equal(localizedMessageBody({ body: 'User-entered 120.00 EUR' }), 'User-entered 120.00 EUR');
+});
+
+
+// Model a browser that supports the other app locales but silently falls back for Albanian.
+function withoutAlbanianIntl() {
+  const wrap = Native => class extends Native {
+    constructor(locale, options) { super(String(locale).startsWith('sq') ? 'en-GB' : locale, options); }
+    static supportedLocalesOf(locale, options) { return String(locale).startsWith('sq') ? [] : Native.supportedLocalesOf(locale, options); }
+  };
+  return { NumberFormat: wrap(Intl.NumberFormat), DateTimeFormat: wrap(Intl.DateTimeFormat) };
+}
+
+test('Albanian money, percentages and compact values remain localized without browser locale data', () => {
+  const e = environment('sq', ['en-GB'], false, withoutAlbanianIntl());
+  const f = e.load('src/app/utils/format.ts');
+  for (const [value, currency] of [[1234.56,'EUR'],[28430.18,'EUR'],[-12.5,'USD'],[1000000,'GBP']]) {
+    assert.equal(f.formatMoney(value,currency),new Intl.NumberFormat('sq-AL',{style:'currency',currency,minimumFractionDigits:2,maximumFractionDigits:2,signDisplay:'auto'}).format(value));
+  }
+  for (const options of [{},{style:'percent',maximumFractionDigits:1,signDisplay:'always'},{notation:'compact',maximumFractionDigits:1}]) {
+    assert.equal(f.formatNumber(28430.18,options),new Intl.NumberFormat('sq-AL',{minimumFractionDigits:0,maximumFractionDigits:2,...options}).format(28430.18));
+  }
+  assert.equal(f.formatMoneyParts(28430.18).decimal, ',');
+});
+
+test('Albanian dates, relative times and ranges do not fall back to English', () => {
+  const e = environment('sq', ['en-GB'], false, withoutAlbanianIntl());
+  const date = e.load('src/app/utils/date.ts');
+  assert.equal(date.formatDashboardDate(),new Intl.DateTimeFormat('sq-AL',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date(2026,4,11)));
+  assert.equal(date.formatDate('Today, 14:22'),'Sot, '+new Intl.DateTimeFormat('sq-AL',{hour:'2-digit',minute:'2-digit'}).format(new Date(2026,4,11,14,22)));
+  const { dateFormatter } = e.load('src/app/utils/localeFormats.ts');
+  const options = {month:'short',year:'numeric'};
+  assert.equal(dateFormatter(options).formatRange(new Date(2026,4,1),new Date(2026,6,31)),new Intl.DateTimeFormat('sq-AL',options).formatRange(new Date(2026,4,1),new Date(2026,6,31)));
+});
+
+
+test('sample exchange metadata localizes the rate and preserves user content', () => {
+  const e = environment('de');
+  const { localizedTransactionMeta } = e.load('src/app/i18n/display.ts');
+  assert.equal(localizedTransactionMeta('Exchange · rate 1.087'),'Umtausch · Kurs 1,087');
+  assert.equal(localizedTransactionMeta('User-entered rate 1.087'),'User-entered rate 1.087');
+});
+
+
+test('CSV labels, dates and rate details follow all 13 languages while numeric cells stay canonical', () => {
+  const e = environment('en');
+  const runtime = e.load('src/app/i18n/runtime.ts');
+  const { locales } = e.load('src/app/i18n/locales.ts');
+  const display = e.load('src/app/i18n/display.ts');
+  const { formatDate } = e.load('src/app/utils/date.ts');
+  const { statementCsv } = e.load('src/app/utils/statementExport.ts');
+  const account = { name:'Main account', iban:'ME25 DEMO', currency:'EUR' };
+  const transaction = { id:'5',date:'May 9',merchant:'FX EUR → USD',meta:'Exchange · rate 1.087',category:'Exchange',amount:-500.25,currency:'EUR',status:'Completed' };
+  for (const locale of locales) {
+    runtime.setLocale(locale.id);
+    const csv = statementCsv(account,[transaction],false,{t:runtime.t,date:formatDate,merchant:display.localizedMerchant,meta:display.localizedTransactionMeta});
+    assert.ok(csv.includes(runtime.t('Sample statement — not an official bank statement')),locale.id);
+    assert.ok(csv.includes(display.localizedTransactionMeta(transaction.meta)),locale.id);
+    assert.ok(csv.includes(formatDate('May 9')),locale.id);
+    assert.ok(csv.includes('"-500.25","EUR"'),locale.id+' must preserve spreadsheet numeric values');
+    assert.doesNotMatch(csv,/\{rate\}/);
+  }
 });

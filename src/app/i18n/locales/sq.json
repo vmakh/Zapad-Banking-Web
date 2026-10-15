@@ -258,7 +258,7 @@
   "Exchange": "Këmbim",
   "Exchange amount": "Shuma e këmbimit",
   "Exchange reviewed locally. No conversion executed; both balances unchanged.": "Këmbimi u shqyrtua lokalisht. Nuk u krye konvertim; të dyja gjendjet mbetën të pandryshuara.",
-  "Exchange · rate 1.087": "Këmbim · kursi 1.087",
+  "Exchange · rate {rate}": "Këmbim · kursi {rate}",
   "Excludes income, pending and scheduled payments, currency exchanges and local previews.": "Nuk përfshin të ardhurat, pagesat në pritje dhe të planifikuara, këmbimet valutore dhe pamjet paraprake lokale.",
   "Execution": "Ekzekutimi",
   "Expiry": "Skadimi",
