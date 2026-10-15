@@ -27,7 +27,7 @@ export function DashboardPage() {
         <div>
           <h1 className={cn("text-2xl sm:text-3xl md:text-balance-compact leading-tight font-medium tracking-tight", isBusiness && "mb-1.5")}>{t("Good afternoon, {name}", { name: profile.greetingName })}
           </h1>
-          {isBusiness && <p className="text-sm sm:text-base font-medium text-neutral-500">
+          {isBusiness && <p className="text-sm sm:text-base font-medium text-muted-foreground">
             {t("You're managing {name}.", { name: profile.name })}
           </p>}
         </div>
@@ -85,7 +85,7 @@ export function DashboardPage() {
         </div>
       </div>
 
-      <footer className="pt-4 md:pt-6 pb-2 text-center text-xs sm:text-sm font-normal text-neutral-500">{t("Independent concept · Simulated accounts and transactions")}</footer>
+      <footer className="pt-4 md:pt-6 pb-2 text-center text-xs sm:text-sm font-normal text-muted-foreground">{t("Independent concept · Simulated accounts and transactions")}</footer>
     </div>
   );
 }

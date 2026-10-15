@@ -29,9 +29,11 @@
 | Токен | Personal | Business | Роль |
 | --- | --- | --- | --- |
 | `--bank-ink` | `#172337` | `#202832` | Основний текст |
-| `--bank-muted` | `#58677b` | `#64707d` | Допоміжний текст |
+| `--bank-muted` | `#58677b` | `#596573` | Допоміжний текст |
 | `--bank-line` | `#e6ebf2` | `#e4e7ea` | Тихі роздільники панелей |
-| `--bank-control-line` | `#dce3ed` | `#cbd1d8` | Видимі межі полів |
+| `--bank-control-line` | `#7b8798` | `#7c8289` | Видимі межі полів |
+| `--bank-choice-line` | `#7a8ba0` | `#8a8176` | Межі checkbox, radio та вимкненого switch |
+| `--bank-positive-ink` | `#14632b` | `#14632b` | Позитивні суми та успішні індикатори |
 | `--bank-paper` | `#f4f7fb` | `#f3f4f5` | Фон main, нейтральні поверхні |
 | `--brand-personal` / `--brand-business` | `#0034B8` | `#A34900` | Єдині базові кольори профілів |
 | `--bank-soft` | `#f0f5fd` | `#fff3e9` | М'який акцент, вибір профілю |
@@ -214,3 +216,5 @@ Business now defaults to `--bank-material-canvas` and `--bank-material-surface`,
 Personal applies the shared material-surface contract using a pale blue-grey canvas and porcelain cards, white edges and a quiet navy-tinted shadow. Personal tokens are isolated by `data-bank-profile="personal"`; Business retains its warm palette. Shared Card, explicit page panels and portalled task surfaces follow the profile tokens. Personal spending analytics uses blue/cyan/sage/slate gradients. Solid blue primary actions and payment-card artwork retain their established identity.
 
 Cash-flow charts reuse `CashFlowAnalytics` with a keyed `profileKind`. The shared model in `data/cashFlow.ts` owns separate Personal and Business illustrative scenarios and profile-specific storage keys. Chart income/spending tokens select blue/cyan for Personal and blue/orange for Business.
+
+Контроли вибору: checkbox/radio 20 px, switch 40×24 px із thumb 20 px та ходом 16 px. Зона натискання кожного — 44×44 px, включно зі switch; підписи відділені на 8 px. Checked, indeterminate, invalid, disabled та клавіатурний focus використовують спільні токени в обох профілях і портальних формах. [Перевірка залишкових стилів](qa/remaining-styles-2026-10-15/REPORT.md).

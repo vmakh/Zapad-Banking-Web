@@ -225,10 +225,11 @@
   --bank-muted: #58677b;
   --bank-feedback-ink: var(--bank-muted);
   --bank-line: #e6ebf2;
-  --bank-control-line: #dce3ed;
+  --bank-control-line: #7b8798;
   --bank-field: #f9fbfd;
   --bank-menu-hover: #f0f5fa;
   --bank-menu-selected: #e7eff9;
+  --bank-positive-ink: #14632b;
   --bank-error: #b42318;
   --bank-error-surface: #fff8f9;
   --bank-disabled: #e7ecf2;
@@ -259,6 +260,10 @@
   --bank-control-radius: 0.75rem;
   --bank-control-height: calc(var(--spacing) * 12);
   --bank-control-height-compact: calc(var(--spacing) * 11);
+  --bank-choice-size: calc(var(--spacing) * 5);
+  --bank-choice-line: #7a8ba0;
+  --bank-switch-width: calc(var(--spacing) * 10);
+  --bank-switch-height: calc(var(--spacing) * 6);
   --bank-control-height-large: calc(var(--spacing) * 13);
   --bank-control-height-extra-large: calc(var(--spacing) * 14);
   --bank-control-padding-inline: calc(var(--spacing) * 3);
@@ -290,15 +295,16 @@
 }
 :root:has(.bank-workspace[data-bank-profile="business"]) {
   --bank-ink: #202832;
-  --bank-muted: #64707d;
+  --bank-muted: #596573;
   --bank-feedback-ink: #5c6875;
   --bank-line: #e4e7ea;
-  --bank-control-line: #cbd1d8;
+  --bank-control-line: #7c8289;
   --bank-field: #fcfaf7;
   --bank-error-surface: #fff8f5;
   --bank-disabled: #f0ede8;
   --bank-disabled-ink: #59636e;
   --bank-disabled-line: #d8d3cd;
+  --bank-choice-line: #8a8176;
   --bank-menu-hover: #f8f3ec;
   --bank-menu-selected: #f6eadc;
   --bank-paper: #f3f4f5;

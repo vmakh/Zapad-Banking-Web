@@ -83,7 +83,7 @@
 
 /* Accessible text colors across pages and portalled dialogs. */
 .text-slate-300,.text-slate-400,.text-neutral-400,.text-gray-400 {color:#525252;}
-.text-emerald-500,.text-emerald-600,.text-green-500,.text-green-600 {color:#198038;}
+.text-emerald-500,.text-emerald-600,.text-green-500,.text-green-600 {color:var(--bank-positive-ink);}
 .text-amber-500,.text-amber-600,.text-orange-500,.text-orange-600 {color:#92400e;}
 .text-rose-500,.text-rose-600,.text-red-500,.text-red-600 {color:#da1e28;}
 .bg-rose-500,.bg-red-500 {background-color:#da1e28;}
@@ -662,6 +662,71 @@ body { font-family:var(--bank-body);font-size:var(--text-base);line-height:var(-
 
 .cashflow-period-switch { max-width:100%; }
 
+/* Compact choice visuals share a full touch target and profile-aware states. */
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"]) {
+  position:relative;
+  flex-shrink:0;
+  border:1px solid var(--bank-choice-line);
+  background:var(--bank-field);
+  color:var(--bank-accent);
+  box-shadow:none;
+  opacity:1;
+}
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"]) { width:var(--bank-choice-size);height:var(--bank-choice-size); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"])::before {
+  content:"";
+  position:absolute;
+  width:var(--bank-control-height-compact);
+  height:var(--bank-control-height-compact);
+  inset:50% auto auto 50%;
+  transform:translate(-50%,-50%);
+}
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="checkbox"] { border-radius:var(--radius-chart-marker); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="checkbox"]:is([data-state="checked"],[data-state="indeterminate"]) {
+  background:var(--bank-accent);border-color:var(--bank-accent);color:var(--bank-action-ink);
+}
+[data-slot="checkbox-indicator"] svg { width:calc(var(--spacing) * 3.5);height:calc(var(--spacing) * 3.5); }
+[data-slot="checkbox-indicator"][data-state="indeterminate"] svg { display:none; }
+[data-slot="checkbox-indicator"][data-state="indeterminate"]::after { content:"";width:calc(var(--spacing) * 2.5);height:calc(var(--spacing) * .5);background:currentColor; }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="radio-group-item"][data-state="checked"] { background:var(--bank-soft);border-color:var(--bank-accent); }
+[data-slot="radio-group-indicator"] svg { width:calc(var(--spacing) * 2);height:calc(var(--spacing) * 2);fill:currentColor;color:inherit; }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="switch"] { width:var(--bank-switch-width);height:var(--bank-switch-height);padding:1px;background:var(--bank-choice-line); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="switch"][data-state="checked"] { background:var(--bank-accent);border-color:var(--bank-accent); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="switch-thumb"] { width:var(--bank-choice-size);height:var(--bank-choice-size);background:var(--bank-action-ink);translate:0 0; }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="switch-thumb"][data-state="checked"] { translate:calc(var(--bank-switch-width) - var(--bank-choice-size) - var(--spacing)) 0; }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"]):focus-visible {
+  outline:calc(var(--spacing) * .5) solid var(--bank-accent);
+  outline-offset:calc(var(--spacing) * .5);
+  box-shadow:none;
+}
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"])[aria-invalid="true"] { border-color:var(--bank-error);outline-color:var(--bank-error); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"]):disabled { background:var(--bank-disabled);border-color:var(--bank-disabled-line);color:var(--bank-disabled-ink);cursor:not-allowed; }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="switch"]):disabled:is([data-state="checked"],[data-state="indeterminate"]) { background:var(--bank-disabled-ink);border-color:var(--bank-disabled-ink);color:var(--bank-action-ink); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+[data-slot="radio-group-item"]:disabled[data-state="checked"] { border-color:var(--bank-disabled-ink); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:is([data-slot="checkbox"],[data-slot="radio-group-item"]):not(:disabled):hover { border-color:var(--bank-accent); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+label:has(> [data-slot="checkbox"], > [data-slot="radio-group-item"], > [data-slot="switch"]) { gap:var(--bank-form-field-gap);min-height:var(--bank-control-height-compact); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+div:has(> [data-slot="checkbox"], > [data-slot="radio-group-item"], > [data-slot="switch"]):has(> [data-slot="label"]) { gap:var(--bank-form-field-gap);min-height:var(--bank-control-height-compact); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"])
+:has(> :is([data-slot="checkbox"],[data-slot="radio-group-item"],[data-slot="switch"]):disabled) > [data-slot="label"] { color:var(--bank-disabled-ink);opacity:1; }
+
 /* One state hierarchy for workspace controls and their portalled forms. */
 :is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"])
 :is([data-slot="button"],[data-slot="input"],[data-slot="textarea"],[data-slot="select-trigger"],[data-slot="native-select"]):focus-visible {
@@ -696,6 +761,21 @@ body { font-family:var(--bank-body);font-size:var(--text-base);line-height:var(-
 :is([data-slot="input"],[data-slot="textarea"]):disabled::placeholder { color:var(--bank-disabled-ink);opacity:1; }
 :is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"])
 :is([data-slot="select-trigger"],[data-slot="native-select"]):disabled svg { color:inherit; }
+
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"])
+span:has(> [data-slot="native-select"]:disabled) > svg { color:var(--bank-disabled-ink); }
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"])
+[data-slot="button"][aria-invalid="true"] {
+  outline:calc(var(--spacing) * .5) solid var(--bank-error);
+  outline-offset:calc(var(--spacing) * .5);
+}
+:is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"])
+[data-slot="button"]:is(:disabled,[aria-disabled="true"]):is(:hover,:active) {
+  background:var(--bank-disabled);
+  color:var(--bank-disabled-ink);
+  border-color:var(--bank-disabled-line);
+  filter:none;
+}
 
 /* Approved type scale. Keep this after legacy screen-specific type overrides. */
 :is(#root .bank-workspace,[data-slot="dialog-content"],[data-slot="sheet-content"],[data-slot="alert-dialog-content"],[data-slot="drawer-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]) h1,
