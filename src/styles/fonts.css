@@ -1,0 +1,17 @@
+/* Identical font file to the mobile concept; license: assets/Unbounded-OFL.txt. */
+@font-face {
+  font-family: Unbounded;
+  src: url('../assets/Unbounded-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Shared UI family for both profiles. License: assets/Onest-OFL.txt. */
+@font-face {
+  font-family: Onest;
+  src: url('../assets/Onest-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

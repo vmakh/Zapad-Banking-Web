@@ -1,5 +1,8 @@
+import { localizedMerchant } from "../../i18n/display";
+import { formatDate } from "../../utils/date";
+import { useI18n } from "../../i18n/I18nProvider";
 import { TransactionExtras } from "./TransactionExtras";
-import type { ElementType } from "react";
+import type { ElementType, CSSProperties } from "react";
 import {
   Sheet,
   SheetContent,
@@ -36,6 +39,7 @@ export function TransactionDetailsSheet({
   onOpenChange,
   isBusiness,
 }: TransactionDetailsSheetProps) {
+  const { t } = useI18n();
   const { isPrivate } = usePrivacy();
 
   if (!transaction) return null;
@@ -48,17 +52,17 @@ export function TransactionDetailsSheet({
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="w-full sm:max-w-md p-0 overflow-hidden border-l-0 rounded-l-5xl bg-neutral-50 flex flex-col">
         {/* Header section */}
-        <div className="bg-white px-8 pt-12 pb-8 rounded-b-5xl shadow-sm relative z-10 flex flex-col items-center text-center shrink-0">
-          <div className={cn("size-24 rounded-xl flex items-center justify-center mb-6", transaction.iconBg)}>
+        <div className="bank-amount-container w-full min-w-0 bg-white px-8 pt-12 pb-8 rounded-b-5xl shadow-sm relative z-10 flex flex-col items-center text-center shrink-0">
+          <div data-slot="functional-icon" className={cn("size-24 rounded-xl flex items-center justify-center mb-6", transaction.iconBg)}>
             <Icon className="size-10" />
           </div>
           
-          <SheetTitle className="text-2xl font-medium mb-1">{transaction.merchant}</SheetTitle>
+          <SheetTitle className="text-2xl font-medium mb-1">{localizedMerchant(transaction.merchant)}</SheetTitle>
           <SheetDescription className="text-base font-medium text-neutral-500 mb-6">
-            {transaction.category}
+            {t(transaction.category)}
           </SheetDescription>
           
-          <div className={cn("text-5xl font-medium tracking-tight mb-2", positive ? "text-emerald-700" : "text-black")}>
+          <div className={cn("bank-fluid-amount max-w-full font-medium tracking-tight mb-2", positive ? "text-emerald-700" : "text-black")} style={{ "--balance-chars": isPrivate ? 3 : formatMoney(transaction.amount, transaction.currency, { showPlus: positive }).length } as CSSProperties}>
             {isPrivate ? "•••" : (
               <>
                 {formatMoney(transaction.amount, transaction.currency, { showPlus: positive })}
@@ -66,7 +70,7 @@ export function TransactionDetailsSheet({
             )}
           </div>
           <div className="text-sm font-normal text-neutral-400">
-            {transaction.date}
+            {formatDate(transaction.date)}
           </div>
         </div>
 
@@ -75,17 +79,17 @@ export function TransactionDetailsSheet({
           
           <div className="bg-white p-5 rounded-3xl space-y-4 shadow-sm">
             <div className="flex justify-between items-center">
-              <span className="text-sm font-normal text-neutral-500">Payment method</span>
-              <span className="text-sm font-medium">{transaction.meta.split('·')[0].trim()}</span>
+              <span className="text-sm font-normal text-neutral-500">{t("Payment method")}</span>
+              <span className="text-sm font-medium">{t(transaction.meta).split(' · ')[0].trim()}</span>
             </div>
             <div className="h-px bg-neutral-100" />
             <div className="flex justify-between items-center">
-              <span className="text-sm font-normal text-neutral-500">Operation details</span>
-              <span className="text-sm font-medium">{transaction.meta.split('·')[1]?.trim() || transaction.category}</span>
+              <span className="text-sm font-normal text-neutral-500">{t("Operation details")}</span>
+              <span className="text-sm font-medium">{t(transaction.meta).split(' · ').slice(1).join(' · ') || t(transaction.category)}</span>
             </div>
             <div className="h-px bg-neutral-100" />
             <div className="flex justify-between items-center">
-              <span className="text-sm font-normal text-neutral-500">Operation ID</span>
+              <span className="text-sm font-normal text-neutral-500">{t("Operation ID")}</span>
               <span className="text-sm font-medium font-mono text-neutral-400">#{`ZB-${isBusiness ? "B" : "P"}-${transaction.id.toUpperCase()}`}</span>
             </div>
           </div>

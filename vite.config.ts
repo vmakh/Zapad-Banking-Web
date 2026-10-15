@@ -39,5 +39,7 @@ export default defineConfig({
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
+  build: { rollupOptions: { input: { app: path.resolve(__dirname, 'index.html'), designSystem: path.resolve(__dirname, 'design-system.html'), designSystemPreview: path.resolve(__dirname, 'design-system-preview.html'), fontPairings: path.resolve(__dirname, 'font-pairings.html') } } },
+
   assetsInclude: ['**/*.svg', '**/*.csv'],
 })

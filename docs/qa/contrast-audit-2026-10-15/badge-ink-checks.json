@@ -1,0 +1,58 @@
+[
+  {
+    "card": "card-personal-default.png",
+    "label": "Personal",
+    "worstRatio": 4.529,
+    "glyphPixels": 162,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "Business",
+    "worstRatio": 3.713,
+    "glyphPixels": 181,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "Virtual",
+    "worstRatio": 3.294,
+    "glyphPixels": 113,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "Virtual",
+    "worstRatio": 3.222,
+    "glyphPixels": 99,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "Frozen",
+    "worstRatio": 6.953,
+    "glyphPixels": 133,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "Frozen",
+    "worstRatio": 6.953,
+    "glyphPixels": 133,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "Personal",
+    "worstRatio": 4.529,
+    "glyphPixels": 162,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "Business",
+    "worstRatio": 3.713,
+    "glyphPixels": 181,
+    "method": "Raster glyph-mask background interpolated between badge padding strips; approximate spot check."
+  }
+]

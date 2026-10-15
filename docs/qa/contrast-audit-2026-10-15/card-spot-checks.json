@@ -1,0 +1,770 @@
+[
+  {
+    "card": "card-personal-default.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      57,
+      84,
+      137
+    ],
+    "ratio": 7.491,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-default.png",
+    "label": "Personal",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      79,
+      111,
+      170
+    ],
+    "ratio": 4.244,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-default.png",
+    "label": "Personal Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      61,
+      92,
+      139
+    ],
+    "ratio": 5.728,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-default.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      32,
+      58,
+      109
+    ],
+    "ratio": 11.126,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-default.png",
+    "label": "Alex Demo",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      26,
+      55,
+      99
+    ],
+    "ratio": 11.861,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-default.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      46,
+      66,
+      101
+    ],
+    "ratio": 10.08,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      92,
+      83,
+      84
+    ],
+    "ratio": 7.446,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "Business",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      143,
+      117,
+      102
+    ],
+    "ratio": 3.623,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "Business Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      113,
+      96,
+      88
+    ],
+    "ratio": 5.053,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      47,
+      53,
+      65
+    ],
+    "ratio": 12.306,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "Demo Corp DOO",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      35,
+      46,
+      66
+    ],
+    "ratio": 13.628,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-default.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      61,
+      68,
+      78
+    ],
+    "ratio": 9.835,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      71,
+      101,
+      127
+    ],
+    "ratio": 6.112,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "Virtual",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      103,
+      139,
+      161
+    ],
+    "ratio": 3.072,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "Personal Virtual",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      81,
+      113,
+      134
+    ],
+    "ratio": 4.38,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      43,
+      72,
+      104
+    ],
+    "ratio": 9.419,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "Alex Demo",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      40,
+      65,
+      96
+    ],
+    "ratio": 10.421,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-virtual.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      50,
+      76,
+      103
+    ],
+    "ratio": 8.879,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      80,
+      94,
+      105
+    ],
+    "ratio": 6.675,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "Virtual",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      125,
+      138,
+      146
+    ],
+    "ratio": 3.0,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "Business Virtual",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      98,
+      112,
+      123
+    ],
+    "ratio": 4.309,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      49,
+      63,
+      76
+    ],
+    "ratio": 10.792,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "Demo Corp DOO",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      42,
+      55,
+      71
+    ],
+    "ratio": 12.097,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-virtual.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      58,
+      74,
+      90
+    ],
+    "ratio": 9.103,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      65,
+      66,
+      68
+    ],
+    "ratio": 10.06,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "Frozen",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      79,
+      80,
+      82
+    ],
+    "ratio": 6.829,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "Personal Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      69,
+      70,
+      72
+    ],
+    "ratio": 7.994,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      56,
+      57,
+      59
+    ],
+    "ratio": 11.56,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "Alex Demo",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      56,
+      57,
+      59
+    ],
+    "ratio": 11.56,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-frozen.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      70,
+      71,
+      73
+    ],
+    "ratio": 9.301,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      65,
+      66,
+      68
+    ],
+    "ratio": 10.06,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "Frozen",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      79,
+      80,
+      82
+    ],
+    "ratio": 6.829,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "Business Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      69,
+      70,
+      72
+    ],
+    "ratio": 7.994,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "\u2022\u2022\u2022\u2022 4242",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      56,
+      57,
+      59
+    ],
+    "ratio": 11.56,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "Demo Corp DOO",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      56,
+      57,
+      59
+    ],
+    "ratio": 11.56,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-frozen.png",
+    "label": "12/28",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      70,
+      71,
+      73
+    ],
+    "ratio": 9.301,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      57,
+      84,
+      137
+    ],
+    "ratio": 7.491,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "Personal",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      79,
+      111,
+      170
+    ],
+    "ratio": 4.244,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "Personal Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      61,
+      92,
+      139
+    ],
+    "ratio": 5.728,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      32,
+      59,
+      106
+    ],
+    "ratio": 11.081,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      30,
+      54,
+      102
+    ],
+    "ratio": 11.833,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-personal-private.png",
+    "label": "\u2022\u2022/\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      45,
+      66,
+      97
+    ],
+    "ratio": 10.177,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "Zapad Banka",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      92,
+      83,
+      84
+    ],
+    "ratio": 7.446,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "Business",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      143,
+      117,
+      102
+    ],
+    "ratio": 3.623,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "Business Visa",
+    "foreground": [
+      228,
+      237,
+      248
+    ],
+    "sampledBackground": [
+      113,
+      96,
+      88
+    ],
+    "ratio": 5.053,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      44,
+      51,
+      67
+    ],
+    "ratio": 12.638,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      35,
+      46,
+      66
+    ],
+    "ratio": 13.628,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  },
+  {
+    "card": "card-business-private.png",
+    "label": "\u2022\u2022/\u2022\u2022",
+    "foreground": [
+      255,
+      255,
+      255
+    ],
+    "sampledBackground": [
+      61,
+      67,
+      81
+    ],
+    "ratio": 9.905,
+    "method": "Background strips outside text line boxes; inside badge padding for badge text. Raster spot check, not exact gradient certification."
+  }
+]

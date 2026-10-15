@@ -1,21 +1,34 @@
-import { createHashRouter, Navigate } from "react-router";
+import { useI18n } from "./i18n/I18nProvider";
+import { useEffect } from "react";
+import { createHashRouter, Navigate, useParams } from "react-router";
 import { RootLayout } from "./components/layout/RootLayout";
 import { ProfileRedirect } from "./components/routing/ProfileRedirect";
+import { Button } from "./components/ui/button";
 
 function RouteLoading() {
-  return <main className="min-h-screen grid place-items-center bg-background text-foreground"><p role="status">Loading banking demo…</p></main>;
+  const { t, intlLocale } = useI18n();
+  return <main className="min-h-dvh grid place-items-center bg-background text-foreground"><p role="status">{t("Loading banking demo…")}</p></main>;
 }
 
 function RouteError() {
-  return <main className="min-h-screen flex flex-col items-center justify-center gap-6 p-8 bg-background text-foreground">
-    <h1 className="text-2xl font-semibold">This screen couldn’t load</h1>
-    <p>Check your connection, then try again.</p>
-    <button className="rounded-lg border px-6 py-3" onClick={() => window.location.reload()}>Reload screen</button>
-    <a className="underline" href="/cases/zapad-banka/">Return to the case study</a>
+  const { t, intlLocale } = useI18n();
+  return <main className="min-h-dvh flex flex-col items-center justify-center gap-6 p-8 bg-background text-foreground text-center">
+    <h1 className="text-2xl font-semibold">{t("This screen couldn’t load")}</h1>
+    <p>{t("Check your connection, then try again.")}</p>
+    <Button onClick={() => window.location.reload()}>{t("Reload screen")}</Button>
+    <Button variant="outline" asChild><a href="#/personal">{t("Back to demo home")}</a></Button>
   </main>;
 }
 
+function DesignSystemRedirect() {
+  const {profile} = useParams();
+  useEffect(()=>{window.location.replace(`/design-system.html?context=${profile === "business" ? "business" : profile === "personal" ? "personal" : "compare"}`);},[profile]);
+  return <main className="min-h-screen grid place-items-center"><p role="status">Opening design system…</p></main>;
+}
+
 export const router = createHashRouter([
+  { path: "/design-system", Component: DesignSystemRedirect },
+  { path: "/:profile/design-system", Component: DesignSystemRedirect },
   { path: "/", element: <ProfileRedirect /> },
   {
     path: "/:profile",

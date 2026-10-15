@@ -37,7 +37,7 @@ const personalAccounts: BankAccount[] = [
     textClass: "text-white",
     accent: "linear-gradient(135deg,var(--brand-personal),var(--brand-personal-light))",
   },
-  { id: "p-gbp", name: "GBP account", iban: "ME25 9900 0000 0000 3004 04", ibanShort: "Account ··· 3004", balance: 0, currency: "GBP", type: "Current account", gradient: "from-brand-personal to-brand-personal-light", textClass: "text-white", accent: "var(--brand-personal)" },
+  { id: "p-gbp", name: "GBP account", iban: "ME25 9900 0000 0000 3004 04", ibanShort: "ME25 ··· 3004", balance: 0, currency: "GBP", type: "Current account", gradient: "from-brand-personal to-brand-personal-light", textClass: "text-white", accent: "var(--brand-personal)" },
 ];
 
 const businessAccounts: BankAccount[] = [

@@ -1,0 +1,14 @@
+/* Documentation host only. Specimens load the actual banking stylesheet separately. */
+[data-gallery-host] { font-size:var(--text-sm);line-height:1.5; }
+#root [data-gallery-host] h1 { font-family:var(--bank-display);font-weight:500; }
+[data-gallery-host] iframe { display:block; }
+[data-gallery-host] button[aria-pressed="true"] { color:var(--bank-accent-text); }
+[data-gallery-preview] { min-height:100dvh; }
+[data-gallery-preview] main { background:var(--card); }
+[data-gallery-preview] [data-gallery-state="focus"] :is([data-slot="button"],[data-slot="input"]) {
+  outline:2px solid var(--ring);outline-offset:2px;
+}
+[data-gallery-preview] [data-gallery-state="hover"] [data-variant="default"] { filter:brightness(.96); }
+[data-gallery-preview] [data-gallery-sample="sidebar"] * { transition:none; }
+
+[data-gallery-preview] [data-gallery-state="hover"] [data-variant="outline"] { background:var(--bank-paper);color:var(--bank-ink); }

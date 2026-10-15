@@ -1,9 +1,13 @@
+import { localizedGoalName } from "../../i18n/display";
+import { useI18n } from "../../i18n/I18nProvider";
 import { GoalDialog } from "./GoalDialog";
 import { useState } from "react";
 import { Link } from "react-router";
-import { motion } from "motion/react";
+import { Progress } from "../ui/progress";
 import { Button } from "../ui/button";
-import { Plus, ChevronRight, Target } from "lucide-react";
+import { PlusIcon as Plus } from "@phosphor-icons/react/dist/csr/Plus";
+import { CaretRightIcon as ChevronRight } from "@phosphor-icons/react/dist/csr/CaretRight";
+import { TargetIcon as Target } from "@phosphor-icons/react/dist/csr/Target";
 import { useGoals } from "../../data/goals";
 import type { ProfileKind, ProfileSlug, SavingsGoal } from "../../data/types";
 import { usePrivacy } from "../../contexts/PrivacyContext";
@@ -20,6 +24,7 @@ function GoalCard({
   isPrivate: boolean;
   onClick: () => void;
 }) {
+  const { t } = useI18n();
   const progress = Math.min((goal.current / goal.target) * 100, 100);
   const Icon = goal.icon;
   const remaining = goal.target - goal.current;
@@ -39,11 +44,10 @@ function GoalCard({
           </IconScaleSlot>
           <div className="min-w-0">
             <div className="font-medium text-slate-900 leading-snug break-words">
-              {goal.name}
+              {localizedGoalName(goal)}
             </div>
             {goal.deadline && (
-              <div className="text-xs font-normal text-slate-400 mt-0.5">
-                Target: {goal.deadline}
+              <div className="text-xs font-normal text-slate-400 mt-0.5">{t("Target: {date}", { date: t(goal.deadline) })}
               </div>
             )}
           </div>
@@ -65,23 +69,14 @@ function GoalCard({
           </span>
         </div>
 
-        <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-slate-400 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.15 }}
-          />
-        </div>
+        <Progress value={Math.round(progress)} aria-label={t("{goal} saved", { goal: localizedGoalName(goal) })} />
 
         <div className="flex flex-wrap justify-between items-center gap-2">
           <span className="text-xs font-medium text-slate-500">
-            {Math.round(progress)}% saved
-          </span>
+            {t("{progress}% saved", { progress: Math.round(progress) })}</span>
           {!isPrivate && (
             <span className="text-xs font-normal text-slate-400">
-              {formatMoney(remaining, "EUR", { decimals: 0 })} to go
-            </span>
+              {t("{amount} to go", { amount: formatMoney(remaining, "EUR", { decimals: 0 }) })}</span>
           )}
         </div>
       </div>
@@ -102,12 +97,13 @@ export function SavingsGoals({
   viewAllHref?: string;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
   const { isPrivate } = usePrivacy();
   const business = profileKind === "business";
   const allGoals = useGoals(profileKind);
   const goals = maxGoals ? allGoals.slice(0, maxGoals) : allGoals;
   const brandColor = business ? "bg-brand-business" : "bg-brand-personal";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
   const [selectedGoal, setSelectedGoal] = useState<SavingsGoal | null>(null);
   const [creating, setCreating] = useState(false);
 
@@ -125,19 +121,15 @@ export function SavingsGoals({
                 className="size-8 shrink-0 rounded-action-inner bg-muted text-muted-foreground flex items-center justify-center"
               >
                 <Target className="size-4" />
-              </div>
-              Savings Goals
-            </h2>
+              </div>{t("Savings Goals")}</h2>
             <p className="text-sm font-normal text-slate-400 mt-1">
-              {allGoals.length} active goals ·{" "}
-              {isPrivate ? "••• overall" : `${overallProgress}% overall`}
+              {t("{count} active goals · {progress} overall", { count: allGoals.length, progress: isPrivate ? "•••" : `${overallProgress}%` })}
             </p>
           </div>
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex flex-wrap items-center gap-2 min-w-0 max-w-full">
             {viewAllHref && (
               <Button variant="ghost" className={cn("font-medium text-slate-600", compact ? "h-9 px-3 text-sm" : "h-10 px-5")} asChild>
-                <Link to={viewAllHref}>
-                  View all <ChevronRight className="size-4 ml-1" />
+                <Link to={viewAllHref}>{t("View all")}<ChevronRight className="size-4 ml-1" />
                 </Link>
               </Button>
             )}
@@ -152,9 +144,7 @@ export function SavingsGoals({
               )}
               onClick={() => setCreating(true)}
             >
-              <Plus className="size-4 mr-1.5" />
-              New goal
-            </Button>
+              <Plus className="size-4 mr-1.5" />{t("New goal")}</Button>
           </div>
         </div>
 

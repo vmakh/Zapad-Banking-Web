@@ -36,6 +36,11 @@ test('privacy masks notification amounts without removing dates or invoice numbe
  const {maskMoneyInText}=load('privacyText');
  assert.equal(maskMoneyInText('INV-2034: €4,820.00, May 11; $20.50 / £0.01'),'INV-2034: •••, May 11; ••• / •••');
 });
+
+test('privacy masks localized currency positions and grouping separators',()=>{
+ const {maskMoneyInText}=load('privacyText');
+ assert.equal(maskMoneyInText('INV-2034: 4.820,00 €; 4 800,00 EUR; 20,50 $; £1,200.00 · 11. Mai'),'INV-2034: •••; •••; •••; ••• · 11. Mai');
+});
 test('loan estimates never expose infinite totals',()=>{
  const {loanEstimate}=load('loanMath');
  assert.equal(loanEstimate(1e308,100,1000),null);

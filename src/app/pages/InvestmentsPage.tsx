@@ -1,9 +1,11 @@
+import { useI18n } from "../i18n/I18nProvider";
 import { ProductPreviewDialog } from "../components/zapad/ProductPreviewDialog";
 import { validMoney } from "../utils/goalRules";
 import { cn } from "../components/ui/utils";
 import { useState, useId, useMemo } from "react";
 import { useOutletContext } from "react-router";
 import { Card } from "../components/ui/card";
+import { ToggleGroup, ToggleGroupItem } from "../components/ui/toggle-group";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
@@ -25,14 +27,12 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import {
-  TrendingUp,
-  TrendingDown,
-  Plus,
-  CheckCircle2,
-  Info,
-  ChevronRight,
-} from "lucide-react";
+import { TrendUpIcon as TrendingUp } from "@phosphor-icons/react/dist/csr/TrendUp";
+import { TrendDownIcon as TrendingDown } from "@phosphor-icons/react/dist/csr/TrendDown";
+import { PlusIcon as Plus } from "@phosphor-icons/react/dist/csr/Plus";
+import { CheckCircleIcon as CheckCircle2 } from "@phosphor-icons/react/dist/csr/CheckCircle";
+import { InfoIcon as Info } from "@phosphor-icons/react/dist/csr/Info";
+import { CaretRightIcon as ChevronRight } from "@phosphor-icons/react/dist/csr/CaretRight";
 import { toast } from "sonner";
 import { usePrivacy } from "../contexts/PrivacyContext";
 import { profiles } from "../components/zapad/TopBar";
@@ -85,6 +85,7 @@ function PortfolioAreaChart({
   isPrivate: boolean;
   fillId: string;
 }) {
+  const { t } = useI18n();
   const stroke = "var(--bank-muted)";
   const values = data.map((d) => d.v);
   const min = Math.min(...values);
@@ -123,7 +124,7 @@ function PortfolioAreaChart({
             }}
             formatter={(v: number) => [
               isPrivate ? "•••" : formatMoney(v, "EUR", { decimals: 0 }),
-              "Value",
+              t("Value"),
             ]}
           />
           <Area
@@ -148,17 +149,19 @@ function PortfolioAreaChart({
 }
 
 function InvestDialog({open,onClose}:{open:boolean;onClose:()=>void;isBusiness:boolean}) {
- return open ? <ProductPreviewDialog open={open} onClose={onClose} title="Investment" options={FUNDS.map(f=>({name:f.name,min:f.min,description:`${f.risk} risk · Minimum €${f.min}`}))} explanation="Capital is at risk. Historical or illustrative returns are not forecasts. Execution prices, custody and fund fees are not quoted in this demo; no order is placed."/> : null;
+  const { t } = useI18n();
+ return open ? <ProductPreviewDialog open={open} onClose={onClose} title="Investment" options={FUNDS.map(f=>({name:f.name,min:f.min,description:t("{risk} risk · Minimum {amount}", { risk: t(f.risk), amount: formatMoney(f.min, "EUR", { decimals: 0 }) })}))} explanation="Capital is at risk. Historical or illustrative returns are not forecasts. Execution prices, custody and fund fees are not quoted in this demo; no order is placed."/> : null;
 }
 
 export function InvestmentsPage() {
+  const { t, intlLocale } = useI18n();
   const { isPrivate } = usePrivacy();
   const { profileId } = useOutletContext<{ profileId: string }>();
   const isBusiness = profiles.find((p) => p.id === profileId)?.kind === "business";
 
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
   const brandHover = isBusiness ? "hover:bg-brand-business-dark" : "hover:bg-brand-personal-dark";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   const holdings = isBusiness ? businessHoldings : personalHoldings;
   const holdingsTotal = holdings.reduce((sum, item) => sum + item.value, 0);
@@ -168,7 +171,7 @@ export function InvestmentsPage() {
   const totalChange = total - startingValue;
 
   const history = portfolioHistory.map((point, index) => ({
-    d: ["Apr 12", "Apr 15", "Apr 18", "Apr 21", "Apr 24", "Apr 27", "Apr 30", "May 3", "May 5", "May 7", "May 9", "May 11"][index],
+    d: new Date(2026, index < 7 ? 3 : 4, [12, 15, 18, 21, 24, 27, 30, 3, 5, 7, 9, 11][index]).toLocaleDateString(intlLocale, { month: "short", day: "numeric" }),
     v: Math.round((total - totalChange + ((point.v - portfolioHistory[0].v) / (portfolioHistory[portfolioHistory.length - 1].v - portfolioHistory[0].v)) * totalChange) * 100) / 100,
   }));
 
@@ -183,16 +186,16 @@ export function InvestmentsPage() {
     <div className={cn(PAGE_MAX_WIDTH, "mx-auto p-6 md:p-8 space-y-8")}>
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">Investments</h1>
+          <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">{t("Investments")}</h1>
           <p className="text-base font-normal text-slate-500 mt-1.5">
-            Sample portfolio overview · Capital is at risk
+            {t("Sample portfolio overview · Capital is at risk")}
           </p>
         </div>
         <Button
           onClick={() => setInvestOpen(true)}
           className={cn(brandBg, brandHover, brandText, "rounded-lg h-11 px-5 font-medium shadow-sm transition-all hover:shadow-md")}
         >
-          <Plus className="size-4 mr-2" /> Invest now
+          <Plus className="size-4 mr-2" /> {t("Invest now")}
         </Button>
       </div>
 
@@ -201,7 +204,7 @@ export function InvestmentsPage() {
         <div className="grid @3xl:grid-cols-2 items-center">
           <div className="p-6 sm:p-8 min-w-0 space-y-5">
             <div>
-              <h2 className="text-base font-medium text-muted-foreground">Total portfolio value</h2>
+              <h2 className="text-base font-medium text-muted-foreground">{t("Total portfolio value")}</h2>
               <p className="text-3xl sm:text-4xl font-semibold tracking-tight tabular-nums text-foreground mt-2 break-words">
                 {isPrivate ? "••••••" : formatMoney(total)}
               </p>
@@ -211,44 +214,44 @@ export function InvestmentsPage() {
                 {periodChange >= 0 ? <TrendingUp className="size-4" /> : <TrendingDown className="size-4" />}
                 {isPrivate ? "•••" : `${formatMoney(periodChange, "EUR", { showPlus: periodChange >= 0 })} (${formatNumber((periodChange / periodStart) * 100, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}%)`}
               </span>
-              <span className="text-sm text-muted-foreground">{period === "7D" ? "change since May 5" : "change since April 12"}</span>
+              <span className="text-sm text-muted-foreground">{t("change since {date}", { date: new Date(2026, period === "7D" ? 4 : 3, period === "7D" ? 5 : 12).toLocaleDateString(intlLocale, { day: "numeric", month: "long" }) })}</span>
             </div>
-            <div className="space-y-1 text-sm text-muted-foreground"><p>Demo valuation · 11 May 2026 · EUR</p><p>Portfolio value is not an available cash balance.</p></div>
+            <div className="space-y-1 text-sm text-muted-foreground"><p>{t("Demo valuation · {date} · EUR", { date: new Date(2026, 4, 11).toLocaleDateString(intlLocale, { day: "numeric", month: "long", year: "numeric" }) })}</p><p>{t("Portfolio value is not an available cash balance.")}</p></div>
           </div>
           <div className="min-w-0 p-6 sm:p-8 border-t @3xl:border-t-0 @3xl:border-l border-border">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <h3 className="text-sm font-medium text-foreground">Portfolio value</h3>
-              <div role="group" aria-label="Portfolio period" className="flex gap-1">
-                {(["7D", "30D"] as const).map(value => <Button key={value} variant="ghost" size="sm" aria-pressed={period === value} onClick={() => setPeriod(value)} className={cn(period === value && "bg-muted text-foreground")}>{value}</Button>)}
-              </div>
+              <h3 className="text-sm font-medium text-foreground">{t("Portfolio value")}</h3>
+              <ToggleGroup type="single" value={period} onValueChange={value => { if (value === "7D" || value === "30D") setPeriod(value); }} aria-label={t("Portfolio period")}>
+                {(["7D", "30D"] as const).map(value => <ToggleGroupItem key={value} value={value} className="px-4">{value === "7D" ? t("7D") : t("30D")}</ToggleGroupItem>)}
+              </ToggleGroup>
             </div>
-            <div className="h-44" role="img" aria-label={isPrivate ? "Portfolio history hidden" : `Illustrative portfolio value from ${formatMoney(visibleHistory[0].v)} on ${visibleHistory[0].d} to ${formatMoney(total)} on ${visibleHistory[visibleHistory.length - 1].d}`}>
-              {isPrivate ? <div className="h-full flex items-center justify-center text-sm text-muted-foreground">Portfolio history hidden</div> : <PortfolioAreaChart data={visibleHistory} isPrivate={isPrivate} fillId={chartFillId} />}
+            <div className="h-44" role="img" aria-label={isPrivate ? t("Portfolio history hidden") : t("Illustrative portfolio value from {startValue} on {startDate} to {endValue} on {endDate}", { startValue: formatMoney(visibleHistory[0].v), startDate: visibleHistory[0].d, endValue: formatMoney(total), endDate: visibleHistory[visibleHistory.length - 1].d })}>
+              {isPrivate ? <div className="h-full flex items-center justify-center text-sm text-muted-foreground">{t("Portfolio history hidden")}</div> : <PortfolioAreaChart data={visibleHistory} isPrivate={isPrivate} fillId={chartFillId} />}
             </div>
           </div>
         </div>
         <details className="border-t border-border px-6 py-4 text-sm">
-          <summary className="cursor-pointer font-medium">About this chart &amp; data</summary>
-          <p className="mt-3 text-muted-foreground">Illustrative value change, not a live investment return. This model assumes no deposits, withdrawals or distributions and excludes fees and taxes. The chart uses a shortened vertical scale. Historical performance does not predict future results.</p>
-          {!isPrivate && <table className="w-full mt-4 text-left text-sm"><caption className="text-left text-muted-foreground mb-2">Sample portfolio values · EUR</caption><thead><tr><th scope="col" className="py-2">Date (2026)</th><th scope="col" className="py-2 text-right">Value</th></tr></thead><tbody>{visibleHistory.map(point => <tr key={point.d} className="border-t border-border"><td className="py-2">{point.d}</td><td className="py-2 text-right tabular-nums">{formatMoney(point.v)}</td></tr>)}</tbody></table>}
+          <summary className="cursor-pointer font-medium">{t("About this chart & data")}</summary>
+          <p className="mt-3 text-muted-foreground">{t("Illustrative value change, not a live investment return. This model assumes no deposits, withdrawals or distributions and excludes fees and taxes. The chart uses a shortened vertical scale. Historical performance does not predict future results.")}</p>
+          {!isPrivate && <table className="w-full mt-4 text-left text-sm"><caption className="text-left text-muted-foreground mb-2">{t("Sample portfolio values · EUR")}</caption><thead><tr><th scope="col" className="py-2">{t("Date (2026)")}</th><th scope="col" className="py-2 text-right">{t("Value")}</th></tr></thead><tbody>{visibleHistory.map(point => <tr key={point.d} className="border-t border-border"><td className="py-2">{point.d}</td><td className="py-2 text-right tabular-nums">{formatMoney(point.v)}</td></tr>)}</tbody></table>}
         </details>
       </Card>
 
       <div className="grid xl:grid-cols-transaction-detail gap-6">
         {/* Portfolio breakdown */}
         <Card className="p-8 border-slate-200/60 bg-white rounded-4xl shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900 tracking-tight">Asset classes</h2>
-          <p className="text-sm text-muted-foreground mt-1 mb-4">Current value · 30-day illustrative change</p>
+          <h2 className="text-xl font-semibold text-slate-900 tracking-tight">{t("Asset classes")}</h2>
+          <p className="text-sm text-muted-foreground mt-1 mb-4">{t("Current value · 30-day illustrative change")}</p>
           <div className="space-y-5">
             {portfolio.map((item) => (
               <div key={item.name}>
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-2.5">
                   <div className="flex min-w-0 flex-wrap items-center gap-3">
                     <div className="size-3 rounded-full" style={{ background: item.color }} />
-                    <span className="font-semibold text-slate-900">{item.name}</span>
+                    <span className="font-semibold text-slate-900">{t(item.name)}</span>
                     <span className={cn("flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full", item.change >= 0 ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700")}>
                       {item.change >= 0 ? <TrendingUp className="size-3" /> : <TrendingDown className="size-3" />}
-                      {isPrivate ? "•••" : `${item.change >= 0 ? "+" : ""}${item.change}%`}
+                      {isPrivate ? "•••" : `${item.change >= 0 ? "+" : ""}${formatNumber(item.change)}%`}
                     </span>
                   </div>
                   <div className="text-right">
@@ -256,7 +259,7 @@ export function InvestmentsPage() {
                       {isPrivate ? "•••" : formatMoney(item.value, "EUR", { decimals: 0 })}
                     </div>
                     <div className="text-xs font-normal text-slate-400">
-                      {formatNumber(item.allocation, { maximumFractionDigits: 1 })}% of portfolio
+                      {t("{percent}% of portfolio", { percent: formatNumber(item.allocation, { maximumFractionDigits: 1 }) })}
                     </div>
                   </div>
                 </div>
@@ -274,7 +277,7 @@ export function InvestmentsPage() {
         {/* Portfolio allocation */}
         <div className="space-y-5">
           <Card className="p-7 border-slate-200/60 bg-white rounded-4xl shadow-sm flex flex-col items-center">
-            <h3 className="text-base font-semibold text-slate-900 mb-4 self-start">Allocation</h3>
+            <h3 className="text-base font-semibold text-slate-900 mb-4 self-start">{t("Allocation")}</h3>
             <div className="size-40">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -288,7 +291,7 @@ export function InvestmentsPage() {
               {portfolio.map((item) => (
                 <div key={item.name} className="flex items-center gap-2.5">
                   <div className="size-2.5 rounded-full shrink-0" style={{ background: item.color }} />
-                  <span className="text-xs font-semibold text-slate-600 flex-1 truncate">{item.name}</span>
+                  <span className="text-xs font-semibold text-slate-600 flex-1 truncate">{t(item.name)}</span>
                   <span className="text-xs font-medium text-slate-900">{formatNumber(item.allocation, { maximumFractionDigits: 1 })}%</span>
                 </div>
               ))}
@@ -299,7 +302,7 @@ export function InvestmentsPage() {
         </div>
       </div>
 
-      <p className="text-sm text-muted-foreground">Capital is at risk. Asset classes shown here are sample allocations, not individual tradable holdings. Live prices, security identifiers, order history and execution fees are not available in this prototype.</p>
+      <p className="text-sm text-muted-foreground">{t("Capital is at risk. Asset classes shown here are sample allocations, not individual tradable holdings. Live prices, security identifiers, order history and execution fees are not available in this prototype.")}</p>
       <InvestDialog open={investOpen} onClose={() => setInvestOpen(false)} isBusiness={isBusiness} />
     </div>
   );

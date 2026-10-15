@@ -1,5 +1,5 @@
 import type { ElementType } from "react";
-import type { LucideIcon } from "lucide-react";
+import type { Icon as BankIcon } from "@phosphor-icons/react";
 
 export type ProfileKind = "personal" | "business";
 export type ProfileSlug = "personal" | "business";
@@ -55,7 +55,7 @@ export type Transaction = {
 export type SavingsGoal = {
   id: string;
   name: string;
-  icon: LucideIcon;
+  icon: BankIcon;
   iconBg: string;
   iconColor: string;
   current: number;
@@ -67,10 +67,12 @@ export type SavingsGoal = {
 export type InboxMessage = {
   id: number;
   type: "alert" | "info" | "success" | "warning";
-  icon: LucideIcon;
+  icon: BankIcon;
   iconColor: string;
   title: string;
   body: string;
+  bodyAmount?: number;
+  bodyRate?: number;
   time: string;
   unread: boolean;
   category: string;

@@ -1,13 +1,11 @@
 import { getPrimaryAccount } from "./accounts";
-import {
-  Banknote,
-  Building2,
-  Coffee,
-  Plane,
-  Repeat,
-  ShoppingBag,
-  Zap,
-} from "lucide-react";
+import { MoneyIcon as Banknote } from "@phosphor-icons/react/dist/csr/Money";
+import { BuildingsIcon as Building2 } from "@phosphor-icons/react/dist/csr/Buildings";
+import { ForkKnifeIcon as Coffee } from "@phosphor-icons/react/dist/csr/ForkKnife";
+import { AirplaneTiltIcon as Plane } from "@phosphor-icons/react/dist/csr/AirplaneTilt";
+import { ArrowsLeftRightIcon as Repeat } from "@phosphor-icons/react/dist/csr/ArrowsLeftRight";
+import { ShoppingBagIcon as ShoppingBag } from "@phosphor-icons/react/dist/csr/ShoppingBag";
+import { LightningIcon as Zap } from "@phosphor-icons/react/dist/csr/Lightning";
 import type { ProfileKind, Transaction } from "./types";
 
 const personalTransactions: Transaction[] = [

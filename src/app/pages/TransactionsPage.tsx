@@ -1,10 +1,13 @@
+import { localizedMerchant } from "../i18n/display";
+import { formatDate } from "../utils/date";
+import { useI18n } from "../i18n/I18nProvider";
 import { activityFilters } from "../utils/activityFilters";
 import { isSpendingTransaction } from "../utils/spending";
 import { CurrencyFlag } from "../components/zapad/CurrencyIcon";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { PreviewHistory } from "../components/zapad/PreviewHistory";
 import { Link, useSearchParams } from "react-router";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeftIcon as ArrowLeft } from "@phosphor-icons/react/dist/csr/ArrowLeft";
 import { Input } from "../components/ui/input";
 import { getAccounts } from "../data/accounts";
 
@@ -22,6 +25,7 @@ import { PAGE_MAX_WIDTH, profilePath } from "../utils/paths";
 import { formatMoney } from "../utils/format";
 
 function StatusBadge({ status }: { status: Transaction["status"] }) {
+  const { t } = useI18n();
   const map: Record<Transaction["status"], string> = {
     Completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
     Pending: "bg-amber-50 text-amber-700 border-amber-200",
@@ -31,12 +35,13 @@ function StatusBadge({ status }: { status: Transaction["status"] }) {
   if (status === "Completed") return null;
   return (
     <Badge variant="outline" className={cn("text-xs font-medium px-2.5 py-0.5 rounded-full", map[status])}>
-      {status}
+      {t(status)}
     </Badge>
   );
 }
 
 export function TransactionsPage() {
+  const { t, intlLocale } = useI18n();
   const { profile, profileSlug, isBusiness } = useAppProfile();
   const { isPrivate } = usePrivacy();
   const [params, setParams] = useSearchParams();
@@ -51,71 +56,71 @@ export function TransactionsPage() {
   const data = (accountId ? getAccountTransactions(profile.kind, accountId) : allTransactions).filter(tx =>
     (!spending || (isSpendingTransaction(tx) && (!category || tx.category === category))) &&
     (!status || tx.status === status) &&
-    `${tx.merchant} ${tx.meta} ${tx.category} ${tx.amount} ZB-${isBusiness ? "B" : "P"}-${tx.id.toUpperCase()}`.toLowerCase().includes(query.trim().toLowerCase())
+    `${tx.merchant} ${tx.meta} ${tx.category} ${localizedMerchant(tx.merchant)} ${t(tx.meta)} ${t(tx.category)} ${tx.amount} ${formatMoney(tx.amount, tx.currency)} ZB-${isBusiness ? "B" : "P"}-${tx.id.toUpperCase()}`.toLocaleLowerCase(intlLocale).includes(query.trim().toLocaleLowerCase(intlLocale))
   );
 
   return (
-    <div className={cn(PAGE_MAX_WIDTH, "mx-auto p-6 md:p-8 space-y-8")}>
+    <div className={cn(PAGE_MAX_WIDTH, "mx-auto p-4 md:p-6 space-y-6")}>
       <div>
-        {spending && <Button variant="ghost" asChild className="mb-3 min-h-11 px-0 text-muted-foreground"><Link to={profilePath(profileSlug, "")}><ArrowLeft className="size-4" /> Back to overview</Link></Button>}
+        {spending && <Button variant="ghost" asChild className="mb-3 min-h-11 px-0 text-muted-foreground"><Link to={profilePath(profileSlug, "")}><ArrowLeft className="size-4" /> {t("Back to overview")}</Link></Button>}
         {!spending && accountId && (
           <Button variant="ghost" asChild className="mb-3 min-h-11 px-0 text-muted-foreground">
-            <Link to={profilePath(profileSlug, "accounts")}><ArrowLeft className="size-4" /> Back to accounts</Link>
+            <Link to={profilePath(profileSlug, "accounts")}><ArrowLeft className="size-4" /> {t("Back to accounts")}</Link>
           </Button>
         )}
         <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">
-          Activity
+          {t("Activity")}
         </h1>
         <p className="text-base font-normal text-slate-500 mt-1.5">
-          {accountId ? `${accounts.find(account => account.id === accountId)?.name} · ${profile.name}` : `Sample activity for ${profile.name}`}
+          {accountId ? `${t(accounts.find(account => account.id === accountId)?.name ?? "")} · ${profile.name}` : t("Sample activity for {name}", { name: profile.name })}
         </p>
       </div>
 
-      {((params.has("transaction") && !selectedTx) || invalid) && <p role="status" className="text-sm text-slate-600">This link contains an unavailable transaction or filter. Showing the available activity.</p>}
+      {((params.has("transaction") && !selectedTx) || invalid) && <p role="status" className="text-sm text-slate-600">{t("This link contains an unavailable transaction or filter. Showing the available activity.")}</p>}
       {!spending && <PreviewHistory kind={profile.kind} accountId={accountId} />}
       <Card className="border border-slate-200/60 bg-white rounded-4xl overflow-hidden shadow-sm">
-        <div className="p-6 md:p-8 space-y-4 border-b border-slate-100">
-          {spending && <div className="space-y-2"><h2 className="text-lg font-semibold">{category || "Posted outgoings"} · EUR</h2><p className="text-sm text-muted-foreground">May 2026 sample · Excludes income, pending and scheduled payments, exchanges and local previews.</p><p className="font-semibold">Total shown: {isPrivate ? "•••" : formatMoney(data.reduce((sum, tx) => sum + Math.round(Math.abs(tx.amount) * 100), 0) / 100, "EUR")}</p></div>}
-          <p className="text-sm text-slate-500">{data.length} {data.length === 1 ? "transaction" : "transactions"} · May 2026 demo</p>
-          <Input aria-label="Search activity" placeholder="Search name, amount, category or reference" value={query} onChange={e => updateParam("search", e.target.value)} />
+        <div className="p-4 md:p-5 space-y-3 border-b border-slate-100">
+          {spending && <div className="space-y-2"><h2 className="text-lg font-semibold">{t(category || "Posted outgoings")} · EUR</h2><p className="text-sm text-muted-foreground">{t("May 2026 sample · Excludes income, pending and scheduled payments, exchanges and local previews.")}</p><p className="font-semibold">{t("Total shown: {amount}", { amount: isPrivate ? "•••" : formatMoney(data.reduce((sum, tx) => sum + Math.round(Math.abs(tx.amount) * 100), 0) / 100, "EUR") })}</p></div>}
+          <p className="text-sm text-slate-500">{data.length === 1 ? t("{count} transaction · May 2026 demo", { count: data.length }) : t("{count} transactions · May 2026 demo", { count: data.length })}</p>
+          <Input aria-label={t("Search activity")} placeholder={t("Search name, amount, category or reference")} value={query} onChange={e => updateParam("search", e.target.value)} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {!spending && <Select value={status || "all"} onValueChange={value => updateParam("status", value === "all" ? "" : value)}>
-              <SelectTrigger aria-label="Filter by status" className="min-h-11"><SelectValue /></SelectTrigger>
-              <SelectContent><SelectItem value="all">All statuses</SelectItem>
-              {["Completed", "Pending", "Scheduled", "Waiting for approval"].map(value => <SelectItem key={value} value={value}>{value}</SelectItem>)}
+              <SelectTrigger aria-label={t("Filter by status")} className="min-h-11"><SelectValue /></SelectTrigger>
+              <SelectContent><SelectItem value="all">{t("All statuses")}</SelectItem>
+              {["Completed", "Pending", "Scheduled", "Waiting for approval"].map(value => <SelectItem key={value} value={value}>{t(value)}</SelectItem>)}
               </SelectContent>
             </Select>}
             <Select value={accountId || "all"} onValueChange={value => updateParam("account", value === "all" ? "" : value)}>
-              <SelectTrigger aria-label="Filter by account" className="min-h-11"><SelectValue /></SelectTrigger>
-              <SelectContent><SelectItem value="all">All accounts</SelectItem>
-              {accounts.map(account => <SelectItem key={account.id} value={account.id}><CurrencyFlag currency={account.currency} />{account.name} · {account.currency}</SelectItem>)}
+              <SelectTrigger aria-label={t("Filter by account")} className="min-h-11"><SelectValue /></SelectTrigger>
+              <SelectContent><SelectItem value="all">{t("All accounts")}</SelectItem>
+              {accounts.map(account => <SelectItem key={account.id} value={account.id}><CurrencyFlag currency={account.currency} />{t(account.name)} · {account.currency}</SelectItem>)}
               </SelectContent>
             </Select>
           </div>
-          {(query || status || accountId || spending) && <Button variant="ghost" onClick={() => setParams({})}>Clear filters</Button>}
+          {(query || status || accountId || spending) && <Button variant="ghost" onClick={() => setParams({})}>{t("Clear filters")}</Button>}
         </div>
-        {!data.length && <p className="p-8 text-slate-500" role="status">No sample transactions match these filters.</p>}
+        {!data.length && <p className="p-8 text-slate-500" role="status">{t("No sample transactions match these filters.")}</p>}
         <div className="divide-y divide-slate-100">
-          {data.map((t) => {
-            const Icon = t.icon;
-            const positive = t.amount > 0;
+          {data.map((tx) => {
+            const Icon = tx.icon;
+            const positive = tx.amount > 0;
             return (
               <button
-                key={t.id}
+                key={tx.id}
                 type="button"
-                onClick={() => updateParam("transaction", t.id)}
+                onClick={() => updateParam("transaction", tx.id)}
                 className="transaction-history-row w-full px-6 md:px-8 py-5 md:py-6 flex items-center gap-4 hover:bg-slate-50/80 transition-colors text-left group"
               >
-                <div className={cn("size-12 md:size-14 rounded-2xl flex items-center justify-center shrink-0", t.iconBg)}>
+                <div data-slot="functional-icon" className={cn("size-12 md:size-14 rounded-2xl flex items-center justify-center shrink-0", tx.iconBg)}>
                   <Icon className="size-5 md:size-6" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-base md:text-lg font-medium text-slate-900 truncate">{t.merchant}</span>
-                    <StatusBadge status={t.status} />
+                    <span className="text-base md:text-lg font-medium text-slate-900 truncate">{localizedMerchant(tx.merchant)}</span>
+                    <StatusBadge status={tx.status} />
                   </div>
                   <div className="text-sm font-normal text-slate-500 truncate mt-1">
-                    {t.meta} · {t.date}
+                    {t(tx.meta)} · {formatDate(tx.date)}
                   </div>
                 </div>
                 <div className="text-right shrink-0">
@@ -128,10 +133,10 @@ export function TransactionsPage() {
                     {isPrivate ? (
                       "•••"
                     ) : (
-                      formatMoney(t.amount, t.currency, { showPlus: positive })
+                      formatMoney(tx.amount, tx.currency, { showPlus: positive })
                     )}
                   </div>
-                  <div className="text-xs font-normal text-slate-500 mt-1">{t.category}</div>
+                  <div className="text-xs font-normal text-slate-500 mt-1">{t(tx.category)}</div>
                 </div>
               </button>
             );

@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n/I18nProvider";
 import { exchangeReturnPath } from "../utils/paymentOrigin";
 import { normalizeDecimalInput } from "../utils/decimalInput";
 import { savePreview, isQuoteExpired } from "../utils/paymentPreview";
@@ -12,21 +13,20 @@ import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
-import {
-  ArrowUpDown,
-  TrendingUp,
-  TrendingDown,
-  Info,
-  CheckCircle2,
-  History,
-  Star,
-} from "lucide-react";
+import { ArrowsDownUpIcon as ArrowUpDown } from "@phosphor-icons/react/dist/csr/ArrowsDownUp";
+import { TrendUpIcon as TrendingUp } from "@phosphor-icons/react/dist/csr/TrendUp";
+import { TrendDownIcon as TrendingDown } from "@phosphor-icons/react/dist/csr/TrendDown";
+import { InfoIcon as Info } from "@phosphor-icons/react/dist/csr/Info";
+import { CheckCircleIcon as CheckCircle2 } from "@phosphor-icons/react/dist/csr/CheckCircle";
+import { ClockCounterClockwiseIcon as History } from "@phosphor-icons/react/dist/csr/ClockCounterClockwise";
+import { StarIcon as Star } from "@phosphor-icons/react/dist/csr/Star";
 import { toast } from "sonner";
 import { usePrivacy } from "../contexts/PrivacyContext";
 import { useAppProfile } from "../hooks/useAppProfile";
 import { getAccounts } from "../data/accounts";
 import { PAGE_MAX_WIDTH, profilePath } from "../utils/paths";
 import { formatMoney, formatNumber } from "../utils/format";
+import { formatDate } from "../utils/date";
 
 import { demoRate as getRate } from "../utils/paymentQuote";
 
@@ -45,11 +45,12 @@ const PAIRS = [
 ];
 
 const recentExchanges = [
-  { from: "EUR", to: "USD", fromAmt: 500, toAmt: 543.5, date: "May 10" },
-  { from: "USD", to: "EUR", fromAmt: 200, toAmt: 184.0, date: "Apr 28" },
+  { from: "EUR", to: "USD", fromAmt: 500, toAmt: 543.5, date: "2026-05-10" },
+  { from: "USD", to: "EUR", fromAmt: 200, toAmt: 184.0, date: "2026-04-28" },
 ];
 
 export function ExchangePage() {
+  const { t } = useI18n();
   const { isPrivate } = usePrivacy();
   const navigate = useNavigate();
   const { profile, profileSlug, isBusiness } = useAppProfile();
@@ -57,13 +58,13 @@ export function ExchangePage() {
 
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
   const brandHover = isBusiness ? "hover:bg-brand-business-dark" : "hover:bg-brand-personal-dark";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   const [params, setParams] = useSearchParams();
   const accounts = getAccounts(profile.kind);
   const { source: sourceAccount, destination: destinationAccount, invalidLink } = resolveExchangeAccounts(accounts, params.get("source"), params.get("target"));
   const returnPath = exchangeReturnPath(profileSlug, params, accounts.map(account => account.id));
-  const returnLabel = returnPath ? params.get("origin") === "home" ? "Home" : "Account details" : "Payments";
+  const returnLabel = returnPath ? params.get("origin") === "home" ? t("Home") : t("Account details") : t("Payments");
   const fromCurrency = sourceAccount?.currency ?? "";
   const toCurrency = destinationAccount?.currency ?? "";
   const selectAccounts = (sourceId: string, targetId: string) => {
@@ -88,9 +89,9 @@ export function ExchangePage() {
   const rate = sourceAccount && destinationAccount && fromCurrency !== toCurrency ? getRate(fromCurrency, toCurrency) : 0;
   const currencies = [...new Set(getAccounts(profile.kind).map(a => a.currency))];
   const amountError = fromAmount !== "" && !validMoney(fromAmount)
-    ? "Enter an amount greater than zero with up to two decimal places."
+    ? t("Enter an amount greater than zero with up to two decimal places.")
     : sourceAccount && Number(fromAmount) > sourceAvailable
-      ? "This amount exceeds the available balance of the selected account." : "";
+      ? t("This amount exceeds the available balance of the selected account.") : "";
   const validQuote = validMoney(fromAmount) && Number(fromAmount) <= sourceAvailable && fromCurrency !== toCurrency && !!sourceAccount && !!destinationAccount && rate > 0;
 
   useEffect(() => {
@@ -116,22 +117,22 @@ export function ExchangePage() {
   useEffect(() => { if (step !== "confirm") return; const timer = setInterval(() => setClock(Date.now()),1000); return () => clearInterval(timer); },[step]);
   const expired = isQuoteExpired(reviewedAt,clock);
   const handleConfirm = () => {
-    if (!validQuote || isQuoteExpired(reviewedAt)) { toast.error("Quote expired. Refresh and review the quote again."); return; }
+    if (!validQuote || isQuoteExpired(reviewedAt)) { toast.error(t("Quote expired. Refresh and review the quote again.")); return; }
     try {
       savePreview({id:intent,kind:profile.kind,createdAt:new Date().toISOString(),title:"Currency exchange",sourceId:sourceAccount!.id,destinationId:destinationAccount!.id,source:`${sourceAccount!.name} · ${sourceAccount!.iban}`,recipient:destinationAccount!.name,iban:destinationAccount!.iban,amount:Number(fromAmount),currency:fromCurrency,fee:0,total:Number(fromAmount),received:Number(toAmount),targetCurrency:toCurrency,note:`Illustrative rate ${rate}. Not a live quote.`,status:"Preview saved",initiator:profile.name,events:["Exchange reviewed locally. No conversion executed; both balances unchanged."]});
       setStep("success");
-    } catch(e) { toast.error((e as Error).message); }
+    } catch(e) { toast.error(t((e as Error).message)); }
   };
 
   return (
     <div className={cn(PAGE_MAX_WIDTH, "@container mx-auto p-6 md:p-8 space-y-8")}>
       <div>
-        <button className="inline-flex min-h-11 items-center text-sm text-primary mb-4" onClick={() => navigate(returnPath ?? profilePath(profileSlug,"payments"), { replace: true })}>← {returnLabel}</button>
+        <button className="inline-flex min-h-11 items-center text-sm text-primary-text mb-4" onClick={() => navigate(returnPath ?? profilePath(profileSlug,"payments"), { replace: true })}>← {returnLabel}</button>
         <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">
-          Currency exchange
+          {t("Currency exchange")}
         </h1>
         <p className="text-base font-normal text-slate-500 mt-1.5">
-          Illustrative exchange rates · Preview a currency exchange
+          {t("Illustrative exchange rates · Preview a currency exchange")}
         </p>
       </div>
 
@@ -141,19 +142,19 @@ export function ExchangePage() {
           {step === "form" && (
             <Card className="@container p-4 sm:p-8 border-slate-200/60 rounded-4xl bg-white shadow-sm">
               <div className="flex items-center justify-between mb-7">
-                <h2 ref={stepHeading} tabIndex={-1} className="text-lg font-semibold text-slate-900">Exchange</h2>
-                <Badge variant="secondary">Demo rates</Badge>
+                <h2 ref={stepHeading} tabIndex={-1} className="text-lg font-semibold text-slate-900">{t("Exchange")}</h2>
+                <Badge variant="secondary">{t("Demo rates")}</Badge>
               </div>
 
-              {invalidLink && <p role="status" className="mb-4 text-sm text-destructive">This link refers to an unavailable account. Select your source and destination accounts to continue.</p>}
+              {invalidLink && <p role="status" className="mb-4 text-sm text-destructive">{t("This link refers to an unavailable account. Select your source and destination accounts to continue.")}</p>}
               <div className="space-y-3">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-5 focus-within:bg-white focus-within:border-slate-300 focus-within:shadow-sm transition-all">
                   <div className="text-xs font-medium uppercase text-slate-400 tracking-wider mb-3">
-                    From balance{sourceAccount ? ` · ${sourceAccount.name}` : ""}
+                    {t("From balance")}{sourceAccount ? ` · ${t(sourceAccount.name)}` : ""}
                   </div>
                   <div className="flex flex-col items-stretch @sm:flex-row @sm:items-center gap-3 min-w-0">
                     <Input
-                      aria-label="Exchange amount"
+                      aria-label={t("Exchange amount")}
                       aria-invalid={!!amountError}
                       aria-describedby={amountError ? "exchange-amount-format exchange-amount-error" : "exchange-amount-format"}
                       type="text"
@@ -164,15 +165,15 @@ export function ExchangePage() {
                       placeholder="0"
                     />
                     <Select value={sourceAccount?.id ?? ""} onValueChange={id => selectAccounts(id, destinationAccount?.id ?? "")}>
-                      <SelectTrigger aria-label="Source account" className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
-                        <SelectValue placeholder="Choose account">{sourceAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={fromCurrency} /><span>{fromCurrency}</span></span>}</SelectValue>
+                      <SelectTrigger aria-label={t("Source account")} className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
+                        <SelectValue placeholder={t("Choose account")}>{sourceAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={fromCurrency} /><span>{fromCurrency}</span></span>}</SelectValue>
                       </SelectTrigger>
                       <SelectContent>
                         {accounts.map((account) => (
                           <SelectItem key={account.id} value={account.id} className="rounded-xl cursor-pointer py-2.5">
                             <span className="flex items-center gap-3 font-medium">
                               <CurrencyFlag currency={account.currency} />
-                              <span>{account.name} · {account.currency}</span>
+                              <span>{t(account.name)} · {account.currency}</span>
                               <span className="text-slate-400 font-semibold text-xs">{account.ibanShort}</span>
                             </span>
                           </SelectItem>
@@ -180,16 +181,16 @@ export function ExchangePage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  <p id="exchange-amount-format" className="mt-2 text-xs text-muted-foreground">Use a dot or comma for decimals, without thousands separators.</p>
+                  <p id="exchange-amount-format" className="mt-2 text-xs text-muted-foreground">{t("Use a dot or comma for decimals, without thousands separators.")}</p>
                   {amountError && <p id="exchange-amount-error" role="status" className="mt-2 text-sm text-destructive">{amountError}</p>}
                   <div className="text-xs font-normal text-slate-400 mt-2">
-                    {!sourceAccount ? "Choose an account to see its available balance." : isPrivate ? "Available: •••" : `Available: ${formatMoney(sourceAvailable, fromCurrency)}`}
+                    {!sourceAccount ? t("Choose an account to see its available balance.") : t("Available: {amount}", { amount: isPrivate ? "•••" : formatMoney(sourceAvailable, fromCurrency) })}
                   </div>
                 </div>
 
                 <div className="flex justify-center py-1 relative z-10">
                   <button
-                    aria-label="Swap source and destination accounts" disabled={!sourceAccount || !destinationAccount} onClick={handleSwap}
+                    aria-label={t("Swap source and destination accounts")} disabled={!sourceAccount || !destinationAccount} onClick={handleSwap}
                     className="size-11 rounded-full bg-muted text-foreground border border-border flex items-center justify-center"
                   >
                     <ArrowUpDown className="size-4" />
@@ -198,7 +199,7 @@ export function ExchangePage() {
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-5 transition-all">
                   <div className="text-xs font-medium uppercase text-slate-400 tracking-wider mb-3">
-                    To balance{destinationAccount ? ` · ${destinationAccount.name}` : ""}
+                    {t("To balance")}{destinationAccount ? ` · ${t(destinationAccount.name)}` : ""}
                   </div>
                   <div className="flex flex-col items-stretch @sm:flex-row @sm:items-center gap-3 min-w-0">
                     <div className="text-3xl md:text-3xl font-semibold text-slate-900 w-full @sm:w-0 flex-1 min-w-0 tabular-nums break-words">
@@ -208,15 +209,15 @@ export function ExchangePage() {
                       }) : "—"}
                     </div>
                     <Select value={destinationAccount?.id ?? ""} onValueChange={id => selectAccounts(sourceAccount?.id ?? "", id)}>
-                      <SelectTrigger aria-label="Destination account" className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
-                        <SelectValue placeholder="Choose account">{destinationAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={toCurrency} /><span>{toCurrency}</span></span>}</SelectValue>
+                      <SelectTrigger aria-label={t("Destination account")} className="h-11 w-auto min-w-27.5 font-medium rounded-sm border-slate-200 bg-white shadow-sm text-slate-900 gap-2 shrink-0">
+                        <SelectValue placeholder={t("Choose account")}>{destinationAccount && <span className="flex items-center gap-2"><CurrencyFlag currency={toCurrency} /><span>{toCurrency}</span></span>}</SelectValue>
                       </SelectTrigger>
                       <SelectContent>
                         {accounts.map((account) => (
                           <SelectItem key={account.id} value={account.id} className="rounded-xl cursor-pointer py-2.5">
                             <span className="flex items-center gap-3 font-medium">
                               <CurrencyFlag currency={account.currency} />
-                              <span>{account.name} · {account.currency}</span>
+                              <span>{t(account.name)} · {account.currency}</span>
                               <span className="text-slate-400 font-semibold text-xs">{account.ibanShort}</span>
                             </span>
                           </SelectItem>
@@ -225,7 +226,7 @@ export function ExchangePage() {
                     </Select>
                   </div>
                   <div className="text-xs font-medium text-muted-foreground mt-2">
-                    {sourceAccount && destinationAccount ? fromCurrency === toCurrency ? "Choose accounts in different currencies." : `1 ${fromCurrency} = ${rate.toFixed(4)} ${toCurrency}` : "Choose both accounts to see the rate."}
+                    {sourceAccount && destinationAccount ? fromCurrency === toCurrency ? t("Choose accounts in different currencies.") : `1 ${fromCurrency} = ${formatNumber(rate, { minimumFractionDigits: 4, maximumFractionDigits: 4 })} ${toCurrency}` : t("Choose both accounts to see the rate.")}
                   </div>
                 </div>
               </div>
@@ -233,7 +234,7 @@ export function ExchangePage() {
               <div className="mt-4 flex items-start gap-2.5 px-3 py-2.5 rounded-xl bg-muted border border-border">
                 <Info className="size-4 text-muted-foreground shrink-0 mt-0.5" />
                 <p className="text-xs font-normal text-muted-foreground">
-                  Illustrative demo rate. No commission in this simulation; no real exchange is submitted.
+                  {t("Illustrative demo rate. No commission in this simulation; no real exchange is submitted.")}
                 </p>
               </div>
 
@@ -241,51 +242,51 @@ export function ExchangePage() {
                 disabled={!validQuote}
                 onClick={() => {
                   if (!fromAmount || !Number.isFinite(Number(fromAmount)) || Number(fromAmount) <= 0) {
-                    toast.error("Enter a valid amount");
+                    toast.error(t("Enter a valid amount"));
                     return;
                   }
                   if (!sourceAccount || Number(fromAmount) > sourceAvailable) {
-                    toast.error("Insufficient funds in the selected currency", { description: "Choose a funded currency account." });
+                    toast.error(t("Insufficient funds in the selected currency"), { description: t("Choose a funded currency account.") });
                     return;
                   }
-                  if (fromCurrency === toCurrency) { toast.error("Choose two different currencies"); return; }
+                  if (fromCurrency === toCurrency) { toast.error(t("Choose two different currencies")); return; }
                   if (!validQuote) return;
                   setReviewedAt(Date.now()); setClock(Date.now()); setStep("confirm");
                 }}
                 className={cn("w-full mt-6 h-14 px-8 rounded-lg font-medium text-lg shadow-md transition-all hover:shadow-lg zb-hover-lift", brandBg, brandHover, brandText)}
               >
-                Review exchange
+                {t("Review exchange")}
               </Button>
             </Card>
           )}
 
           {step === "confirm" && (
             <Card className="@container p-4 sm:p-8 border-slate-200/60 rounded-4xl bg-white shadow-sm">
-              <h2 ref={stepHeading} tabIndex={-1} className="text-xl font-semibold text-slate-900 mb-4">Review exchange</h2>
-              <p className="text-sm text-muted-foreground mb-4">From {sourceAccount?.name} · {sourceAccount?.ibanShort}<br/>To {destinationAccount?.name} · {destinationAccount?.ibanShort}</p>
-              <p role="status" className="text-sm text-muted-foreground mb-4">{expired ? "Quote expired. Refresh before confirming." : "Illustrative quote · valid for 60 seconds after review. No bank request will be sent."}</p>
-              {expired && <Button variant="outline" className="mb-4" onClick={()=>{setReviewedAt(Date.now());setClock(Date.now());}}>Refresh demo quote</Button>}
+              <h2 ref={stepHeading} tabIndex={-1} className="text-xl font-semibold text-slate-900 mb-4">{t("Review exchange")}</h2>
+              <p className="text-sm text-muted-foreground mb-4">{t("From {account}", { account: sourceAccount ? t(sourceAccount.name) : "" })} · {sourceAccount?.ibanShort}<br/>{t("To {account}", { account: destinationAccount ? t(destinationAccount.name) : "" })} · {destinationAccount?.ibanShort}</p>
+              <p role="status" className="text-sm text-muted-foreground mb-4">{expired ? t("Quote expired. Refresh before confirming.") : t("Illustrative quote · valid for 60 seconds after review. No bank request will be sent.")}</p>
+              {expired && <Button variant="outline" className="mb-4" onClick={()=>{setReviewedAt(Date.now());setClock(Date.now());}}>{t("Refresh demo quote")}</Button>}
               <div className="rounded-xl bg-slate-50 border border-slate-100 divide-y divide-slate-100 mb-7 overflow-hidden">
                 <div className="flex flex-wrap justify-between items-center gap-2 px-5 py-4">
-                  <span className="text-sm font-normal text-slate-500">You pay</span>
+                  <span className="text-sm font-normal text-slate-500">{t("You pay")}</span>
                   <span className="font-semibold text-slate-900"><CurrencyFlag currency={fromCurrency} /> {formatNumber(parseFloat(fromAmount) || 0, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {fromCurrency}</span>
                 </div>
                 <div className="flex flex-wrap justify-between items-center gap-2 px-5 py-4">
-                  <span className="text-sm font-normal text-slate-500">You receive</span>
+                  <span className="text-sm font-normal text-slate-500">{t("You receive")}</span>
                   <span className="font-semibold text-emerald-600"><CurrencyFlag currency={toCurrency} /> {formatNumber(parseFloat(toAmount) || 0, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {toCurrency}</span>
                 </div>
                 <div className="flex flex-wrap justify-between items-center gap-2 px-5 py-4">
-                  <span className="text-sm font-normal text-slate-500">Rate</span>
-                  <span className="font-medium text-slate-700">1 {fromCurrency} = {rate.toFixed(4)} {toCurrency}</span>
+                  <span className="text-sm font-normal text-slate-500">{t("Rate")}</span>
+                  <span className="font-medium text-slate-700">1 {fromCurrency} = {formatNumber(rate, { minimumFractionDigits: 4, maximumFractionDigits: 4 })} {toCurrency}</span>
                 </div>
                 <div className="flex flex-wrap justify-between items-center gap-2 px-5 py-4">
-                  <span className="text-sm font-normal text-slate-500">Fee</span>
-                  <span className="font-medium text-emerald-600">€0.00 · demo only</span>
+                  <span className="text-sm font-normal text-slate-500">{t("Fee")}</span>
+                  <span className="font-medium text-emerald-600">{t("{amount} · demo only", { amount: formatMoney(0, "EUR") })}</span>
                 </div>
               </div>
               <div className="grid grid-cols-1 @sm:grid-cols-2 gap-3">
-                <Button variant="outline" onClick={() => setStep("form")} className="h-12 px-6 rounded-lg font-medium border-slate-200 text-slate-700">Edit</Button>
-                <Button disabled={expired || !validQuote} onClick={handleConfirm} className={cn("h-12 px-6 rounded-lg font-medium shadow-sm", brandBg, brandHover, brandText)}>Confirm in demo</Button>
+                <Button variant="outline" onClick={() => setStep("form")} className="h-12 px-6 rounded-lg font-medium border-slate-200 text-slate-700">{t("Edit")}</Button>
+                <Button disabled={expired || !validQuote} onClick={handleConfirm} className={cn("h-12 px-6 rounded-lg font-medium shadow-sm", brandBg, brandHover, brandText)}>{t("Confirm in demo")}</Button>
               </div>
             </Card>
           )}
@@ -295,7 +296,7 @@ export function ExchangePage() {
               <div data-slot="supporting-surface" className={cn("size-20 rounded-full", brandBg, "flex items-center justify-center shadow-lg")}>
                 <CheckCircle2 className={cn("size-10", brandText)} />
               </div>
-              <h2 ref={stepHeading} tabIndex={-1} className="text-2xl font-semibold tracking-tight text-slate-900">Demo exchange confirmed</h2>
+              <h2 ref={stepHeading} tabIndex={-1} className="text-2xl font-semibold tracking-tight text-slate-900">{t("Demo exchange confirmed")}</h2>
               <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-slate-500 font-semibold leading-snug tabular-nums">
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
                   <CurrencyFlag currency={fromCurrency} /> {formatNumber(parseFloat(fromAmount) || 0, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {fromCurrency}
@@ -305,10 +306,10 @@ export function ExchangePage() {
                   <CurrencyFlag currency={toCurrency} /> {formatNumber(parseFloat(toAmount) || 0, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {toCurrency}
                 </span>
               </p>
-              <p className="text-sm text-slate-600">Local preview saved in Activity. No exchange executed; balances are unchanged.</p>
-              <Button variant="outline" onClick={()=>navigate(profilePath(profileSlug,`transactions?preview=${intent}`))}>View in Activity</Button>
+              <p className="text-sm text-slate-600">{t("Local preview saved in Activity. No exchange executed; balances are unchanged.")}</p>
+              <Button variant="outline" onClick={()=>navigate(profilePath(profileSlug,`transactions?preview=${intent}`))}>{t("View in Activity")}</Button>
               <Button onClick={() => { setIntent(crypto.randomUUID()); setFromAmount(""); setStep("form"); }} className="mt-2 w-full h-12 px-6 rounded-lg font-medium bg-slate-900 hover:bg-slate-800 text-white">
-                New exchange
+                {t("New exchange")}
               </Button>
             </Card>
           )}
@@ -316,7 +317,7 @@ export function ExchangePage() {
           {/* Recent exchanges */}
           <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2.5">
-              <History className="size-5 text-slate-400" /> Illustrative exchanges
+              <History className="size-5 text-slate-400" /> {t("Illustrative exchanges")}
             </h2>
             <div className="space-y-3">
               {recentExchanges.map((ex, i) => (
@@ -330,7 +331,7 @@ export function ExchangePage() {
                     <div className="font-semibold text-slate-900 text-sm">
                       {ex.from} → {ex.to}
                     </div>
-                    <div className="text-xs font-normal text-slate-400">{ex.date}</div>
+                    <div className="text-xs font-normal text-slate-400">{formatDate(ex.date, { month: "short", day: "numeric" })}</div>
                   </div>
                   <div className="text-right">
                     <div className="font-semibold text-slate-900 text-sm">
@@ -350,8 +351,8 @@ export function ExchangePage() {
         <div className="min-w-0 space-y-5">
           <Card className="p-7 border-slate-200/60 rounded-4xl bg-white shadow-sm">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-semibold text-slate-900">Reference rates</h2>
-              <Badge variant="secondary">Demo rates</Badge>
+              <h2 className="text-lg font-semibold text-slate-900">{t("Reference rates")}</h2>
+              <Badge variant="secondary">{t("Demo rates")}</Badge>
             </div>
             <div className="space-y-2">
               {PAIRS.filter(([from, to]) => currencies.includes(from) && currencies.includes(to)).map(([from, to], i) => {
@@ -375,11 +376,11 @@ export function ExchangePage() {
                     </div>
                     <div className="flex-1 text-left">
                       <div className="font-semibold text-slate-900 text-sm">{from}/{to}</div>
-                      <div className="text-xs font-normal text-slate-400">1 {from} = {r.toFixed(4)} {to}</div>
+                      <div className="text-xs font-normal text-slate-400">1 {from} = {formatNumber(r, { minimumFractionDigits: 4, maximumFractionDigits: 4 })} {to}</div>
                     </div>
                     <div className={cn("flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full", isPos ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700")}>
                       {isPos ? <TrendingUp className="size-3" /> : <TrendingDown className="size-3" />}
-                      {meta.change === 0 ? "—" : `${isPos ? "+" : ""}${meta.change}%`}
+                      {meta.change === 0 ? "—" : formatNumber(meta.change / 100, { style: "percent", maximumFractionDigits: 2, signDisplay: "always" })}
                     </div>
                   </button>
                 );
@@ -393,16 +394,16 @@ export function ExchangePage() {
                 <Star className="size-5" />
               </div>
               <div>
-                <div className="font-semibold text-slate-900">Rate alert</div>
+                <div className="font-semibold text-slate-900">{t("Rate alert")}</div>
                 <p className="text-sm font-normal text-slate-500 mt-1 leading-snug">
-                  Rate alerts are unavailable in this prototype.
+                  {t("Rate alerts are unavailable in this prototype.")}
                 </p>
                 <Button
                   variant="link"
-                  className="px-0 h-auto mt-2 text-sm font-medium text-blue-600 hover:no-underline"
+                  className="px-0 h-auto mt-2 text-sm font-medium text-primary-text hover:no-underline"
                   disabled
                 >
-                  Alerts unavailable
+                  {t("Alerts unavailable")}
                 </Button>
               </div>
             </div>

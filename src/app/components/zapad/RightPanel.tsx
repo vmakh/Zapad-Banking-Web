@@ -1,22 +1,21 @@
+import { useI18n } from "../../i18n/I18nProvider";
 import { usePrivacy } from "../../contexts/PrivacyContext";
 import { maskMoneyInText } from "../../utils/privacyText";
 import { cn } from "../ui/utils";
-import { CurrencyFlag } from "./CurrencyIcon";
 import { PaymentCard } from "./PaymentCard";
 import { Link, useNavigate } from "react-router";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import {
-  AlertCircle,
-  CreditCard,
-  FileText,
-  ShieldAlert,
-  ArrowRight,
-  Wifi,
-  Lock,
-  Snowflake,
-} from "lucide-react";
+import { demoRate } from "../../utils/paymentQuote";
+import { formatMoney, formatNumber } from "../../utils/format";
+import { WarningCircleIcon as AlertCircle } from "@phosphor-icons/react/dist/csr/WarningCircle";
+import { ClockIcon as Clock3 } from "@phosphor-icons/react/dist/csr/Clock";
+import { FileTextIcon as FileText } from "@phosphor-icons/react/dist/csr/FileText";
+import { ReceiptIcon as ReceiptText } from "@phosphor-icons/react/dist/csr/Receipt";
+import { DeviceMobileIcon as Smartphone } from "@phosphor-icons/react/dist/csr/DeviceMobile";
+import { ArrowRightIcon as ArrowRight } from "@phosphor-icons/react/dist/csr/ArrowRight";
+import { LockSimpleIcon as Lock } from "@phosphor-icons/react/dist/csr/LockSimple";
+import { SnowflakeIcon as Snowflake } from "@phosphor-icons/react/dist/csr/Snowflake";
 import type { ProfileKind, ProfileSlug } from "../../data/types";
 import { getPrimaryCard } from "../../data/cards";
 import { cardPath, paymentsPath, profilePath, statementsPath } from "../../utils/paths";
@@ -36,6 +35,7 @@ export function RightPanel({
   profileKind: ProfileKind;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
   return (
     <div className={cn(compact ? "space-y-4 xl:sticky xl:top-20" : "space-y-5 xl:sticky xl:top-24")}>
       <AlertsCard business={business} profileSlug={profileSlug} compact={compact} />
@@ -56,21 +56,21 @@ export function AlertsCard({
   profileSlug: ProfileSlug;
   compact?: boolean;
 }) {
-  const navigate = useNavigate();
+  const { t } = useI18n();
   const { isPrivate } = usePrivacy();
   const items = business
     ? [
         {
-          icon: ShieldAlert,
-          color: "text-orange-600 bg-orange-50",
-          title: "Payment awaiting approval",
-          desc: "Invoice INV-2034 · €4,820.00",
+          icon: ReceiptText,
+          statusIcon: Clock3,
+          title: "Sample invoice to review",
+          desc: t("Invoice {reference} · {amount}", { reference: "INV-2034", amount: formatMoney(4820, "EUR") }),
           cta: "Review",
           href: profilePath(profileSlug, "transactions?transaction=1"),
         },
         {
-          icon: AlertCircle,
-          color: "text-amber-600 bg-amber-50",
+          icon: FileText,
+          statusIcon: null,
           title: "Sample statement ready",
           desc: "May 2026 · Sample",
           cta: "Open",
@@ -79,16 +79,16 @@ export function AlertsCard({
       ]
     : [
         {
-          icon: AlertCircle,
-          color: "text-orange-600 bg-orange-50",
-          title: "New device login",
-          desc: "iPhone 15 · 2 hours ago",
+          icon: Smartphone,
+          statusIcon: AlertCircle,
+          title: "Sample device alert",
+          desc: "iPhone 15 · Demo scenario",
           cta: "Security help",
           href: profilePath(profileSlug, "settings"),
         },
         {
           icon: FileText,
-          color: "text-sky-600 bg-sky-50",
+          statusIcon: null,
           title: "Statement ready",
           desc: "May 2026 · Sample",
           cta: "View",
@@ -97,41 +97,39 @@ export function AlertsCard({
       ];
 
   return (
-    <Card className={cn(panelCardPad(compact), "border border-slate-200/60 bg-white rounded-4xl shadow-sm")}>
+    <Card className={cn(panelCardPad(compact), "border-border bg-card rounded-2xl shadow-none")}>
       <div className={cn("flex items-center justify-between", panelSectionGap(compact))}>
-        <h3 className="text-base md:text-lg font-semibold text-slate-900">Needs attention</h3>
-        <span className="size-6 rounded-full bg-muted text-foreground text-xs font-medium flex items-center justify-center shadow-sm">{items.length}</span>
+        <h3 className="text-lg font-semibold text-foreground">{t("Needs attention")}</h3>
+        <span className="size-6 rounded-full bg-muted text-muted-foreground text-xs font-medium flex items-center justify-center">{items.length}</span>
       </div>
       <div className="space-y-3">
-        {items.map((it, i) => {
+        {items.map((it) => {
           const Icon = it.icon;
+          const StatusIcon = it.statusIcon;
           return (
-            <div
-              key={i}
-              role="button"
-              tabIndex={0}
-              onClick={() => navigate(it.href)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  navigate(it.href);
-                }
-              }}
-              className={cn("flex items-start rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 cursor-pointer transition-surface group", compact ? "gap-3 p-3" : "gap-4 p-4")}
+            <Link
+              key={it.href}
+              to={it.href}
+              className={cn("group flex items-start rounded-xl hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors", compact ? "gap-3 p-3" : "gap-4 p-4")}
             >
-              <IconScaleSlot className={cn("rounded-md shrink-0", compact ? "size-10" : "size-12")} innerClassName={`shadow-sm ${it.color}`}>
-                <Icon className="size-5" />
-              </IconScaleSlot>
+              <div className="relative size-10 shrink-0" aria-hidden="true">
+                <IconScaleSlot className="size-full rounded-full" innerClassName="bg-muted text-foreground">
+                  <Icon className="size-6" />
+                </IconScaleSlot>
+                {StatusIcon && <span className="absolute -bottom-0.5 -right-0.5 flex size-4.5 items-center justify-center rounded-full bg-amber-100 text-amber-800 ring-2 ring-card">
+                  <StatusIcon className="size-3" />
+                </span>}
+              </div>
               <div className="flex-1 min-w-0">
-                <div className="text-sm font-medium text-slate-900">{it.title}</div>
-                <div className="text-xs font-normal text-slate-500 truncate mt-1">
-                  {isPrivate ? maskMoneyInText(it.desc) : it.desc}
+                <div className="text-sm font-medium text-foreground">{t(it.title)}</div>
+                <div className="text-xs font-normal text-muted-foreground mt-1 wrap-anywhere">
+                  {isPrivate ? maskMoneyInText(t(it.desc)) : t(it.desc)}
                 </div>
-                <span className="inline-block h-8 font-medium text-slate-900 mt-2 text-xs group-hover:text-blue-600 transition-colors">
-                  {it.cta} →
+                <span className="inline-flex items-center gap-1.5 font-medium text-foreground mt-2 text-xs group-hover:text-primary-text transition-colors">
+                  {t(it.cta)} <ArrowRight className="size-3.5" aria-hidden="true" />
                 </span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -150,6 +148,7 @@ export function CardWidget({
   profileKind: ProfileKind;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
   const navigate = useNavigate();
   const { isPrivate } = usePrivacy();
   const card = getPrimaryCard(profileKind);
@@ -158,10 +157,9 @@ export function CardWidget({
   return (
     <Card className={cn(panelCardPad(compact), "border border-slate-200/60 bg-white rounded-4xl shadow-sm")}>
       <div className={cn("flex items-center justify-between", panelSectionGap(compact))}>
-        <h3 className="text-base md:text-lg font-semibold text-slate-900">Card</h3>
+        <h3 className="text-base md:text-lg font-semibold text-slate-900">{t("Card")}</h3>
         <Button variant="ghost" className="font-medium h-9 px-3 rounded-full hover:bg-slate-100 text-slate-600" asChild>
-          <Link to={profilePath(profileSlug, "cards")}>
-            Manage <ArrowRight className="size-4 ml-1.5" />
+          <Link to={profilePath(profileSlug, "cards")}>{t("Manage")}<ArrowRight className="size-4 ml-1.5" />
           </Link>
         </Button>
       </div>
@@ -176,7 +174,7 @@ export function CardWidget({
           onClick={() => navigate(`${cardsHref}?action=freeze`)}
         >
           <Snowflake className="size-5" />
-          <span className="text-xs font-medium">{card.frozen ? "Unfreeze" : "Freeze"}</span>
+          <span className="text-xs font-medium">{t(card.frozen ? "Unfreeze" : "Freeze")}</span>
         </Button>
         <Button
           type="button"
@@ -185,7 +183,7 @@ export function CardWidget({
           onClick={() => navigate(`${cardsHref}?action=limits`)}
         >
           <Lock className="size-5" />
-          <span className="text-xs font-medium">Limits</span>
+          <span className="text-xs font-medium">{t("Limits")}</span>
         </Button>
         <Button
           type="button"
@@ -194,7 +192,7 @@ export function CardWidget({
           onClick={() => navigate(`${cardsHref}?action=details`)}
         >
           <FileText className="size-5" />
-          <span className="text-xs font-medium">Details</span>
+          <span className="text-xs font-medium">{t("Details")}</span>
         </Button>
       </div>
     </Card>
@@ -210,74 +208,36 @@ function FxWidget({
   profileSlug: ProfileSlug;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
   const brandBg = business ? "bg-brand-business" : "bg-brand-personal";
   const brandHover = business ? "hover:bg-brand-business-dark" : "hover:bg-brand-personal-dark";
 
   return (
     <Card
       className={cn(panelCardPad(compact), "border border-slate-200/60 bg-white rounded-4xl shadow-sm")}
-      aria-label="Currency exchange widget"
+      aria-label={t("Currency exchange widget")}
     >
       <div className={cn("flex items-center justify-between", panelSectionGap(compact))}>
-        <h3 className="text-base md:text-lg font-semibold text-slate-900">Exchange</h3>
-        <span className="text-xs font-medium text-emerald-600 flex items-center gap-1.5 uppercase tracking-wide">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          Demo
-        </span>
+        <h3 className="text-base md:text-lg font-semibold text-slate-900">{t("Exchange")}</h3>
+        <span className="text-xs font-medium text-muted-foreground">{t("Illustrative")}</span>
       </div>
-      <div className="space-y-2" aria-hidden="true">
-        <div className="rounded-lg border border-slate-100 bg-slate-50/50 p-4">
-          <div className="text-xs font-medium uppercase text-slate-500 tracking-wider mb-2">
-            You pay
-          </div>
-          <div className="flex items-center gap-3 min-w-0 overflow-hidden">
-            <Input
-              readOnly
-              tabIndex={-1}
-              defaultValue="1,000"
-              className="border-0 bg-transparent px-0 h-10 text-3xl font-semibold shadow-none focus-visible:ring-0 text-slate-900 w-0 flex-1 min-w-0 pointer-events-none"
-            />
-            <Button variant="outline" className="h-10 px-5 font-medium rounded-full border-slate-200 text-slate-900 bg-white hover:bg-slate-50 gap-2 shrink-0 shadow-sm">
-              <CurrencyFlag currency="EUR" />
-              EUR ▾
-            </Button>
-          </div>
+      <dl className="space-y-3">
+        <div className="rounded-lg border border-border bg-secondary p-4">
+          <dt className="text-xs font-medium text-muted-foreground mb-2">{t("Example amount")}</dt>
+          <dd className="text-2xl font-semibold text-foreground tabular-nums">{formatMoney(1000, "EUR")}</dd>
         </div>
-        <div className="flex justify-center py-1 relative z-10">
-          <div data-slot="supporting-surface" className={cn("size-10 rounded-full", "text-white", "flex items-center justify-center", brandBg, "shadow-md ring-4 ring-white")}>
-            <ArrowRight className="size-4 rotate-90" />
-          </div>
+        <div className="rounded-lg border border-border bg-secondary p-4">
+          <dt className="text-xs font-medium text-muted-foreground mb-2">{t("Converted example")}</dt>
+          <dd className="text-2xl font-semibold text-foreground tabular-nums">{formatMoney(1000 * demoRate("EUR", "USD"), "USD")}</dd>
         </div>
-        <div className="rounded-lg border border-slate-100 bg-slate-50/50 p-4">
-          <div className="text-xs font-medium uppercase text-slate-500 tracking-wider mb-2">
-            You receive
-          </div>
-          <div className="flex items-center gap-3 min-w-0 overflow-hidden">
-            <Input
-              readOnly
-              tabIndex={-1}
-              defaultValue="1,087"
-              className="border-0 bg-transparent px-0 h-10 text-3xl font-semibold shadow-none focus-visible:ring-0 text-slate-900 w-0 flex-1 min-w-0 pointer-events-none"
-            />
-            <Button variant="outline" className="h-10 px-5 font-medium rounded-full border-slate-200 text-slate-900 bg-white hover:bg-slate-50 gap-2 shrink-0 shadow-sm">
-              <CurrencyFlag currency="USD" />
-              USD ▾
-            </Button>
-          </div>
-        </div>
-      </div>
+      </dl>
       <Button variant="outline"
-        className={cn("w-full text-sm font-medium", "text-white", "rounded-lg", brandBg, brandHover, "shadow-sm transition-all hover:shadow", compact ? "mt-4 h-11 px-5" : "mt-6 h-12 px-6")}
+        className={cn("w-full text-sm font-medium", "text-primary-foreground", "rounded-lg", brandBg, brandHover, "shadow-sm transition-all hover:shadow", compact ? "mt-4 h-11 px-5" : "mt-6 h-12 px-6")}
         asChild
       >
-        <Link to={profilePath(profileSlug, "exchange")}>Convert now</Link>
+        <Link to={profilePath(profileSlug, "exchange")}>{t("Preview exchange")}</Link>
       </Button>
-      <p className="text-xs font-normal text-slate-500 text-center mt-4">
-        1 EUR = 1.087 USD <span className="mx-1">•</span> Updated 5s ago
-      </p>
+      <p className="text-xs font-normal text-slate-500 text-center mt-4">{t("1 EUR = {rate} USD · Demo rate", { rate: formatNumber(demoRate("EUR", "USD"), { maximumFractionDigits: 3 }) })}</p>
     </Card>
   );
 }
@@ -291,6 +251,7 @@ function OffersCard({
   profileSlug: ProfileSlug;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
   const offerHref = profilePath(profileSlug, business ? "loans" : "savings");
 
   return (
@@ -299,18 +260,16 @@ function OffersCard({
       <div className={cn("flex items-start relative z-10", compact ? "gap-4" : "gap-5")}>
         <div>
           <div className="text-base font-semibold text-slate-900">
-            {business
-              ? "Working capital up to €150k"
-              : "Earn 3.2% APY on savings"}
+            {t(business
+              ? "Explore a sample business loan"
+              : "Explore sample savings options")}
           </div>
           <p className="text-sm font-normal text-slate-500 mt-1.5 leading-snug">
-            {business
-              ? "Pre-approved credit line. Decision in 24h."
-              : "Open a fixed-term deposit instantly."}
+            {t(business
+              ? "Preview illustrative terms. No credit decision is made."
+              : "Compare illustrative deposits. No account is opened.")}
           </p>
-          <span className="inline-block mt-3 text-blue-600 text-sm font-medium group-hover:text-blue-700">
-            Learn more →
-          </span>
+          <span className="inline-block mt-3 text-primary-text text-sm font-medium group-hover:underline">{t("Learn more →")}</span>
         </div>
       </div>
       </Card>

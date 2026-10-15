@@ -14,7 +14,10 @@ function environment(data=new Map()) {
   vm.runInNewContext(`(function(require,module,exports){${code}\n})`,{localStorage:storage,crypto:{randomUUID:()=> 'test-goal'}})(name=>{
    // These exports are presentation-only; the tests exercise the real data modules.
    if(name==='react')return {useSyncExternalStore:()=>{throw Error('UI hook is not under test');}};
-   if(name==='lucide-react')return {Plane:'plane',Shield:'shield',Monitor:'monitor',Building2:'building'};
+   if(name.startsWith('@phosphor-icons/react/')) {
+    const glyph = path.basename(name) + 'Icon';
+    return {[glyph]: glyph};
+   }
    return load(path.resolve(path.dirname(file),name+'.ts'));
   },mod,mod.exports);return mod.exports;
  }

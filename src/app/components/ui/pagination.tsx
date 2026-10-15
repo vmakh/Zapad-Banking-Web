@@ -1,9 +1,7 @@
 import * as React from "react";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreHorizontalIcon,
-} from "lucide-react";
+import { CaretLeftIcon as ChevronLeftIcon } from "@phosphor-icons/react/dist/csr/CaretLeft";
+import { CaretRightIcon as ChevronRightIcon } from "@phosphor-icons/react/dist/csr/CaretRight";
+import { DotsThreeIcon as MoreHorizontalIcon } from "@phosphor-icons/react/dist/csr/DotsThree";
 
 import { cn } from "./utils";
 import { Button, buttonVariants } from "./button";
@@ -58,6 +56,7 @@ function PaginationLink({
           variant: isActive ? "outline" : "ghost",
           size,
         }),
+        "rounded-action-inner",
         className,
       )}
       {...props}

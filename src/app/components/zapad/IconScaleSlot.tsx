@@ -17,7 +17,7 @@ export function IconScaleSlot({
   children: ReactNode;
 }) {
   return (
-    <div className={cn("zb-scale-slot", className)}>
+    <div data-slot="functional-icon" className={cn("zb-scale-slot", className)}>
       <div
         className={cn("zb-scale-slot__target", innerClassName)}
         style={innerStyle}

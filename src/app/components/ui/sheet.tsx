@@ -2,9 +2,11 @@
 
 import * as React from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
-import { XIcon } from "lucide-react";
+import { XIcon as XIcon } from "@phosphor-icons/react/dist/csr/X";
 
+import { useI18n } from "../../i18n/I18nProvider";
 import { cn } from "./utils";
+import { Button } from "./button";
 import { useReturnFocus } from "./use-return-focus";
 
 const Sheet = SheetPrimitive.Root;
@@ -59,6 +61,7 @@ const SheetContent = React.forwardRef<
     side?: "top" | "right" | "bottom" | "left";
   }
 >(({ className, children, side = "right", onOpenAutoFocus, onCloseAutoFocus, ...props }, ref) => {
+  const { t } = useI18n();
   const focusHandlers = useReturnFocus(onOpenAutoFocus, onCloseAutoFocus);
   return (
   <SheetPortal>
@@ -82,10 +85,10 @@ const SheetContent = React.forwardRef<
       {...focusHandlers}
     >
       {children}
-      <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
+      <SheetPrimitive.Close asChild><Button variant="ghost" size="icon" className="absolute top-4 right-4 size-11 rounded-lg bg-secondary text-foreground hover:bg-accent">
         <XIcon className="size-4" />
-        <span className="sr-only">Close</span>
-      </SheetPrimitive.Close>
+        <span className="sr-only">{t("Close")}</span>
+      </Button></SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
 );

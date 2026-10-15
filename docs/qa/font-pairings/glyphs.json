@@ -1,0 +1,20 @@
+[
+  {
+    "file": "IBMPlexSans-Variable.ttf",
+    "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
+    "checkedCharacters": "ҐґЄєІіЇї₴€0123456789",
+    "missing": []
+  },
+  {
+    "file": "Onest-Variable.ttf",
+    "sha256": "966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31",
+    "checkedCharacters": "ҐґЄєІіЇї₴€0123456789",
+    "missing": []
+  },
+  {
+    "file": "Manrope-Variable.ttf",
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "checkedCharacters": "ҐґЄєІіЇї₴€0123456789",
+    "missing": []
+  }
+]

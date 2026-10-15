@@ -1,12 +1,10 @@
-/** en-US: thousands with commas, dot as decimal separator (e.g. 28,430.18) */
-
-const LOCALE = "en-US";
+import { getIntlLocale } from "../i18n/runtime";
 
 export function formatNumber(
   value: number,
   options?: Intl.NumberFormatOptions,
 ): string {
-  return value.toLocaleString(LOCALE, {
+  return value.toLocaleString(getIntlLocale(), {
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
     ...options,
@@ -14,10 +12,10 @@ export function formatNumber(
 }
 
 export function formatInteger(value: number): string {
-  return value.toLocaleString(LOCALE, { maximumFractionDigits: 0 });
+  return value.toLocaleString(getIntlLocale(), { maximumFractionDigits: 0 });
 }
 
-const moneyFormatter = new Intl.NumberFormat(LOCALE, {
+const moneyFormatter = () => new Intl.NumberFormat(getIntlLocale(), {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
@@ -32,20 +30,22 @@ export function formatMoneyParts(value: number): {
   sign: string;
   whole: string;
   cents: string;
+  decimal: string;
 } {
   const amount = coerceMoneyAmount(value);
   if (amount === null) {
-    return { sign: "", whole: "—", cents: "00" };
+    return { sign: "", whole: "—", cents: "00", decimal: new Intl.NumberFormat(getIntlLocale()).formatToParts(1.1).find(part => part.type === "decimal")?.value ?? "." };
   }
 
   const sign = amount < 0 ? "-" : "";
-  const parts = moneyFormatter.formatToParts(Math.abs(amount));
+  const parts = moneyFormatter().formatToParts(Math.abs(amount));
   const whole = parts
     .filter((p) => p.type === "integer" || p.type === "group")
     .map((p) => p.value)
     .join("");
   const cents = parts.find((p) => p.type === "fraction")?.value ?? "00";
-  return { sign, whole, cents };
+  const decimal = parts.find(p => p.type === "decimal")?.value ?? ".";
+  return { sign, whole, cents, decimal };
 }
 
 /** Fluid hero balance — scales with viewport, never overflows the card. */
@@ -92,14 +92,12 @@ export function formatMoney(
   }
 
   const decimals = options?.decimals ?? 2;
-  const formatted = Math.abs(coerced).toLocaleString(LOCALE, {
+  return new Intl.NumberFormat(getIntlLocale(), {
+    ...(options?.hideSymbol ? {} : { style: "currency", currency }),
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
-  });
-  let sign = "";
-  if (coerced < 0) sign = "-";
-  else if (options?.showPlus && coerced > 0) sign = "+";
-  return `${sign}${symbol}${formatted}`;
+    signDisplay: options?.showPlus ? "exceptZero" : "auto",
+  }).format(coerced);
 }
 
 /** Compact labels: €4.8k, €32k, €1.2M */
@@ -110,14 +108,9 @@ export function formatMoneyCompact(value: number, currency: string = "EUR"): str
     return `${sym}—`;
   }
 
-  const abs = Math.abs(coerced);
-  if (abs >= 1_000_000) {
-    return `${sym}${(abs / 1_000_000).toLocaleString(LOCALE, { maximumFractionDigits: 1 })}M`;
-  }
-  if (abs >= 1_000) {
-    return `${sym}${(abs / 1_000).toLocaleString(LOCALE, { maximumFractionDigits: 1 })}k`;
-  }
-  return formatMoney(abs, currency, { decimals: 0 });
+  return new Intl.NumberFormat(getIntlLocale(), {
+    style: "currency", currency, notation: "compact", maximumFractionDigits: 1,
+  }).format(coerced);
 }
 
 /** Account card balance — scales down for long amounts so nothing clips. */

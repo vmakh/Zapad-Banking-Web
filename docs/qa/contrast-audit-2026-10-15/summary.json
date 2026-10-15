@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "profiles": [
+    "personal",
+    "business"
+  ],
+  "catalogueGroups": 62,
+  "catalogueStatesPerProfile": 179,
+  "uniqueStateProfileCombinations": 358,
+  "snapshots": 492,
+  "screeningMeasurements": 6476,
+  "disabledMeasurements": 223,
+  "productCssChanged": false,
+  "verdict": "Block: confirmed active contrast failures remain"
+}

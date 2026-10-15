@@ -2,14 +2,17 @@
 
 :root {
   --font-size: 16px;
-  --brand-personal: #0a3d91;
-  --brand-personal-mid: #0e4dab;
-  --brand-personal-light: #1862c7;
-  --brand-personal-dark: #083175;
-  --brand-business: #ff6a13;
-  --brand-business-mid: #ff8534;
-  --brand-business-light: #ffa155;
-  --brand-business-dark: #e55c0c;
+  --brand-personal: #0034B8;
+  --brand-personal-mid: color-mix(in srgb, var(--brand-personal) 95%, white);
+  --brand-personal-light: color-mix(in srgb, var(--brand-personal) 85%, white);
+  --brand-personal-dark: color-mix(in srgb, var(--brand-personal) 92%, black);
+  --brand-personal-foreground: #ffffff;
+  --brand-business: #A34900;
+  --brand-business-mid: color-mix(in srgb, var(--brand-business) 95%, white);
+  --brand-business-light: color-mix(in srgb, var(--brand-business) 85%, white);
+  --brand-business-dark: color-mix(in srgb, var(--brand-business) 96%, black);
+  --brand-business-foreground: #ffffff;
+  --brand-business-text: color-mix(in srgb, var(--brand-business) 88%, black);
   --background: #f4f4f4;
   --foreground: #000000;
   --card: #ffffff;
@@ -24,7 +27,7 @@
   --muted-foreground: #6f6f6f;
   --accent: #f4f4f4;
   --accent-foreground: #000000;
-  --destructive: #da1e28;
+  --destructive: #b3261e;
   --destructive-foreground: #ffffff;
   --border: #e0e0e0;
   --input: transparent;
@@ -95,6 +98,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-text: var(--bank-accent-text);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -124,10 +128,13 @@
   --color-brand-personal-mid: var(--brand-personal-mid);
   --color-brand-personal-light: var(--brand-personal-light);
   --color-brand-personal-dark: var(--brand-personal-dark);
+  --color-brand-personal-foreground: var(--brand-personal-foreground);
   --color-brand-business: var(--brand-business);
   --color-brand-business-mid: var(--brand-business-mid);
   --color-brand-business-light: var(--brand-business-light);
   --color-brand-business-dark: var(--brand-business-dark);
+  --color-brand-business-foreground: var(--brand-business-foreground);
+  --color-brand-business-text: var(--brand-business-text);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -214,15 +221,21 @@
    Source: zapad-mobile-successor/src/prototype.css (current app-owned theme).
    Root scope also supplies Radix portals with the active workspace theme. */
 :root {
-  --bank-ink: #112039;
+  --bank-ink: #172337;
   --bank-muted: #58677b;
-  --bank-line: #e9edf2;
-  --bank-paper: #f6f8fb;
+  --bank-line: #e6ebf2;
+  --bank-control-line: #dce3ed;
+  --bank-field: #f9fbfd;
+  --bank-error: #b42318;
+  --bank-disabled: #e7ecf2;
+  --bank-disabled-ink: #536174;
+  --bank-paper: #f4f7fb;
   --bank-soft: #f0f5fd;
-  --bank-accent: #1647a4;
-  --bank-action: linear-gradient(125deg, #245fc5, #123e99);
-  --bank-action-ink: #ffffff;
-  --bank-wash: linear-gradient(115deg, #ffffff, #f0f5fd);
+  --bank-accent: var(--brand-personal);
+  --bank-accent-text: var(--brand-personal);
+  --bank-action: var(--bank-accent);
+  --bank-action-ink: var(--brand-personal-foreground);
+  --bank-wash: linear-gradient(115deg, var(--card), var(--bank-soft));
   --bank-card-base: #153d79;
   --bank-card-glow: #3266a3;
   --bank-card-end: #122944;
@@ -236,40 +249,93 @@
   --bank-virtual-glow: #4d869a;
   --bank-card-ink: #e4edf8;
   --bank-card-state: #ffffff10;
-  --bank-display: 'Unbounded', Inter, sans-serif;
-  --bank-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bank-display: 'Unbounded', Onest, -apple-system, BlinkMacSystemFont, sans-serif;
+  --bank-body: Onest, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --bank-control-radius: 0.75rem;
   --bank-panel-radius: 1rem;
   --background: #ffffff;
   --foreground: var(--bank-ink);
   --card-foreground: var(--bank-ink);
   --popover-foreground: var(--bank-ink);
-  --primary: var(--bank-accent);
+  --primary: var(--bank-action);
   --primary-foreground: var(--bank-action-ink);
   --secondary: var(--bank-paper);
   --secondary-foreground: var(--bank-ink);
   --muted: var(--bank-paper);
   --muted-foreground: var(--bank-muted);
   --accent: var(--bank-soft);
-  --accent-foreground: var(--bank-accent);
+  --accent-foreground: var(--bank-accent-text);
   --border: var(--bank-line);
-  --input-background: var(--bank-paper);
+  --input-background: var(--bank-field);
   --ring: var(--bank-accent);
-  --brand-personal: #1647a4;
-  --brand-personal-dark: #123e99;
-  --brand-business: #91400e;
-  --brand-business-dark: #84451c;
 }
 :root:has(.bank-workspace[data-bank-profile="business"]) {
   --bank-ink: #202832;
   --bank-muted: #64707d;
   --bank-line: #e4e7ea;
+  --bank-control-line: #cbd1d8;
+  --bank-field: #fcfaf7;
   --bank-paper: #f3f4f5;
   --bank-soft: #fff3e9;
-  --bank-accent: #91400e;
+  --bank-accent: var(--brand-business);
+  --bank-accent-text: var(--brand-business-text);
   --bank-action: var(--bank-accent);
-  --bank-action-ink: var(--card);
-  --bank-wash: linear-gradient(115deg, #ffffff, #fbefe4);
+  --bank-action-ink: var(--brand-business-foreground);
+  --bank-wash: linear-gradient(115deg, var(--card), var(--bank-soft));
   --bank-card-base: var(--bank-copper-base);
   --bank-card-glow: var(--bank-copper-glow);
+}
+
+/* Business material system; the gallery marker also enables isolated specimens. */
+:root:has(.bank-workspace[data-bank-profile="business"], [data-dashboard-material="soft"]) {
+  --bank-material-canvas: #eeeae3;
+  --bank-material-surface: #fffefd;
+  --bank-material-edge: #ffffff;
+  --bank-material-shadow: 0 2px 4px rgb(68 53 33 / 0.025), 0 12px 28px -16px rgb(68 53 33 / 0.13);
+  --bank-material-chart-shadow: 0 5px 5px rgb(122 81 27 / 0.07);
+  --bank-material-blue: #5675e7;
+  --bank-material-blue-light: #a6b9ff;
+  --bank-material-orange: #eaa037;
+  --bank-material-orange-light: #ffda94;
+  --bank-material-cyan: #3298b2;
+  --bank-material-cyan-light: #8ad6e3;
+  --bank-material-slate: #7e8d9e;
+  --bank-material-slate-light: #b9c5d1;
+}
+
+:root:has(.bank-workspace[data-bank-profile="business"]) {
+  --bank-paper: var(--bank-material-canvas);
+  --card: var(--bank-material-surface);
+  --popover: var(--bank-material-surface);
+}
+
+/* Personal material system: cool porcelain surfaces, blue identity, quiet depth. */
+:root:has(.bank-workspace[data-bank-profile="personal"]) {
+  --bank-material-canvas: #e9eff5;
+  --bank-material-surface: #fdfefe;
+  --bank-material-edge: #ffffff;
+  --bank-material-shadow: 0 2px 4px rgb(29 55 88 / 0.025), 0 12px 28px -16px rgb(29 55 88 / 0.13);
+  --bank-material-chart-shadow: 0 5px 5px rgb(29 55 88 / 0.07);
+  --bank-material-blue: #487acb;
+  --bank-material-blue-light: #aac8ee;
+  --bank-material-cyan: #459caa;
+  --bank-material-cyan-light: #addde2;
+  --bank-material-sage: #5c9e8e;
+  --bank-material-sage-light: #b9dacd;
+  --bank-material-slate: #778ea9;
+  --bank-material-slate-light: #c1cfdc;
+  --bank-paper: var(--bank-material-canvas);
+  --card: var(--bank-material-surface);
+  --popover: var(--bank-material-surface);
+}
+
+:root:has(.bank-workspace, [data-dashboard-material="soft"]) {
+  --bank-cashflow-income: var(--bank-material-blue);
+  --bank-cashflow-income-light: var(--bank-material-blue-light);
+  --bank-cashflow-spending: var(--bank-material-orange);
+  --bank-cashflow-spending-light: var(--bank-material-orange-light);
+}
+:root:has(.bank-workspace[data-bank-profile="personal"]) {
+  --bank-cashflow-spending: var(--bank-material-cyan);
+  --bank-cashflow-spending-light: var(--bank-material-cyan-light);
 }

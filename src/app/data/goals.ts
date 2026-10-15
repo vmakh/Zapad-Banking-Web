@@ -2,7 +2,10 @@ import { useSyncExternalStore } from "react";
 import { getAccounts } from "./accounts";
 import { readDemo, writeDemo } from "../utils/demoStorage";
 import { allocationError, goalError } from "../utils/goalRules";
-import { Plane, Shield, Monitor, Building2 } from "lucide-react";
+import { AirplaneTiltIcon as Plane } from "@phosphor-icons/react/dist/csr/AirplaneTilt";
+import { ShieldIcon as Shield } from "@phosphor-icons/react/dist/csr/Shield";
+import { MonitorIcon as Monitor } from "@phosphor-icons/react/dist/csr/Monitor";
+import { BuildingsIcon as Building2 } from "@phosphor-icons/react/dist/csr/Buildings";
 import type { ProfileKind, SavingsGoal } from "./types";
 const personalGoals: SavingsGoal[] = [
  {id:"vacation",name:"Holiday goal",icon:Plane,iconBg:"bg-sky-100",iconColor:"text-sky-600",current:1840,target:3000,barColor:"from-sky-400 to-blue-500"},

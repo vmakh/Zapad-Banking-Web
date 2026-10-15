@@ -35,3 +35,14 @@ test('privacy mode masks exported amounts and empty statements retain metadata',
   assert.ok(empty.includes(account.iban));
   assert.ok(empty.includes('not an official bank statement'));
 });
+
+test('export applies display translations while keeping numeric cells and merchant names importable', () => {
+  const labels = { Amount: 'Сума', Completed: 'Завершено', Hidden: 'Приховано', Shopping: 'Покупки' };
+  const localization = { t: value => labels[value] ?? value, date: () => '6 трав.' };
+  const csv = statementCsv(account, [transaction], false, localization);
+  assert.ok(csv.includes('"Сума"'));
+  assert.ok(csv.includes('"6 трав."'));
+  assert.ok(csv.includes('"-42.18","EUR","Завершено"'));
+  assert.ok(csv.includes('"Shop, ""Demo"""'));
+  assert.ok(statementCsv(account, [transaction], true, localization).includes('"Приховано","EUR"'));
+});

@@ -1,26 +1,26 @@
+import { useI18n } from "../../i18n/I18nProvider";
 import { cn } from "../ui/utils";
 import { useState } from "react";
 import { useNavigate, useOutletContext } from "react-router";
 import type { AppOutletContext } from "../../hooks/useAppProfile";
 import { profilePath, statementsPath } from "../../utils/paths";
-import {
-  Send,
-  Receipt,
-  Repeat,
-  ArrowLeftRight,
-  Download,
-  UserPlus,
-  CreditCard,
-} from "lucide-react";
+import { PaperPlaneTiltIcon as Send } from "@phosphor-icons/react/dist/csr/PaperPlaneTilt";
+import { ReceiptIcon as Receipt } from "@phosphor-icons/react/dist/csr/Receipt";
+import { ArrowsLeftRightIcon as Repeat } from "@phosphor-icons/react/dist/csr/ArrowsLeftRight";
+import { ArrowsLeftRightIcon as ArrowLeftRight } from "@phosphor-icons/react/dist/csr/ArrowsLeftRight";
+import { DownloadSimpleIcon as Download } from "@phosphor-icons/react/dist/csr/DownloadSimple";
+import { UserPlusIcon as UserPlus } from "@phosphor-icons/react/dist/csr/UserPlus";
+import { CreditCardIcon as CreditCard } from "@phosphor-icons/react/dist/csr/CreditCard";
 import { toast } from "sonner";
 import { TransferModal } from "./TransferModal";
 
 export function QuickActions() {
+  const { t } = useI18n();
   const navigate = useNavigate();
   const { profileSlug, isBusiness } = useOutletContext<AppOutletContext>();
 
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   const actions = [
     { id: "send", icon: Send, label: "Transfer", color: brandBg, text: brandText },
@@ -82,7 +82,7 @@ export function QuickActions() {
     } else if (id === "statement") {
       navigate(statementsPath(profileSlug));
     } else if (id === "add") {
-      navigate(profilePath(profileSlug, "payments?action=send"));
+      navigate(profilePath(profileSlug, "payments?action=send&recipient=new"));
     } else if (id === "card") {
       navigate(profilePath(profileSlug, "cards"));
     }
@@ -105,7 +105,7 @@ export function QuickActions() {
                 <Icon className="size-6" />
               </div>
               <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
-                {a.label}
+                {t(a.label)}
               </span>
             </button>
           );

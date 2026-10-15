@@ -2,18 +2,21 @@ import type { BankAccount, Transaction } from "../data/types";
 import { csvCell } from "./exportFiles";
 
 /** Export the same sample and privacy state shown in the statement dialog. */
-export function statementCsv(account: BankAccount, transactions: Transaction[], isPrivate: boolean) {
+export function statementCsv(account: BankAccount, transactions: Transaction[], isPrivate: boolean, localization?: { t: (value: string) => string; date: (value: string) => string; merchant?: (value: string) => string }) {
+  const t = localization?.t ?? ((value: string) => value);
+  const date = localization?.date ?? ((value: string) => value);
   const rows: (string | number)[][] = [
-    ["Sample statement — not an official bank statement"],
-    ["Period", "May 2026"],
-    ["Account", account.name],
+    [t("Sample statement — not an official bank statement")],
+    [t("Period"), t("May 2026")],
+    [t("Account"), t(account.name)],
     ["IBAN", account.iban],
-    ["Account currency", account.currency],
-    ["Amounts", isPrivate ? "Hidden by privacy setting" : "Visible"],
-    ["Posted transactions", transactions.length],
+    [t("Account currency"), account.currency],
+    [t("Amounts"), t(isPrivate ? "Hidden by privacy setting" : "Visible")],
+    [t("Posted transactions"), transactions.length],
     [],
-    ["Transaction ID", "Sample date", "Description", "Details", "Category", "Amount", "Currency", "Status"],
-    ...transactions.map(t => [t.id, t.date, t.merchant, t.meta, t.category, isPrivate ? "Hidden" : t.amount, t.currency, t.status]),
+    ["Transaction ID", "Sample date", "Description", "Details", "Category", "Amount", "Currency", "Status"].map(t),
+    // Numeric CSV cells stay canonical decimal values for spreadsheet import.
+    ...transactions.map(tx => [tx.id, date(tx.date), localization?.merchant?.(tx.merchant) ?? tx.merchant, t(tx.meta), t(tx.category), isPrivate ? t("Hidden") : tx.amount, tx.currency, t(tx.status)]),
   ];
   return "\uFEFF" + rows.map(row => row.map(csvCell).join(",")).join("\r\n");
 }

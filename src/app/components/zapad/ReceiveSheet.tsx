@@ -1,3 +1,4 @@
+import { useI18n } from "../../i18n/I18nProvider";
 import { copyText } from "../../utils/clipboard";
 import { CurrencyFlag } from "./CurrencyIcon";
 import { cn } from "../ui/utils";
@@ -11,7 +12,11 @@ import {
 } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
-import { ArrowDownLeft, Copy, CheckCheck, Check, ChevronsUpDown } from "lucide-react";
+import { ArrowDownLeftIcon as ArrowDownLeft } from "@phosphor-icons/react/dist/csr/ArrowDownLeft";
+import { CopyIcon as Copy } from "@phosphor-icons/react/dist/csr/Copy";
+import { ChecksIcon as CheckCheck } from "@phosphor-icons/react/dist/csr/Checks";
+import { CheckIcon as Check } from "@phosphor-icons/react/dist/csr/Check";
+import { CaretUpDownIcon as ChevronsUpDown } from "@phosphor-icons/react/dist/csr/CaretUpDown";
 import { Popover, PopoverTrigger, PopoverContent } from "../ui/popover";
 import { Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem } from "../ui/command";
 import { getProfileBySlug } from "../../data/profiles";
@@ -31,6 +36,7 @@ export function ReceiveSheet({
   profileKind: ProfileKind;
   initialAccountId?: string;
 }) {
+  const { t } = useI18n();
   const { isPrivate } = usePrivacy();
   const [copied, setCopied] = useState<string | null>(null);
   const [accountPickerOpen, setAccountPickerOpen] = useState(false);
@@ -51,9 +57,9 @@ export function ReceiveSheet({
 
   const copyToClipboard = async (text: string, field: string) => {
     setCopied(null);
-    if (!await copyText(text)) { toast.error("Could not copy. Select and copy the details manually."); return; }
+    if (!await copyText(text)) { toast.error(t("Could not copy. Select and copy the details manually.")); return; }
     setCopied(field);
-    toast.success("Copied to clipboard");
+    toast.success(t("Copied to clipboard"));
     setTimeout(() => setCopied(null), 2000);
   };
 
@@ -67,24 +73,20 @@ export function ReceiveSheet({
                 <ArrowDownLeft className="size-5" />
               </div>
               <div>
-                <SheetTitle className="text-2xl font-semibold tracking-tight text-slate-900">
-                  Receive money
-                </SheetTitle>
-                <SheetDescription className="text-sm font-normal text-slate-500 mt-0.5">
-                  Copy your demo account details. Payment links and QR codes are unavailable.
-                </SheetDescription>
+                <SheetTitle className="text-2xl font-semibold tracking-tight text-slate-900">{t("Receive money")}</SheetTitle>
+                <SheetDescription className="text-sm font-normal text-slate-500 mt-0.5">{t("Copy your demo account details. Payment links and QR codes are unavailable.")}</SheetDescription>
               </div>
             </div>
           </SheetHeader>
 
           <div className="mb-6 space-y-2">
-            <Label id="receive-account-label" className="text-sm text-muted-foreground">Receive to</Label>
+            <Label id="receive-account-label" className="text-sm text-muted-foreground">{t("Receive to")}</Label>
             <Popover open={accountPickerOpen} onOpenChange={setAccountPickerOpen}>
               <PopoverTrigger asChild>
                 <Button variant="outline" role="combobox" aria-expanded={accountPickerOpen} aria-labelledby="receive-account-label receive-account-value" className="w-full h-auto min-h-14 justify-between gap-3 text-left whitespace-normal">
                   <CurrencyFlag currency={acc.currency} />
                   <span id="receive-account-value" className="min-w-0 flex-1">
-                    <span className="block break-words">{acc.name}</span>
+                    <span className="block break-words">{t(acc.name)}</span>
                     <span className="block text-xs font-normal text-muted-foreground">{acc.currency} · {isPrivate ? "••••" : acc.iban.slice(-7)}</span>
                   </span>
                   <ChevronsUpDown className="size-4 shrink-0 text-muted-foreground" />
@@ -92,15 +94,15 @@ export function ReceiveSheet({
               </PopoverTrigger>
               <PopoverContent align="start" className="p-0" style={{ width: "var(--radix-popover-trigger-width)" }}>
                 <Command>
-                  <CommandInput placeholder="Search name, currency or IBAN" aria-label="Search accounts" />
+                  <CommandInput placeholder={t("Search name, currency or IBAN")} aria-label={t("Search accounts")} />
                   <CommandList className="max-h-64 overscroll-contain">
-                    <CommandEmpty>No matching accounts.</CommandEmpty>
+                    <CommandEmpty>{t("No matching accounts.")}</CommandEmpty>
                     <CommandGroup>
                       {accounts.map((account, index) => (
-                        <CommandItem key={account.id} value={account.id} keywords={[account.name, account.currency, account.iban, account.iban.replace(/\s/g, "")]} onSelect={() => { setSelectedAccount(index); setCopied(null); setAccountPickerOpen(false); }} className="min-h-14 gap-3">
+                        <CommandItem key={account.id} value={account.id} keywords={[t(account.name), account.name, account.currency, account.iban, account.iban.replace(/\s/g, "")]} onSelect={() => { setSelectedAccount(index); setCopied(null); setAccountPickerOpen(false); }} className="min-h-14 gap-3">
                           <CurrencyFlag currency={account.currency} />
                           <span className="min-w-0 flex-1">
-                            <span className="block break-words">{account.name}</span>
+                            <span className="block break-words">{t(account.name)}</span>
                             <span className="block text-xs text-muted-foreground">{account.currency} · {isPrivate ? "••••" : account.iban.slice(-7)}</span>
                           </span>
                           <Check aria-hidden="true" className={cn("size-4 shrink-0", selectedAccount !== index && "invisible")} />
@@ -118,23 +120,22 @@ export function ReceiveSheet({
               {details.map(field => (
                 <div key={field.id} className="flex items-center justify-between gap-3">
                   <div className="min-w-0">
-                    <dt className="text-xs text-muted-foreground mb-1">{field.label}</dt>
+                    <dt className="text-xs text-muted-foreground mb-1">{t(field.label)}</dt>
                     <dd className={cn("text-sm text-foreground break-words select-text", (field.id === "iban" || field.id === "bic") && "font-mono")}>
                       {field.id === "iban" && isPrivate ? "ME25 •••• •••• •••• ••••" : field.value}
                     </dd>
                   </div>
-                  <Button type="button" variant="ghost" size="icon" aria-label={`Copy ${field.label}`} onClick={() => copyToClipboard(field.value, field.id)} className="shrink-0 text-muted-foreground">
+                  <Button type="button" variant="ghost" size="icon" aria-label={t("Copy {field}", { field: t(field.label) })} onClick={() => copyToClipboard(field.value, field.id)} className="shrink-0 text-muted-foreground">
                     {copied === field.id ? <CheckCheck className="size-4" /> : <Copy className="size-4" />}
                   </Button>
                 </div>
               ))}
             </dl>
-            <Button type="button" onClick={() => copyToClipboard(details.map(field => `${field.label}: ${field.value}`).join("\n"), "all")} className="w-full mt-5 gap-2">
-              {copied === "all" ? <CheckCheck className="size-4" /> : <Copy className="size-4" />} Copy all details
-            </Button>
+            <Button type="button" onClick={() => copyToClipboard(details.map(field => `${t(field.label)}: ${field.value}`).join("\n"), "all")} className="w-full mt-5 gap-2">
+              {copied === "all" ? <CheckCheck className="size-4" /> : <Copy className="size-4" />}{t("Copy all details")}</Button>
           </div>
 
-          <p className="text-sm text-muted-foreground">Payment requests, share links and QR codes are not supported in this prototype. Copying details does not confirm an incoming payment.</p>
+          <p className="text-sm text-muted-foreground">{t("Payment requests, share links and QR codes are not supported in this prototype. Copying details does not confirm an incoming payment.")}</p>
         </div>
       </SheetContent>
     </Sheet>

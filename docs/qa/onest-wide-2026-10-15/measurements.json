@@ -1,0 +1,6838 @@
+{
+  "date": "2026-10-15",
+  "verifiedScreens": [
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "de",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    }
+  ],
+  "bankPopups": [
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "create",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 730.0155029296875,
+        "height": 436.031005859375,
+        "left": 124.51156616210938,
+        "overflowY": "auto",
+        "right": 643.4884948730469,
+        "scrollHeight": 437,
+        "top": 293.9844970703125
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "details",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 763.3589477539062,
+        "height": 502.7178955078125,
+        "left": 126.6203155517578,
+        "overflowY": "auto",
+        "right": 641.3797149658203,
+        "scrollHeight": 508,
+        "top": 260.64105224609375
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "recipient",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 817.140380859375,
+        "height": 610.28076171875,
+        "left": 127.82402801513672,
+        "overflowY": "auto",
+        "right": 640.1759567260742,
+        "scrollHeight": 619,
+        "top": 206.859619140625
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "transfer",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 913.128532409668,
+        "height": 802.257080078125,
+        "left": 128.6209259033203,
+        "overflowY": "auto",
+        "right": 639.3791046142578,
+        "scrollHeight": 817,
+        "top": 110.87145233154295
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "bills",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 819.3486785888672,
+        "height": 614.6973876953125,
+        "left": 130.61700439453125,
+        "overflowY": "auto",
+        "right": 637.3829956054688,
+        "scrollHeight": 631,
+        "top": 204.6512908935547
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "exchange",
+      "state": "default",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 616.4708251953125,
+        "height": 208.941650390625,
+        "left": 125.31031799316406,
+        "overflowY": "auto",
+        "right": 642.6897125244141,
+        "scrollHeight": 210,
+        "top": 407.5291748046875
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "default",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 769.7499542236328,
+        "height": 515.4998779296875,
+        "left": 131.70831298828125,
+        "overflowY": "auto",
+        "right": 636.2916870117188,
+        "scrollHeight": 531,
+        "top": 254.2500762939453
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "filled",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 773.6493072509766,
+        "height": 523.298583984375,
+        "left": 127.89153289794922,
+        "overflowY": "auto",
+        "right": 640.1084518432617,
+        "scrollHeight": 531,
+        "top": 250.35072326660156
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 791.28564453125,
+        "height": 558.5712890625,
+        "left": 130.54705810546875,
+        "overflowY": "auto",
+        "right": 637.4529418945312,
+        "scrollHeight": 573,
+        "top": 232.71435546875
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "create",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 723.9931030273438,
+        "height": 423.9862060546875,
+        "left": 131.6796112060547,
+        "overflowY": "auto",
+        "right": 636.3203582763672,
+        "scrollHeight": 437,
+        "top": 300.00689697265625
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "details",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 790.3832702636719,
+        "height": 556.7664794921875,
+        "left": 130.6302032470703,
+        "overflowY": "auto",
+        "right": 637.3698272705078,
+        "scrollHeight": 571,
+        "top": 233.6167907714844
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "recipient",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 859.4370269775391,
+        "height": 694.8740234375,
+        "left": 127.1480712890625,
+        "overflowY": "auto",
+        "right": 640.8519287109375,
+        "scrollHeight": 703,
+        "top": 164.56300354003906
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "transfer",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 913.144401550293,
+        "height": 802.288818359375,
+        "left": 128.61082458496094,
+        "overflowY": "auto",
+        "right": 639.3891448974609,
+        "scrollHeight": 817,
+        "top": 110.85558319091795
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "bills",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 820.6916046142578,
+        "height": 617.3831787109375,
+        "left": 129.50991821289062,
+        "overflowY": "auto",
+        "right": 638.4900512695312,
+        "scrollHeight": 631,
+        "top": 203.3084259033203
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "exchange",
+      "state": "default",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 613.9005737304688,
+        "height": 203.8011779785156,
+        "left": 131.6747283935547,
+        "overflowY": "auto",
+        "right": 636.3252410888672,
+        "scrollHeight": 210,
+        "top": 410.0993957519531
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "default",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 772.9590454101562,
+        "height": 521.9180908203125,
+        "left": 128.56715393066406,
+        "overflowY": "auto",
+        "right": 639.4328765869141,
+        "scrollHeight": 531,
+        "top": 251.04095458984375
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "filled",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 774.9499053955078,
+        "height": 525.8997802734375,
+        "left": 126.61846923828124,
+        "overflowY": "auto",
+        "right": 641.3815307617188,
+        "scrollHeight": 531,
+        "top": 249.0501251220703
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bounds": {
+        "bottom": 791.3003540039062,
+        "height": 558.6007080078125,
+        "left": 130.53372192382812,
+        "overflowY": "auto",
+        "right": 637.46630859375,
+        "scrollHeight": 573,
+        "top": 232.69964599609375
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "create",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 661.9931030273438,
+        "height": 423.9862060546875,
+        "left": 467.6795959472656,
+        "overflowY": "auto",
+        "right": 972.3203735351562,
+        "scrollHeight": 437,
+        "top": 238.00689697265625
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "details",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 697.4340667724609,
+        "height": 494.8681640625,
+        "left": 466.63916015625,
+        "overflowY": "auto",
+        "right": 973.36083984375,
+        "scrollHeight": 508,
+        "top": 202.56590270996097
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "recipient",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 753.1230926513672,
+        "height": 606.2462158203125,
+        "left": 465.517578125,
+        "overflowY": "auto",
+        "right": 974.482421875,
+        "scrollHeight": 619,
+        "top": 146.8768768310547
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "transfer",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 849.6224746704102,
+        "height": 799.2449951171875,
+        "left": 465.5797424316406,
+        "overflowY": "auto",
+        "right": 974.4202880859376,
+        "scrollHeight": 817,
+        "top": 50.377479553222656
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "bills",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 761.47998046875,
+        "height": 622.9599609375,
+        "left": 463.2111206054687,
+        "overflowY": "auto",
+        "right": 976.7888793945312,
+        "scrollHeight": 631,
+        "top": 138.52001953125
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "exchange",
+      "state": "default",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 552.7748413085938,
+        "height": 205.5496826171875,
+        "left": 465.5099182128906,
+        "overflowY": "auto",
+        "right": 974.4900512695312,
+        "scrollHeight": 210,
+        "top": 347.22515869140625
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "default",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 707.7645874023438,
+        "height": 515.5291748046875,
+        "left": 467.6939697265625,
+        "overflowY": "auto",
+        "right": 972.3060302734376,
+        "scrollHeight": 531,
+        "top": 192.23541259765625
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "filled",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 711.0066070556641,
+        "height": 522.01318359375,
+        "left": 464.5206298828125,
+        "overflowY": "auto",
+        "right": 975.4793701171876,
+        "scrollHeight": 531,
+        "top": 188.9934234619141
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 731.3745880126953,
+        "height": 562.7491455078125,
+        "left": 464.6513671875,
+        "overflowY": "auto",
+        "right": 975.3486328125,
+        "scrollHeight": 573,
+        "top": 168.6254425048828
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "create",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 662.9486236572266,
+        "height": 425.897216796875,
+        "left": 466.5423583984375,
+        "overflowY": "auto",
+        "right": 973.4576416015624,
+        "scrollHeight": 437,
+        "top": 237.05140686035156
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "details",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 727.1088562011719,
+        "height": 554.2176513671875,
+        "left": 467.79010009765625,
+        "overflowY": "auto",
+        "right": 972.2098999023438,
+        "scrollHeight": 571,
+        "top": 172.89120483398438
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "recipient",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 792.8393173217773,
+        "height": 685.6785888671875,
+        "left": 466.5470581054687,
+        "overflowY": "auto",
+        "right": 973.4529418945312,
+        "scrollHeight": 703,
+        "top": 107.16072845458984
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "transfer",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 848.2260627746582,
+        "height": 796.4521484375,
+        "left": 466.4687805175781,
+        "overflowY": "auto",
+        "right": 973.5311889648438,
+        "scrollHeight": 817,
+        "top": 51.7739143371582
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "bills",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 757.4335174560547,
+        "height": 614.8670654296875,
+        "left": 466.5470581054687,
+        "overflowY": "auto",
+        "right": 973.4529418945312,
+        "scrollHeight": 631,
+        "top": 142.5664520263672
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "exchange",
+      "state": "default",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 551.90625,
+        "height": 203.8125,
+        "left": 467.6606750488281,
+        "overflowY": "auto",
+        "right": 972.3392944335938,
+        "scrollHeight": 210,
+        "top": 348.09375
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "default",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 707.8377685546875,
+        "height": 515.675537109375,
+        "left": 467.6223449707031,
+        "overflowY": "auto",
+        "right": 972.377685546875,
+        "scrollHeight": 531,
+        "top": 192.1622314453125
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "filled",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 709.9483337402344,
+        "height": 519.896728515625,
+        "left": 465.556396484375,
+        "overflowY": "auto",
+        "right": 974.443603515625,
+        "scrollHeight": 531,
+        "top": 190.05160522460935
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": {
+        "bottom": 731.3633270263672,
+        "height": 562.7266845703125,
+        "left": 464.6615295410156,
+        "overflowY": "auto",
+        "right": 975.3385009765624,
+        "scrollHeight": 573,
+        "top": 168.6366424560547
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    }
+  ],
+  "pagePopups": [
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Деталі",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Ліміти",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Заморозити",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "action": "Пошук",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Деталі",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Ліміти",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Заморозити",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "Пошук",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Деталі",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Ліміти",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Заморозити",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "action": "Шукати транзакції та отримувачів",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Деталі",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Ліміти",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Заморозити",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "Шукати транзакції та отримувачів",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    }
+  ],
+  "panels": [
+    {
+      "profile": "personal",
+      "sample": "receive",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "transactions/details",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "sample": "receive",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "sample": "transactions/details",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    }
+  ],
+  "longTransferReviews": [
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "footer": [
+        {
+          "height": 62,
+          "scrollHeight": 62,
+          "scrollWidth": 193,
+          "text": "Редагувати деталі",
+          "width": 193,
+          "wrap": "anywhere"
+        },
+        {
+          "height": 64,
+          "scrollHeight": 64,
+          "scrollWidth": 257,
+          "text": "Підтвердити локальний перегляд",
+          "width": 257,
+          "wrap": "anywhere"
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "footer": [
+        {
+          "height": 62,
+          "scrollHeight": 62,
+          "scrollWidth": 193,
+          "text": "Редагувати деталі",
+          "width": 193,
+          "wrap": "anywhere"
+        },
+        {
+          "height": 64,
+          "scrollHeight": 64,
+          "scrollWidth": 257,
+          "text": "Підтвердити локальний перегляд",
+          "width": 257,
+          "wrap": "anywhere"
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [],
+      "titleFont": null,
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "footer": [
+        {
+          "height": 62,
+          "scrollHeight": 62,
+          "scrollWidth": 193,
+          "text": "Редагувати деталі",
+          "width": 193,
+          "wrap": "anywhere"
+        },
+        {
+          "height": 64,
+          "scrollHeight": 64,
+          "scrollWidth": 257,
+          "text": "Підтвердити локальний перегляд",
+          "width": 257,
+          "wrap": "anywhere"
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "footer": [
+        {
+          "height": 62,
+          "scrollHeight": 62,
+          "scrollWidth": 193,
+          "text": "Редагувати деталі",
+          "width": 193,
+          "wrap": "anywhere"
+        },
+        {
+          "height": 64,
+          "scrollHeight": 64,
+          "scrollWidth": 257,
+          "text": "Підтвердити локальний перегляд",
+          "width": 257,
+          "wrap": "anywhere"
+        }
+      ],
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": null,
+      "width": 1440
+    }
+  ],
+  "beforeSearchBreakpointFix": [
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 768,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 42,
+          "left": 429,
+          "outside": false,
+          "right": 471,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 768
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1024,
+      "findings": [
+        {
+          "ancestorClip": false,
+          "ch": 24,
+          "clipped": true,
+          "cls": "truncate text-muted-foreground",
+          "cw": 78,
+          "left": 649,
+          "outside": false,
+          "right": 727,
+          "sh": 24,
+          "sw": 265,
+          "tag": "SPAN",
+          "text": "Пошук операцій, одержувачів...",
+          "vertical": false
+        }
+      ],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1024
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1280,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1280
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "uk",
+      "bodyFont": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "documentWidth": 1440,
+      "findings": [],
+      "titleFont": "Unbounded, Onest, -apple-system, \"system-ui\", sans-serif",
+      "width": 1440
+    }
+  ],
+  "notes": [
+    "All form data is illustrative and isolated in memory.",
+    "The first pass found one shared search-placeholder clipping issue at 768 and 1024px; the full screen matrix was rerun after fixing its breakpoint.",
+    "Side panels were measured after opening animations finished.",
+    "Contained table and form scrolling are intentional; hidden sections were excluded.",
+    "Computed font-family checks and visual review complement geometry checks; scrollWidth alone does not detect every anonymous flex-text clip."
+  ]
+}

@@ -1,0 +1,9 @@
+/* Preview-only, unmodified Google Fonts binaries. OFL notices beside each font. */
+@font-face { font-family: Manrope; src: url('../../assets/font-proposals/Manrope-Variable.ttf') format('truetype'); font-weight:200 800; font-style:normal; font-display:swap; }
+@font-face { font-family: 'IBM Plex Sans'; src: url('../../assets/font-proposals/IBMPlexSans-Variable.ttf') format('truetype'); font-weight:100 700; font-style:normal; font-stretch:normal; font-display:swap; }
+#root [data-font-pairings] h1 { font-family:var(--bank-display); font-weight:500; }
+[data-font-pairings] iframe { display:block; }
+[data-font-pairings] [data-font-specimen] { font-synthesis:none; }
+@media (min-width:1024px) {
+  [data-font-pairings] section { display:grid; grid-template-rows:subgrid; grid-row:span 4; }
+}

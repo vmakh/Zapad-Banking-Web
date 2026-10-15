@@ -1,7 +1,10 @@
+import { formatDate } from "../utils/date";
+import { localizedMerchant } from "../i18n/display";
+import { useI18n } from "../i18n/I18nProvider";
 import { copyText } from "../utils/clipboard";
 import { cn } from "../components/ui/utils";
 import { CurrencyMark } from "../components/zapad/CurrencyIcon";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";
@@ -21,19 +24,17 @@ import {
   DialogTitle,
   DialogDescription,
 } from "../components/ui/dialog";
-import {
-  Plus,
-  Download,
-  TrendingUp,
-  Copy,
-  CheckCheck,
-  ChevronRight,
-  ArrowUpRight,
-  ArrowDownLeft,
-  MoreVertical,
-  Wallet,
-  CheckCircle2,
-} from "lucide-react";
+import { PlusIcon as Plus } from "@phosphor-icons/react/dist/csr/Plus";
+import { DownloadSimpleIcon as Download } from "@phosphor-icons/react/dist/csr/DownloadSimple";
+import { TrendUpIcon as TrendingUp } from "@phosphor-icons/react/dist/csr/TrendUp";
+import { CopyIcon as Copy } from "@phosphor-icons/react/dist/csr/Copy";
+import { ChecksIcon as CheckCheck } from "@phosphor-icons/react/dist/csr/Checks";
+import { CaretRightIcon as ChevronRight } from "@phosphor-icons/react/dist/csr/CaretRight";
+import { ArrowUpRightIcon as ArrowUpRight } from "@phosphor-icons/react/dist/csr/ArrowUpRight";
+import { ArrowDownLeftIcon as ArrowDownLeft } from "@phosphor-icons/react/dist/csr/ArrowDownLeft";
+import { DotsThreeVerticalIcon as MoreVertical } from "@phosphor-icons/react/dist/csr/DotsThreeVertical";
+import { BankIcon as Wallet } from "@phosphor-icons/react/dist/csr/Bank";
+import { CheckCircleIcon as CheckCircle2 } from "@phosphor-icons/react/dist/csr/CheckCircle";
 import { toast } from "sonner";
 import { useAppProfile } from "../hooks/useAppProfile";
 import { usePrivacy } from "../contexts/PrivacyContext";
@@ -58,51 +59,52 @@ function AccountDetailSheet({
   isPrivate: boolean;
   profileSlug: ProfileSlug;
 }) {
+  const { t } = useI18n();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const txs = account?.id === "p-main" ? accountActivity.personal : account?.id === "b-operating" ? accountActivity.business : [];
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   if (!account) return null;
 
   const copy = async (text: string) => {
     setCopied(false);
     if (!await copyText(text)) {
-      toast.error("Could not copy. Select and copy the IBAN manually.");
+      toast.error(t("Could not copy. Select and copy the IBAN manually."));
       return;
     }
     setCopied(true);
-    toast.success("IBAN copied");
+    toast.success(t("IBAN copied"));
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <Sheet open={open} onOpenChange={(v) => !v && onClose()}>
       <SheetContent className="w-full sm:max-w-lg p-0 overflow-y-auto">
-        <div className="p-8">
+        <div className="p-5 sm:p-8">
           <SheetHeader className="mb-7 text-left">
             <SheetTitle className="text-2xl font-semibold tracking-tight text-slate-900">
-              {account.name}
+              {t(account.name)}
             </SheetTitle>
             <SheetDescription className="font-semibold text-slate-500 mt-1">
-              {account.type}
+              {t(account.type)}
             </SheetDescription>
           </SheetHeader>
 
           {/* Balance card */}
-          <div data-slot="supporting-surface" className={cn("rounded-xl p-6 mb-6 text-white", brandBg)}>
+          <div data-slot="supporting-surface" className={cn("rounded-xl p-4 sm:p-6 mb-6 text-white", brandBg)}>
             <div className="text-sm text-inherit mb-2">
-              Available balance
+              {t("Available balance")}
             </div>
-            <div className={cn("text-4xl font-semibold tracking-tight mb-4", "text-white")}>
+            <div className={cn("text-2xl sm:text-4xl font-semibold tracking-tight mb-4", "text-white")}>
               {isPrivate ? "••••••" : formatMoney(account.balance, account.currency)}
             </div>
             <div className="flex items-center gap-2">
               <code className={cn("font-mono text-sm font-medium min-w-0 break-words", "text-white")}>
                 {account.iban}
               </code>
-              <button aria-label="Copy IBAN" onClick={() => copy(account.iban)} className="shrink-0 size-11 rounded-lg flex items-center justify-center border border-white/50 bg-white/10 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition-colors">
+              <button aria-label={t("Copy IBAN")} onClick={() => copy(account.iban)} className="shrink-0 size-11 rounded-lg flex items-center justify-center border border-white/50 bg-white/10 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition-colors">
                 {copied ? <CheckCheck className={cn("size-4", brandText)} /> : <Copy className="size-4 text-white" />}
               </button>
             </div>
@@ -134,7 +136,7 @@ function AccountDetailSheet({
                   <div className="size-10 rounded-action-inner bg-white border border-slate-200 flex items-center justify-center zb-group-hover-lift shadow-sm">
                     <Icon className="size-4 text-slate-700" />
                   </div>
-                  <span className="text-xs font-medium text-slate-700">{a.label}</span>
+                  <span className="text-xs font-medium text-slate-700">{t(a.label)}</span>
                 </button>
               );
             })}
@@ -142,17 +144,17 @@ function AccountDetailSheet({
 
           {/* Recent activity */}
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="font-semibold text-slate-900">Recent activity</h3>
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <h3 className="font-semibold text-slate-900">{t("Recent activity")}</h3>
               <Button onClick={() => navigate(profilePath(profileSlug, `transactions?account=${account.id}`))} variant="ghost" className="text-xs font-medium text-slate-500 hover:text-slate-900 h-8 px-2">
-                All transactions
+                {t("All transactions")}
               </Button>
             </div>
             <div className="space-y-1">
-              {txs.length === 0 && <p className="text-sm text-slate-500 py-4">No activity in this demo account.</p>}
+              {txs.length === 0 && <p className="text-sm text-slate-500 py-4">{t("No activity in this demo account.")}</p>}
               {txs.map((tx) => (
-                <div key={tx.id} className="flex items-center gap-4 px-4 py-3.5 rounded-lg hover:bg-slate-50 transition-colors">
-                  <div className={cn("size-10 rounded-full flex items-center justify-center shrink-0", tx.positive ? "bg-emerald-100" : "bg-slate-100")}>
+                <div key={tx.id} className="grid grid-cols-1 sm:flex sm:items-center gap-2 sm:gap-4 sm:px-4 py-3.5 rounded-lg hover:bg-slate-50 transition-colors">
+                  <div className={cn("size-10 rounded-full hidden sm:flex items-center justify-center shrink-0", tx.positive ? "bg-emerald-100" : "bg-slate-100")}>
                     {tx.positive ? (
                       <ArrowDownLeft className="size-4 text-emerald-600" />
                     ) : (
@@ -160,8 +162,8 @@ function AccountDetailSheet({
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-slate-900 truncate text-sm">{tx.desc}</div>
-                    <div className="text-xs font-normal text-slate-400">{tx.date}</div>
+                    <div className="font-medium text-slate-900 truncate text-sm">{localizedMerchant(tx.desc)}</div>
+                    <div className="text-xs font-normal text-slate-400">{formatDate(tx.date)}</div>
                   </div>
                   <span className={cn("font-semibold text-sm", tx.positive ? "text-emerald-600" : "text-slate-700")}>
                     {isPrivate ? "•••" : formatMoney(tx.amount, account.currency, { showPlus: tx.positive })}
@@ -185,10 +187,15 @@ function OpenAccountDialog({
   onClose: () => void;
   isBusiness: boolean;
 }) {
+  const { t } = useI18n();
   const [selected, setSelected] = useState<string | null>(null);
   const [step, setStep] = useState<"select" | "success">("select");
+  const resultTitle = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    if (step === "success") resultTitle.current?.focus();
+  }, [step]);
   const brandBg = isBusiness ? "bg-brand-business" : "bg-brand-personal";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   return (
     <Dialog open={open} onOpenChange={(v) => { if (!v) { setStep("select"); setSelected(null); onClose(); } }}>
@@ -197,29 +204,30 @@ function OpenAccountDialog({
           <div className="p-8">
             <DialogHeader className="mb-7">
               <DialogTitle className="text-2xl font-semibold tracking-tight text-slate-900">
-                Open new account
+                {t("Open new account")}
               </DialogTitle>
               <DialogDescription className="text-sm font-normal text-slate-500 mt-1">
-                Choose the account type that fits your needs.
+                {t("Choose the account type that fits your needs.")}
               </DialogDescription>
             </DialogHeader>
 
             <div className="space-y-3 mb-7">
-              {ACCOUNT_TYPES.map((t) => (
+              {ACCOUNT_TYPES.map((type) => (
                 <button
-                  key={t.id}
-                  onClick={() => setSelected(t.id)}
-                  className={cn("w-full text-left p-4 rounded-lg border-2 transition-all", selected === t.id
+                  key={type.id}
+                  aria-pressed={selected === type.id}
+                  onClick={() => setSelected(type.id)}
+                  className={cn("w-full text-left p-4 rounded-action-inner border-2 transition-all", selected === type.id
                       ? "bg-slate-50"
                       : "border-slate-200 bg-white hover:border-slate-300")}
-                  style={selected === t.id ? { borderColor: isBusiness ? "var(--brand-business)" : "var(--brand-personal)" } : {}}
+                  style={selected === type.id ? { borderColor: isBusiness ? "var(--brand-business)" : "var(--brand-personal)" } : {}}
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <div className="font-semibold text-slate-900 text-sm">{t.label}</div>
-                      <div className="text-xs font-normal text-slate-500 mt-1 leading-snug">{t.desc}</div>
+                      <div className="font-semibold text-slate-900 text-sm">{t(type.label)}</div>
+                      <div className="text-xs font-normal text-slate-500 mt-1 leading-snug">{t(type.desc)}</div>
                     </div>
-                    <span className="text-xs font-medium text-slate-400 shrink-0 mt-0.5">{t.fee}</span>
+                    <span className="text-xs font-medium text-slate-400 shrink-0 mt-0.5">{t(type.fee)}</span>
                   </div>
                 </button>
               ))}
@@ -230,7 +238,7 @@ function OpenAccountDialog({
               onClick={() => setStep("success")}
               className={cn("w-full h-12 px-6 rounded-lg font-medium shadow-sm disabled:opacity-50 transition-all hover:shadow-md", brandBg, brandText)}
             >
-              Continue <ChevronRight className="size-4 ml-1" />
+              {t("Continue")} <ChevronRight className="size-4 ml-1" />
             </Button>
           </div>
         ) : (
@@ -238,15 +246,15 @@ function OpenAccountDialog({
             <div data-slot="supporting-surface" className={cn("size-20 rounded-full", brandBg, "flex items-center justify-center shadow-lg")}>
               <CheckCircle2 className={cn("size-10", brandText)} />
             </div>
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Account preview complete</h2>
-            <p className="text-slate-500 font-semibold text-base max-w-60 leading-snug">
-              No account was opened. This is a simulated confirmation for the portfolio demo.
-            </p>
+            <DialogTitle ref={resultTitle} tabIndex={-1} className="text-2xl font-semibold tracking-tight text-slate-900">{t("Account preview complete")}</DialogTitle>
+            <DialogDescription className="text-slate-500 font-semibold text-base max-w-60 leading-snug">
+              {t("No account was opened. This is a simulated confirmation for the portfolio demo.")}
+            </DialogDescription>
             <Button
               onClick={() => { setStep("select"); setSelected(null); onClose(); }}
               className="mt-4 w-full h-12 px-6 rounded-lg font-medium bg-slate-900 hover:bg-slate-800 text-white shadow-sm"
             >
-              Done
+              {t("Done")}
             </Button>
           </div>
         )}
@@ -256,6 +264,7 @@ function OpenAccountDialog({
 }
 
 export function AccountsPage() {
+  const { t } = useI18n();
   const { profile, profileSlug, isBusiness } = useAppProfile();
   const { accountId } = useParams<{ accountId?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -263,7 +272,7 @@ export function AccountsPage() {
   const { isPrivate } = usePrivacy();
   const brandColor = isBusiness ? "bg-brand-business" : "bg-brand-personal";
   const brandHover = isBusiness ? "hover:bg-brand-business-dark" : "hover:bg-brand-personal-dark";
-  const brandText = "text-white";
+  const brandText = "text-primary-foreground";
 
   const accounts = getAccounts(profile.kind);
   const totalBalance = getTotalEurBalance(profile.kind);
@@ -283,49 +292,49 @@ export function AccountsPage() {
   }, [searchParams, setSearchParams]);
 
   const detailFromRoute = accountId ? getAccountById(profile.kind, accountId) : null;
-  if (accountId && !detailFromRoute) return <div className="p-8 space-y-4"><h1 className="text-2xl font-semibold">Account not found</h1><p>This link does not belong to the selected profile or is no longer available.</p><Button variant="outline" onClick={() => navigate(profilePath(profileSlug, "accounts"))}>Back to accounts</Button></div>;
+  if (accountId && !detailFromRoute) return <div className="p-8 space-y-4"><h1 className="text-2xl font-semibold">{t("Account not found")}</h1><p>{t("This link does not belong to the selected profile or is no longer available.")}</p><Button variant="outline" onClick={() => navigate(profilePath(profileSlug, "accounts"))}>{t("Back to accounts")}</Button></div>;
 
 
   return (
     <div className={cn(PAGE_MAX_WIDTH, "mx-auto p-6 md:p-8 space-y-8")}>
       {accountId && detailFromRoute && (
-        <nav aria-label="Breadcrumb" className="text-sm font-normal text-slate-500">
+        <nav aria-label={t("Breadcrumb")} className="text-sm font-normal text-slate-500">
           <Link to={profilePath(profileSlug)} className="hover:text-slate-900 transition-colors">
-            Dashboard
+            {t("Dashboard")}
           </Link>
           <span className="mx-2 text-slate-300">/</span>
           <Link to={profilePath(profileSlug, "accounts")} className="hover:text-slate-900 transition-colors">
-            Accounts
+            {t("Accounts")}
           </Link>
           <span className="mx-2 text-slate-300">/</span>
-          <span className="text-slate-900 font-medium">{detailFromRoute.name}</span>
+          <span className="text-slate-900 font-medium">{t(detailFromRoute.name)}</span>
         </nav>
       )}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">Accounts</h1>
+          <h1 className="text-3xl md:text-balance leading-none font-semibold tracking-tight text-slate-900">{t("Accounts")}</h1>
           <p className="text-base font-normal text-slate-500 mt-1.5">
-            {isBusiness ? `Business accounts · ${profile.name}` : `Personal accounts · ${profile.name}`}
+            {isBusiness ? t("Business accounts · {name}", { name: profile.name }) : t("Personal accounts · {name}", { name: profile.name })}
           </p>
         </div>
         <Button
           onClick={() => setOpenAccountDialog(true)}
           className={cn(brandColor, brandHover, brandText, "rounded-lg h-11 px-5 font-medium shadow-sm transition-all hover:shadow-md")}
         >
-          <Plus className="size-4 mr-2" /> Open new account
+          <Plus className="size-4 mr-2" /> {t("Open new account")}
         </Button>
       </div>
 
       {/* Total balance */}
       <div className="border-b border-border pb-6">
         <div className="text-sm text-muted-foreground mb-2">
-          Total EUR balance
+          {t("Total EUR balance")}
         </div>
         <div className="text-4xl font-semibold tracking-tight text-foreground">
           {isPrivate ? "••••••" : formatMoney(totalBalance)}
         </div>
         <div className="text-sm text-muted-foreground mt-2">
-          Across {accounts.filter(account => account.currency === "EUR").length} EUR accounts · Other currencies shown separately
+          {t("Across {count} EUR accounts · Other currencies shown separately", { count: accounts.filter(account => account.currency === "EUR").length })}
         </div>
       </div>
 
@@ -333,31 +342,29 @@ export function AccountsPage() {
         {accounts.map((account) => (
           <div
             key={account.id}
-            onClick={() => setDetailAccount(account)}
-            className="w-full text-left group cursor-pointer"
+            className="w-full text-left group"
           >
             <Card className="p-7 border-slate-200/60 bg-white rounded-4xl hover:shadow-lg hover:border-slate-300 transition-all duration-300 shadow-sm">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
                   <CurrencyMark currency={account.currency} />
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight">{account.name}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight"><button type="button" aria-haspopup="dialog" onClick={() => setDetailAccount(account)} className="min-h-11 text-left hover:underline underline-offset-4">{t(account.name)}</button></h3>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs font-medium text-slate-400 px-2.5 py-1 rounded-full bg-slate-100">
-                        {account.type}
+                        {t(account.type)}
                       </span>
                     </div>
                   </div>
                 </div>
-                <ChevronRight className="size-5 text-slate-300 group-hover:text-slate-500 transition-colors mt-1" />
+                <Button variant="ghost" size="icon" aria-label={t(account.name)} aria-haspopup="dialog" onClick={() => setDetailAccount(account)} className="shrink-0 text-muted-foreground"><ChevronRight className="size-5" /></Button>
               </div>
 
               <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">Balance</div>
-                  <div className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{t("Balance")}</div>
+                  <div className="text-2xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
                     {isPrivate ? "••••••" : formatMoney(account.balance, account.currency)}
-                    <span className="text-xl font-medium text-slate-400 ml-2">{account.currency}</span>
                   </div>
                 </div>
                 <code className="text-xs font-mono font-medium text-muted-foreground break-words sm:text-right leading-relaxed">
@@ -365,7 +372,7 @@ export function AccountsPage() {
                 </code>
               </div>
 
-              <div className="mt-5 flex gap-3">
+              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <Button
                   variant="outline"
                   onClick={(e) => {
@@ -374,14 +381,14 @@ export function AccountsPage() {
                   }}
                   className="flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all"
                 >
-                  <Download className="size-4 mr-2" /> Statement
+                  <Download className="size-4 mr-2" /> {t("Statement")}
                 </Button>
                 <Button
                   variant="outline"
                   onClick={(e) => { e.stopPropagation(); navigate(profilePath(profileSlug, `transactions?account=${account.id}`)); }}
                   className="flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all"
                 >
-                  <TrendingUp className="size-4 mr-2" /> Activity
+                  <TrendingUp className="size-4 mr-2" /> {t("Activity")}
                 </Button>
               </div>
             </Card>

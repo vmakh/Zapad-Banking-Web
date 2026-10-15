@@ -1,0 +1,3736 @@
+{
+  "date": "2026-10-15",
+  "verifiedScreens": [
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "uk"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "locale": "uk"
+      },
+      "documentWidth": 390,
+      "findings": [],
+      "width": 390
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "locale": "de"
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "verifiedBankPopups": [
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "create",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "recipient",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "transfer",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "bills",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "exchange",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "filled",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "create",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "recipient",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "transfer",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "bills",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "exchange",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "filled",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transactions",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "receive",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "receive",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transactions",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "verifiedPagePopups": [
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Деталі",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Ліміти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Заморозити",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "action": "Пошук",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Деталі",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Ліміти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Заморозити",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "Пошук",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "extraStates": [
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "review",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "result",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "payments",
+      "state": "qr-unavailable",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "review",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "result",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "payments",
+      "state": "qr-unavailable",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "lowHeightDialogBounds": [
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "create",
+      "bounds": {
+        "bottom": 546.6487369537354,
+        "height": 525.2974853515625,
+        "overflowY": "auto",
+        "scrollHeight": 555,
+        "top": 21.35125160217285
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "details",
+      "bounds": {
+        "bottom": 547.8653907775879,
+        "height": 527.7308349609375,
+        "overflowY": "auto",
+        "scrollHeight": 641,
+        "top": 20.13455581665039
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "recipient",
+      "bounds": {
+        "bottom": 537.4487190246582,
+        "height": 506.8974609375,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 30.551258087158203
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "transfer",
+      "bounds": {
+        "bottom": 536.3106651306152,
+        "height": 504.6213073730469,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 31.68935775756836
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "bills",
+      "bounds": {
+        "bottom": 535.0860061645508,
+        "height": 502.1719970703125,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 32.91400909423828
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "exchange",
+      "state": "default",
+      "bounds": {
+        "bottom": 402.9279174804687,
+        "height": 237.8558349609375,
+        "overflowY": "auto",
+        "scrollHeight": 244,
+        "top": 165.07208251953125
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "default",
+      "bounds": {
+        "bottom": 537.4791202545166,
+        "height": 506.9582214355469,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 30.520898818969727
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "filled",
+      "bounds": {
+        "bottom": 539.3180465698242,
+        "height": 510.6361083984375,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 28.68193817138672
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "bounds": {
+        "bottom": 538.4900569915771,
+        "height": 508.9801330566406,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 29.509923934936523
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "create",
+      "bounds": {
+        "bottom": 551.1020088195801,
+        "height": 534.2039794921875,
+        "overflowY": "auto",
+        "scrollHeight": 555,
+        "top": 16.898029327392578
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "details",
+      "bounds": {
+        "bottom": 553.31946849823,
+        "height": 538.638916015625,
+        "overflowY": "auto",
+        "scrollHeight": 727,
+        "top": 14.68055248260498
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "recipient",
+      "bounds": {
+        "bottom": 538.4900569915771,
+        "height": 508.9801330566406,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 29.509923934936523
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "transfer",
+      "bounds": {
+        "bottom": 538.3891010284424,
+        "height": 508.7781982421875,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 29.610902786254883
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "bills",
+      "bounds": {
+        "bottom": 538.4900569915771,
+        "height": 508.9801330566406,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 29.509923934936523
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "exchange",
+      "state": "default",
+      "bounds": {
+        "bottom": 402.940185546875,
+        "height": 237.88038635253903,
+        "overflowY": "auto",
+        "scrollHeight": 244,
+        "top": 165.05979919433594
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "default",
+      "bounds": {
+        "bottom": 538.4824237823486,
+        "height": 508.96484375,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 29.517580032348633
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "filled",
+      "bounds": {
+        "bottom": 537.4660167694092,
+        "height": 506.9320373535156,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 30.533979415893555
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "bounds": {
+        "bottom": 537.4529418945312,
+        "height": 506.9058837890625,
+        "overflowY": "auto",
+        "scrollHeight": 520,
+        "top": 30.54705810546875
+      },
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "exploratoryBeforeFixesAndDuringAnimations": [
+    {
+      "profile": "personal",
+      "route": "home",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 py-2 has-[>svg]:px-4 rounded-lg font-medium shadow-sm transition-all hover:shadow-md zb-hover-lift h-9 px-3 text-sm bg-brand-personal text-primary-foreground",
+          "cw": 142,
+          "left": 200,
+          "outside": true,
+          "right": 344,
+          "sh": 42,
+          "sw": 142,
+          "tag": "BUTTON",
+          "text": "Нова ціль",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "payments",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "exchange",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "savings",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "investments",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "transactions",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "inbox",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "help",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 38,
+          "clipped": false,
+          "cls": "py-2 text-right font-medium",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 38,
+          "sw": 113,
+          "tag": "TH",
+          "text": "Витрати",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "6 400,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "7 200,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "10 300,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "14 100,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "12 000,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "16 400,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "14 800,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "9 600,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "12 500,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "11 200,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "15 800,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 60,
+          "clipped": false,
+          "cls": "py-2 text-right",
+          "cw": 113,
+          "left": 209,
+          "outside": true,
+          "right": 322,
+          "sh": 60,
+          "sw": 113,
+          "tag": "TD",
+          "text": "10 900,00 EUR",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 py-2 has-[>svg]:px-4 rounded-lg font-medium shadow-sm transition-all hover:shadow-md zb-hover-lift h-9 px-3 text-sm bg-brand-business text-primary-foreground",
+          "cw": 142,
+          "left": 200,
+          "outside": true,
+          "right": 344,
+          "sh": 42,
+          "sw": 142,
+          "tag": "BUTTON",
+          "text": "Нова ціль",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "payments",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 flex-1 h-11 rounded-lg border-slate-200 font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all",
+          "cw": 136,
+          "left": 202,
+          "outside": true,
+          "right": 339,
+          "sh": 42,
+          "sw": 136,
+          "tag": "BUTTON",
+          "text": "Операції",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "exchange",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "savings",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "investments",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "transactions",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "inbox",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center whitespace-nowrap text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-10 rounded-2xl gap-1.5 px-4 has-[>svg]:px-3 font-medium",
+          "cw": 292,
+          "left": 41,
+          "outside": true,
+          "right": 335,
+          "sh": 42,
+          "sw": 292,
+          "tag": "BUTTON",
+          "text": "Переглянути рахунок-фактуру",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "help",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transactions",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 27,
+          "clipped": false,
+          "cls": "text-foreground text-2xl font-medium mb-1",
+          "cw": 141,
+          "left": 394,
+          "outside": true,
+          "right": 534,
+          "sh": 27,
+          "sw": 141,
+          "tag": "H2",
+          "text": "Retail Demo",
+          "vertical": false
+        },
+        {
+          "ch": 24,
+          "clipped": false,
+          "cls": "text-base font-medium text-neutral-500 mb-6",
+          "cw": 70,
+          "left": 429,
+          "outside": true,
+          "right": 499,
+          "sh": 24,
+          "sw": 70,
+          "tag": "P",
+          "text": "Покупки",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 103,
+          "left": 348,
+          "outside": true,
+          "right": 451,
+          "sh": 22,
+          "sw": 103,
+          "tag": "SPAN",
+          "text": "Спосіб оплати",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-medium",
+          "cw": 95,
+          "left": 485,
+          "outside": true,
+          "right": 580,
+          "sh": 22,
+          "sw": 95,
+          "tag": "SPAN",
+          "text": "Картка ··4821",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 109,
+          "left": 348,
+          "outside": true,
+          "right": 458,
+          "sh": 22,
+          "sw": 109,
+          "tag": "SPAN",
+          "text": "Деталі операції",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-medium",
+          "cw": 70,
+          "left": 510,
+          "outside": true,
+          "right": 580,
+          "sh": 22,
+          "sw": 70,
+          "tag": "SPAN",
+          "text": "Продукти",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 78,
+          "left": 348,
+          "outside": true,
+          "right": 426,
+          "sh": 22,
+          "sw": 78,
+          "tag": "SPAN",
+          "text": "ID операції",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-medium font-mono text-neutral-400",
+          "cw": 65,
+          "left": 515,
+          "outside": true,
+          "right": 580,
+          "sh": 22,
+          "sw": 65,
+          "tag": "SPAN",
+          "text": "#ZB-P-1",
+          "vertical": false
+        },
+        {
+          "ch": 49,
+          "clipped": false,
+          "cls": "text-sm text-slate-600 leading-relaxed",
+          "cw": 232,
+          "left": 348,
+          "outside": true,
+          "right": 580,
+          "sh": 49,
+          "sw": 232,
+          "tag": "P",
+          "text": "Цю операцію завершено в демонстраційній історії.",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-slate-600",
+          "cw": 47,
+          "left": 348,
+          "outside": true,
+          "right": 395,
+          "sh": 22,
+          "sw": 47,
+          "tag": "SPAN",
+          "text": "ZB-P-1",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 132,
+          "left": 448,
+          "outside": true,
+          "right": 580,
+          "sh": 44,
+          "sw": 132,
+          "tag": "BUTTON",
+          "text": "Копіювати",
+          "vertical": false
+        },
+        {
+          "ch": 15,
+          "clipped": false,
+          "cls": "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+          "cw": 232,
+          "left": 348,
+          "outside": true,
+          "right": 580,
+          "sh": 17,
+          "sw": 232,
+          "tag": "LABEL",
+          "text": "Особиста примітка",
+          "vertical": false
+        },
+        {
+          "ch": 64,
+          "clipped": false,
+          "cls": "resize-none border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-input-background px-3 py-2 text-base transition-control outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "cw": 230,
+          "left": 348,
+          "outside": true,
+          "right": 580,
+          "sh": 64,
+          "sw": 230,
+          "tag": "TEXTAREA",
+          "text": "Додайте примітку на потім…",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-slate-500",
+          "cw": 203,
+          "left": 348,
+          "outside": true,
+          "right": 551,
+          "sh": 18,
+          "sw": 203,
+          "tag": "SPAN",
+          "text": "0/500 · Лише на цьому пристрої",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 189,
+          "left": 348,
+          "outside": true,
+          "right": 539,
+          "sh": 42,
+          "sw": 189,
+          "tag": "BUTTON",
+          "text": "Зберегти нотатку",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full",
+          "cw": 270,
+          "left": 328,
+          "outside": true,
+          "right": 600,
+          "sh": 42,
+          "sw": 270,
+          "tag": "A",
+          "text": "Я не впізнаю цей платіж",
+          "vertical": false
+        },
+        {
+          "ch": 87,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full",
+          "cw": 270,
+          "left": 328,
+          "outside": true,
+          "right": 600,
+          "sh": 87,
+          "sw": 270,
+          "tag": "BUTTON",
+          "text": "Завантажити демонстраційну квитанцію",
+          "vertical": false
+        },
+        {
+          "ch": 55,
+          "clipped": false,
+          "cls": "text-xs text-slate-500",
+          "cw": 272,
+          "left": 328,
+          "outside": true,
+          "right": 600,
+          "sh": 55,
+          "sw": 272,
+          "tag": "P",
+          "text": "Документ HTML · Відкрийте й надрукуйте, щоб зберегти як PDF. Не є підтвердженням оплати.",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 absolute top-4 right-4 size-11 rounded-lg bg-secondary text-foreground hover:bg-accent",
+          "cw": 44,
+          "left": 564,
+          "outside": true,
+          "right": 608,
+          "sh": 44,
+          "sw": 44,
+          "tag": "BUTTON",
+          "text": "Закрити",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "create",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "savings-goals",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "recipient",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "transfer",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer",
+      "state": "bills",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "receive",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 54,
+          "clipped": false,
+          "cls": "text-2xl font-semibold tracking-tight text-slate-900",
+          "cw": 135,
+          "left": 425,
+          "outside": true,
+          "right": 560,
+          "sh": 54,
+          "sw": 135,
+          "tag": "H2",
+          "text": "Отримати кошти",
+          "vertical": false
+        },
+        {
+          "ch": 109,
+          "clipped": false,
+          "cls": "text-sm font-normal text-slate-500 mt-0.5",
+          "cw": 135,
+          "left": 425,
+          "outside": true,
+          "right": 560,
+          "sh": 109,
+          "sw": 135,
+          "tag": "P",
+          "text": "Скопіюйте дані демонстраційного рахунку. Платіжні посилання та QR-коди недоступні.",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "flex items-center gap-2 font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm text-muted-foreground",
+          "cw": 255,
+          "left": 349,
+          "outside": true,
+          "right": 604,
+          "sh": 22,
+          "sw": 255,
+          "tag": "LABEL",
+          "text": "Отримати на",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 74,
+          "left": 370,
+          "outside": true,
+          "right": 444,
+          "sh": 18,
+          "sw": 74,
+          "tag": "DT",
+          "text": "Одержувач",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 74,
+          "left": 370,
+          "outside": true,
+          "right": 444,
+          "sh": 22,
+          "sw": 74,
+          "tag": "DD",
+          "text": "Alex Demo",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 157,
+          "left": 370,
+          "outside": true,
+          "right": 527,
+          "sh": 18,
+          "sw": 157,
+          "tag": "DT",
+          "text": "IBAN",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text font-mono",
+          "cw": 157,
+          "left": 370,
+          "outside": true,
+          "right": 527,
+          "sh": 44,
+          "sw": 157,
+          "tag": "DD",
+          "text": "ME25 9900 0000 0000 3001 01",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 46,
+          "left": 370,
+          "outside": true,
+          "right": 416,
+          "sh": 18,
+          "sw": 46,
+          "tag": "DT",
+          "text": "Валюта",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 46,
+          "left": 370,
+          "outside": true,
+          "right": 416,
+          "sh": 22,
+          "sw": 46,
+          "tag": "DD",
+          "text": "EUR",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 157,
+          "left": 370,
+          "outside": true,
+          "right": 527,
+          "sh": 18,
+          "sw": 157,
+          "tag": "DT",
+          "text": "Банк",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 157,
+          "left": 370,
+          "outside": true,
+          "right": 527,
+          "sh": 44,
+          "sw": 157,
+          "tag": "DD",
+          "text": "ZapadBanka AD Podgorica",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 74,
+          "left": 370,
+          "outside": true,
+          "right": 444,
+          "sh": 18,
+          "sw": 74,
+          "tag": "DT",
+          "text": "BIC / SWIFT",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text font-mono",
+          "cw": 74,
+          "left": 370,
+          "outside": true,
+          "right": 444,
+          "sh": 22,
+          "sw": 74,
+          "tag": "DD",
+          "text": "ZAPAME22",
+          "vertical": false
+        },
+        {
+          "ch": 64,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full mt-5 gap-2",
+          "cw": 213,
+          "left": 370,
+          "outside": true,
+          "right": 583,
+          "sh": 64,
+          "sw": 213,
+          "tag": "BUTTON",
+          "text": "Скопіювати всі реквізити",
+          "vertical": false
+        },
+        {
+          "ch": 109,
+          "clipped": false,
+          "cls": "text-sm text-muted-foreground",
+          "cw": 255,
+          "left": 349,
+          "outside": true,
+          "right": 604,
+          "sh": 109,
+          "sw": 255,
+          "tag": "P",
+          "text": "Цей прототип не підтримує платіжні запити, посилання для поширення та QR-коди. Копіювання даних не підтверджує надходження платежу",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 absolute top-4 right-4 size-11 rounded-lg bg-secondary text-foreground hover:bg-accent",
+          "cw": 44,
+          "left": 576,
+          "outside": true,
+          "right": 620,
+          "sh": 44,
+          "sw": 44,
+          "tag": "BUTTON",
+          "text": "Закрити",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "exchange",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "filled",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transactions",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 54,
+          "clipped": false,
+          "cls": "text-foreground text-2xl font-medium mb-1",
+          "cw": 256,
+          "left": 341,
+          "outside": true,
+          "right": 597,
+          "sh": 54,
+          "sw": 256,
+          "tag": "H2",
+          "text": "Рахунок INV-2034 · Techno d.o.o.",
+          "vertical": false
+        },
+        {
+          "ch": 24,
+          "clipped": false,
+          "cls": "text-base font-medium text-neutral-500 mb-6",
+          "cw": 59,
+          "left": 439,
+          "outside": true,
+          "right": 498,
+          "sh": 24,
+          "sw": 59,
+          "tag": "P",
+          "text": "Вихідні",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 94,
+          "left": 353,
+          "outside": true,
+          "right": 447,
+          "sh": 44,
+          "sw": 94,
+          "tag": "SPAN",
+          "text": "Спосіб оплати",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm font-medium",
+          "cw": 138,
+          "left": 447,
+          "outside": true,
+          "right": 585,
+          "sh": 44,
+          "sw": 138,
+          "tag": "SPAN",
+          "text": "Міжнародний платіж",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 109,
+          "left": 353,
+          "outside": true,
+          "right": 462,
+          "sh": 22,
+          "sw": 109,
+          "tag": "SPAN",
+          "text": "Деталі операції",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-medium",
+          "cw": 52,
+          "left": 533,
+          "outside": true,
+          "right": 585,
+          "sh": 22,
+          "sw": 52,
+          "tag": "SPAN",
+          "text": "Вихідні",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-normal text-neutral-500",
+          "cw": 78,
+          "left": 353,
+          "outside": true,
+          "right": 430,
+          "sh": 22,
+          "sw": 78,
+          "tag": "SPAN",
+          "text": "ID операції",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm font-medium font-mono text-neutral-400",
+          "cw": 65,
+          "left": 520,
+          "outside": true,
+          "right": 585,
+          "sh": 22,
+          "sw": 65,
+          "tag": "SPAN",
+          "text": "#ZB-B-1",
+          "vertical": false
+        },
+        {
+          "ch": 146,
+          "clipped": false,
+          "cls": "text-sm text-slate-600 leading-relaxed",
+          "cw": 232,
+          "left": 353,
+          "outside": true,
+          "right": 585,
+          "sh": 146,
+          "sw": 232,
+          "tag": "P",
+          "text": "Цей демонстраційний платіж очікує погодження. Скористайтеся окремим переглядом погодження, щоб записати демо-рішення. Платіж не мо",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-slate-600",
+          "cw": 48,
+          "left": 353,
+          "outside": true,
+          "right": 400,
+          "sh": 22,
+          "sw": 48,
+          "tag": "SPAN",
+          "text": "ZB-B-1",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 132,
+          "left": 452,
+          "outside": true,
+          "right": 585,
+          "sh": 44,
+          "sw": 132,
+          "tag": "BUTTON",
+          "text": "Копіювати",
+          "vertical": false
+        },
+        {
+          "ch": 15,
+          "clipped": false,
+          "cls": "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+          "cw": 232,
+          "left": 353,
+          "outside": true,
+          "right": 585,
+          "sh": 17,
+          "sw": 232,
+          "tag": "LABEL",
+          "text": "Особиста примітка",
+          "vertical": false
+        },
+        {
+          "ch": 64,
+          "clipped": false,
+          "cls": "resize-none border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-input-background px-3 py-2 text-base transition-control outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "cw": 230,
+          "left": 353,
+          "outside": true,
+          "right": 585,
+          "sh": 64,
+          "sw": 230,
+          "tag": "TEXTAREA",
+          "text": "Додайте примітку на потім…",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-slate-500",
+          "cw": 203,
+          "left": 353,
+          "outside": true,
+          "right": 555,
+          "sh": 18,
+          "sw": 203,
+          "tag": "SPAN",
+          "text": "0/500 · Лише на цьому пристрої",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 189,
+          "left": 353,
+          "outside": true,
+          "right": 544,
+          "sh": 42,
+          "sw": 189,
+          "tag": "BUTTON",
+          "text": "Зберегти нотатку",
+          "vertical": false
+        },
+        {
+          "ch": 64,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full",
+          "cw": 270,
+          "left": 333,
+          "outside": true,
+          "right": 605,
+          "sh": 64,
+          "sw": 270,
+          "tag": "BUTTON",
+          "text": "Переглянути попереднє схвалення",
+          "vertical": false
+        },
+        {
+          "ch": 42,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full",
+          "cw": 270,
+          "left": 333,
+          "outside": true,
+          "right": 605,
+          "sh": 42,
+          "sw": 270,
+          "tag": "A",
+          "text": "Я не впізнаю цей платіж",
+          "vertical": false
+        },
+        {
+          "ch": 87,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full",
+          "cw": 270,
+          "left": 333,
+          "outside": true,
+          "right": 605,
+          "sh": 87,
+          "sw": 270,
+          "tag": "BUTTON",
+          "text": "Завантажити демонстраційну квитанцію",
+          "vertical": false
+        },
+        {
+          "ch": 55,
+          "clipped": false,
+          "cls": "text-xs text-slate-500",
+          "cw": 272,
+          "left": 333,
+          "outside": true,
+          "right": 605,
+          "sh": 55,
+          "sw": 272,
+          "tag": "P",
+          "text": "Документ HTML · Відкрийте й надрукуйте, щоб зберегти як PDF. Не є підтвердженням оплати.",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 absolute top-4 right-4 size-11 rounded-lg bg-secondary text-foreground hover:bg-accent",
+          "cw": 44,
+          "left": 569,
+          "outside": true,
+          "right": 613,
+          "sh": 44,
+          "sw": 44,
+          "tag": "BUTTON",
+          "text": "Закрити",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "create",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "savings-goals",
+      "state": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "recipient",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "transfer",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "transfer",
+      "state": "bills",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "receive",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 54,
+          "clipped": false,
+          "cls": "text-2xl font-semibold tracking-tight text-slate-900",
+          "cw": 135,
+          "left": 417,
+          "outside": true,
+          "right": 552,
+          "sh": 54,
+          "sw": 135,
+          "tag": "H2",
+          "text": "Отримати кошти",
+          "vertical": false
+        },
+        {
+          "ch": 109,
+          "clipped": false,
+          "cls": "text-sm font-normal text-slate-500 mt-0.5",
+          "cw": 135,
+          "left": 417,
+          "outside": true,
+          "right": 552,
+          "sh": 109,
+          "sw": 135,
+          "tag": "P",
+          "text": "Скопіюйте дані демонстраційного рахунку. Платіжні посилання та QR-коди недоступні.",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "flex items-center gap-2 font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm text-muted-foreground",
+          "cw": 255,
+          "left": 341,
+          "outside": true,
+          "right": 596,
+          "sh": 22,
+          "sw": 255,
+          "tag": "LABEL",
+          "text": "Отримати на",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 117,
+          "left": 362,
+          "outside": true,
+          "right": 479,
+          "sh": 18,
+          "sw": 117,
+          "tag": "DT",
+          "text": "Одержувач",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 117,
+          "left": 362,
+          "outside": true,
+          "right": 479,
+          "sh": 22,
+          "sw": 117,
+          "tag": "DD",
+          "text": "Demo Corp DOO",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 157,
+          "left": 362,
+          "outside": true,
+          "right": 519,
+          "sh": 18,
+          "sw": 157,
+          "tag": "DT",
+          "text": "IBAN",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text font-mono",
+          "cw": 157,
+          "left": 362,
+          "outside": true,
+          "right": 519,
+          "sh": 44,
+          "sw": 157,
+          "tag": "DD",
+          "text": "ME25 9900 0000 0000 2001 01",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 46,
+          "left": 362,
+          "outside": true,
+          "right": 409,
+          "sh": 18,
+          "sw": 46,
+          "tag": "DT",
+          "text": "Валюта",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 46,
+          "left": 362,
+          "outside": true,
+          "right": 409,
+          "sh": 22,
+          "sw": 46,
+          "tag": "DD",
+          "text": "EUR",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 157,
+          "left": 362,
+          "outside": true,
+          "right": 519,
+          "sh": 18,
+          "sw": 157,
+          "tag": "DT",
+          "text": "Банк",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text",
+          "cw": 157,
+          "left": 362,
+          "outside": true,
+          "right": 519,
+          "sh": 44,
+          "sw": 157,
+          "tag": "DD",
+          "text": "ZapadBanka AD Podgorica",
+          "vertical": false
+        },
+        {
+          "ch": 18,
+          "clipped": false,
+          "cls": "text-xs text-muted-foreground mb-1",
+          "cw": 74,
+          "left": 362,
+          "outside": true,
+          "right": 437,
+          "sh": 18,
+          "sw": 74,
+          "tag": "DT",
+          "text": "BIC / SWIFT",
+          "vertical": false
+        },
+        {
+          "ch": 22,
+          "clipped": false,
+          "cls": "text-sm text-foreground break-words select-text font-mono",
+          "cw": 74,
+          "left": 362,
+          "outside": true,
+          "right": 437,
+          "sh": 22,
+          "sw": 74,
+          "tag": "DD",
+          "text": "ZAPAME22",
+          "vertical": false
+        },
+        {
+          "ch": 64,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center whitespace-nowrap rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 min-h-11 px-5 py-2 has-[>svg]:px-4 w-full mt-5 gap-2",
+          "cw": 213,
+          "left": 362,
+          "outside": true,
+          "right": 575,
+          "sh": 64,
+          "sw": 213,
+          "tag": "BUTTON",
+          "text": "Скопіювати всі реквізити",
+          "vertical": false
+        },
+        {
+          "ch": 109,
+          "clipped": false,
+          "cls": "text-sm text-muted-foreground",
+          "cw": 255,
+          "left": 341,
+          "outside": true,
+          "right": 596,
+          "sh": 109,
+          "sw": 255,
+          "tag": "P",
+          "text": "Цей прототип не підтримує платіжні запити, посилання для поширення та QR-коди. Копіювання даних не підтверджує надходження платежу",
+          "vertical": false
+        },
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 absolute top-4 right-4 size-11 rounded-lg bg-secondary text-foreground hover:bg-accent",
+          "cw": 44,
+          "left": 568,
+          "outside": true,
+          "right": 612,
+          "sh": 44,
+          "sw": 44,
+          "tag": "BUTTON",
+          "text": "Закрити",
+          "vertical": false
+        }
+      ],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "exchange",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "default",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "filled",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "sample": "product-preview",
+      "state": "withdraw",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer-long",
+      "state": "review",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "sample": "transfer-long",
+      "state": "result",
+      "documentWidth": 320,
+      "findings": [],
+      "font": "Onest, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "width": 320
+    }
+  ],
+  "additionalExploratoryPopupChecks": [
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Деталі",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Ліміти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Заморозити",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 min-w-0 max-w-full whitespace-normal break-words rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 169,
+          "left": 174,
+          "outside": true,
+          "right": 344,
+          "sh": 44,
+          "sw": 169,
+          "tag": "BUTTON",
+          "text": "Зберегти зміни",
+          "vertical": false
+        }
+      ],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Деталі",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Ліміти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Заморозити",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Замовити нову картку",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "Налаштувати гаманець",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "cards",
+      "action": "/^Онлайн-платежі:/",
+      "documentWidth": 320,
+      "findings": [
+        {
+          "ch": 44,
+          "clipped": false,
+          "cls": "inline-flex items-center justify-center gap-2 min-w-0 max-w-full whitespace-normal break-words rounded-2xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 min-h-11 px-5 py-2 has-[>svg]:px-4",
+          "cw": 169,
+          "left": 174,
+          "outside": true,
+          "right": 344,
+          "sh": 44,
+          "sw": 169,
+          "tag": "BUTTON",
+          "text": "Зберегти зміни",
+          "vertical": false
+        }
+      ],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "action": "Пошук",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "action": "Відкрити новий рахунок",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Подати заявку на кредит",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "Здійснити платіж",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "settings",
+      "action": "Скинути збережені зміни",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "Пошук",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "receive",
+      "action": "account-picker",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "goal",
+      "action": "Редагувати ціль",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "goal",
+      "action": "Додати кошти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "goal",
+      "action": "Вивільнити кошти",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "goal",
+      "action": "Редагувати ціль",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "goal",
+      "action": "add-after-local-release",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "accounts",
+      "action": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "accounts",
+      "action": "details",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "loans",
+      "action": "schedule",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "loans",
+      "action": "schedule",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "statements",
+      "action": "preview",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "statements",
+      "action": "preview",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "preview-history",
+      "action": "saved",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "preview-history",
+      "action": "approval",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "mobile-navigation",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "return-overview-confirmation",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "personal",
+      "route": "home",
+      "action": "profile-menu",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "home",
+      "action": "language-picker",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    },
+    {
+      "profile": "business",
+      "route": "transfer",
+      "action": "unbroken-name-and-long-note-320x568",
+      "documentWidth": 320,
+      "findings": [],
+      "width": 320
+    }
+  ],
+  "notes": [
+    "Initial measurements include sheet opening transitions; settled sheets were measured again.",
+    "Visual inspection caught anonymous flex text clipping not visible in scrollWidth; wrap-anywhere and stacked mobile footer fixed it.",
+    "Native editable fields and contained table/form scrolling are intentional.",
+    "All browser previews use isolated in-memory storage."
+  ]
+}
